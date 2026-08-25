@@ -11,7 +11,7 @@ export const SITE = {
   facebookPixelId: '1677430622530607',
   foundingYear: 2015,
   logo: '/images/logo-white.png',
-  ogImage: '/images/billy-speaking.jpg',
+  ogImage: '/images/og-card.jpg',
   address: {
     street: '2257 N Loop 336 W, Ste 140471',
     city: 'Conroe',
