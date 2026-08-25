@@ -193,14 +193,3604 @@
       "permanent": true
     },
     {
+      "source": "/screenings/",
+      "destination": "https://www.1shoppingcart.com/app/?af=1310688",
+      "permanent": false
+    },
+    {
+      "source": "/screenings",
+      "destination": "https://www.1shoppingcart.com/app/?af=1310688",
+      "permanent": false
+    },
+    {
+      "source": "/posturescreen/",
+      "destination": "https://postureanalysis.com/mobile/",
+      "permanent": false
+    },
+    {
+      "source": "/posturescreen",
+      "destination": "https://postureanalysis.com/mobile/",
+      "permanent": false
+    },
+    {
+      "source": "/elite/",
+      "destination": "https://www.1shoppingcart.com/app/?af=1031702",
+      "permanent": false
+    },
+    {
+      "source": "/elite",
+      "destination": "https://www.1shoppingcart.com/app/?af=1031702",
+      "permanent": false
+    },
+    {
+      "source": "/podcasttraining/",
+      "destination": "https://www.mcssl.com/app/?Clk=5413554",
+      "permanent": false
+    },
+    {
+      "source": "/podcasttraining",
+      "destination": "https://www.mcssl.com/app/?Clk=5413554",
+      "permanent": false
+    },
+    {
+      "source": "/dinner/",
+      "destination": "https://fx186.isrefer.com/go/1234/chirocandy/",
+      "permanent": false
+    },
+    {
+      "source": "/dinner",
+      "destination": "https://fx186.isrefer.com/go/1234/chirocandy/",
+      "permanent": false
+    },
+    {
+      "source": "/itunes/",
+      "destination": "https://itunes.apple.com/us/podcast/chirocandy-podcast-sweet-chiropractic/id990802157",
+      "permanent": false
+    },
+    {
+      "source": "/itunes",
+      "destination": "https://itunes.apple.com/us/podcast/chirocandy-podcast-sweet-chiropractic/id990802157",
+      "permanent": false
+    },
+    {
+      "source": "/stitcher/",
+      "destination": "https://www.stitcher.com/s?fid=65087&refid=stpr",
+      "permanent": false
+    },
+    {
+      "source": "/stitcher",
+      "destination": "https://www.stitcher.com/s?fid=65087&refid=stpr",
+      "permanent": false
+    },
+    {
+      "source": "/taborsmith/",
+      "destination": "https://chirocandy.com/podcast/003/",
+      "permanent": false
+    },
+    {
+      "source": "/taborsmith",
+      "destination": "https://chirocandy.com/podcast/003/",
+      "permanent": false
+    },
+    {
+      "source": "/loop/",
+      "destination": "https://chirocandy.com/podcast/004/",
+      "permanent": false
+    },
+    {
+      "source": "/loop",
+      "destination": "https://chirocandy.com/podcast/004/",
+      "permanent": false
+    },
+    {
+      "source": "/spencer/",
+      "destination": "https://chirocandy.com/podcast/005/",
+      "permanent": false
+    },
+    {
+      "source": "/spencer",
+      "destination": "https://chirocandy.com/podcast/005/",
+      "permanent": false
+    },
+    {
+      "source": "/reputation/",
+      "destination": "https://squeakycleanreputation.com/",
+      "permanent": false
+    },
+    {
+      "source": "/reputation",
+      "destination": "https://squeakycleanreputation.com/",
+      "permanent": false
+    },
+    {
+      "source": "/pro2pro/",
+      "destination": "https://pro2pronetwork.com",
+      "permanent": false
+    },
+    {
+      "source": "/pro2pro",
+      "destination": "https://pro2pronetwork.com",
+      "permanent": false
+    },
+    {
+      "source": "/len/",
+      "destination": "https://chirocandy.com/podcast/006/",
+      "permanent": false
+    },
+    {
+      "source": "/len",
+      "destination": "https://chirocandy.com/podcast/006/",
+      "permanent": false
+    },
+    {
+      "source": "/internal/",
+      "destination": "https://www.1shoppingcart.com/app/?Clk=5422590",
+      "permanent": false
+    },
+    {
+      "source": "/internal",
+      "destination": "https://www.1shoppingcart.com/app/?Clk=5422590",
+      "permanent": false
+    },
+    {
+      "source": "/logo/",
+      "destination": "https://chirocandy.com/wp-content/uploads/2015/03/custom-login-logo.jpg/",
+      "permanent": false
+    },
+    {
+      "source": "/logo",
+      "destination": "https://chirocandy.com/wp-content/uploads/2015/03/custom-login-logo.jpg/",
+      "permanent": false
+    },
+    {
+      "source": "/7/",
+      "destination": "https://chirocandy.com/7-figure-practice-building/",
+      "permanent": false
+    },
+    {
+      "source": "/7",
+      "destination": "https://chirocandy.com/7-figure-practice-building/",
+      "permanent": false
+    },
+    {
+      "source": "/tolle/",
+      "destination": "https://chirocandy.com/7-figure-practice-building/",
+      "permanent": false
+    },
+    {
+      "source": "/tolle",
+      "destination": "https://chirocandy.com/7-figure-practice-building/",
+      "permanent": false
+    },
+    {
+      "source": "/schedule/",
+      "destination": "https://api.leadconnectorhq.com/widget/booking/SkKWlvkZrPeFJguQHylX",
+      "permanent": false
+    },
+    {
+      "source": "/schedule",
+      "destination": "https://api.leadconnectorhq.com/widget/booking/SkKWlvkZrPeFJguQHylX",
+      "permanent": false
+    },
+    {
+      "source": "/8/",
+      "destination": "https://chirocandy.com/7-figure-practice-building-part-2/",
+      "permanent": false
+    },
+    {
+      "source": "/8",
+      "destination": "https://chirocandy.com/7-figure-practice-building-part-2/",
+      "permanent": false
+    },
+    {
+      "source": "/tolle2/",
+      "destination": "https://chirocandy.com/7-figure-practice-building-part-2/",
+      "permanent": false
+    },
+    {
+      "source": "/tolle2",
+      "destination": "https://chirocandy.com/7-figure-practice-building-part-2/",
+      "permanent": false
+    },
+    {
+      "source": "/9/",
+      "destination": "https://chirocandy.com/podcast/marketing-from-the-heart/",
+      "permanent": false
+    },
+    {
+      "source": "/9",
+      "destination": "https://chirocandy.com/podcast/marketing-from-the-heart/",
+      "permanent": false
+    },
+    {
+      "source": "/snipermethod/",
+      "destination": "https://newpatientsnipermethod.com/?aff_code=sticker",
+      "permanent": false
+    },
+    {
+      "source": "/snipermethod",
+      "destination": "https://newpatientsnipermethod.com/?aff_code=sticker",
+      "permanent": false
+    },
+    {
+      "source": "/10/",
+      "destination": "https://go.chirocandy.com/10",
+      "permanent": false
+    },
+    {
+      "source": "/10",
+      "destination": "https://go.chirocandy.com/10",
+      "permanent": false
+    },
+    {
+      "source": "/11/",
+      "destination": "https://chirocandy.com/podcast/establishing-yourself-as-the-authority/",
+      "permanent": false
+    },
+    {
+      "source": "/11",
+      "destination": "https://chirocandy.com/podcast/establishing-yourself-as-the-authority/",
+      "permanent": false
+    },
+    {
+      "source": "/ed/",
+      "destination": "https://chirocandy.com/podcast/establishing-yourself-as-the-authority/",
+      "permanent": false
+    },
+    {
+      "source": "/ed",
+      "destination": "https://chirocandy.com/podcast/establishing-yourself-as-the-authority/",
+      "permanent": false
+    },
+    {
+      "source": "/12/",
+      "destination": "https://chirocandy.com/podcast/how-to-increase-your-pva/",
+      "permanent": false
+    },
+    {
+      "source": "/12",
+      "destination": "https://chirocandy.com/podcast/how-to-increase-your-pva/",
+      "permanent": false
+    },
+    {
+      "source": "/13/",
+      "destination": "https://chirocandy.com/podcast/tips-for-building-a-practice-from-scratch/",
+      "permanent": false
+    },
+    {
+      "source": "/13",
+      "destination": "https://chirocandy.com/podcast/tips-for-building-a-practice-from-scratch/",
+      "permanent": false
+    },
+    {
+      "source": "/14/",
+      "destination": "https://chirocandy.com/podcast/being-great/",
+      "permanent": false
+    },
+    {
+      "source": "/14",
+      "destination": "https://chirocandy.com/podcast/being-great/",
+      "permanent": false
+    },
+    {
+      "source": "/15/",
+      "destination": "https://chirocandy.com/podcast/marketing-mindset/",
+      "permanent": false
+    },
+    {
+      "source": "/15",
+      "destination": "https://chirocandy.com/podcast/marketing-mindset/",
+      "permanent": false
+    },
+    {
+      "source": "/ads/",
+      "destination": "https://www.1shoppingcart.com/app/?Clk=3239094",
+      "permanent": false
+    },
+    {
+      "source": "/ads",
+      "destination": "https://www.1shoppingcart.com/app/?Clk=3239094",
+      "permanent": false
+    },
+    {
+      "source": "/16/",
+      "destination": "https://chirocandy.com/podcast/effective-chiropractic-advertising/",
+      "permanent": false
+    },
+    {
+      "source": "/16",
+      "destination": "https://chirocandy.com/podcast/effective-chiropractic-advertising/",
+      "permanent": false
+    },
+    {
+      "source": "/17/",
+      "destination": "https://chirocandy.com/podcast/dynamic-dinner/",
+      "permanent": false
+    },
+    {
+      "source": "/17",
+      "destination": "https://chirocandy.com/podcast/dynamic-dinner/",
+      "permanent": false
+    },
+    {
+      "source": "/18/",
+      "destination": "https://chirocandy.com/podcast/writing-a-book/",
+      "permanent": false
+    },
+    {
+      "source": "/18",
+      "destination": "https://chirocandy.com/podcast/writing-a-book/",
+      "permanent": false
+    },
+    {
+      "source": "/19/",
+      "destination": "https://chirocandy.com/podcast/3-simple-steps-for-marketing/",
+      "permanent": false
+    },
+    {
+      "source": "/19",
+      "destination": "https://chirocandy.com/podcast/3-simple-steps-for-marketing/",
+      "permanent": false
+    },
+    {
+      "source": "/20/",
+      "destination": "https://chirocandy.com/podcast/posture-by-design/",
+      "permanent": false
+    },
+    {
+      "source": "/20",
+      "destination": "https://chirocandy.com/podcast/posture-by-design/",
+      "permanent": false
+    },
+    {
+      "source": "/21/",
+      "destination": "https://chirocandy.com/podcast/worldwide-influence/",
+      "permanent": false
+    },
+    {
+      "source": "/21",
+      "destination": "https://chirocandy.com/podcast/worldwide-influence/",
+      "permanent": false
+    },
+    {
+      "source": "/22/",
+      "destination": "https://chirocandy.com/podcast/chiropractic-financial-freedom/",
+      "permanent": false
+    },
+    {
+      "source": "/22",
+      "destination": "https://chirocandy.com/podcast/chiropractic-financial-freedom/",
+      "permanent": false
+    },
+    {
+      "source": "/23/",
+      "destination": "https://chirocandy.com/podcast/land-your-first-professional-sports-team/",
+      "permanent": false
+    },
+    {
+      "source": "/23",
+      "destination": "https://chirocandy.com/podcast/land-your-first-professional-sports-team/",
+      "permanent": false
+    },
+    {
+      "source": "/postureexpert/",
+      "destination": "https://www.mcssl.com/app/?Clk=5455898",
+      "permanent": false
+    },
+    {
+      "source": "/postureexpert",
+      "destination": "https://www.mcssl.com/app/?Clk=5455898",
+      "permanent": false
+    },
+    {
+      "source": "/podcastwebinar/",
+      "destination": "https://thechiropracticphilanthropist.com/TCPLaborWeekWebinar",
+      "permanent": false
+    },
+    {
+      "source": "/podcastwebinar",
+      "destination": "https://thechiropracticphilanthropist.com/TCPLaborWeekWebinar",
+      "permanent": false
+    },
+    {
+      "source": "/24/",
+      "destination": "https://chirocandy.com/podcast/supercharge-your-practice-and-profits-podcasting/",
+      "permanent": false
+    },
+    {
+      "source": "/24",
+      "destination": "https://chirocandy.com/podcast/supercharge-your-practice-and-profits-podcasting/",
+      "permanent": false
+    },
+    {
+      "source": "/25/",
+      "destination": "https://chirocandy.com/podcast/automate-your-marketing/",
+      "permanent": false
+    },
+    {
+      "source": "/25",
+      "destination": "https://chirocandy.com/podcast/automate-your-marketing/",
+      "permanent": false
+    },
+    {
+      "source": "/26/",
+      "destination": "https://chirocandy.com/podcast/communicating-the-power-of-a-chiropractic-adjustment/",
+      "permanent": false
+    },
+    {
+      "source": "/26",
+      "destination": "https://chirocandy.com/podcast/communicating-the-power-of-a-chiropractic-adjustment/",
+      "permanent": false
+    },
+    {
+      "source": "/27/",
+      "destination": "https://chirocandy.com/podcast/helping-patients-sleep-smarter/",
+      "permanent": false
+    },
+    {
+      "source": "/27",
+      "destination": "https://chirocandy.com/podcast/helping-patients-sleep-smarter/",
+      "permanent": false
+    },
+    {
+      "source": "/28/",
+      "destination": "https://chirocandy.com/podcast/next-generation-chiropractor/",
+      "permanent": false
+    },
+    {
+      "source": "/28",
+      "destination": "https://chirocandy.com/podcast/next-generation-chiropractor/",
+      "permanent": false
+    },
+    {
+      "source": "/29/",
+      "destination": "https://chirocandy.com/podcast/the-message-of-chiropractic/",
+      "permanent": false
+    },
+    {
+      "source": "/29",
+      "destination": "https://chirocandy.com/podcast/the-message-of-chiropractic/",
+      "permanent": false
+    },
+    {
+      "source": "/32/",
+      "destination": "https://chirocandy.com/podcast/rediscovering-your-chiropractic-purpose/",
+      "permanent": false
+    },
+    {
+      "source": "/32",
+      "destination": "https://chirocandy.com/podcast/rediscovering-your-chiropractic-purpose/",
+      "permanent": false
+    },
+    {
+      "source": "/evolved/",
+      "destination": "https://undergroundx.isrefer.com/go/evolve/billysticker/",
+      "permanent": false
+    },
+    {
+      "source": "/evolved",
+      "destination": "https://undergroundx.isrefer.com/go/evolve/billysticker/",
+      "permanent": false
+    },
+    {
+      "source": "/33/",
+      "destination": "https://chirocandy.com/podcast/5-star-reputation-management/",
+      "permanent": false
+    },
+    {
+      "source": "/33",
+      "destination": "https://chirocandy.com/podcast/5-star-reputation-management/",
+      "permanent": false
+    },
+    {
+      "source": "/scottsmith/",
+      "destination": "https://www.worldtouchcompany.com/chirocandy",
+      "permanent": false
+    },
+    {
+      "source": "/scottsmith",
+      "destination": "https://www.worldtouchcompany.com/chirocandy",
+      "permanent": false
+    },
+    {
+      "source": "/details/",
+      "destination": "https://archive.aweber.com/awlist3901407/BroSH/h/_Still_Want_to_Write_A_Book_.htm",
+      "permanent": false
+    },
+    {
+      "source": "/details",
+      "destination": "https://archive.aweber.com/awlist3901407/BroSH/h/_Still_Want_to_Write_A_Book_.htm",
+      "permanent": false
+    },
+    {
+      "source": "/34/",
+      "destination": "https://chirocandy.com/podcast/3-keys-of-a-successful-chiropractor/",
+      "permanent": false
+    },
+    {
+      "source": "/34",
+      "destination": "https://chirocandy.com/podcast/3-keys-of-a-successful-chiropractor/",
+      "permanent": false
+    },
+    {
+      "source": "/31/",
+      "destination": "https://chirocandy.com/podcast/10-steps-to-building-a-million-dollar-chiropractic-practice/",
+      "permanent": false
+    },
+    {
+      "source": "/31",
+      "destination": "https://chirocandy.com/podcast/10-steps-to-building-a-million-dollar-chiropractic-practice/",
+      "permanent": false
+    },
+    {
+      "source": "/transform/",
+      "destination": "https://cl153.isrefer.com/go/tpwftv/bist01",
+      "permanent": false
+    },
+    {
+      "source": "/transform",
+      "destination": "https://cl153.isrefer.com/go/tpwftv/bist01",
+      "permanent": false
+    },
+    {
+      "source": "/35/",
+      "destination": "https://chirocandy.com/podcast/transform-power-workshops/",
+      "permanent": false
+    },
+    {
+      "source": "/35",
+      "destination": "https://chirocandy.com/podcast/transform-power-workshops/",
+      "permanent": false
+    },
+    {
+      "source": "/36/",
+      "destination": "https://chirocandy.com/podcast/evolved-enterprise/",
+      "permanent": false
+    },
+    {
+      "source": "/36",
+      "destination": "https://chirocandy.com/podcast/evolved-enterprise/",
+      "permanent": false
+    },
+    {
+      "source": "/37/",
+      "destination": "https://chirocandy.com/podcast/3-essential-steps-to-grow-your-impact/",
+      "permanent": false
+    },
+    {
+      "source": "/37",
+      "destination": "https://chirocandy.com/podcast/3-essential-steps-to-grow-your-impact/",
+      "permanent": false
+    },
+    {
+      "source": "/facebooktips/",
+      "destination": "https://sticker.clickfunnels.com/c4-optin",
+      "permanent": false
+    },
+    {
+      "source": "/facebooktips",
+      "destination": "https://sticker.clickfunnels.com/c4-optin",
+      "permanent": false
+    },
+    {
+      "source": "/38/",
+      "destination": "https://chirocandy.com/podcast/facebook-ad-campaign/",
+      "permanent": false
+    },
+    {
+      "source": "/38",
+      "destination": "https://chirocandy.com/podcast/facebook-ad-campaign/",
+      "permanent": false
+    },
+    {
+      "source": "/39/",
+      "destination": "https://chirocandy.com/podcast/5-factors-of-health/",
+      "permanent": false
+    },
+    {
+      "source": "/39",
+      "destination": "https://chirocandy.com/podcast/5-factors-of-health/",
+      "permanent": false
+    },
+    {
+      "source": "/hangout/",
+      "destination": "https://chirocandy.com/hangouts/",
+      "permanent": false
+    },
+    {
+      "source": "/hangout",
+      "destination": "https://chirocandy.com/hangouts/",
+      "permanent": false
+    },
+    {
+      "source": "/40/",
+      "destination": "https://chirocandy.com/podcast/chiropractic-philosophy/",
+      "permanent": false
+    },
+    {
+      "source": "/40",
+      "destination": "https://chirocandy.com/podcast/chiropractic-philosophy/",
+      "permanent": false
+    },
+    {
+      "source": "/cod/",
+      "destination": "https://chirocandy.com/c4/?ap_id=cod",
+      "permanent": false
+    },
+    {
+      "source": "/cod",
+      "destination": "https://chirocandy.com/c4/?ap_id=cod",
+      "permanent": false
+    },
+    {
+      "source": "/41/",
+      "destination": "https://chirocandy.com/podcast/mens-style/",
+      "permanent": false
+    },
+    {
+      "source": "/41",
+      "destination": "https://chirocandy.com/podcast/mens-style/",
+      "permanent": false
+    },
+    {
+      "source": "/42/",
+      "destination": "https://chirocandy.com/podcast/blueprint-to-neuropathy/",
+      "permanent": false
+    },
+    {
+      "source": "/42",
+      "destination": "https://chirocandy.com/podcast/blueprint-to-neuropathy/",
+      "permanent": false
+    },
+    {
+      "source": "/a-z/",
+      "destination": "https://chirocandy.com/blog/businessorjob/",
+      "permanent": false
+    },
+    {
+      "source": "/a-z",
+      "destination": "https://chirocandy.com/blog/businessorjob/",
+      "permanent": false
+    },
+    {
+      "source": "/43/",
+      "destination": "https://chirocandy.com/podcast/successful-2016/",
+      "permanent": false
+    },
+    {
+      "source": "/43",
+      "destination": "https://chirocandy.com/podcast/successful-2016/",
+      "permanent": false
+    },
+    {
+      "source": "/44/",
+      "destination": "https://chirocandy.com/podcast/purpose-bigger-than-your-fears/",
+      "permanent": false
+    },
+    {
+      "source": "/44",
+      "destination": "https://chirocandy.com/podcast/purpose-bigger-than-your-fears/",
+      "permanent": false
+    },
+    {
+      "source": "/45/",
+      "destination": "https://chirocandy.com/podcast/chiropractic-patient-referrals-from-medical-doctors/",
+      "permanent": false
+    },
+    {
+      "source": "/45",
+      "destination": "https://chirocandy.com/podcast/chiropractic-patient-referrals-from-medical-doctors/",
+      "permanent": false
+    },
+    {
+      "source": "/46/",
+      "destination": "https://chirocandy.com/podcast/chiropractic-the-documentary/",
+      "permanent": false
+    },
+    {
+      "source": "/46",
+      "destination": "https://chirocandy.com/podcast/chiropractic-the-documentary/",
+      "permanent": false
+    },
+    {
+      "source": "/47/",
+      "destination": "https://chirocandy.com/podcast/3-facebook-marketing-essentials/",
+      "permanent": false
+    },
+    {
+      "source": "/47",
+      "destination": "https://chirocandy.com/podcast/3-facebook-marketing-essentials/",
+      "permanent": false
+    },
+    {
+      "source": "/48/",
+      "destination": "https://chirocandy.com/podcast/chiropractic-mastery/",
+      "permanent": false
+    },
+    {
+      "source": "/48",
+      "destination": "https://chirocandy.com/podcast/chiropractic-mastery/",
+      "permanent": false
+    },
+    {
+      "source": "/cpe/",
+      "destination": "https://www.mcssl.com/app/?Imp=5455891",
+      "permanent": false
+    },
+    {
+      "source": "/cpe",
+      "destination": "https://www.mcssl.com/app/?Imp=5455891",
+      "permanent": false
+    },
+    {
+      "source": "/49/",
+      "destination": "https://chirocandy.com/podcast/saving-lives/",
+      "permanent": false
+    },
+    {
+      "source": "/49",
+      "destination": "https://chirocandy.com/podcast/saving-lives/",
+      "permanent": false
+    },
+    {
+      "source": "/cpe-live/",
+      "destination": "https://www.mcssl.com/app/?Clk=5455899",
+      "permanent": false
+    },
+    {
+      "source": "/cpe-live",
+      "destination": "https://www.mcssl.com/app/?Clk=5455899",
+      "permanent": false
+    },
+    {
+      "source": "/50/",
+      "destination": "https://chirocandy.com/podcast/spinal-care-workshops/",
+      "permanent": false
+    },
+    {
+      "source": "/50",
+      "destination": "https://chirocandy.com/podcast/spinal-care-workshops/",
+      "permanent": false
+    },
+    {
+      "source": "/tory-eval/",
+      "destination": "https://www.winnersedgeconsulting.com/dr-eval-page/",
+      "permanent": false
+    },
+    {
+      "source": "/tory-eval",
+      "destination": "https://www.winnersedgeconsulting.com/dr-eval-page/",
+      "permanent": false
+    },
+    {
+      "source": "/51/",
+      "destination": "https://chirocandy.com/podcast/growth-in-your-practice/",
+      "permanent": false
+    },
+    {
+      "source": "/51",
+      "destination": "https://chirocandy.com/podcast/growth-in-your-practice/",
+      "permanent": false
+    },
+    {
+      "source": "/52/",
+      "destination": "https://chirocandy.com/podcast/growth-in-your-practice2/",
+      "permanent": false
+    },
+    {
+      "source": "/52",
+      "destination": "https://chirocandy.com/podcast/growth-in-your-practice2/",
+      "permanent": false
+    },
+    {
+      "source": "/booklaunch/",
+      "destination": "https://www.surveymonkey.com/r/6G7Q5MT",
+      "permanent": false
+    },
+    {
+      "source": "/booklaunch",
+      "destination": "https://www.surveymonkey.com/r/6G7Q5MT",
+      "permanent": false
+    },
+    {
+      "source": "/53/",
+      "destination": "https://chirocandy.com/podcast/chiropractic-life-coach/",
+      "permanent": false
+    },
+    {
+      "source": "/53",
+      "destination": "https://chirocandy.com/podcast/chiropractic-life-coach/",
+      "permanent": false
+    },
+    {
+      "source": "/54/",
+      "destination": "https://chirocandy.com/podcast/facebook-marketing-strategies/",
+      "permanent": false
+    },
+    {
+      "source": "/54",
+      "destination": "https://chirocandy.com/podcast/facebook-marketing-strategies/",
+      "permanent": false
+    },
+    {
+      "source": "/patientfunnel/",
+      "destination": "https://members.perfectpatientfunnel.com/refer/?ref=4",
+      "permanent": false
+    },
+    {
+      "source": "/patientfunnel",
+      "destination": "https://members.perfectpatientfunnel.com/refer/?ref=4",
+      "permanent": false
+    },
+    {
+      "source": "/56/",
+      "destination": "https://chirocandy.com/podcast/visit-number-dc-models-going-extinct/",
+      "permanent": false
+    },
+    {
+      "source": "/56",
+      "destination": "https://chirocandy.com/podcast/visit-number-dc-models-going-extinct/",
+      "permanent": false
+    },
+    {
+      "source": "/55/",
+      "destination": "https://chirocandy.com/podcast/5-disney-success-principles/",
+      "permanent": false
+    },
+    {
+      "source": "/55",
+      "destination": "https://chirocandy.com/podcast/5-disney-success-principles/",
+      "permanent": false
+    },
+    {
+      "source": "/57/",
+      "destination": "https://chirocandy.com/podcast/database-marketing/",
+      "permanent": false
+    },
+    {
+      "source": "/57",
+      "destination": "https://chirocandy.com/podcast/database-marketing/",
+      "permanent": false
+    },
+    {
+      "source": "/58/",
+      "destination": "https://chirocandy.com/podcast/the-best-adjustement-is-above-your-atlas/",
+      "permanent": false
+    },
+    {
+      "source": "/58",
+      "destination": "https://chirocandy.com/podcast/the-best-adjustement-is-above-your-atlas/",
+      "permanent": false
+    },
+    {
+      "source": "/59/",
+      "destination": "https://chirocandy.com/podcast/part-2-the-best-adjustement-is-above-your-atlas/",
+      "permanent": false
+    },
+    {
+      "source": "/59",
+      "destination": "https://chirocandy.com/podcast/part-2-the-best-adjustement-is-above-your-atlas/",
+      "permanent": false
+    },
+    {
+      "source": "/60/",
+      "destination": "https://chirocandy.com/podcast/chiropractic-world-domination/",
+      "permanent": false
+    },
+    {
+      "source": "/60",
+      "destination": "https://chirocandy.com/podcast/chiropractic-world-domination/",
+      "permanent": false
+    },
+    {
+      "source": "/61/",
+      "destination": "https://chirocandy.com/podcast/trauma-toxins-thoughts/",
+      "permanent": false
+    },
+    {
+      "source": "/61",
+      "destination": "https://chirocandy.com/podcast/trauma-toxins-thoughts/",
+      "permanent": false
+    },
+    {
+      "source": "/62/",
+      "destination": "https://chirocandy.com/podcast/designing-your-ideal-chiropractic-practice/",
+      "permanent": false
+    },
+    {
+      "source": "/62",
+      "destination": "https://chirocandy.com/podcast/designing-your-ideal-chiropractic-practice/",
+      "permanent": false
+    },
+    {
+      "source": "/63/",
+      "destination": "https://chirocandy.com/podcast/chiropractic-critical-mass/",
+      "permanent": false
+    },
+    {
+      "source": "/63",
+      "destination": "https://chirocandy.com/podcast/chiropractic-critical-mass/",
+      "permanent": false
+    },
+    {
+      "source": "/64/",
+      "destination": "https://chirocandy.com/podcast/patient-food-testing/",
+      "permanent": false
+    },
+    {
+      "source": "/64",
+      "destination": "https://chirocandy.com/podcast/patient-food-testing/",
+      "permanent": false
+    },
+    {
+      "source": "/65/",
+      "destination": "https://chirocandy.com/podcast/closing-more-from-talks/",
+      "permanent": false
+    },
+    {
+      "source": "/65",
+      "destination": "https://chirocandy.com/podcast/closing-more-from-talks/",
+      "permanent": false
+    },
+    {
+      "source": "/jetpack/",
+      "destination": "https://cl153.isrefer.com/go/jpcmil/bist01",
+      "permanent": false
+    },
+    {
+      "source": "/jetpack",
+      "destination": "https://cl153.isrefer.com/go/jpcmil/bist01",
+      "permanent": false
+    },
+    {
+      "source": "/66/",
+      "destination": "https://chirocandy.com/podcast/attraction-conversion-retention-wellness/",
+      "permanent": false
+    },
+    {
+      "source": "/66",
+      "destination": "https://chirocandy.com/podcast/attraction-conversion-retention-wellness/",
+      "permanent": false
+    },
+    {
+      "source": "/67/",
+      "destination": "https://chirocandy.com/podcast/closing-more-patients/",
+      "permanent": false
+    },
+    {
+      "source": "/67",
+      "destination": "https://chirocandy.com/podcast/closing-more-patients/",
+      "permanent": false
+    },
+    {
+      "source": "/68/",
+      "destination": "https://chirocandy.com/podcast/private-practice-millionaire/",
+      "permanent": false
+    },
+    {
+      "source": "/68",
+      "destination": "https://chirocandy.com/podcast/private-practice-millionaire/",
+      "permanent": false
+    },
+    {
+      "source": "/69/",
+      "destination": "https://chirocandy.com/podcast/chiropractic-millionaire-maker/",
+      "permanent": false
+    },
+    {
+      "source": "/69",
+      "destination": "https://chirocandy.com/podcast/chiropractic-millionaire-maker/",
+      "permanent": false
+    },
+    {
+      "source": "/70/",
+      "destination": "https://chirocandy.com/podcast/chiropractic-millionaire-maker-part2/",
+      "permanent": false
+    },
+    {
+      "source": "/70",
+      "destination": "https://chirocandy.com/podcast/chiropractic-millionaire-maker-part2/",
+      "permanent": false
+    },
+    {
+      "source": "/71/",
+      "destination": "https://chirocandy.com/podcast/chiropractic-millionaire-maker-part3/",
+      "permanent": false
+    },
+    {
+      "source": "/71",
+      "destination": "https://chirocandy.com/podcast/chiropractic-millionaire-maker-part3/",
+      "permanent": false
+    },
+    {
+      "source": "/72/",
+      "destination": "https://chirocandy.com/podcast/stop-selling/",
+      "permanent": false
+    },
+    {
+      "source": "/72",
+      "destination": "https://chirocandy.com/podcast/stop-selling/",
+      "permanent": false
+    },
+    {
+      "source": "/73/",
+      "destination": "https://chirocandy.com/podcast/get-amped/",
+      "permanent": false
+    },
+    {
+      "source": "/73",
+      "destination": "https://chirocandy.com/podcast/get-amped/",
+      "permanent": false
+    },
+    {
+      "source": "/write/",
+      "destination": "https://dcinstantinfluencer.com/go",
+      "permanent": true
+    },
+    {
+      "source": "/write",
+      "destination": "https://dcinstantinfluencer.com/go",
+      "permanent": true
+    },
+    {
+      "source": "/74/",
+      "destination": "https://chirocandy.com/understanding-facebook-live/",
+      "permanent": true
+    },
+    {
+      "source": "/74",
+      "destination": "https://chirocandy.com/understanding-facebook-live/",
+      "permanent": true
+    },
+    {
+      "source": "/wowca1/",
+      "destination": "https://www.mcssl.com/app/?Clk=5537326",
+      "permanent": false
+    },
+    {
+      "source": "/wowca1",
+      "destination": "https://www.mcssl.com/app/?Clk=5537326",
+      "permanent": false
+    },
+    {
+      "source": "/wowca2/",
+      "destination": "https://www.mcssl.com/app/?Clk=5537325",
+      "permanent": true
+    },
+    {
+      "source": "/wowca2",
+      "destination": "https://www.mcssl.com/app/?Clk=5537325",
+      "permanent": true
+    },
+    {
+      "source": "/chirofunnels/",
+      "destination": "https://chirofunnelsecrets.com/webinar?affiliate_id=490314",
+      "permanent": true
+    },
+    {
+      "source": "/chirofunnels",
+      "destination": "https://chirofunnelsecrets.com/webinar?affiliate_id=490314",
+      "permanent": true
+    },
+    {
+      "source": "/75/",
+      "destination": "https://chirocandy.com/podcast/chiropractic-marketing-funnels/",
+      "permanent": true
+    },
+    {
+      "source": "/75",
+      "destination": "https://chirocandy.com/podcast/chiropractic-marketing-funnels/",
+      "permanent": true
+    },
+    {
+      "source": "/76/",
+      "destination": "https://chirocandy.com/podcast/increasing-your-pva/",
+      "permanent": false
+    },
+    {
+      "source": "/76",
+      "destination": "https://chirocandy.com/podcast/increasing-your-pva/",
+      "permanent": false
+    },
+    {
+      "source": "/77/",
+      "destination": "https://chirocandy.com/podcast/4-pillars-of-chiropractic-success/",
+      "permanent": true
+    },
+    {
+      "source": "/77",
+      "destination": "https://chirocandy.com/podcast/4-pillars-of-chiropractic-success/",
+      "permanent": true
+    },
+    {
+      "source": "/78/",
+      "destination": "https://chirocandy.com/podcast/why-i-do-what-i-do/",
+      "permanent": false
+    },
+    {
+      "source": "/78",
+      "destination": "https://chirocandy.com/podcast/why-i-do-what-i-do/",
+      "permanent": false
+    },
+    {
+      "source": "/freedcsbook/",
+      "destination": "https://dotcomsecretsbook.com/get-it-free?cf_affiliate_id=389211&affiliate_id=389211",
+      "permanent": true
+    },
+    {
+      "source": "/freedcsbook",
+      "destination": "https://dotcomsecretsbook.com/get-it-free?cf_affiliate_id=389211&affiliate_id=389211",
+      "permanent": true
+    },
+    {
+      "source": "/c4/",
+      "destination": "https://c4.chirocandy.com/c4notavailable",
+      "permanent": true
+    },
+    {
+      "source": "/c4",
+      "destination": "https://c4.chirocandy.com/c4notavailable",
+      "permanent": true
+    },
+    {
+      "source": "/79/",
+      "destination": "https://chirocandy.com/podcast/visit-number-dc-models-going-extinct-best-of/",
+      "permanent": false
+    },
+    {
+      "source": "/79",
+      "destination": "https://chirocandy.com/podcast/visit-number-dc-models-going-extinct-best-of/",
+      "permanent": false
+    },
+    {
+      "source": "/80/",
+      "destination": "https://chirocandy.com/podcast/chiropractic-relationship-marketing/",
+      "permanent": true
+    },
+    {
+      "source": "/80",
+      "destination": "https://chirocandy.com/podcast/chiropractic-relationship-marketing/",
+      "permanent": true
+    },
+    {
+      "source": "/c4life/",
+      "destination": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8GBZC6G83KLPN",
+      "permanent": true
+    },
+    {
+      "source": "/c4life",
+      "destination": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8GBZC6G83KLPN",
+      "permanent": true
+    },
+    {
+      "source": "/81/",
+      "destination": "https://chirocandy.com/podcast/remarkable-chiropractic-practice/",
+      "permanent": false
+    },
+    {
+      "source": "/81",
+      "destination": "https://chirocandy.com/podcast/remarkable-chiropractic-practice/",
+      "permanent": false
+    },
+    {
+      "source": "/headachefunnel/",
+      "destination": "https://go.billysticker.com/share-headache-funnel",
+      "permanent": false
+    },
+    {
+      "source": "/headachefunnel",
+      "destination": "https://go.billysticker.com/share-headache-funnel",
+      "permanent": false
+    },
+    {
+      "source": "/82/",
+      "destination": "https://chirocandy.com/podcast/get-uncomfortable/",
+      "permanent": false
+    },
+    {
+      "source": "/82",
+      "destination": "https://chirocandy.com/podcast/get-uncomfortable/",
+      "permanent": false
+    },
+    {
+      "source": "/fbchecklist/",
+      "destination": "https://go.billysticker.com/fbchecklist",
+      "permanent": true
+    },
+    {
+      "source": "/fbchecklist",
+      "destination": "https://go.billysticker.com/fbchecklist",
+      "permanent": true
+    },
+    {
+      "source": "/ward/",
+      "destination": "https://s3.amazonaws.com/billysticker/Facebook+Funnels+Webinar_Handout794.pdf",
+      "permanent": false
+    },
+    {
+      "source": "/ward",
+      "destination": "https://s3.amazonaws.com/billysticker/Facebook+Funnels+Webinar_Handout794.pdf",
+      "permanent": false
+    },
+    {
+      "source": "/83/",
+      "destination": "https://chirocandy.com/podcast/beyond-the-pain/",
+      "permanent": true
+    },
+    {
+      "source": "/83",
+      "destination": "https://chirocandy.com/podcast/beyond-the-pain/",
+      "permanent": true
+    },
+    {
+      "source": "/84/",
+      "destination": "https://chirocandy.com/podcast/building-a-pediatric-practice/",
+      "permanent": true
+    },
+    {
+      "source": "/84",
+      "destination": "https://chirocandy.com/podcast/building-a-pediatric-practice/",
+      "permanent": true
+    },
+    {
+      "source": "/85/",
+      "destination": "https://chirocandy.com/podcast/facebook-marketing-secrets/",
+      "permanent": true
+    },
+    {
+      "source": "/85",
+      "destination": "https://chirocandy.com/podcast/facebook-marketing-secrets/",
+      "permanent": true
+    },
+    {
+      "source": "/86/",
+      "destination": "https://chirocandy.com/podcast/video-marketing-essentials/",
+      "permanent": false
+    },
+    {
+      "source": "/86",
+      "destination": "https://chirocandy.com/podcast/video-marketing-essentials/",
+      "permanent": false
+    },
+    {
+      "source": "/atozvideos/",
+      "destination": "https://az_associate.ositracker.com/34859/3454",
+      "permanent": false
+    },
+    {
+      "source": "/atozvideos",
+      "destination": "https://az_associate.ositracker.com/34859/3454",
+      "permanent": false
+    },
+    {
+      "source": "/perfectwebinar/",
+      "destination": "https://perfectwebinarsecrets.com/get-it-free?affiliate_id=389211&cf_affiliate_id=389211",
+      "permanent": false
+    },
+    {
+      "source": "/perfectwebinar",
+      "destination": "https://perfectwebinarsecrets.com/get-it-free?affiliate_id=389211&cf_affiliate_id=389211",
+      "permanent": false
+    },
+    {
+      "source": "/87/",
+      "destination": "https://chirocandy.com/podcast/chirosushi/",
+      "permanent": false
+    },
+    {
+      "source": "/87",
+      "destination": "https://chirocandy.com/podcast/chirosushi/",
+      "permanent": false
+    },
+    {
+      "source": "/88/",
+      "destination": "https://chirocandy.com/podcast/brain-based-wellness/",
+      "permanent": false
+    },
+    {
+      "source": "/88",
+      "destination": "https://chirocandy.com/podcast/brain-based-wellness/",
+      "permanent": false
+    },
+    {
+      "source": "/aweber/",
+      "destination": "https://chirocandy.aweber.com",
+      "permanent": true
+    },
+    {
+      "source": "/aweber",
+      "destination": "https://chirocandy.aweber.com",
+      "permanent": true
+    },
+    {
+      "source": "/89/",
+      "destination": "https://chirocandy.com/podcast/clarifying-communication/",
+      "permanent": false
+    },
+    {
+      "source": "/89",
+      "destination": "https://chirocandy.com/podcast/clarifying-communication/",
+      "permanent": false
+    },
+    {
+      "source": "/90/",
+      "destination": "https://chirocandy.com/podcast/tma-attack-on-chiropractic/",
+      "permanent": false
+    },
+    {
+      "source": "/90",
+      "destination": "https://chirocandy.com/podcast/tma-attack-on-chiropractic/",
+      "permanent": false
+    },
+    {
+      "source": "/challenge/",
+      "destination": "https://c4.chirocandy.com/marketing-challenge",
+      "permanent": true
+    },
+    {
+      "source": "/challenge",
+      "destination": "https://c4.chirocandy.com/marketing-challenge",
+      "permanent": true
+    },
+    {
+      "source": "/91/",
+      "destination": "https://chirocandy.com/podcast/chiropractic-marketing-challenge/",
+      "permanent": false
+    },
+    {
+      "source": "/91",
+      "destination": "https://chirocandy.com/podcast/chiropractic-marketing-challenge/",
+      "permanent": false
+    },
+    {
+      "source": "/92/",
+      "destination": "https://chirocandy.com/podcast/building-a-referable-practice/",
+      "permanent": false
+    },
+    {
+      "source": "/92",
+      "destination": "https://chirocandy.com/podcast/building-a-referable-practice/",
+      "permanent": false
+    },
+    {
+      "source": "/93/",
+      "destination": "https://chirocandy.com/podcast/email-marketing-for-chiropractors/",
+      "permanent": false
+    },
+    {
+      "source": "/93",
+      "destination": "https://chirocandy.com/podcast/email-marketing-for-chiropractors/",
+      "permanent": false
+    },
+    {
+      "source": "/94/",
+      "destination": "https://chirocandy.com/podcast/2017-marketing-plan/",
+      "permanent": false
+    },
+    {
+      "source": "/94",
+      "destination": "https://chirocandy.com/podcast/2017-marketing-plan/",
+      "permanent": false
+    },
+    {
+      "source": "/95/",
+      "destination": "https://chirocandy.com/podcast/7-reasons-write-a-book/",
+      "permanent": false
+    },
+    {
+      "source": "/95",
+      "destination": "https://chirocandy.com/podcast/7-reasons-write-a-book/",
+      "permanent": false
+    },
+    {
+      "source": "/facebooktraining/",
+      "destination": "https://go.billysticker.com/webinar-registration",
+      "permanent": false
+    },
+    {
+      "source": "/facebooktraining",
+      "destination": "https://go.billysticker.com/webinar-registration",
+      "permanent": false
+    },
+    {
+      "source": "/96/",
+      "destination": "https://chirocandy.com/podcast/nutrition-systems/",
+      "permanent": false
+    },
+    {
+      "source": "/96",
+      "destination": "https://chirocandy.com/podcast/nutrition-systems/",
+      "permanent": false
+    },
+    {
+      "source": "/helo/",
+      "destination": "https://my.worldgn.com/store/chirocandy",
+      "permanent": false
+    },
+    {
+      "source": "/helo",
+      "destination": "https://my.worldgn.com/store/chirocandy",
+      "permanent": false
+    },
+    {
+      "source": "/fbtraining/",
+      "destination": "https://go.billysticker.com/webinar-registration",
+      "permanent": false
+    },
+    {
+      "source": "/fbtraining",
+      "destination": "https://go.billysticker.com/webinar-registration",
+      "permanent": false
+    },
+    {
+      "source": "/vrmission/",
+      "destination": "https://at119.isrefer.com/go/vrmis/chirocandy/",
+      "permanent": false
+    },
+    {
+      "source": "/vrmission",
+      "destination": "https://at119.isrefer.com/go/vrmis/chirocandy/",
+      "permanent": false
+    },
+    {
+      "source": "/97/",
+      "destination": "https://chirocandy.com/podcast/vaccines_revealed/",
+      "permanent": false
+    },
+    {
+      "source": "/97",
+      "destination": "https://chirocandy.com/podcast/vaccines_revealed/",
+      "permanent": false
+    },
+    {
+      "source": "/vaccines-revealed/",
+      "destination": "https://chirocandy.com/podcast/vaccines_revealed/",
+      "permanent": false
+    },
+    {
+      "source": "/vaccines-revealed",
+      "destination": "https://chirocandy.com/podcast/vaccines_revealed/",
+      "permanent": false
+    },
+    {
+      "source": "/drjay/",
+      "destination": "https://yes.wellnessnow.co/webinar-registration",
+      "permanent": false
+    },
+    {
+      "source": "/drjay",
+      "destination": "https://yes.wellnessnow.co/webinar-registration",
+      "permanent": false
+    },
+    {
+      "source": "/98/",
+      "destination": "https://chirocandy.com/podcast/traits-successful-chiropractor/",
+      "permanent": false
+    },
+    {
+      "source": "/98",
+      "destination": "https://chirocandy.com/podcast/traits-successful-chiropractor/",
+      "permanent": false
+    },
+    {
+      "source": "/99/",
+      "destination": "https://chirocandy.com/podcast/ultimate-referral-machine/",
+      "permanent": false
+    },
+    {
+      "source": "/99",
+      "destination": "https://chirocandy.com/podcast/ultimate-referral-machine/",
+      "permanent": false
+    },
+    {
+      "source": "/100/",
+      "destination": "https://chirocandy.com/podcast/spinal-hygiene-movement/",
+      "permanent": true
+    },
+    {
+      "source": "/100",
+      "destination": "https://chirocandy.com/podcast/spinal-hygiene-movement/",
+      "permanent": true
+    },
+    {
+      "source": "/cruise/",
+      "destination": "https://chirocandycruise.com/2018",
+      "permanent": true
+    },
+    {
+      "source": "/cruise",
+      "destination": "https://chirocandycruise.com/2018",
+      "permanent": true
+    },
+    {
+      "source": "/101/",
+      "destination": "https://chirocandy.com/podcast/cruise-2018/",
+      "permanent": true
+    },
+    {
+      "source": "/101",
+      "destination": "https://chirocandy.com/podcast/cruise-2018/",
+      "permanent": true
+    },
+    {
+      "source": "/mastery/",
+      "destination": "https://patientmastery.com/enter?affiliate_id=576045",
+      "permanent": true
+    },
+    {
+      "source": "/mastery",
+      "destination": "https://patientmastery.com/enter?affiliate_id=576045",
+      "permanent": true
+    },
+    {
+      "source": "/102/",
+      "destination": "https://chirocandy.com/podcast/patient-centered-communication/",
+      "permanent": false
+    },
+    {
+      "source": "/102",
+      "destination": "https://chirocandy.com/podcast/patient-centered-communication/",
+      "permanent": false
+    },
+    {
+      "source": "/103/",
+      "destination": "https://chirocandy.com/podcast/practicing-abroad-part1/",
+      "permanent": false
+    },
+    {
+      "source": "/103",
+      "destination": "https://chirocandy.com/podcast/practicing-abroad-part1/",
+      "permanent": false
+    },
+    {
+      "source": "/104/",
+      "destination": "https://chirocandy.com/podcast/successful-chiropractor/",
+      "permanent": false
+    },
+    {
+      "source": "/104",
+      "destination": "https://chirocandy.com/podcast/successful-chiropractor/",
+      "permanent": false
+    },
+    {
+      "source": "/iheart/",
+      "destination": "https://www.iheart.com/show/263-ChiroCandy-The-Podcast-Of/",
+      "permanent": false
+    },
+    {
+      "source": "/iheart",
+      "destination": "https://www.iheart.com/show/263-ChiroCandy-The-Podcast-Of/",
+      "permanent": false
+    },
+    {
+      "source": "/105/",
+      "destination": "https://chirocandy.com/podcast/8-key-takeaways-funnel-hacking-live/",
+      "permanent": true
+    },
+    {
+      "source": "/105",
+      "destination": "https://chirocandy.com/podcast/8-key-takeaways-funnel-hacking-live/",
+      "permanent": true
+    },
+    {
+      "source": "/pnvideo1/",
+      "destination": "https://postureexpert.samcart.com/referral/xtZv4yDW/182233",
+      "permanent": true
+    },
+    {
+      "source": "/pnvideo1",
+      "destination": "https://postureexpert.samcart.com/referral/xtZv4yDW/182233",
+      "permanent": true
+    },
+    {
+      "source": "/pnvideo2/",
+      "destination": "https://postureexpert.samcart.com/referral/in7U6OrX/182233",
+      "permanent": false
+    },
+    {
+      "source": "/pnvideo2",
+      "destination": "https://postureexpert.samcart.com/referral/in7U6OrX/182233",
+      "permanent": false
+    },
+    {
+      "source": "/106/",
+      "destination": "https://chirocandy.com/podcast/practicing-abroad-part-2/",
+      "permanent": false
+    },
+    {
+      "source": "/106",
+      "destination": "https://chirocandy.com/podcast/practicing-abroad-part-2/",
+      "permanent": false
+    },
+    {
+      "source": "/pnvideo3/",
+      "destination": "https://postureexpert.samcart.com/referral/VwXl0ebQ/182233",
+      "permanent": false
+    },
+    {
+      "source": "/pnvideo3",
+      "destination": "https://postureexpert.samcart.com/referral/VwXl0ebQ/182233",
+      "permanent": false
+    },
+    {
+      "source": "/posturalneurologylive/",
+      "destination": "https://postureexpert.samcart.com/referral/Odh9xlhI/182233",
+      "permanent": false
+    },
+    {
+      "source": "/posturalneurologylive",
+      "destination": "https://postureexpert.samcart.com/referral/Odh9xlhI/182233",
+      "permanent": false
+    },
+    {
+      "source": "/107/",
+      "destination": "https://chirocandy.com/podcast/hugh-liddle-the-sales-wizard/",
+      "permanent": false
+    },
+    {
+      "source": "/107",
+      "destination": "https://chirocandy.com/podcast/hugh-liddle-the-sales-wizard/",
+      "permanent": false
+    },
+    {
+      "source": "/108/",
+      "destination": "https://chirocandy.com/podcast/creating-ultimate-authority/",
+      "permanent": false
+    },
+    {
+      "source": "/108",
+      "destination": "https://chirocandy.com/podcast/creating-ultimate-authority/",
+      "permanent": false
+    },
+    {
+      "source": "/cpnreopen/",
+      "destination": "https://postureexpert.samcart.com/referral/PEVSGVOH/182233",
+      "permanent": false
+    },
+    {
+      "source": "/cpnreopen",
+      "destination": "https://postureexpert.samcart.com/referral/PEVSGVOH/182233",
+      "permanent": false
+    },
+    {
+      "source": "/109/",
+      "destination": "https://chirocandy.com/podcast/big-idea-mentor/",
+      "permanent": true
+    },
+    {
+      "source": "/109",
+      "destination": "https://chirocandy.com/podcast/big-idea-mentor/",
+      "permanent": true
+    },
+    {
+      "source": "/110/",
+      "destination": "https://chirocandy.com/podcast/practice-automation/",
+      "permanent": false
+    },
+    {
+      "source": "/110",
+      "destination": "https://chirocandy.com/podcast/practice-automation/",
+      "permanent": false
+    },
+    {
+      "source": "/edlecara/",
+      "destination": "https://academy.edlecara.com/a/3625/rk9yT48Y",
+      "permanent": false
+    },
+    {
+      "source": "/edlecara",
+      "destination": "https://academy.edlecara.com/a/3625/rk9yT48Y",
+      "permanent": false
+    },
+    {
+      "source": "/111/",
+      "destination": "https://chirocandy.com/podcast/waiting-list-practice/",
+      "permanent": false
+    },
+    {
+      "source": "/111",
+      "destination": "https://chirocandy.com/podcast/waiting-list-practice/",
+      "permanent": false
+    },
+    {
+      "source": "/expertbook/",
+      "destination": "https://expertsecrets.com/?cf_affiliate_id=389211&affiliate_id=389211",
+      "permanent": false
+    },
+    {
+      "source": "/expertbook",
+      "destination": "https://expertsecrets.com/?cf_affiliate_id=389211&affiliate_id=389211",
+      "permanent": false
+    },
+    {
+      "source": "/expertsecrets/",
+      "destination": "https://expertsecrets.com/?cf_affiliate_id=389211&affiliate_id=389211",
+      "permanent": false
+    },
+    {
+      "source": "/expertsecrets",
+      "destination": "https://expertsecrets.com/?cf_affiliate_id=389211&affiliate_id=389211",
+      "permanent": false
+    },
+    {
+      "source": "/112/",
+      "destination": "https://chirocandy.com/podcast/branding-yourself-expert/",
+      "permanent": false
+    },
+    {
+      "source": "/112",
+      "destination": "https://chirocandy.com/podcast/branding-yourself-expert/",
+      "permanent": false
+    },
+    {
+      "source": "/113/",
+      "destination": "https://chirocandy.com/podcast/million-dollar-practice/",
+      "permanent": false
+    },
+    {
+      "source": "/113",
+      "destination": "https://chirocandy.com/podcast/million-dollar-practice/",
+      "permanent": false
+    },
+    {
+      "source": "/114/",
+      "destination": "https://chirocandy.com/podcast/chirosushi-summit-review/",
+      "permanent": false
+    },
+    {
+      "source": "/114",
+      "destination": "https://chirocandy.com/podcast/chirosushi-summit-review/",
+      "permanent": false
+    },
+    {
+      "source": "/fb-training/",
+      "destination": "https://go.billysticker.com/webinar-registration",
+      "permanent": true
+    },
+    {
+      "source": "/fb-training",
+      "destination": "https://go.billysticker.com/webinar-registration",
+      "permanent": true
+    },
+    {
+      "source": "/115/",
+      "destination": "https://chirocandy.com/podcast/brand-building/",
+      "permanent": false
+    },
+    {
+      "source": "/115",
+      "destination": "https://chirocandy.com/podcast/brand-building/",
+      "permanent": false
+    },
+    {
+      "source": "/116/",
+      "destination": "https://chirocandy.com/podcast/danny-veiga/",
+      "permanent": false
+    },
+    {
+      "source": "/116",
+      "destination": "https://chirocandy.com/podcast/danny-veiga/",
+      "permanent": false
+    },
+    {
+      "source": "/117/",
+      "destination": "https://chirocandy.com/podcast/stroke-chiropractic/",
+      "permanent": false
+    },
+    {
+      "source": "/117",
+      "destination": "https://chirocandy.com/podcast/stroke-chiropractic/",
+      "permanent": false
+    },
+    {
+      "source": "/118/",
+      "destination": "https://chirocandy.com/podcast/3-more-facebook-marketing-secrets/",
+      "permanent": true
+    },
+    {
+      "source": "/118",
+      "destination": "https://chirocandy.com/podcast/3-more-facebook-marketing-secrets/",
+      "permanent": true
+    },
+    {
+      "source": "/119/",
+      "destination": "https://chirocandy.com/podcast/success-self-image/",
+      "permanent": true
+    },
+    {
+      "source": "/119",
+      "destination": "https://chirocandy.com/podcast/success-self-image/",
+      "permanent": true
+    },
+    {
+      "source": "/challenge-access/",
+      "destination": "https://go.billysticker.com/challenge-home/e080c900eab",
+      "permanent": false
+    },
+    {
+      "source": "/challenge-access",
+      "destination": "https://go.billysticker.com/challenge-home/e080c900eab",
+      "permanent": false
+    },
+    {
+      "source": "/120/",
+      "destination": "https://chirocandy.com/podcast/storms-of-life/",
+      "permanent": false
+    },
+    {
+      "source": "/120",
+      "destination": "https://chirocandy.com/podcast/storms-of-life/",
+      "permanent": false
+    },
+    {
+      "source": "/121/",
+      "destination": "https://chirocandy.com/podcast/chiropractic-wealth-management/",
+      "permanent": false
+    },
+    {
+      "source": "/121",
+      "destination": "https://chirocandy.com/podcast/chiropractic-wealth-management/",
+      "permanent": false
+    },
+    {
+      "source": "/123/",
+      "destination": "https://chirocandy.com/podcast/beyond-bones/",
+      "permanent": false
+    },
+    {
+      "source": "/123",
+      "destination": "https://chirocandy.com/podcast/beyond-bones/",
+      "permanent": false
+    },
+    {
+      "source": "/122/",
+      "destination": "https://chirocandy.com/podcast/john-lee-dumas/",
+      "permanent": false
+    },
+    {
+      "source": "/122",
+      "destination": "https://chirocandy.com/podcast/john-lee-dumas/",
+      "permanent": false
+    },
+    {
+      "source": "/124/",
+      "destination": "https://chirocandy.com/podcast/dr-vince-leone/",
+      "permanent": false
+    },
+    {
+      "source": "/124",
+      "destination": "https://chirocandy.com/podcast/dr-vince-leone/",
+      "permanent": false
+    },
+    {
+      "source": "/affiliate-sign-up/",
+      "destination": "https://sticker.clickfunnels.com/affiliate-access11844171/045e328b9ef",
+      "permanent": false
+    },
+    {
+      "source": "/affiliate-sign-up",
+      "destination": "https://sticker.clickfunnels.com/affiliate-access11844171/045e328b9ef",
+      "permanent": false
+    },
+    {
+      "source": "/intake/",
+      "destination": "https://go.chirocandy.com/intake-form",
+      "permanent": false
+    },
+    {
+      "source": "/intake",
+      "destination": "https://go.chirocandy.com/intake-form",
+      "permanent": false
+    },
+    {
+      "source": "/125/",
+      "destination": "https://chirocandy.com/podcast/10-rules-for-success/",
+      "permanent": false
+    },
+    {
+      "source": "/125",
+      "destination": "https://chirocandy.com/podcast/10-rules-for-success/",
+      "permanent": false
+    },
+    {
+      "source": "/126/",
+      "destination": "https://chirocandy.com/podcast/corporate-wellness/",
+      "permanent": false
+    },
+    {
+      "source": "/126",
+      "destination": "https://chirocandy.com/podcast/corporate-wellness/",
+      "permanent": false
+    },
+    {
+      "source": "/127/",
+      "destination": "https://chirocandy.com/podcast/hurricane-harvey/",
+      "permanent": false
+    },
+    {
+      "source": "/127",
+      "destination": "https://chirocandy.com/podcast/hurricane-harvey/",
+      "permanent": false
+    },
+    {
+      "source": "/128/",
+      "destination": "https://chirocandy.com/podcast/128-new-facebook-marketing-strategy/",
+      "permanent": false
+    },
+    {
+      "source": "/128",
+      "destination": "https://chirocandy.com/podcast/128-new-facebook-marketing-strategy/",
+      "permanent": false
+    },
+    {
+      "source": "/129/",
+      "destination": "https://chirocandy.com/podcast/chirosummit/",
+      "permanent": false
+    },
+    {
+      "source": "/129",
+      "destination": "https://chirocandy.com/podcast/chirosummit/",
+      "permanent": false
+    },
+    {
+      "source": "/130/",
+      "destination": "https://chirocandy.com/podcast/chiro-ceo/",
+      "permanent": false
+    },
+    {
+      "source": "/130",
+      "destination": "https://chirocandy.com/podcast/chiro-ceo/",
+      "permanent": false
+    },
+    {
+      "source": "/131/",
+      "destination": "https://chirocandy.com/uncategorized/marketing-dream-practice/",
+      "permanent": false
+    },
+    {
+      "source": "/131",
+      "destination": "https://chirocandy.com/uncategorized/marketing-dream-practice/",
+      "permanent": false
+    },
+    {
+      "source": "/132/",
+      "destination": "https://chirocandy.com/podcast/how-to-10x-business/",
+      "permanent": false
+    },
+    {
+      "source": "/132",
+      "destination": "https://chirocandy.com/podcast/how-to-10x-business/",
+      "permanent": false
+    },
+    {
+      "source": "/133/",
+      "destination": "https://chirocandy.com/podcast/crushing-day-1-2-procedures/",
+      "permanent": false
+    },
+    {
+      "source": "/133",
+      "destination": "https://chirocandy.com/podcast/crushing-day-1-2-procedures/",
+      "permanent": false
+    },
+    {
+      "source": "/134/",
+      "destination": "https://chirocandy.com/podcast/art-of-story/",
+      "permanent": false
+    },
+    {
+      "source": "/134",
+      "destination": "https://chirocandy.com/podcast/art-of-story/",
+      "permanent": false
+    },
+    {
+      "source": "/marketingv2/",
+      "destination": "https://billysticker.com/",
+      "permanent": false
+    },
+    {
+      "source": "/marketingv2",
+      "destination": "https://billysticker.com/",
+      "permanent": false
+    },
+    {
+      "source": "/strategy/",
+      "destination": "https://calendly.com/andrewch",
+      "permanent": false
+    },
+    {
+      "source": "/strategy",
+      "destination": "https://calendly.com/andrewch",
+      "permanent": false
+    },
+    {
+      "source": "/videoedits/",
+      "destination": "https://form.jotform.com/billysticker/video-request-form",
+      "permanent": false
+    },
+    {
+      "source": "/videoedits",
+      "destination": "https://form.jotform.com/billysticker/video-request-form",
+      "permanent": false
+    },
+    {
+      "source": "/ebc/",
+      "destination": "https://c4.chirocandy.com/pdf-optin",
+      "permanent": false
+    },
+    {
+      "source": "/ebc",
+      "destination": "https://c4.chirocandy.com/pdf-optin",
+      "permanent": false
+    },
+    {
+      "source": "/138/",
+      "destination": "https://chirocandy.com/podcast/spinal-hygienist/",
+      "permanent": true
+    },
+    {
+      "source": "/138",
+      "destination": "https://chirocandy.com/podcast/spinal-hygienist/",
+      "permanent": true
+    },
+    {
+      "source": "/139/",
+      "destination": "https://chirocandy.com/podcast/3-reasons-facebook-ads-are-not-working/",
+      "permanent": true
+    },
+    {
+      "source": "/139",
+      "destination": "https://chirocandy.com/podcast/3-reasons-facebook-ads-are-not-working/",
+      "permanent": true
+    },
+    {
+      "source": "/spotify/",
+      "destination": "https://open.spotify.com/show/5q5bnNeMynDNBKI2cLPAVv?si=r97t4EK0T6SlysW9FpVhZQ",
+      "permanent": true
+    },
+    {
+      "source": "/spotify",
+      "destination": "https://open.spotify.com/show/5q5bnNeMynDNBKI2cLPAVv?si=r97t4EK0T6SlysW9FpVhZQ",
+      "permanent": true
+    },
+    {
+      "source": "/10xsecrets/",
+      "destination": "https://10xsecrets.com/masterclass?cf_affiliate_id=389211&affiliate_id=389211",
+      "permanent": true
+    },
+    {
+      "source": "/10xsecrets",
+      "destination": "https://10xsecrets.com/masterclass?cf_affiliate_id=389211&affiliate_id=389211",
+      "permanent": true
+    },
+    {
+      "source": "/140/",
+      "destination": "https://chirocandy.com/podcast/suck-selling/",
+      "permanent": false
+    },
+    {
+      "source": "/140",
+      "destination": "https://chirocandy.com/podcast/suck-selling/",
+      "permanent": false
+    },
+    {
+      "source": "/london10x/",
+      "destination": "https://go.billysticker.com/london10x",
+      "permanent": false
+    },
+    {
+      "source": "/london10x",
+      "destination": "https://go.billysticker.com/london10x",
+      "permanent": false
+    },
+    {
+      "source": "/success-stories/",
+      "destination": "https://www.chirocandymarketing.com/success-stories",
+      "permanent": false
+    },
+    {
+      "source": "/success-stories",
+      "destination": "https://www.chirocandymarketing.com/success-stories",
+      "permanent": false
+    },
+    {
+      "source": "/paris/",
+      "destination": "https://c4.chirocandy.com/pdf-optin",
+      "permanent": false
+    },
+    {
+      "source": "/paris",
+      "destination": "https://c4.chirocandy.com/pdf-optin",
+      "permanent": false
+    },
+    {
+      "source": "/success-summit/",
+      "destination": "https://c4.chirocandy.com/pdf-optin",
+      "permanent": false
+    },
+    {
+      "source": "/success-summit",
+      "destination": "https://c4.chirocandy.com/pdf-optin",
+      "permanent": false
+    },
+    {
+      "source": "/chirojobs/",
+      "destination": "https://chiropracticjobsonline.idevaffiliate.com/104.html",
+      "permanent": false
+    },
+    {
+      "source": "/chirojobs",
+      "destination": "https://chiropracticjobsonline.idevaffiliate.com/104.html",
+      "permanent": false
+    },
+    {
+      "source": "/cancel/",
+      "destination": "https://form.jotform.com/90085070103141",
+      "permanent": false
+    },
+    {
+      "source": "/cancel",
+      "destination": "https://form.jotform.com/90085070103141",
+      "permanent": false
+    },
+    {
+      "source": "/141/",
+      "destination": "https://chirocandy.com/podcast/holy-grail-business/",
+      "permanent": false
+    },
+    {
+      "source": "/141",
+      "destination": "https://chirocandy.com/podcast/holy-grail-business/",
+      "permanent": false
+    },
+    {
+      "source": "/tribe/",
+      "destination": "https://go.chirocandy.com/2025",
+      "permanent": false
+    },
+    {
+      "source": "/tribe",
+      "destination": "https://go.chirocandy.com/2025",
+      "permanent": false
+    },
+    {
+      "source": "/142/",
+      "destination": "https://chirocandy.com/podcast/142-how-to-succeed-with-facebook-marketing-series-part-1-with-billy-sticker/",
+      "permanent": true
+    },
+    {
+      "source": "/142",
+      "destination": "https://chirocandy.com/podcast/142-how-to-succeed-with-facebook-marketing-series-part-1-with-billy-sticker/",
+      "permanent": true
+    },
+    {
+      "source": "/funnels/",
+      "destination": "https://chirofunnelsecrets.com/webinar?affiliate_id=490314",
+      "permanent": false
+    },
+    {
+      "source": "/funnels",
+      "destination": "https://chirofunnelsecrets.com/webinar?affiliate_id=490314",
+      "permanent": false
+    },
+    {
+      "source": "/143/",
+      "destination": "https://chirocandy.com/podcast/143-chirofunnel-secrets-w-chad-woolner/",
+      "permanent": false
+    },
+    {
+      "source": "/143",
+      "destination": "https://chirocandy.com/podcast/143-chirofunnel-secrets-w-chad-woolner/",
+      "permanent": false
+    },
+    {
+      "source": "/144/",
+      "destination": "https://chirocandy.com/podcast/chasing-success/",
+      "permanent": false
+    },
+    {
+      "source": "/144",
+      "destination": "https://chirocandy.com/podcast/chasing-success/",
+      "permanent": false
+    },
+    {
+      "source": "/getnewpatients/",
+      "destination": "https://www.chirocandymarketing.com/getnewpatients",
+      "permanent": false
+    },
+    {
+      "source": "/getnewpatients",
+      "destination": "https://www.chirocandymarketing.com/getnewpatients",
+      "permanent": false
+    },
+    {
+      "source": "/callwithbilly/",
+      "destination": "https://calendly.com/billysticker/15-min-chirocandy-call",
+      "permanent": false
+    },
+    {
+      "source": "/callwithbilly",
+      "destination": "https://calendly.com/billysticker/15-min-chirocandy-call",
+      "permanent": false
+    },
+    {
+      "source": "/event/",
+      "destination": "https://form.jotform.com/90084301095147",
+      "permanent": false
+    },
+    {
+      "source": "/event",
+      "destination": "https://form.jotform.com/90084301095147",
+      "permanent": false
+    },
+    {
+      "source": "/callwithbrady/",
+      "destination": "https://go.oncehub.com/OneonOneStrategyCall",
+      "permanent": false
+    },
+    {
+      "source": "/callwithbrady",
+      "destination": "https://go.oncehub.com/OneonOneStrategyCall",
+      "permanent": false
+    },
+    {
+      "source": "/client-training/",
+      "destination": "https://cmbav42jzhkdmberlbuu.memberships.msgsndr.com/",
+      "permanent": false
+    },
+    {
+      "source": "/client-training",
+      "destination": "https://cmbav42jzhkdmberlbuu.memberships.msgsndr.com/",
+      "permanent": false
+    },
+    {
+      "source": "/lwp/",
+      "destination": "https://c4.chirocandy.com/pdf-optin",
+      "permanent": false
+    },
+    {
+      "source": "/lwp",
+      "destination": "https://c4.chirocandy.com/pdf-optin",
+      "permanent": false
+    },
+    {
+      "source": "/discover2020/",
+      "destination": "https://et151.isrefer.com/go/discover-2020/trp/",
+      "permanent": false
+    },
+    {
+      "source": "/discover2020",
+      "destination": "https://et151.isrefer.com/go/discover-2020/trp/",
+      "permanent": false
+    },
+    {
+      "source": "/review/",
+      "destination": "https://www.reviewtec.com/review-1475/chirocandy-marketing-llc",
+      "permanent": false
+    },
+    {
+      "source": "/review",
+      "destination": "https://www.reviewtec.com/review-1475/chirocandy-marketing-llc",
+      "permanent": false
+    },
+    {
+      "source": "/keto30/",
+      "destination": "https://cart.xenestalife.com/chiro/KETOPACKS/KETOOnDemandMonthlySupplyPreferred/",
+      "permanent": false
+    },
+    {
+      "source": "/keto30",
+      "destination": "https://cart.xenestalife.com/chiro/KETOPACKS/KETOOnDemandMonthlySupplyPreferred/",
+      "permanent": false
+    },
+    {
+      "source": "/keto/",
+      "destination": "https://cart.xenestalife.com/chiro/KETOPACKS/KETOOnDemandMonthlySupplyPreferred/",
+      "permanent": false
+    },
+    {
+      "source": "/keto",
+      "destination": "https://cart.xenestalife.com/chiro/KETOPACKS/KETOOnDemandMonthlySupplyPreferred/",
+      "permanent": false
+    },
+    {
+      "source": "/158/",
+      "destination": "https://chirocandy.com/podcast/158-how-to-dominate-social-media-marketing-without-discounting-services/",
+      "permanent": false
+    },
+    {
+      "source": "/158",
+      "destination": "https://chirocandy.com/podcast/158-how-to-dominate-social-media-marketing-without-discounting-services/",
+      "permanent": false
+    },
+    {
+      "source": "/dallasbootcamp/",
+      "destination": "https://ryanriederbootcamp.com/newpatientsfromtalksdallasbs",
+      "permanent": false
+    },
+    {
+      "source": "/dallasbootcamp",
+      "destination": "https://ryanriederbootcamp.com/newpatientsfromtalksdallasbs",
+      "permanent": false
+    },
+    {
+      "source": "/activecampaign/",
+      "destination": "https://www.activecampaign.com/?_r=E5U148YF",
+      "permanent": true
+    },
+    {
+      "source": "/activecampaign",
+      "destination": "https://www.activecampaign.com/?_r=E5U148YF",
+      "permanent": true
+    },
+    {
+      "source": "/marketing/",
+      "destination": "https://go.chirocandy.com/2025",
+      "permanent": true
+    },
+    {
+      "source": "/marketing",
+      "destination": "https://go.chirocandy.com/2025",
+      "permanent": true
+    },
+    {
+      "source": "/27fbads/",
+      "destination": "https://www.chiropracticmarketinguniversity.com/discover",
+      "permanent": false
+    },
+    {
+      "source": "/27fbads",
+      "destination": "https://www.chiropracticmarketinguniversity.com/discover",
+      "permanent": false
+    },
+    {
+      "source": "/parler/",
+      "destination": "https://www.chiropracticmarketinguniversity.com/scholarship",
+      "permanent": false
+    },
+    {
+      "source": "/parler",
+      "destination": "https://www.chiropracticmarketinguniversity.com/scholarship",
+      "permanent": false
+    },
+    {
+      "source": "/onboarding/",
+      "destination": "https://go.chirocandy.com/onboarding-call",
+      "permanent": false
+    },
+    {
+      "source": "/onboarding",
+      "destination": "https://go.chirocandy.com/onboarding-call",
+      "permanent": false
+    },
+    {
+      "source": "/zoom/",
+      "destination": "https://zoom.us/s/183793498",
+      "permanent": false
+    },
+    {
+      "source": "/zoom",
+      "destination": "https://zoom.us/s/183793498",
+      "permanent": false
+    },
+    {
+      "source": "/apply/",
+      "destination": "https://www.jotform.com/billysticker/careers",
+      "permanent": false
+    },
+    {
+      "source": "/apply",
+      "destination": "https://www.jotform.com/billysticker/careers",
+      "permanent": false
+    },
+    {
+      "source": "/callwithmichael/",
+      "destination": "https://api.leadconnectorhq.com/widget/booking/FhHziKhQUZGceSRL6P8s",
+      "permanent": false
+    },
+    {
+      "source": "/callwithmichael",
+      "destination": "https://api.leadconnectorhq.com/widget/booking/FhHziKhQUZGceSRL6P8s",
+      "permanent": false
+    },
+    {
+      "source": "/callwithamanda/",
+      "destination": "https://api.leadconnectorhq.com/widget/booking/KtP8NudSNwfirKy5Z3ol",
+      "permanent": false
+    },
+    {
+      "source": "/callwithamanda",
+      "destination": "https://api.leadconnectorhq.com/widget/booking/KtP8NudSNwfirKy5Z3ol",
+      "permanent": false
+    },
+    {
+      "source": "/callwithtravis/",
+      "destination": "https://calendly.com/schedule-with-travis/20min",
+      "permanent": false
+    },
+    {
+      "source": "/callwithtravis",
+      "destination": "https://calendly.com/schedule-with-travis/20min",
+      "permanent": false
+    },
+    {
+      "source": "/callwithmatt/",
+      "destination": "https://calendly.com/mattchirocandy/call-with-matt",
+      "permanent": false
+    },
+    {
+      "source": "/callwithmatt",
+      "destination": "https://calendly.com/mattchirocandy/call-with-matt",
+      "permanent": false
+    },
+    {
+      "source": "/callwithalex/",
+      "destination": "https://api.leadconnectorhq.com/widget/booking/oPu7su1TPsevv84Tthc9",
+      "permanent": false
+    },
+    {
+      "source": "/callwithalex",
+      "destination": "https://api.leadconnectorhq.com/widget/booking/oPu7su1TPsevv84Tthc9",
+      "permanent": false
+    },
+    {
+      "source": "/amped/",
+      "destination": "https://www.chirocandymarketing.com/tribe",
+      "permanent": false
+    },
+    {
+      "source": "/amped",
+      "destination": "https://www.chirocandymarketing.com/tribe",
+      "permanent": false
+    },
+    {
+      "source": "/video-brainstorm/",
+      "destination": "https://docs.google.com/spreadsheets/d/1op2qsTzvN3jTtw6yXm5c94m5CTaF2ia8eWynied5_jQ/edit?usp=sharing",
+      "permanent": false
+    },
+    {
+      "source": "/video-brainstorm",
+      "destination": "https://docs.google.com/spreadsheets/d/1op2qsTzvN3jTtw6yXm5c94m5CTaF2ia8eWynied5_jQ/edit?usp=sharing",
+      "permanent": false
+    },
+    {
+      "source": "/script/",
+      "destination": "https://drive.google.com/file/d/1BQqOUcRqq635NJkPAjKqcrYnHjGF-vge/view?usp=sharing",
+      "permanent": false
+    },
+    {
+      "source": "/script",
+      "destination": "https://drive.google.com/file/d/1BQqOUcRqq635NJkPAjKqcrYnHjGF-vge/view?usp=sharing",
+      "permanent": false
+    },
+    {
+      "source": "/callwithdeanna/",
+      "destination": "https://calendly.com/call-with-deanna/20min",
+      "permanent": false
+    },
+    {
+      "source": "/callwithdeanna",
+      "destination": "https://calendly.com/call-with-deanna/20min",
+      "permanent": false
+    },
+    {
+      "source": "/callwithandrew/",
+      "destination": "https://andrew.chirocandy.com/schedule-with-andrew",
+      "permanent": false
+    },
+    {
+      "source": "/callwithandrew",
+      "destination": "https://andrew.chirocandy.com/schedule-with-andrew",
+      "permanent": false
+    },
+    {
+      "source": "/sample-videos/",
+      "destination": "https://docs.google.com/spreadsheets/d/1YSGE1r1mHZZQbTFcNYyBiapO_k9aetNHlrU6WSAogV8/edit#gid=0",
+      "permanent": false
+    },
+    {
+      "source": "/sample-videos",
+      "destination": "https://docs.google.com/spreadsheets/d/1YSGE1r1mHZZQbTFcNYyBiapO_k9aetNHlrU6WSAogV8/edit#gid=0",
+      "permanent": false
+    },
+    {
+      "source": "/newclient/",
+      "destination": "https://go.chirocandy.com/newclient",
+      "permanent": false
+    },
+    {
+      "source": "/newclient",
+      "destination": "https://go.chirocandy.com/newclient",
+      "permanent": false
+    },
+    {
+      "source": "/callwithtaylor/",
+      "destination": "https://api.leadconnectorhq.com/widget/booking/2pp8E90lqTrV5byIeEqL",
+      "permanent": false
+    },
+    {
+      "source": "/callwithtaylor",
+      "destination": "https://api.leadconnectorhq.com/widget/booking/2pp8E90lqTrV5byIeEqL",
+      "permanent": false
+    },
+    {
+      "source": "/beta/",
+      "destination": "https://go.chirocandy.com/beta",
+      "permanent": false
+    },
+    {
+      "source": "/beta",
+      "destination": "https://go.chirocandy.com/beta",
+      "permanent": false
+    },
+    {
+      "source": "/connect/",
+      "destination": "https://leadsie.io/connect/320975508454884/manage",
+      "permanent": false
+    },
+    {
+      "source": "/connect",
+      "destination": "https://leadsie.io/connect/320975508454884/manage",
+      "permanent": false
+    },
+    {
+      "source": "/clipscribe/",
+      "destination": "https://clipscribe.com/join-now/?ref=443",
+      "permanent": false
+    },
+    {
+      "source": "/clipscribe",
+      "destination": "https://clipscribe.com/join-now/?ref=443",
+      "permanent": false
+    },
+    {
+      "source": "/webinar-slides/",
+      "destination": "https://go.chirocandy.com/5key-webinar-slides",
+      "permanent": false
+    },
+    {
+      "source": "/webinar-slides",
+      "destination": "https://go.chirocandy.com/5key-webinar-slides",
+      "permanent": false
+    },
+    {
+      "source": "/mark/",
+      "destination": "https://go.oncehub.com/MARKSLATER",
+      "permanent": false
+    },
+    {
+      "source": "/mark",
+      "destination": "https://go.oncehub.com/MARKSLATER",
+      "permanent": false
+    },
+    {
+      "source": "/166/",
+      "destination": "https://chirocandy.com/podcast/166-your-2021-internet-marketing-plan/",
+      "permanent": false
+    },
+    {
+      "source": "/166",
+      "destination": "https://chirocandy.com/podcast/166-your-2021-internet-marketing-plan/",
+      "permanent": false
+    },
+    {
+      "source": "/167/",
+      "destination": "https://chirocandy.com/podcast/167-how-to-master-personal-injury-marketing-with-dr-mark-slater/",
+      "permanent": false
+    },
+    {
+      "source": "/167",
+      "destination": "https://chirocandy.com/podcast/167-how-to-master-personal-injury-marketing-with-dr-mark-slater/",
+      "permanent": false
+    },
+    {
+      "source": "/case-study/",
+      "destination": "https://go.chirocandy.com/case-study",
+      "permanent": false
+    },
+    {
+      "source": "/case-study",
+      "destination": "https://go.chirocandy.com/case-study",
+      "permanent": false
+    },
+    {
+      "source": "/168/",
+      "destination": "https://chirocandy.com/podcast/7-strategies-to-get-higher-quality-leads-increase-show-rates/",
+      "permanent": false
+    },
+    {
+      "source": "/168",
+      "destination": "https://chirocandy.com/podcast/7-strategies-to-get-higher-quality-leads-increase-show-rates/",
+      "permanent": false
+    },
+    {
+      "source": "/simplelife/",
+      "destination": "https://go.chirocandy.com/simplelife",
+      "permanent": true
+    },
+    {
+      "source": "/simplelife",
+      "destination": "https://go.chirocandy.com/simplelife",
+      "permanent": true
+    },
+    {
+      "source": "/simple-life/",
+      "destination": "https://go.chirocandy.com/simplelife",
+      "permanent": false
+    },
+    {
+      "source": "/simple-life",
+      "destination": "https://go.chirocandy.com/simplelife",
+      "permanent": false
+    },
+    {
+      "source": "/callwithrene/",
+      "destination": "https://calendly.com/rrkasparchirocandy",
+      "permanent": false
+    },
+    {
+      "source": "/callwithrene",
+      "destination": "https://calendly.com/rrkasparchirocandy",
+      "permanent": false
+    },
+    {
+      "source": "/callwithhollie/",
+      "destination": "https://hollie.chirocandy.com/strategycall",
+      "permanent": false
+    },
+    {
+      "source": "/callwithhollie",
+      "destination": "https://hollie.chirocandy.com/strategycall",
+      "permanent": false
+    },
+    {
+      "source": "/callwithliz/",
+      "destination": "https://calendly.com/lizatchirocandy/15min",
+      "permanent": false
+    },
+    {
+      "source": "/callwithliz",
+      "destination": "https://calendly.com/lizatchirocandy/15min",
+      "permanent": false
+    },
+    {
+      "source": "/7fa/",
+      "destination": "https://calendly.com/billysticker/7fa-coaching-call",
+      "permanent": false
+    },
+    {
+      "source": "/7fa",
+      "destination": "https://calendly.com/billysticker/7fa-coaching-call",
+      "permanent": false
+    },
+    {
+      "source": "/ca-training/",
+      "destination": "https://go.chirocandy.com/ca-training",
+      "permanent": false
+    },
+    {
+      "source": "/ca-training",
+      "destination": "https://go.chirocandy.com/ca-training",
+      "permanent": false
+    },
+    {
+      "source": "/170/",
+      "destination": "https://chirocandy.com/podcast/170-case-study-consistently-get-60-70-show-rates/",
+      "permanent": false
+    },
+    {
+      "source": "/170",
+      "destination": "https://chirocandy.com/podcast/170-case-study-consistently-get-60-70-show-rates/",
+      "permanent": false
+    },
+    {
+      "source": "/169/",
+      "destination": "https://chirocandy.com/podcast/increasing-your-pva-2/",
+      "permanent": false
+    },
+    {
+      "source": "/169",
+      "destination": "https://chirocandy.com/podcast/increasing-your-pva-2/",
+      "permanent": false
+    },
+    {
+      "source": "/171/",
+      "destination": "https://chirocandy.com/podcast/171-100000-patients-a-month/",
+      "permanent": false
+    },
+    {
+      "source": "/171",
+      "destination": "https://chirocandy.com/podcast/171-100000-patients-a-month/",
+      "permanent": false
+    },
+    {
+      "source": "/172/",
+      "destination": "https://chirocandy.com/podcast/172-thriving-in-any-market-condition-with-dr-tory-robson/",
+      "permanent": false
+    },
+    {
+      "source": "/172",
+      "destination": "https://chirocandy.com/podcast/172-thriving-in-any-market-condition-with-dr-tory-robson/",
+      "permanent": false
+    },
+    {
+      "source": "/gmb-webinar/",
+      "destination": "https://docs.google.com/presentation/d/1b2_FK7DY0a0SVuftVVgq-BmmrAXANMV2PakyB_rNTmQ/edit?usp=sharing",
+      "permanent": false
+    },
+    {
+      "source": "/gmb-webinar",
+      "destination": "https://docs.google.com/presentation/d/1b2_FK7DY0a0SVuftVVgq-BmmrAXANMV2PakyB_rNTmQ/edit?usp=sharing",
+      "permanent": false
+    },
+    {
+      "source": "/careers/",
+      "destination": "https://www.chirocandymarketing.com/careers",
+      "permanent": false
+    },
+    {
+      "source": "/careers",
+      "destination": "https://www.chirocandymarketing.com/careers",
+      "permanent": false
+    },
+    {
+      "source": "/seo-onboarding/",
+      "destination": "https://go.chirocandy.com/seo",
+      "permanent": false
+    },
+    {
+      "source": "/seo-onboarding",
+      "destination": "https://go.chirocandy.com/seo",
+      "permanent": false
+    },
+    {
+      "source": "/callwithbailee/",
+      "destination": "https://api.leadconnectorhq.com/widget/groups/baileebragg",
+      "permanent": false
+    },
+    {
+      "source": "/callwithbailee",
+      "destination": "https://api.leadconnectorhq.com/widget/groups/baileebragg",
+      "permanent": false
+    },
+    {
+      "source": "/gmb-seo/",
+      "destination": "https://go.chirocandy.com/gmb-seo",
+      "permanent": false
+    },
+    {
+      "source": "/gmb-seo",
+      "destination": "https://go.chirocandy.com/gmb-seo",
+      "permanent": false
+    },
+    {
+      "source": "/authority/",
+      "destination": "https://go.chirocandy.com/authority",
+      "permanent": false
+    },
+    {
+      "source": "/authority",
+      "destination": "https://go.chirocandy.com/authority",
+      "permanent": false
+    },
+    {
+      "source": "/2022-worksheet/",
+      "destination": "https://docs.google.com/spreadsheets/d/1KpY_EuZs7aZfX-2VoX6zrTTDEX02TwNTbs6DS8KCZLI/edit?usp=sharing",
+      "permanent": false
+    },
+    {
+      "source": "/2022-worksheet",
+      "destination": "https://docs.google.com/spreadsheets/d/1KpY_EuZs7aZfX-2VoX6zrTTDEX02TwNTbs6DS8KCZLI/edit?usp=sharing",
+      "permanent": false
+    },
+    {
+      "source": "/sfm/",
+      "destination": "https://go.chirocandy.com/tribe",
+      "permanent": false
+    },
+    {
+      "source": "/sfm",
+      "destination": "https://go.chirocandy.com/tribe",
+      "permanent": false
+    },
+    {
+      "source": "/173/",
+      "destination": "https://chirocandy.com/podcast/173-how-to-dominate-adding-knee-and-neuropathy-niches-clinic-masters/",
+      "permanent": false
+    },
+    {
+      "source": "/173",
+      "destination": "https://chirocandy.com/podcast/173-how-to-dominate-adding-knee-and-neuropathy-niches-clinic-masters/",
+      "permanent": false
+    },
+    {
+      "source": "/2022-apply/",
+      "destination": "https://www.chirocandymarketing.com/apply-jotform",
+      "permanent": false
+    },
+    {
+      "source": "/2022-apply",
+      "destination": "https://www.chirocandymarketing.com/apply-jotform",
+      "permanent": false
+    },
+    {
+      "source": "/tiktok-onboarding/",
+      "destination": "https://go.chirocandy.com/tiktok-onboarding",
+      "permanent": false
+    },
+    {
+      "source": "/tiktok-onboarding",
+      "destination": "https://go.chirocandy.com/tiktok-onboarding",
+      "permanent": false
+    },
+    {
+      "source": "/issues/",
+      "destination": "https://go.chirocandy.com/issues",
+      "permanent": false
+    },
+    {
+      "source": "/issues",
+      "destination": "https://go.chirocandy.com/issues",
+      "permanent": false
+    },
+    {
+      "source": "/issue/",
+      "destination": "https://go.chirocandy.com/issues",
+      "permanent": false
+    },
+    {
+      "source": "/issue",
+      "destination": "https://go.chirocandy.com/issues",
+      "permanent": false
+    },
+    {
+      "source": "/customer-success/",
+      "destination": "https://go.chirocandy.com/customer-success",
+      "permanent": false
+    },
+    {
+      "source": "/customer-success",
+      "destination": "https://go.chirocandy.com/customer-success",
+      "permanent": false
+    },
+    {
+      "source": "/tiktok/",
+      "destination": "https://go.chirocandy.com/signup-750",
+      "permanent": false
+    },
+    {
+      "source": "/tiktok",
+      "destination": "https://go.chirocandy.com/signup-750",
+      "permanent": false
+    },
+    {
+      "source": "/uac-tiktok/",
+      "destination": "https://go.chirocandy.com/tiktokwebinar-replay",
+      "permanent": false
+    },
+    {
+      "source": "/uac-tiktok",
+      "destination": "https://go.chirocandy.com/tiktokwebinar-replay",
+      "permanent": false
+    },
+    {
+      "source": "/7fa-author/",
+      "destination": "https://docs.google.com/presentation/d/1yK35riMML5b8iYgvF3y4nWSwO6tTzpn1/",
+      "permanent": false
+    },
+    {
+      "source": "/7fa-author",
+      "destination": "https://docs.google.com/presentation/d/1yK35riMML5b8iYgvF3y4nWSwO6tTzpn1/",
+      "permanent": false
+    },
+    {
+      "source": "/7fa-workbook/",
+      "destination": "https://docs.google.com/document/d/1NGVh78roe73oxUx1o8Twr-XdTbgRNGgwdbaqaDiHuoo/edit?usp=sharing",
+      "permanent": false
+    },
+    {
+      "source": "/7fa-workbook",
+      "destination": "https://docs.google.com/document/d/1NGVh78roe73oxUx1o8Twr-XdTbgRNGgwdbaqaDiHuoo/edit?usp=sharing",
+      "permanent": false
+    },
+    {
+      "source": "/callwithhailey/",
+      "destination": "https://hailey.chirocandy.com/book-with-me-page",
+      "permanent": false
+    },
+    {
+      "source": "/callwithhailey",
+      "destination": "https://hailey.chirocandy.com/book-with-me-page",
+      "permanent": false
+    },
+    {
+      "source": "/callwithkayla/",
+      "destination": "https://calendly.com/kayla-201",
+      "permanent": false
+    },
+    {
+      "source": "/callwithkayla",
+      "destination": "https://calendly.com/kayla-201",
+      "permanent": false
+    },
+    {
+      "source": "/callwithnate/",
+      "destination": "https://calendly.com/callwithnatevega",
+      "permanent": false
+    },
+    {
+      "source": "/callwithnate",
+      "destination": "https://calendly.com/callwithnatevega",
+      "permanent": false
+    },
+    {
+      "source": "/intensive/",
+      "destination": "https://form.jotform.com/93127101039144",
+      "permanent": false
+    },
+    {
+      "source": "/intensive",
+      "destination": "https://form.jotform.com/93127101039144",
+      "permanent": false
+    },
+    {
+      "source": "/seo/",
+      "destination": "https://go.chirocandy.com/seo-case-study",
+      "permanent": false
+    },
+    {
+      "source": "/seo",
+      "destination": "https://go.chirocandy.com/seo-case-study",
+      "permanent": false
+    },
+    {
+      "source": "/integrity-tiktok/",
+      "destination": "https://go.chirocandy.com/integrity-tiktok",
+      "permanent": false
+    },
+    {
+      "source": "/integrity-tiktok",
+      "destination": "https://go.chirocandy.com/integrity-tiktok",
+      "permanent": false
+    },
+    {
+      "source": "/save/",
+      "destination": "https://go.chirocandy.com/webinar-discount",
+      "permanent": false
+    },
+    {
+      "source": "/save",
+      "destination": "https://go.chirocandy.com/webinar-discount",
+      "permanent": false
+    },
+    {
+      "source": "/tiktok-video-request/",
+      "destination": "https://api.leadconnectorhq.com/widget/form/AmxYhlra9cfnZ5T0wTfc",
+      "permanent": false
+    },
+    {
+      "source": "/tiktok-video-request",
+      "destination": "https://api.leadconnectorhq.com/widget/form/AmxYhlra9cfnZ5T0wTfc",
+      "permanent": false
+    },
+    {
+      "source": "/calculator/",
+      "destination": "https://churchcandy.com/calculator-2/",
+      "permanent": false
+    },
+    {
+      "source": "/calculator",
+      "destination": "https://churchcandy.com/calculator-2/",
+      "permanent": false
+    },
+    {
+      "source": "/notes/",
+      "destination": "https://api.leadconnectorhq.com/widget/form/CutlcNXHOW1HeyWJOAvr",
+      "permanent": false
+    },
+    {
+      "source": "/notes",
+      "destination": "https://api.leadconnectorhq.com/widget/form/CutlcNXHOW1HeyWJOAvr",
+      "permanent": false
+    },
+    {
+      "source": "/lead-follow-up/",
+      "destination": "https://go.chirocandy.com/done-for-you-lead-follow-up",
+      "permanent": false
+    },
+    {
+      "source": "/lead-follow-up",
+      "destination": "https://go.chirocandy.com/done-for-you-lead-follow-up",
+      "permanent": false
+    },
+    {
+      "source": "/callwithtomas/",
+      "destination": "https://api.leadconnectorhq.com/widget/booking/uanEDyRz2Af3ZMiYIG2u",
+      "permanent": false
+    },
+    {
+      "source": "/callwithtomas",
+      "destination": "https://api.leadconnectorhq.com/widget/booking/uanEDyRz2Af3ZMiYIG2u",
+      "permanent": false
+    },
+    {
+      "source": "/parker/",
+      "destination": "https://go.chirocandy.com/parker",
+      "permanent": false
+    },
+    {
+      "source": "/parker",
+      "destination": "https://go.chirocandy.com/parker",
+      "permanent": false
+    },
+    {
+      "source": "/ghl/",
+      "destination": "https://www.gohighlevel.com/?fp_ref=chirocandy",
+      "permanent": false
+    },
+    {
+      "source": "/ghl",
+      "destination": "https://www.gohighlevel.com/?fp_ref=chirocandy",
+      "permanent": false
+    },
+    {
+      "source": "/107-videos-download/",
+      "destination": "https://drive.google.com/file/d/1Z-wynAVSm2ZuDi5F3NRCcA95QrDTMjEg/view?usp=sharing",
+      "permanent": false
+    },
+    {
+      "source": "/107-videos-download",
+      "destination": "https://drive.google.com/file/d/1Z-wynAVSm2ZuDi5F3NRCcA95QrDTMjEg/view?usp=sharing",
+      "permanent": false
+    },
+    {
+      "source": "/wca/",
+      "destination": "https://go.chirocandy.com/ebook",
+      "permanent": false
+    },
+    {
+      "source": "/wca",
+      "destination": "https://go.chirocandy.com/ebook",
+      "permanent": false
+    },
+    {
+      "source": "/107videos/",
+      "destination": "https://go.chirocandy.com/ebook",
+      "permanent": false
+    },
+    {
+      "source": "/107videos",
+      "destination": "https://go.chirocandy.com/ebook",
+      "permanent": false
+    },
+    {
+      "source": "/sleep/",
+      "destination": "https://saatva.partnerstack.com/?group=chirocandy",
+      "permanent": false
+    },
+    {
+      "source": "/sleep",
+      "destination": "https://saatva.partnerstack.com/?group=chirocandy",
+      "permanent": false
+    },
+    {
+      "source": "/saatva/",
+      "destination": "https://saatva.partnerstack.com/?group=chirocandy",
+      "permanent": false
+    },
+    {
+      "source": "/saatva",
+      "destination": "https://saatva.partnerstack.com/?group=chirocandy",
+      "permanent": false
+    },
+    {
+      "source": "/mattress/",
+      "destination": "https://saatva.partnerstack.com/?group=chirocandy",
+      "permanent": false
+    },
+    {
+      "source": "/mattress",
+      "destination": "https://saatva.partnerstack.com/?group=chirocandy",
+      "permanent": false
+    },
+    {
+      "source": "/free/",
+      "destination": "https://go.chirocandy.com/10",
+      "permanent": false
+    },
+    {
+      "source": "/free",
+      "destination": "https://go.chirocandy.com/10",
+      "permanent": false
+    },
+    {
+      "source": "/mattress-program/",
+      "destination": "https://go.chirocandy.com/saatva",
+      "permanent": false
+    },
+    {
+      "source": "/mattress-program",
+      "destination": "https://go.chirocandy.com/saatva",
+      "permanent": false
+    },
+    {
+      "source": "/ai-demo/",
+      "destination": "https://go.chirocandy.com/ai-demo",
+      "permanent": true
+    },
+    {
+      "source": "/ai-demo",
+      "destination": "https://go.chirocandy.com/ai-demo",
+      "permanent": true
+    },
+    {
+      "source": "/callwithbrenden/",
+      "destination": "https://brenden.chirocandy.com/schedule-a-call",
+      "permanent": false
+    },
+    {
+      "source": "/callwithbrenden",
+      "destination": "https://brenden.chirocandy.com/schedule-a-call",
+      "permanent": false
+    },
+    {
+      "source": "/laser/",
+      "destination": "https://go.chirocandy.com/2025",
+      "permanent": false
+    },
+    {
+      "source": "/laser",
+      "destination": "https://go.chirocandy.com/2025",
+      "permanent": false
+    },
+    {
+      "source": "/ai-webinar/",
+      "destination": "https://go.chirocandy.com/ai-webinar",
+      "permanent": false
+    },
+    {
+      "source": "/ai-webinar",
+      "destination": "https://go.chirocandy.com/ai-webinar",
+      "permanent": false
+    },
+    {
+      "source": "/zappychat/",
+      "destination": "https://go.zappychat.com/ai?fpr=chirocandy",
+      "permanent": false
+    },
+    {
+      "source": "/zappychat",
+      "destination": "https://go.zappychat.com/ai?fpr=chirocandy",
+      "permanent": false
+    },
+    {
+      "source": "/ai-ca/",
+      "destination": "https://api.leadconnectorhq.com/widget/bookings/chirocandystrategycall",
+      "permanent": false
+    },
+    {
+      "source": "/ai-ca",
+      "destination": "https://api.leadconnectorhq.com/widget/bookings/chirocandystrategycall",
+      "permanent": false
+    },
+    {
+      "source": "/aica/",
+      "destination": "https://api.leadconnectorhq.com/widget/bookings/chirocandystrategycall",
+      "permanent": false
+    },
+    {
+      "source": "/aica",
+      "destination": "https://api.leadconnectorhq.com/widget/bookings/chirocandystrategycall",
+      "permanent": false
+    },
+    {
+      "source": "/ai-replay/",
+      "destination": "https://go.chirocandy.com/ai-replay",
+      "permanent": false
+    },
+    {
+      "source": "/ai-replay",
+      "destination": "https://go.chirocandy.com/ai-replay",
+      "permanent": false
+    },
+    {
+      "source": "/ai-setup/",
+      "destination": "https://go.chirocandy.com/ai-setup",
+      "permanent": false
+    },
+    {
+      "source": "/ai-setup",
+      "destination": "https://go.chirocandy.com/ai-setup",
+      "permanent": false
+    },
+    {
+      "source": "/aica-sample/",
+      "destination": "https://go.chirocandy.com/aica-sample",
+      "permanent": false
+    },
+    {
+      "source": "/aica-sample",
+      "destination": "https://go.chirocandy.com/aica-sample",
+      "permanent": false
+    },
+    {
+      "source": "/riverside/",
+      "destination": "https://riverside.fm/studio/chirocandy?t=4facc903653b7175d3a0",
+      "permanent": false
+    },
+    {
+      "source": "/riverside",
+      "destination": "https://riverside.fm/studio/chirocandy?t=4facc903653b7175d3a0",
+      "permanent": false
+    },
+    {
+      "source": "/ai-book/",
+      "destination": "https://go.chirocandy.com/ai-book",
+      "permanent": false
+    },
+    {
+      "source": "/ai-book",
+      "destination": "https://go.chirocandy.com/ai-book",
+      "permanent": false
+    },
+    {
+      "source": "/heygen/",
+      "destination": "https://heygen.com/?sid=rewardful&via=billy-sticker",
+      "permanent": false
+    },
+    {
+      "source": "/heygen",
+      "destination": "https://heygen.com/?sid=rewardful&via=billy-sticker",
+      "permanent": false
+    },
+    {
+      "source": "/ai-tools/",
+      "destination": "https://go.chirocandy.com/ai-tools",
+      "permanent": false
+    },
+    {
+      "source": "/ai-tools",
+      "destination": "https://go.chirocandy.com/ai-tools",
+      "permanent": false
+    },
+    {
+      "source": "/2025-replay/",
+      "destination": "https://go.chirocandy.com/2025-replay",
+      "permanent": false
+    },
+    {
+      "source": "/2025-replay",
+      "destination": "https://go.chirocandy.com/2025-replay",
+      "permanent": false
+    },
+    {
+      "source": "/best-offer-ever/",
+      "destination": "https://go.chirocandy.com/best-offer",
+      "permanent": false
+    },
+    {
+      "source": "/best-offer-ever",
+      "destination": "https://go.chirocandy.com/best-offer",
+      "permanent": false
+    },
+    {
+      "source": "/best-offer/",
+      "destination": "https://go.chirocandy.com/best-offer",
+      "permanent": false
+    },
+    {
+      "source": "/best-offer",
+      "destination": "https://go.chirocandy.com/best-offer",
+      "permanent": false
+    },
+    {
+      "source": "/skool/",
+      "destination": "https://www.skool.com/c3-chirocandy-clients/about",
+      "permanent": false
+    },
+    {
+      "source": "/skool",
+      "destination": "https://www.skool.com/c3-chirocandy-clients/about",
+      "permanent": false
+    },
+    {
+      "source": "/returning-client/",
+      "destination": "https://sendlink.co/documents/doc-form/676f6214564ac94d09f0a856?locale=en-US",
+      "permanent": false
+    },
+    {
+      "source": "/returning-client",
+      "destination": "https://sendlink.co/documents/doc-form/676f6214564ac94d09f0a856?locale=en-US",
+      "permanent": false
+    },
+    {
+      "source": "/new-client-agreement/",
+      "destination": "https://sendlink.co/documents/doc-form/676f5ade564ac9341ef0a7d7?locale=en-US",
+      "permanent": false
+    },
+    {
+      "source": "/new-client-agreement",
+      "destination": "https://sendlink.co/documents/doc-form/676f5ade564ac9341ef0a7d7?locale=en-US",
+      "permanent": false
+    },
+    {
+      "source": "/current-prepay/",
+      "destination": "https://sendlink.co/documents/doc-form/676f69525a9456ff9403fd4d?locale=en-US",
+      "permanent": false
+    },
+    {
+      "source": "/current-prepay",
+      "destination": "https://sendlink.co/documents/doc-form/676f69525a9456ff9403fd4d?locale=en-US",
+      "permanent": false
+    },
+    {
+      "source": "/52videoscripts/",
+      "destination": "https://drive.google.com/file/d/1o4YfKtN-wAsHfkyKkUSpyiXl8ekJwY4w/view",
+      "permanent": false
+    },
+    {
+      "source": "/52videoscripts",
+      "destination": "https://drive.google.com/file/d/1o4YfKtN-wAsHfkyKkUSpyiXl8ekJwY4w/view",
+      "permanent": false
+    },
+    {
+      "source": "/elevenlabs/",
+      "destination": "https://try.elevenlabs.io/88msx8ppkgtx",
+      "permanent": false
+    },
+    {
+      "source": "/elevenlabs",
+      "destination": "https://try.elevenlabs.io/88msx8ppkgtx",
+      "permanent": false
+    },
+    {
+      "source": "/ai-offer/",
+      "destination": "https://go.chirocandy.com/ai-agent-order",
+      "permanent": false
+    },
+    {
+      "source": "/ai-offer",
+      "destination": "https://go.chirocandy.com/ai-agent-order",
+      "permanent": false
+    },
+    {
+      "source": "/429-replay/",
+      "destination": "https://go.chirocandy.com/ai-webby-replay",
+      "permanent": false
+    },
+    {
+      "source": "/429-replay",
+      "destination": "https://go.chirocandy.com/ai-webby-replay",
+      "permanent": false
+    },
+    {
+      "source": "/ai-agents/",
+      "destination": "https://go.chirocandy.com/ai-agent-replay",
+      "permanent": false
+    },
+    {
+      "source": "/ai-agents",
+      "destination": "https://go.chirocandy.com/ai-agent-replay",
+      "permanent": false
+    },
+    {
+      "source": "/ai-agent/",
+      "destination": "https://go.chirocandy.com/ai-agent-replay",
+      "permanent": false
+    },
+    {
+      "source": "/ai-agent",
+      "destination": "https://go.chirocandy.com/ai-agent-replay",
+      "permanent": false
+    },
+    {
+      "source": "/callwithcynthia/",
+      "destination": "https://cynthia.chirocandy.com/strategy-call",
+      "permanent": false
+    },
+    {
+      "source": "/callwithcynthia",
+      "destination": "https://cynthia.chirocandy.com/strategy-call",
+      "permanent": false
+    },
+    {
+      "source": "/callwithkatie/",
+      "destination": "https://katie.chirocandy.com/schedule",
+      "permanent": false
+    },
+    {
+      "source": "/callwithkatie",
+      "destination": "https://katie.chirocandy.com/schedule",
+      "permanent": false
+    },
+    {
+      "source": "/22-list/",
+      "destination": "https://storage.googleapis.com/msgsndr/CMbaV42JZHKdMbeRLBUu/media/69001a1d6f3caff09663ca33.pdf",
+      "permanent": false
+    },
+    {
+      "source": "/22-list",
+      "destination": "https://storage.googleapis.com/msgsndr/CMbaV42JZHKdMbeRLBUu/media/69001a1d6f3caff09663ca33.pdf",
+      "permanent": false
+    },
+    {
+      "source": "/workshop/",
+      "destination": "https://chatcandy.ai/workshop",
+      "permanent": false
+    },
+    {
+      "source": "/workshop",
+      "destination": "https://chatcandy.ai/workshop",
+      "permanent": false
+    },
+    {
+      "source": "/12-ways/",
+      "destination": "https://chatcandy.ai/12-ways-replay",
+      "permanent": false
+    },
+    {
+      "source": "/12-ways",
+      "destination": "https://chatcandy.ai/12-ways-replay",
+      "permanent": false
+    },
+    {
+      "source": "/mailbox/",
+      "destination": "https://mailboxpower.com/7BCF9G",
+      "permanent": false
+    },
+    {
+      "source": "/mailbox",
+      "destination": "https://mailboxpower.com/7BCF9G",
+      "permanent": false
+    },
+    {
+      "source": "/gbp-checklist/",
+      "destination": "https://storage.googleapis.com/msgsndr/CMbaV42JZHKdMbeRLBUu/media/691e0c7af05eafab92270b37.pdf",
+      "permanent": false
+    },
+    {
+      "source": "/gbp-checklist",
+      "destination": "https://storage.googleapis.com/msgsndr/CMbaV42JZHKdMbeRLBUu/media/691e0c7af05eafab92270b37.pdf",
+      "permanent": false
+    },
+    {
+      "source": "/local-seo-replay/",
+      "destination": "https://chatcandy.ai/replay-local-seo",
+      "permanent": false
+    },
+    {
+      "source": "/local-seo-replay",
+      "destination": "https://chatcandy.ai/replay-local-seo",
+      "permanent": false
+    },
+    {
+      "source": "/b-roll/",
+      "destination": "https://storage.googleapis.com/msgsndr/CMbaV42JZHKdMbeRLBUu/media/69531ca0d2e1fc7e687048f3.pdf",
+      "permanent": false
+    },
+    {
+      "source": "/b-roll",
+      "destination": "https://storage.googleapis.com/msgsndr/CMbaV42JZHKdMbeRLBUu/media/69531ca0d2e1fc7e687048f3.pdf",
+      "permanent": false
+    },
+    {
+      "source": "/broll/",
+      "destination": "https://storage.googleapis.com/msgsndr/CMbaV42JZHKdMbeRLBUu/media/69531ca0d2e1fc7e687048f3.pdf",
+      "permanent": false
+    },
+    {
+      "source": "/broll",
+      "destination": "https://storage.googleapis.com/msgsndr/CMbaV42JZHKdMbeRLBUu/media/69531ca0d2e1fc7e687048f3.pdf",
+      "permanent": false
+    },
+    {
+      "source": "/2026-tools/",
+      "destination": "https://storage.googleapis.com/msgsndr/CMbaV42JZHKdMbeRLBUu/media/6953f05688fd1a10400d52c7.pdf",
+      "permanent": false
+    },
+    {
+      "source": "/2026-tools",
+      "destination": "https://storage.googleapis.com/msgsndr/CMbaV42JZHKdMbeRLBUu/media/6953f05688fd1a10400d52c7.pdf",
+      "permanent": false
+    },
+    {
+      "source": "/parker-2026/",
+      "destination": "https://go.chirocandy.com/parker-26",
+      "permanent": false
+    },
+    {
+      "source": "/parker-2026",
+      "destination": "https://go.chirocandy.com/parker-26",
+      "permanent": false
+    },
+    {
       "source": "/12-ways-recut/",
       "destination": "https://chatcandy.ai/12-ways-recut",
-      "permanent": true
+      "permanent": false
     },
     {
       "source": "/12-ways-recut",
       "destination": "https://chatcandy.ai/12-ways-recut",
-      "permanent": true
+      "permanent": false
+    },
+    {
+      "source": "/update-billing/",
+      "destination": "https://sendlink.co/documents/doc-form/6a3049049fad645bb71c8b1c?locale=en-US",
+      "permanent": false
+    },
+    {
+      "source": "/update-billing",
+      "destination": "https://sendlink.co/documents/doc-form/6a3049049fad645bb71c8b1c?locale=en-US",
+      "permanent": false
+    },
+    {
+      "source": "/maps-access/",
+      "destination": "https://www.loom.com/share/832e8dfb99ec48e9863509ab170b5a87",
+      "permanent": false
+    },
+    {
+      "source": "/maps-access",
+      "destination": "https://www.loom.com/share/832e8dfb99ec48e9863509ab170b5a87",
+      "permanent": false
+    },
+    {
+      "source": "/parker2026/",
+      "destination": "https://go.chirocandy.com/parker-26",
+      "permanent": false
+    },
+    {
+      "source": "/parker2026",
+      "destination": "https://go.chirocandy.com/parker-26",
+      "permanent": false
+    },
+    {
+      "source": "/jumper/",
+      "destination": "https://go.chirocandy.com/cc-vsl",
+      "permanent": false
+    },
+    {
+      "source": "/jumper",
+      "destination": "https://go.chirocandy.com/cc-vsl",
+      "permanent": false
+    },
+    {
+      "source": "/parker-miami/",
+      "destination": "https://go.chirocandy.com/parker-2026-tools",
+      "permanent": false
+    },
+    {
+      "source": "/parker-miami",
+      "destination": "https://go.chirocandy.com/parker-2026-tools",
+      "permanent": false
+    },
+    {
+      "source": "/updated-billing/",
+      "destination": "https://sendlink.co/documents/doc-form/6a3049049fad645bb71c8b1c?locale=en-US",
+      "permanent": false
+    },
+    {
+      "source": "/updated-billing",
+      "destination": "https://sendlink.co/documents/doc-form/6a3049049fad645bb71c8b1c?locale=en-US",
+      "permanent": false
+    },
+    {
+      "source": "/callwithben/",
+      "destination": "https://go.chirocandy.com/schedule-with-ben",
+      "permanent": false
+    },
+    {
+      "source": "/callwithben",
+      "destination": "https://go.chirocandy.com/schedule-with-ben",
+      "permanent": false
+    },
+    {
+      "source": "/callwithryan/",
+      "destination": "https://go.chirocandy.com/schedule-with-ryan",
+      "permanent": false
+    },
+    {
+      "source": "/callwithryan",
+      "destination": "https://go.chirocandy.com/schedule-with-ryan",
+      "permanent": false
     }
   ],
   "headers": [
