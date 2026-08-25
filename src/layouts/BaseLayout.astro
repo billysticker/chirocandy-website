@@ -1,0 +1,59 @@
+---
+import BookingModal from '@/components/BookingModal.astro';
+import Footer from '@/components/Footer.astro';
+import Header from '@/components/Header.astro';
+import SEO from '@/components/SEO.astro';
+import '@/styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogType?: string;
+  ogImage?: string;
+  noindex?: boolean;
+  schema?: Record<string, unknown>;
+  hideHeader?: boolean;
+  hideFooter?: boolean;
+  bodyClass?: string;
+}
+
+const props = Astro.props;
+const { hideHeader = false, hideFooter = false, bodyClass } = props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <SEO {...props} />
+  </head>
+  <body class:list={['relative font-body text-on-surface antialiased', bodyClass]}>
+    <a href="#main" class="sr-only">Skip to main content</a>
+    <div class="relative z-10">
+      {!hideHeader && <Header />}
+      <main id="main">
+        <slot />
+      </main>
+      {!hideFooter && <Footer />}
+    </div>
+    <BookingModal />
+    <script>
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12, rootMargin: '0px 0px -5% 0px' }
+        );
+        document.querySelectorAll('[data-animate]').forEach((el) => observer.observe(el));
+      } else {
+        document.querySelectorAll('[data-animate]').forEach((el) => el.classList.add('is-visible'));
+      }
+    </script>
+  </body>
+</html>

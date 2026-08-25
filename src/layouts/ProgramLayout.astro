@@ -1,0 +1,48 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import { buildGraph, breadcrumbSchema, webPageSchema } from '@/lib/schema';
+import { SITE } from '@/lib/site';
+
+interface Props {
+  title: string;
+  description: string;
+  slug: string;
+  heroTitle: string;
+  heroAnswer: string;
+}
+
+const { title, description, slug, heroTitle, heroAnswer } = Astro.props;
+const url = `${SITE.url}/${slug}/`;
+const schema = buildGraph(
+  webPageSchema({ url, name: title, description, dateModified: '2026-06-09' }),
+  breadcrumbSchema([
+    { name: 'Home', url: `${SITE.url}/` },
+    { name: heroTitle, url },
+  ])
+);
+---
+
+<BaseLayout title={title} description={description} canonical={url} schema={schema}>
+  <PageHero title={heroTitle} answer={heroAnswer} />
+  <section class="section">
+    <div class="container prose">
+      <slot />
+    </div>
+  </section>
+  <section class="section section--alt">
+    <div class="container cta-band">
+      <a href="/contact-us/" class="btn btn--primary">Schedule a Call</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .prose {
+    max-width: 72ch;
+  }
+
+  .cta-band {
+    text-align: center;
+  }
+</style>

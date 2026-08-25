@@ -1,0 +1,30 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import { buildGraph, breadcrumbSchema, webPageSchema } from '@/lib/schema';
+import { SITE } from '@/lib/site';
+
+const title = 'Thank You | ChiroCandy';
+const description = 'Thanks for contacting ChiroCandy. We will follow up on your strategy call request.';
+const url = `${SITE.url}/thank-you/`;
+const schema = buildGraph(
+  webPageSchema({ url, name: title, description, dateModified: '2026-08-25' }),
+  breadcrumbSchema([
+    { name: 'Home', url: `${SITE.url}/` },
+    { name: 'Thank You', url },
+  ])
+);
+---
+
+<BaseLayout title={title} description={description} canonical={url} schema={schema} noindex>
+  <PageHero
+    title="You're on the list."
+    answer="The ChiroCandy team will reach out within one business day to lock in your strategy call. Watch your inbox, or call us now if you would rather talk immediately."
+  />
+  <section class="section">
+    <div class="container inner-cta">
+      <a class="btn btn--primary" href={`tel:${SITE.phone}`}>Call {SITE.phoneDisplay}</a>
+      <a class="btn btn--secondary" href="/">Back to the homepage</a>
+    </div>
+  </section>
+</BaseLayout>

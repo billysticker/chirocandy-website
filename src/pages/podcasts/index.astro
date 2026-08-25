@@ -1,0 +1,99 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import { buildGraph, breadcrumbSchema, webPageSchema } from '@/lib/schema';
+import { SITE } from '@/lib/site';
+import podcasts from '@/data/podcasts.json';
+
+const title = 'Podcasts | ChiroCandy Marketing, LLC';
+const description =
+  'The ChiroCandy podcast helps chiropractic practice owners grow with interviews, Facebook ad strategy, practice systems, and marketing frameworks. 170+ episodes since 2015.';
+
+const url = `${SITE.url}/podcasts/`;
+const schema = buildGraph(
+  webPageSchema({ url, name: title, description, dateModified: '2026-06-09' }),
+  breadcrumbSchema([
+    { name: 'Home', url: `${SITE.url}/` },
+    { name: 'Podcast', url },
+  ])
+);
+
+const sorted = [...podcasts].sort(
+  (a, b) => new Date(b.datePublished).getTime() - new Date(a.datePublished).getTime()
+);
+---
+
+<BaseLayout title={title} description={description} canonical={url} schema={schema}>
+  <PageHero
+    title="ChiroCandy Podcast"
+    answer="The ChiroCandy podcast is a library of interviews and strategy episodes for chiropractic practice owners. Billy Sticker and guests cover Facebook ads, practice growth, team building, and marketing systems that work in real offices."
+  />
+
+  <section class="section">
+    <div class="container">
+      <p class="episode-count">{sorted.length} episodes</p>
+      <ul class="episode-list">
+        {sorted.map((episode) => (
+          <li class="episode-item reveal" data-animate>
+            <a href={`/podcast/${episode.slug}/`}>
+              <span class="episode-item__title">{episode.h1}</span>
+              <span class="episode-item__date">
+                {new Date(episode.datePublished).toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'short',
+                  day: 'numeric',
+                })}
+              </span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .episode-count {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin: 0 0 1rem;
+  }
+
+  .episode-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .episode-item {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .episode-item a {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem 1rem;
+    padding: 1rem 0;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .episode-item a:hover .episode-item__title {
+    color: var(--green-dark);
+  }
+
+  .episode-item__title {
+    font-family: var(--font-subhead);
+    font-weight: 500;
+    color: var(--ink);
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .episode-item__date {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    white-space: nowrap;
+  }
+</style>

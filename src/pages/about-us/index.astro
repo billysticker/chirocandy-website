@@ -1,0 +1,126 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import { buildGraph, breadcrumbSchema, webPageSchema } from '@/lib/schema';
+import { BILLY_STICKER, SITE } from '@/lib/site';
+
+const title = 'About Us | ChiroCandy Marketing, LLC';
+const description =
+  'ChiroCandy is a chiropractic-only marketing agency founded in 2015. Learn how Billy Sticker and the team help practice owners worldwide grow with proven patient acquisition systems.';
+
+const url = `${SITE.url}/about-us/`;
+const schema = buildGraph(
+  webPageSchema({ url, name: title, description, dateModified: '2026-06-09' }),
+  breadcrumbSchema([
+    { name: 'Home', url: `${SITE.url}/` },
+    { name: 'About Us', url },
+  ])
+);
+
+const team = {
+  leadership: [
+    { name: 'Billy', role: 'Founder & CEO' },
+    { name: 'Rustee', role: 'President' },
+  ],
+  gurus: [
+    { name: 'Taylor', role: 'DailyChiroPosts Director' },
+    { name: 'Hollie', role: 'Account Manager' },
+    { name: 'Michael', role: 'Sales & Account Manager' },
+    { name: 'Amanda', role: 'Onboarding and Account Manager' },
+    { name: 'Andrew', role: 'Onboarding and Account Manager' },
+    { name: 'Bailee', role: 'Account Manager' },
+  ],
+};
+---
+
+<BaseLayout title={title} description={description} canonical={url} schema={schema}>
+  <PageHero
+    title="About ChiroCandy"
+    answer="ChiroCandy is the growth system for healthcare practices, founded in 2015. We help practice owners worldwide attract, convert, and retain patients through ads, SEO, websites, CTV, reactivation, and AI follow-up."
+    eyebrow="Founded 2015"
+  />
+
+  <section class="section">
+    <div class="container prose">
+      <h2>Who is ChiroCandy?</h2>
+      <p>
+        ChiroCandy Marketing, LLC is a boutique agency built exclusively for chiropractors. Billy
+        Sticker founded the company in 2015 after years of working inside the profession. What
+        started as a podcast to support chiropractors became a multi seven-figure agency recognized
+        on the Inc. 5000 list.
+      </p>
+      <p>
+        Over 11 years, ChiroCandy systems have been used by more than 2,000 chiropractic offices.
+        Today, the agency serves practice owners across the United States, Canada, the United
+        Kingdom, Australia, and other international markets.
+      </p>
+
+      <h2>What makes ChiroCandy different?</h2>
+      <p>
+        We only work with chiropractors. That focus means we know the language, the competitive
+        landscape, and the marketing tactics that actually move the needle. Clients get a dedicated
+        Client Success Manager, month-to-month flexibility after an initial 60-day period, and a
+        US-based team without overseas virtual assistants on their accounts.
+      </p>
+
+      <h2>Leadership</h2>
+      <div class="team-grid">
+        {team.leadership.map((member) => (
+          <article class="team-card">
+            <h3>{member.name}</h3>
+            <p>{member.role}</p>
+          </article>
+        ))}
+      </div>
+
+      <h2>New Patient Gurus</h2>
+      <div class="team-grid">
+        {team.gurus.map((member) => (
+          <article class="team-card">
+            <h3>{member.name}</h3>
+            <p>{member.role}</p>
+          </article>
+        ))}
+      </div>
+
+      <p>
+        Learn more about <a href={BILLY_STICKER.url}>Billy Sticker's background and track record</a>.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .prose {
+    max-width: 72ch;
+  }
+
+  .prose h2 {
+    margin-top: 2rem;
+  }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0 2rem;
+  }
+
+  .team-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1rem;
+    background: var(--off-white);
+  }
+
+  .team-card h3 {
+    margin: 0 0 0.25rem;
+    font-size: 1rem;
+  }
+
+  .team-card p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+  }
+</style>

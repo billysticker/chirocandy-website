@@ -1,0 +1,113 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import { NAV, SITE } from '@/lib/site';
+import { buildGraph, breadcrumbSchema, webPageSchema } from '@/lib/schema';
+import blogPosts from '@/data/blog-posts.json';
+import podcasts from '@/data/podcasts.json';
+import uncategorized from '@/data/uncategorized-posts.json';
+
+const title = 'Sitemap | ChiroCandy';
+const description =
+  'HTML sitemap for chirocandy.com: services, frameworks, blog, podcast archive, and company pages. Use this to find any public URL.';
+const url = `${SITE.url}/sitemap/`;
+const schema = buildGraph(
+  webPageSchema({ url, name: title, description, dateModified: '2026-08-25' }),
+  breadcrumbSchema([
+    { name: 'Home', url: `${SITE.url}/` },
+    { name: 'Sitemap', url },
+  ])
+);
+
+const core = [
+  { href: '/', label: 'Home' },
+  { href: '/services/', label: 'Services' },
+  ...NAV.services,
+  { href: '/frameworks/', label: 'Frameworks' },
+  ...NAV.frameworks,
+  { href: '/get-new-patients/', label: 'Get New Patients' },
+  { href: '/done-for-you-program/', label: 'Done-For-You Program' },
+  { href: '/training-program/', label: 'Training Program' },
+  { href: '/let-me-write-your-book/', label: 'Let Me Write Your Book' },
+  { href: '/about-us/', label: 'About Us' },
+  { href: '/about/billy-sticker/', label: 'Billy Sticker' },
+  { href: '/contact-us/', label: 'Contact' },
+  { href: '/faqs/', label: 'FAQs' },
+  { href: '/testimonials/', label: 'Testimonials' },
+  { href: '/news-and-media/', label: 'News and Media' },
+  { href: '/podcasts/', label: 'Podcasts' },
+  { href: '/blog/', label: 'Blog' },
+  { href: '/service-areas/', label: 'Service Areas' },
+  { href: '/demo/', label: 'Demo' },
+  { href: '/privacy-policy/', label: 'Privacy Policy' },
+  { href: '/terms-conditions/', label: 'Terms & Conditions' },
+];
+---
+
+<BaseLayout title={title} description={description} canonical={url} schema={schema}>
+  <PageHero
+    title="Sitemap"
+    answer="Every public ChiroCandy URL lives here. This HTML sitemap is for people. Search engines also get an XML sitemap at /sitemap-index.xml."
+  />
+  <section class="section">
+    <div class="container map">
+      <div>
+        <h2>Core pages</h2>
+        <ul>
+          {core.map((item) => (
+            <li><a href={item.href}>{item.label}</a></li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h2>Blog</h2>
+        <ul>
+          {blogPosts.map((post) => (
+            <li><a href={`/blog/${post.slug}/`}>{post.h1}</a></li>
+          ))}
+        </ul>
+        <h2>Legacy articles</h2>
+        <ul>
+          {uncategorized.map((post) => (
+            <li><a href={`/uncategorized/${post.slug}/`}>{post.h1}</a></li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h2>Podcast episodes</h2>
+        <ul>
+          {podcasts.map((episode) => (
+            <li><a href={`/podcast/${episode.slug}/`}>{episode.h1}</a></li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .map {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1.2fr;
+    gap: 2rem;
+  }
+  .map ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem;
+  }
+  .map li {
+    margin: 0.35rem 0;
+  }
+  .map a {
+    color: var(--muted);
+  }
+  .map a:hover {
+    color: var(--green);
+  }
+  @media (max-width: 900px) {
+    .map {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

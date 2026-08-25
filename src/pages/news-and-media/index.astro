@@ -1,0 +1,43 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import { buildGraph, breadcrumbSchema, webPageSchema } from '@/lib/schema';
+import { SITE } from '@/lib/site';
+
+const title = 'News and Media | ChiroCandy';
+const description =
+  'ChiroCandy in the press and on podcasts. Media mentions, founder interviews, and appearances for healthcare practice growth.';
+const url = `${SITE.url}/news-and-media/`;
+const schema = buildGraph(
+  webPageSchema({ url, name: title, description, dateModified: '2026-08-25' }),
+  breadcrumbSchema([
+    { name: 'Home', url: `${SITE.url}/` },
+    { name: 'News and Media', url },
+  ])
+);
+---
+
+<BaseLayout title={title} description={description} canonical={url} schema={schema}>
+  <PageHero
+    title="News and Media"
+    answer="Billy Sticker and ChiroCandy appear in press, podcasts, and industry events covering healthcare practice growth, AI, and patient acquisition."
+    eyebrow="Press"
+  />
+  <section class="section">
+    <div class="container prose">
+      <p>
+        ChiroCandy has been featured across broadcast and business media, including FOX, CBS, NBC, Forbes, and Inc. 5000 recognition. For interviews or brand assets, email
+        <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.
+      </p>
+      <h2>Where to start</h2>
+      <ul>
+        <li><a href="/about/billy-sticker/">Billy Sticker credentials</a></li>
+        <li><a href="/podcasts/">ChiroCandy podcast archive</a></li>
+        <li><a href="/testimonials/">Client video testimonials</a></li>
+      </ul>
+      <div class="inner-cta">
+        <button class="btn btn--primary" data-book type="button">Book a Strategy Call</button>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

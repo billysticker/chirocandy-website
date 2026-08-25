@@ -1,0 +1,62 @@
+{
+  "installCommand": "npm install --legacy-peer-deps",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.chirocandy.com" }],
+      "destination": "https://chirocandy.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/sample-page/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/sample-page",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/category/podcast/",
+      "destination": "/podcasts/",
+      "permanent": true
+    },
+    {
+      "source": "/category/podcast",
+      "destination": "/podcasts/",
+      "permanent": true
+    },
+    {
+      "source": "/divi_overlay/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/divi_overlay",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/divi_overlay/form/",
+      "destination": "/contact-us/",
+      "permanent": true
+    },
+    {
+      "source": "/divi_overlay/form",
+      "destination": "/contact-us/",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        }
+      ]
+    }
+  ]
+}

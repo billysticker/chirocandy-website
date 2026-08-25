@@ -1,0 +1,85 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import { buildGraph, breadcrumbSchema, webPageSchema } from '@/lib/schema';
+import { SITE } from '@/lib/site';
+import posts from '@/data/blog-posts.json';
+
+const title = 'Blog | ChiroCandy';
+const description =
+  'ChiroCandy blog articles on healthcare practice marketing: Facebook ads, websites, SEO, and patient acquisition systems for practice owners.';
+const url = `${SITE.url}/blog/`;
+const schema = buildGraph(
+  webPageSchema({ url, name: title, description, dateModified: '2026-08-25' }),
+  breadcrumbSchema([
+    { name: 'Home', url: `${SITE.url}/` },
+    { name: 'Blog', url },
+  ])
+);
+const sorted = [...posts].sort(
+  (a, b) => new Date(b.datePublished).getTime() - new Date(a.datePublished).getTime()
+);
+---
+
+<BaseLayout title={title} description={description} canonical={url} schema={schema}>
+  <PageHero
+    title="ChiroCandy Blog"
+    answer="These articles cover patient acquisition for healthcare practices: ads, websites, SEO, and the systems that turn inquiries into booked visits."
+    eyebrow="Resources"
+  />
+  <section class="section">
+    <div class="container">
+      <ul class="post-list">
+        {
+          sorted.map((post) => (
+            <li>
+              <a href={`/blog/${post.slug}/`}>
+                <span class="post-title">{post.h1}</span>
+                <span class="post-date">
+                  {new Date(post.datePublished).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric',
+                  })}
+                </span>
+              </a>
+              <p>{post.meta_description}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .post-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .post-list li {
+    border-bottom: 1px solid var(--line);
+    padding: 1.25rem 0;
+  }
+  .post-list a {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .post-title {
+    font-family: var(--font-headline);
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .post-date {
+    color: var(--muted2);
+    font-size: 0.85rem;
+  }
+  .post-list p {
+    color: var(--muted);
+    margin: 0.45rem 0 0;
+    max-width: 72ch;
+  }
+</style>

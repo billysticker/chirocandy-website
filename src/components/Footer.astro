@@ -1,0 +1,126 @@
+---
+import { NAV, SITE } from '@/lib/site';
+---
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="/" class="foot-logo">
+          <img src="/images/logo-white.png" alt="ChiroCandy" width="128" height="32" />
+        </a>
+        <p class="foot-blurb">
+          The growth system for healthcare practices. Founder-led since 2015.
+        </p>
+        <p>
+          <a href={`tel:${SITE.phone}`}>{SITE.phoneDisplay}</a>
+        </p>
+        <p>
+          <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+        </p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/">All services</a></li>
+          {NAV.services.map((item) => (
+            <li><a href={item.href}>{item.label}</a></li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h4>Frameworks</h4>
+        <ul>
+          <li><a href="/frameworks/">All frameworks</a></li>
+          {NAV.frameworks.map((item) => (
+            <li><a href={item.href}>{item.label}</a></li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          {NAV.resources.map((item) => (
+            <li><a href={item.href}>{item.label}</a></li>
+          ))}
+          {NAV.company.map((item) => (
+            <li><a href={item.href}>{item.label}</a></li>
+          ))}
+          <li><a href="/service-areas/">Where we serve</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>© {new Date().getFullYear()} ChiroCandy Marketing LLC. Healthcare practice growth since 2015.</p>
+      <div class="foot-legal">
+        <a href="/terms-conditions/">Terms</a>
+        <a href="/privacy-policy/">Privacy</a>
+        <a href="/sitemap/">Sitemap</a>
+        <a href="/llms.txt">llms.txt</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-foot {
+    border-top: 1px solid var(--line);
+    padding: 4.5rem 0 2.4rem;
+    color: var(--muted2);
+    font-size: 0.9rem;
+  }
+  .foot-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr 1fr;
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+  }
+  .foot-logo img {
+    height: 28px;
+    width: auto;
+    margin-bottom: 1rem;
+  }
+  .foot-blurb {
+    color: var(--muted);
+    max-width: 28ch;
+    margin: 0 0 1rem;
+  }
+  .site-foot h4 {
+    font-size: 0.95rem;
+    margin: 0 0 1rem;
+  }
+  .site-foot ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.55rem;
+  }
+  .site-foot a:hover {
+    color: var(--green);
+  }
+  .foot-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    border-top: 1px solid var(--line);
+    padding-top: 1.4rem;
+    font-size: 0.8rem;
+  }
+  .foot-legal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+  }
+  @media (max-width: 900px) {
+    .foot-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media (max-width: 600px) {
+    .foot-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,66 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import { NAV } from '@/lib/site';
+import { buildGraph, breadcrumbSchema, webPageSchema } from '@/lib/schema';
+import { SITE } from '@/lib/site';
+
+const title = 'Chiropractic Marketing Frameworks | ChiroCandy';
+const description =
+  'ChiroCandy proprietary frameworks help chiropractic practice owners build authority, attract ideal patients, and convert trust into predictable growth. Explore Known/Found/Trusted and more.';
+
+const url = `${SITE.url}/frameworks/`;
+const schema = buildGraph(
+  webPageSchema({ url, name: title, description, dateModified: '2026-06-09' }),
+  breadcrumbSchema([
+    { name: 'Home', url: `${SITE.url}/` },
+    { name: 'Frameworks', url },
+  ])
+);
+---
+
+<BaseLayout title={title} description={description} canonical={url} schema={schema}>
+  <PageHero
+    title="ChiroCandy marketing frameworks"
+    answer="These are the named systems ChiroCandy uses to help chiropractic practice owners move from unknown to trusted in their markets. Each framework is a repeatable model you can apply to ads, content, and patient experience."
+  />
+
+  <section class="section">
+    <div class="container card-grid">
+      {NAV.frameworks.map((fw) => (
+        <a href={fw.href} class="card reveal" data-animate>
+          <h2>{fw.label}</h2>
+          <p>Learn how this framework drives patient acquisition and practice growth.</p>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+  }
+
+  .card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: var(--shadow);
+  }
+
+  .card h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.1rem;
+  }
+
+  .card p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+</style>

@@ -1,0 +1,113 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import {
+  buildGraph,
+  breadcrumbSchema,
+  faqPageSchema,
+  webPageSchema,
+} from '@/lib/schema';
+import { SITE } from '@/lib/site';
+
+interface FAQ {
+  question: string;
+  answer: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  slug: string;
+  heroTitle: string;
+  heroAnswer: string;
+  definition: string;
+  stages: { title: string; answer: string; detail: string }[];
+  faqs: FAQ[];
+  relatedServices: { href: string; label: string }[];
+}
+
+const {
+  title,
+  description,
+  slug,
+  heroTitle,
+  heroAnswer,
+  definition,
+  stages,
+  faqs,
+  relatedServices,
+} = Astro.props;
+
+const url = `${SITE.url}/frameworks/${slug}/`;
+const schema = buildGraph(
+  webPageSchema({ url, name: title, description, dateModified: '2026-06-09' }),
+  breadcrumbSchema([
+    { name: 'Home', url: `${SITE.url}/` },
+    { name: 'Frameworks', url: `${SITE.url}/frameworks/` },
+    { name: heroTitle, url },
+  ]),
+  faqPageSchema(faqs)
+);
+---
+
+<BaseLayout title={title} description={description} canonical={url} schema={schema}>
+  <PageHero title={heroTitle} answer={heroAnswer} eyebrow="ChiroCandy Framework" />
+
+  <section class="section">
+    <div class="container prose">
+      <div class="definition-block">
+        <strong>Definition:</strong> {definition}
+      </div>
+
+      {stages.map((stage) => (
+        <section class="reveal" data-animate>
+          <h2>{stage.title}</h2>
+          <p class="answer-first">{stage.answer}</p>
+          <p>{stage.detail}</p>
+        </section>
+      ))}
+
+      <h2>Related services</h2>
+      <ul>
+        {relatedServices.map((link) => (
+          <li><a href={link.href}>{link.label}</a></li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <h2>Framework FAQ</h2>
+      <dl class="faq-list">
+        {faqs.map((faq) => (
+          <div class="faq-item">
+            <dt>{faq.question}</dt>
+            <dd>{faq.answer}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .prose {
+    max-width: 72ch;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 0;
+  }
+
+  .faq-item dt {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .faq-item dd {
+    margin: 0;
+    color: var(--text-muted);
+  }
+</style>

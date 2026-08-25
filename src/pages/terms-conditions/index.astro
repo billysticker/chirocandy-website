@@ -1,0 +1,45 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import { buildGraph, breadcrumbSchema, webPageSchema } from '@/lib/schema';
+import { SITE } from '@/lib/site';
+
+const title = 'Terms & Conditions | ChiroCandy';
+const description =
+  'Terms of use for chirocandy.com and ChiroCandy Marketing, LLC services, including website use, strategy calls, and marketing engagements.';
+const url = `${SITE.url}/terms-conditions/`;
+const schema = buildGraph(
+  webPageSchema({ url, name: title, description, dateModified: '2026-08-25' }),
+  breadcrumbSchema([
+    { name: 'Home', url: `${SITE.url}/` },
+    { name: 'Terms & Conditions', url },
+  ])
+);
+---
+
+<BaseLayout title={title} description={description} canonical={url} schema={schema}>
+  <PageHero
+    title="Terms & Conditions"
+    answer="By using chirocandy.com you agree to these terms. They cover site use, inquiries, and how ChiroCandy Marketing, LLC provides marketing services."
+  />
+  <section class="section">
+    <div class="container prose">
+      <h2>Using this website</h2>
+      <p>
+        Content on this site is for information about ChiroCandy services. It is not medical advice and not a guarantee of patient volume or revenue.
+      </p>
+      <h2>Strategy calls</h2>
+      <p>
+        Booking a strategy call does not create a client agreement. Any paid engagement is governed by a separate service agreement.
+      </p>
+      <h2>Intellectual property</h2>
+      <p>
+        ChiroCandy names, logos, frameworks, and site content are owned by ChiroCandy Marketing, LLC unless otherwise noted. Do not copy them without permission.
+      </p>
+      <h2>Contact</h2>
+      <p>
+        Questions about these terms: <a href={`mailto:${SITE.email}`}>{SITE.email}</a> or {SITE.phoneDisplay}.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

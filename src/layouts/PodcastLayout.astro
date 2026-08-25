@@ -1,0 +1,200 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import {
+  buildGraph,
+  blogPostingSchema,
+  breadcrumbSchema,
+  podcastEpisodeSchema,
+  webPageSchema,
+} from '@/lib/schema';
+import { SITE } from '@/lib/site';
+
+interface Props {
+  title: string;
+  description: string;
+  slug: string;
+  h1: string;
+  body: string;
+  audioUrl?: string;
+  datePublished: string;
+  dateModified: string;
+  summary?: string;
+}
+
+const {
+  title,
+  description,
+  slug,
+  h1,
+  body,
+  audioUrl,
+  datePublished,
+  dateModified,
+  summary,
+} = Astro.props;
+
+const url = `${SITE.url}/podcast/${slug}/`;
+const paragraphs = body.split('\n\n').filter(Boolean);
+
+const schema = buildGraph(
+  webPageSchema({
+    url,
+    name: title,
+    description,
+    datePublished,
+    dateModified,
+  }),
+  breadcrumbSchema([
+    { name: 'Home', url: `${SITE.url}/` },
+    { name: 'Podcast', url: `${SITE.url}/podcasts/` },
+    { name: h1, url },
+  ]),
+  podcastEpisodeSchema({
+    url,
+    name: h1,
+    description: summary ?? description,
+    datePublished,
+    audioUrl,
+  }),
+  blogPostingSchema({
+    url,
+    headline: h1,
+    description,
+    datePublished,
+    dateModified,
+  })
+);
+---
+
+<BaseLayout title={title} description={description} canonical={url} ogType="article" schema={schema}>
+  <article class="podcast-episode section">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a> / <a href="/podcasts/">Podcast</a> / <span>{h1}</span>
+      </nav>
+
+      <header class="podcast-episode__header">
+        <p class="eyebrow">ChiroCandy Podcast</p>
+        <h1>{h1}</h1>
+        {summary && <p class="answer-first podcast-episode__summary">{summary}</p>}
+        <p class="podcast-episode__meta">
+          <time datetime={datePublished}>
+            Published {new Date(datePublished).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+          </time>
+          {dateModified !== datePublished && (
+            <>
+              {' '}
+              · Updated{' '}
+              <time datetime={dateModified}>
+                {new Date(dateModified).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+              </time>
+            </>
+          )}
+        </p>
+      </header>
+
+      {audioUrl && (
+        <div class="podcast-episode__player">
+          <h2 class="sr-only">Listen to this episode</h2>
+          <audio controls preload="none" src={audioUrl}>
+            <a href={audioUrl}>Download MP3</a>
+          </audio>
+          <p class="podcast-episode__player-links">
+            <a href={audioUrl} download>Download episode</a>
+          </p>
+        </div>
+      )}
+
+      <div class="podcast-episode__body">
+        <h2>What will you learn in this episode?</h2>
+        {paragraphs.map((paragraph) => (
+          <p>{paragraph}</p>
+        ))}
+      </div>
+
+      <footer class="podcast-episode__footer">
+        <p>
+          Hosted by <a href="/about/billy-sticker/">Billy Sticker</a>. More episodes on the{' '}
+          <a href="/podcasts/">ChiroCandy podcast archive</a>.
+        </p>
+        <a href="/contact-us/" class="btn btn--primary">Schedule a Call</a>
+      </footer>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .breadcrumb {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  .breadcrumb a {
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .eyebrow {
+    font-family: var(--font-subhead);
+    font-weight: 600;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--green-dark);
+    margin: 0 0 0.5rem;
+  }
+
+  .podcast-episode__header h1 {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    margin: 0 0 1rem;
+    max-width: 48ch;
+  }
+
+  .podcast-episode__summary {
+    margin: 0 0 1rem;
+  }
+
+  .podcast-episode__meta {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  .podcast-episode__player {
+    background: var(--off-white);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    margin: 2rem 0;
+  }
+
+  .podcast-episode__player audio {
+    width: 100%;
+  }
+
+  .podcast-episode__player-links {
+    margin: 0.75rem 0 0;
+    font-size: 0.875rem;
+  }
+
+  .podcast-episode__body {
+    max-width: 72ch;
+    margin: 2rem 0;
+  }
+
+  .podcast-episode__body h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .podcast-episode__footer {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+</style>

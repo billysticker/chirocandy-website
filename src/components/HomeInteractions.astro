@@ -1,0 +1,257 @@
+<script>
+  import gsap from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isMobile = window.matchMedia('(max-width: 960px)').matches;
+  const $ = (selector: string, root: ParentNode = document) => root.querySelector(selector);
+  const $$ = (selector: string, root: ParentNode = document) => Array.from(root.querySelectorAll(selector));
+
+  const intro = $('#intro');
+  if (intro) {
+    if (reduced) intro.remove();
+    else {
+      window.setTimeout(() => intro.classList.add('done'), 650);
+      window.setTimeout(() => intro.remove(), 1700);
+    }
+  }
+
+  const aura = $('#aura');
+  if (aura instanceof HTMLElement) {
+    window.addEventListener('pointermove', (event) => {
+      aura.style.left = `${event.clientX}px`;
+      aura.style.top = `${event.clientY}px`;
+    });
+  }
+
+  const nav = $('#nav');
+  if (nav) {
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40), {
+      passive: true,
+    });
+  }
+
+  const toggle = $('#navToggle');
+  const menu = $('#mobileMenu');
+  if (toggle && menu) {
+    const closeMenu = () => {
+      toggle.classList.remove('open');
+      menu.classList.remove('open');
+      document.body.style.overflow = '';
+      toggle.setAttribute('aria-label', 'Open menu');
+    };
+    toggle.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      toggle.classList.toggle('open', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+    $$('#mobileMenu a').forEach((link) => link.addEventListener('click', closeMenu));
+  }
+
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.16 }
+  );
+  $$('.landing-home .reveal').forEach((el) => io.observe(el));
+
+  const cio = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target as HTMLElement;
+        cio.unobserve(el);
+        const dec = el.dataset.dec || '';
+        const places = dec.length;
+        const target = parseFloat(`${el.dataset.to}${dec ? `.${dec}` : ''}`);
+        if (reduced) {
+          el.textContent = places ? target.toFixed(places) : target.toLocaleString();
+          return;
+        }
+        const duration = 1600;
+        const start = performance.now();
+        const tick = (now: number) => {
+          const progress = Math.min(1, (now - start) / duration);
+          const ease = 1 - Math.pow(1 - progress, 3);
+          const value = target * ease;
+          el.textContent = places ? value.toFixed(places) : Math.round(value).toLocaleString();
+          if (progress < 1) requestAnimationFrame(tick);
+        };
+        tick(start);
+      });
+    },
+    { threshold: 0.6 }
+  );
+  $$('.landing-home .count').forEach((el) => cio.observe(el));
+
+  if (!isMobile && !reduced) {
+    $$('.landing-home .magnetic').forEach((btn) => {
+      if (!(btn instanceof HTMLElement)) return;
+      btn.addEventListener('pointermove', (event) => {
+        const rect = btn.getBoundingClientRect();
+        const dx = event.clientX - (rect.left + rect.width / 2);
+        const dy = event.clientY - (rect.top + rect.height / 2);
+        btn.style.transform = `translate(${dx * 0.18}px, ${dy * 0.28}px)`;
+      });
+      btn.addEventListener('pointerleave', () => {
+        btn.style.transform = '';
+        btn.style.transition = 'transform .5s cubic-bezier(.2,.8,.2,1)';
+        window.setTimeout(() => {
+          btn.style.transition = '';
+        }, 500);
+      });
+    });
+  }
+
+  if (!reduced) {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to('#heroIn', {
+      scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: true },
+      y: -130,
+      opacity: 0.1,
+      scale: 0.94,
+      ease: 'none',
+    });
+    if (!isMobile) {
+      const lines = gsap.utils.toArray<SVGLineElement>('.ring-svg line');
+      const nodes = gsap.utils.toArray<HTMLElement>('.node');
+      const items = gsap.utils.toArray<HTMLElement>('#engineList li');
+      const timeline = gsap.timeline({
+        scrollTrigger: { trigger: '#engineStage', start: 'top top', end: '+=3600', scrub: 0.6, pin: true },
+      });
+      lines.forEach((line, index) => {
+        timeline
+          .to(line, { strokeDashoffset: 0, duration: 0.5, ease: 'none' }, index)
+          .to(
+            nodes[index],
+            {
+              opacity: 1,
+              scale: 1,
+              duration: 0.35,
+              ease: 'none',
+              onStart: () => nodes[index]?.classList.add('on'),
+              onReverseComplete: () => nodes[index]?.classList.remove('on'),
+            },
+            index + 0.25
+          )
+          .to(
+            items[index],
+            {
+              backgroundColor: 'rgba(126,217,87,.07)',
+              duration: 0.3,
+              ease: 'none',
+              onStart: () => items[index]?.classList.add('on'),
+              onReverseComplete: () => items[index]?.classList.remove('on'),
+            },
+            index + 0.25
+          );
+      });
+      timeline
+        .to('#coreGlow', { opacity: 1, scale: 1.15, duration: 1, ease: 'none' }, 9)
+        .to('#engineFinal', { opacity: 1, y: 0, duration: 0.8, ease: 'none' }, 9.3);
+    } else {
+      gsap.set('.node', { opacity: 1, scale: 1 });
+      $$('.node').forEach((node) => node.classList.add('on'));
+      $$('#engineList li').forEach((item) => item.classList.add('on'));
+      gsap.set('#engineFinal', { opacity: 1 });
+      gsap.set('.ring-svg line', { strokeDashoffset: 0 });
+    }
+  } else {
+    $$('.node').forEach((node) => {
+      if (node instanceof HTMLElement) {
+        node.style.opacity = '1';
+        node.style.transform = 'translate(-50%,-50%) scale(1)';
+      }
+      node.classList.add('on');
+    });
+    $$('#engineList li').forEach((item) => item.classList.add('on'));
+    const engineFinal = $('#engineFinal');
+    if (engineFinal instanceof HTMLElement) engineFinal.style.opacity = '1';
+    $$('.ring-svg line').forEach((line) => {
+      if (line instanceof SVGElement) line.style.strokeDashoffset = '0';
+    });
+    const glow = $('#coreGlow');
+    if (glow instanceof HTMLElement) glow.style.opacity = '1';
+  }
+
+  const chat = $('#chat');
+  const cityInput = $('#cityInput');
+  const runBtn = $('#runDemo');
+  let running = false;
+
+  const bubble = (cls: string, html: string) => {
+    if (!(chat instanceof HTMLElement)) return null;
+    const node = document.createElement('div');
+    node.className = `bubble ${cls}`;
+    node.innerHTML = html;
+    chat.appendChild(node);
+    requestAnimationFrame(() => requestAnimationFrame(() => node.classList.add('show')));
+    chat.scrollTop = chat.scrollHeight;
+    return node;
+  };
+
+  const wait = (ms: number) => new Promise((resolve) => window.setTimeout(resolve, reduced ? 0 : ms));
+
+  const runDemo = async () => {
+    if (running || !chat || !(runBtn instanceof HTMLElement)) return;
+    running = true;
+    runBtn.textContent = 'Running...';
+    const raw = cityInput instanceof HTMLInputElement ? cityInput.value.trim() : '';
+    const city = raw ? raw.replace(/[<>]/g, '') : 'your city';
+    chat.innerHTML = '';
+    await wait(300);
+    bubble('them', "Hi, do you take new patients? I've been dealing with lower back pain for a few weeks.");
+    await wait(1400);
+    const typing1 = bubble('ai typing', '<i></i><i></i><i></i>');
+    await wait(1200);
+    typing1?.remove();
+    bubble(
+      'ai',
+      `We'd love to help! You reached the top-rated practice in <b>${city}</b>. Dr. [Name] has openings tomorrow. Morning or afternoon?`
+    );
+    await wait(1700);
+    bubble('them', 'Morning works.');
+    await wait(1100);
+    const typing2 = bubble('ai typing', '<i></i><i></i><i></i>');
+    await wait(1000);
+    typing2?.remove();
+    bubble('ai', "You're set for <b>9:40am tomorrow</b>. Confirmation and directions just went to your phone. See you then!");
+    await wait(1200);
+    bubble('sys', '✓ Appointment booked · 22 seconds · Zero staff time');
+    runBtn.textContent = 'Run it again';
+    running = false;
+  };
+
+  runBtn?.addEventListener('click', () => {
+    void runDemo();
+  });
+  cityInput?.addEventListener('keydown', (event) => {
+    if (event instanceof KeyboardEvent && event.key === 'Enter') void runDemo();
+  });
+
+  if (chat) {
+    bubble('them', "Hi, do you take new patients? I've been dealing with lower back pain for a few weeks.");
+    const phone = $('.phone');
+    if (phone) {
+      const demoObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              demoObserver.disconnect();
+              void runDemo();
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+      demoObserver.observe(phone);
+    }
+  }
+</script>

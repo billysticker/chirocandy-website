@@ -1,0 +1,65 @@
+---
+import { SITE } from '@/lib/site';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogType?: string;
+  ogImage?: string;
+  noindex?: boolean;
+  schema?: Record<string, unknown>;
+}
+
+const {
+  title,
+  description,
+  canonical,
+  ogType = 'website',
+  ogImage,
+  noindex = false,
+  schema,
+} = Astro.props;
+
+const fullTitle = title.includes('ChiroCandy') ? title : `${title} | ${SITE.title}`;
+const canonicalUrl = canonical ?? new URL(Astro.url.pathname, SITE.url).href;
+const imageUrl = new URL(ogImage ?? SITE.ogImage, SITE.url).href;
+---
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{fullTitle}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalUrl} />
+<meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'} />
+<meta name="author" content={SITE.name} />
+<meta name="theme-color" content="#04101F" />
+
+<meta property="og:type" content={ogType} />
+<meta property="og:site_name" content={SITE.name} />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:locale" content="en_US" />
+<meta property="og:image" content={imageUrl} />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={imageUrl} />
+
+<link rel="alternate" type="text/plain" href={`${SITE.url}/llms.txt`} title="LLM index" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+  rel="stylesheet"
+/>
+
+<link rel="icon" href="/images/logo-mark.png" type="image/png" />
+<link rel="apple-touch-icon" href="/images/logo-mark.png" />
+
+{schema && (
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+)}

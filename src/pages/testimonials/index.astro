@@ -1,0 +1,85 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import { buildGraph, breadcrumbSchema, webPageSchema } from '@/lib/schema';
+import { SITE } from '@/lib/site';
+import testimonials from '@/data/testimonials.json';
+
+const title = 'Testimonials | ChiroCandy';
+const description =
+  'Watch healthcare practice owners describe working with ChiroCandy. Video testimonials from doctors who used the growth system to get known, found, and trusted.';
+const url = `${SITE.url}/testimonials/`;
+const schema = buildGraph(
+  webPageSchema({ url, name: title, description, dateModified: '2026-08-25' }),
+  breadcrumbSchema([
+    { name: 'Home', url: `${SITE.url}/` },
+    { name: 'Testimonials', url },
+  ])
+);
+---
+
+<BaseLayout title={title} description={description} canonical={url} schema={schema}>
+  <PageHero
+    title="Proof from the practices we serve"
+    answer="These doctors used ChiroCandy to grow patient flow. Watch the videos, then book a strategy call if you want the same system in your market."
+    eyebrow="Results"
+  />
+  <section class="section">
+    <div class="container grid">
+      {
+        testimonials.map((item) => (
+          <article class="card">
+            {item.youtubeId ? (
+              <iframe
+                src={`https://www.youtube.com/embed/${item.youtubeId}`}
+                title={`${item.name} testimonial`}
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              />
+            ) : null}
+            <h2>{item.name}</h2>
+          </article>
+        ))
+      }
+    </div>
+    <div class="container inner-cta">
+      <button class="btn btn--primary" data-book type="button">Book a Strategy Call</button>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+  }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  .card iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+    display: block;
+  }
+  .card h2 {
+    font-size: 1rem;
+    padding: 1rem 1.1rem 1.2rem;
+    margin: 0;
+  }
+  @media (max-width: 900px) {
+    .grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media (max-width: 600px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

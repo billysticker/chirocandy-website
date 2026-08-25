@@ -1,0 +1,431 @@
+---
+import HomeInteractions from '@/components/HomeInteractions.astro';
+import SignalField from '@/components/SignalField.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { HOME_FAQS, SITE } from '@/lib/site';
+import {
+  buildGraph,
+  faqPageSchema,
+  howToSchema,
+  webPageSchema,
+} from '@/lib/schema';
+import '@/styles/homepage.css';
+
+const title = 'ChiroCandy | Build Trust. Become Known. Get Found.';
+const description =
+  'ChiroCandy is the growth system for healthcare practices. Ads, SEO, websites, CTV, reactivation, and AI follow-up in one founder-led engine since 2015.';
+
+const schema = buildGraph(
+  webPageSchema({
+    url: `${SITE.url}/`,
+    name: title,
+    description,
+    datePublished: '2015-05-01',
+    dateModified: '2026-08-25',
+    speakable: ['.hero h1', '.lede', '.home-faq-item'],
+  }),
+  faqPageSchema([...HOME_FAQS]),
+  howToSchema({
+    name: 'How a ChiroCandy strategy call works',
+    description:
+      'Thirty minutes. No pressure, no canned pitch. You leave with a clear read on your marketing health and a plan built for your market.',
+    steps: [
+      {
+        name: 'Book a time',
+        text: 'Pick a slot that works. We review your market, your competitors, and where patients are already looking for you.',
+      },
+      {
+        name: 'Get the diagnosis',
+        text: 'We walk your marketing health across channels and name exactly what is leaking growth right now.',
+      },
+      {
+        name: 'Get the plan',
+        text: 'A personalized growth plan with the channels, sequence, and numbers to build trust, become known, and get found.',
+      },
+    ],
+  })
+);
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonical={`${SITE.url}/`}
+  schema={schema}
+  hideHeader
+  bodyClass="landing-home"
+>
+  <div id="intro"><img src="/images/logo-white.png" alt="ChiroCandy" /></div>
+  <div id="aura" aria-hidden="true"></div>
+
+  <nav id="nav">
+    <div class="wrap nav-in">
+      <a class="nav-logo" href="/" aria-label={`${SITE.title} home`}>
+        <img src="/images/logo-white.png" alt="ChiroCandy" width="160" height="40" />
+      </a>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="#engine">The System</a>
+          <a href="/services/">Services</a>
+          <a href="#ai">AI Demo</a>
+          <a href="#founder">About</a>
+        </div>
+        <a class="nav-phone" href={`tel:${SITE.phone}`}><b>{SITE.phoneDisplay}</b></a>
+        <button class="btn btn-green nav-cta magnetic" data-book type="button">Book a Strategy Call</button>
+        <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#engine">The System</a>
+    <a href="/services/">Services</a>
+    <a href="/blog/">Blog</a>
+    <a href="/podcasts/">Podcast</a>
+    <a href="#ai">AI Demo</a>
+    <a href="#founder">About</a>
+    <a href="/faqs/">FAQs</a>
+    <a href="/contact-us/">Contact</a>
+    <button class="btn btn-green mm-cta" data-book type="button">Book a Strategy Call <span class="arrow">→</span></button>
+    <a href={`tel:${SITE.phone}`} style="font-size:1rem;font-family:'Inter',sans-serif;color:var(--muted)">
+      Or call <b style="color:var(--green)">{SITE.phoneDisplay}</b>
+    </a>
+  </div>
+
+  <header class="hero" id="hero">
+    <SignalField />
+    <div class="hero-veil" aria-hidden="true"></div>
+    <div class="wrap hero-in" id="heroIn">
+      <span class="eyebrow"><span class="pulse-dot"></span> The Growth System for Healthcare Practices</span>
+      <h1>
+        <span class="w">Build <em class="grad">Trust.</em></span>
+        <span class="w">Become <em class="grad">Known.</em></span>
+        <span class="w">Get <em class="grad">Found.</em></span>
+      </h1>
+      <p class="lede">
+        Ads, SEO, websites, CTV, reactivation, and AI follow-up. One integrated engine for healthcare
+        practices, founder-led since 2015.
+      </p>
+      <div class="hero-ctas">
+        <button class="btn btn-green magnetic" data-book type="button">Book a Strategy Call <span class="arrow">→</span></button>
+        <a class="btn btn-ghost magnetic" href="#watch">See How It Works</a>
+      </div>
+    </div>
+    <div class="scroll-hint">Scroll</div>
+  </header>
+
+  <section class="press" aria-label="As seen on">
+    <div class="wrap">
+      <img
+        class="press-strip"
+        src="/images/as-seen-on.png"
+        alt="As seen on FOX, CBS, NBC, Forbes, and Inc. 5000"
+        width="820"
+        height="80"
+      />
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span><b>2,000+</b> practices served</span>
+      <span><b>$450M+</b> client revenue generated</span>
+      <span>Healthcare marketing, <b>since 2015</b></span>
+      <span><b>Founder-led</b> strategy</span>
+      <span><b>9 services,</b> one growth engine</span>
+      <span><b>2,000+</b> practices served</span>
+      <span><b>$450M+</b> client revenue generated</span>
+      <span>Healthcare marketing, <b>since 2015</b></span>
+      <span><b>Founder-led</b> strategy</span>
+      <span><b>9 services,</b> one growth engine</span>
+    </div>
+  </div>
+
+  <section class="vsl" id="watch">
+    <div class="wrap">
+      <div class="vsl-head reveal">
+        <span class="eyebrow">Start Here</span>
+        <h2>Watch this before your strategy call</h2>
+      </div>
+      <div class="vsl-frame reveal d1">
+        <iframe
+          src="https://player.vimeo.com/video/1155065181"
+          title="ChiroCandy: how the system works"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+      <div class="vsl-cta reveal d2">
+        <button class="btn btn-green magnetic" data-book type="button">Book a Strategy Call <span class="arrow">→</span></button>
+        <span class="call">Prefer to talk now? Call <a href={`tel:${SITE.phone}`}>{SITE.phoneDisplay}</a></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="wrap stat-grid">
+      <div class="stat reveal">
+        <div class="n"><span class="count" data-to="2000">0</span><em>+</em></div>
+        <div class="l">Practices served</div>
+      </div>
+      <div class="stat reveal d1">
+        <div class="n">$<span class="count" data-to="450">0</span>M<em>+</em></div>
+        <div class="l">Estimated client revenue generated</div>
+      </div>
+      <div class="stat reveal d2">
+        <div class="n"><span class="count" data-to="11">0</span> <em>yrs</em></div>
+        <div class="l">Years inside healthcare marketing</div>
+      </div>
+      <div class="stat reveal d3">
+        <div class="n"><span class="count" data-to="9">0</span></div>
+        <div class="l">Services in one integrated system</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="contrast-grid">
+        <div class="reveal">
+          <span class="eyebrow">Random Acts of Hope</span>
+          <h2 style="font-size:clamp(2rem,3.6vw,2.9rem);margin:.8rem 0 1rem;line-height:1.12">
+            Most practice marketing is a menu, not a system.
+          </h2>
+          <p style="color:var(--muted)">
+            Four vendors, four dashboards, and nobody accountable for the number that matters: patients through the door.
+          </p>
+          <ul class="leak-list">
+            <li><span class="lx">✕</span><div><b>Disconnected tactics</b><span>Campaigns that never compound into real growth</span></div></li>
+            <li><span class="lx">✕</span><div><b>Leads that never arrive</b><span>Names on a list instead of patients in your chairs</span></div></li>
+            <li><span class="lx">✕</span><div><b>Slow follow-up</b><span>The fastest response wins, and it is rarely yours</span></div></li>
+            <li><span class="lx">✕</span><div><b>Generalist agencies</b><span>Teams learning healthcare on your dime and your reputation</span></div></li>
+          </ul>
+        </div>
+        <div class="reveal d1">
+          <div class="eng-card">
+            <div class="eng-top">
+              <span class="lbl"><span class="pulse-dot"></span> Growth Engine Active</span>
+              <span class="eng-live">LIVE</span>
+            </div>
+            <div class="eng-when">This month</div>
+            <div class="eng-h">Your market, working together.</div>
+            <div class="eng-kpis">
+              <div class="eng-kpi hot">
+                <div class="kl">New opportunities</div>
+                <div class="kn"><span class="count" data-to="120">0</span><em>+</em></div>
+                <div class="ks">Across paid and organic</div>
+              </div>
+              <div class="eng-kpi">
+                <div class="kl">Avg. response</div>
+                <div class="kn"><span class="lt">&lt;</span><span class="count" data-to="60">0</span><em> sec</em></div>
+                <div class="ks">Patient follow-up, 24/7</div>
+              </div>
+            </div>
+            <div class="eng-rows">
+              <div class="eng-row"><div class="eng-chip">M</div><div class="rt"><b>Meta Ads</b><span>Demand generation</span></div><span class="eng-on">ON</span></div>
+              <div class="eng-row"><div class="eng-chip">G</div><div class="rt"><b>Google + Maps</b><span>High-intent search</span></div><span class="eng-on">ON</span></div>
+              <div class="eng-row"><div class="eng-chip">AI</div><div class="rt"><b>AI Patient Coordinator</b><span>Instant follow-up</span></div><span class="eng-on">ON</span></div>
+            </div>
+            <div class="eng-foot">
+              <span><span class="chk">✓</span>One strategy</span>
+              <span><span class="chk">✓</span>One team</span>
+              <span><span class="chk">✓</span>One clear scorecard</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="engine">
+    <div class="engine-stage" id="engineStage">
+      <div class="wrap engine-grid">
+        <div>
+          <span class="eyebrow">The ChiroCandy System</span>
+          <h2 style="font-size:clamp(2rem,3.6vw,2.9rem);margin:.8rem 0 1.8rem;line-height:1.12">
+            One engine.<br />Watch it assemble.
+          </h2>
+          <ul class="engine-list" id="engineList">
+            <li><span class="k">01</span><div><b>AI CA™</b><span>Every lead answered and booked, 24/7</span></div></li>
+            <li><span class="k">02</span><div><b>Meta Ads</b><span>Patient campaigns proven on Facebook and Instagram</span></div></li>
+            <li><span class="k">03</span><div><b>Streaming TV</b><span>Your face on your community's living room TVs</span></div></li>
+            <li><span class="k">04</span><div><b>Retargeting</b><span>Stay in front of every visitor until they book</span></div></li>
+            <li><span class="k">05</span><div><b>Invisible Intent™</b><span>Reach patients researching care before they call</span></div></li>
+            <li><span class="k">06</span><div><b>Custom Website</b><span>Built to convert visitors into booked visits</span></div></li>
+            <li><span class="k">07</span><div><b>Google Ads</b><span>Capture patients searching for care right now</span></div></li>
+            <li><span class="k">08</span><div><b>Google Maps</b><span>Own the map pack patients see first</span></div></li>
+            <li><span class="k">09</span><div><b>SEO & AI Search</b><span>Found in local rankings and AI answers</span></div></li>
+          </ul>
+          <p class="engine-final" id="engineFinal">
+            Each service makes the others stronger. <b>The system outperforms the menu.</b>
+          </p>
+        </div>
+        <div class="ring-wrap" id="ringWrap">
+          <svg class="ring-svg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+            <line x1="50" y1="50" x2="50" y2="10" pathLength="1"></line>
+            <line x1="50" y1="50" x2="75.7" y2="19.4" pathLength="1"></line>
+            <line x1="50" y1="50" x2="89.4" y2="43.1" pathLength="1"></line>
+            <line x1="50" y1="50" x2="84.6" y2="70" pathLength="1"></line>
+            <line x1="50" y1="50" x2="63.7" y2="87.6" pathLength="1"></line>
+            <line x1="50" y1="50" x2="36.3" y2="87.6" pathLength="1"></line>
+            <line x1="50" y1="50" x2="15.4" y2="70" pathLength="1"></line>
+            <line x1="50" y1="50" x2="10.6" y2="43.1" pathLength="1"></line>
+            <line x1="50" y1="50" x2="24.3" y2="19.4" pathLength="1"></line>
+          </svg>
+          <div class="core-glow" id="coreGlow"></div>
+          <div class="core">Your<br /><b>Office</b></div>
+          <div class="node" style="top:10%;left:50%"><em>●</em>AI CA™</div>
+          <div class="node" style="top:19.4%;left:75.7%"><em>●</em>Meta Ads</div>
+          <div class="node" style="top:43.1%;left:89.4%"><em>●</em>Streaming TV</div>
+          <div class="node" style="top:70%;left:84.6%"><em>●</em>Retargeting</div>
+          <div class="node" style="top:88.5%;left:70%"><em>●</em>Invisible Intent™</div>
+          <div class="node" style="top:88.5%;left:30%"><em>●</em>Custom Website</div>
+          <div class="node" style="top:70%;left:15.4%"><em>●</em>Google Ads</div>
+          <div class="node" style="top:43.1%;left:10.6%"><em>●</em>Google Maps</div>
+          <div class="node" style="top:19.4%;left:24.3%"><em>●</em>SEO & AI Search</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ai">
+    <div class="wrap ai-grid">
+      <div class="reveal">
+        <span class="eyebrow">AI, Applied Practically</span>
+        <h2 style="font-size:clamp(1.9rem,3.2vw,2.6rem);margin:.8rem 0 1rem">Don't take our word for it. Run the demo.</h2>
+        <p style="color:var(--muted)">
+          This is what happens the moment a new patient reaches out to a ChiroCandy-powered practice. Type your city and watch the AI handle the lead in real time.
+        </p>
+        <ul class="ai-list">
+          <li><span class="chk">✓</span> Every lead answered in under 60 seconds, 24/7</li>
+          <li><span class="chk">✓</span> Found when patients ask AI for the best practice near them</li>
+          <li><span class="chk">✓</span> Follow-up that books while your front desk sleeps</li>
+        </ul>
+      </div>
+      <div class="reveal d1">
+        <div class="phone">
+          <div class="phone-head">
+            <div class="pav">AI</div>
+            <div><b>Your Practice AI</b><span><span class="live-dot"></span>Responds in seconds</span></div>
+          </div>
+          <div class="chat" id="chat" aria-live="polite"></div>
+          <div class="demo-bar">
+            <input id="cityInput" type="text" placeholder="Type your city..." maxlength="40" aria-label="Your city" />
+            <button id="runDemo" type="button">Run the demo</button>
+          </div>
+          <div class="demo-hint">Simulation. No data is sent anywhere.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="process" id="process">
+    <SignalField opacity={0.55} phase={42} />
+    <div class="process-veil" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="sec-head reveal" style="text-align:center;margin-left:auto;margin-right:auto">
+        <span class="eyebrow">What Happens On The Call</span>
+        <h2>Diagnosis before prescription</h2>
+        <p>
+          Thirty minutes. No pressure, no canned pitch. You leave with a clear read on your marketing health and a plan built for your market.
+        </p>
+      </div>
+      <div class="step-grid">
+        <div class="step reveal">
+          <div class="sn">01</div>
+          <span class="day">Before the call</span>
+          <h3>Book a time</h3>
+          <p>Pick a slot that works. We review your market, your competitors, and where patients are already looking for you.</p>
+        </div>
+        <div class="step reveal d1">
+          <div class="sn">02</div>
+          <span class="day">Day one</span>
+          <h3>Get the diagnosis</h3>
+          <p>We walk your marketing health across all six channels and name exactly what is leaking growth right now.</p>
+        </div>
+        <div class="step reveal d2">
+          <div class="sn">03</div>
+          <span class="day">Day two</span>
+          <h3>Get the plan</h3>
+          <p>A personalized growth plan with the channels, sequence, and numbers to build trust, become known, and get found.</p>
+        </div>
+      </div>
+      <div class="reveal d2" style="text-align:center;margin-top:2.8rem">
+        <button class="btn btn-green magnetic" data-book type="button">Book a Strategy Call <span class="arrow">→</span></button>
+      </div>
+    </div>
+  </section>
+
+  <section id="founder">
+    <div class="wrap founder-grid">
+      <div class="founder-photo reveal">
+        <div class="founder-shot">
+          <img src="/images/billy-speaking.jpg" alt="Billy Sticker speaking on stage" width="720" height="900" />
+        </div>
+        <div class="founder-badge">
+          <b>Founder-led strategy</b>
+          <span>Not a revolving door of account managers.</span>
+        </div>
+      </div>
+      <div class="founder-body reveal d1">
+        <span class="eyebrow">Built Inside Healthcare Marketing</span>
+        <h2 class="founder-h">Eleven years in patient acquisition changes how you see the market.</h2>
+        <p>
+          Billy Sticker built ChiroCandy around a simple conviction: healthcare practices should not have to teach their marketing company how patient care, local trust, and the front desk really work.
+        </p>
+        <p>
+          He currently chairs the Technology and Innovation Committee for the Texas Chiropractic Association, helping set the standard for how practices adopt AI responsibly.
+        </p>
+        <p>
+          The result is a team, strategy, and growth system shaped by more than 2,000 practices, and still led by the founder.
+        </p>
+        <div class="cred-grid">
+          <div class="cred-card"><span class="cl">Author</span><span class="cv">AI-Powered Chiropractic Marketing & Tribe of Patients</span></div>
+          <div class="cred-card"><span class="cl">Speaker</span><span class="cv">Parker Seminars, FocusOKC, 7-Figure Agency, CE Approved AI & HIPAA Class</span></div>
+          <div class="cred-card"><span class="cl">Committee Chair</span><span class="cv">Technology & Innovation, Texas Chiropractic Association</span></div>
+          <div class="cred-card"><span class="cl">Founder</span><span class="cv">ChiroCandy, est. 2015</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-faq" id="faqs" aria-labelledby="home-faq-title">
+    <div class="wrap">
+      <div class="sec-head reveal" style="text-align:center;margin-left:auto;margin-right:auto">
+        <span class="eyebrow">Direct Answers</span>
+        <h2 id="home-faq-title">What is ChiroCandy, in plain language?</h2>
+        <p>Short answers for search, AI assistants, and practice owners deciding whether to book a call.</p>
+      </div>
+      <dl class="home-faq-list">
+        {
+          HOME_FAQS.map((faq) => (
+            <div class="home-faq-item reveal">
+              <dt>{faq.question}</dt>
+              <dd>{faq.answer}</dd>
+            </div>
+          ))
+        }
+      </dl>
+      <p class="reveal" style="text-align:center;margin-top:2rem">
+        <a href="/faqs/">Read every FAQ</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="final">
+    <SignalField opacity={0.75} phase={20} />
+    <div class="final-veil" aria-hidden="true"></div>
+    <div class="wrap">
+      <h2 class="reveal">
+        Ready to become the <span class="shimmer">most trusted</span> and best-known practice in your market?
+      </h2>
+      <p class="reveal d1">One call. A clear diagnosis of your marketing health and a personalized plan to grow.</p>
+      <button class="btn btn-green magnetic reveal d2" data-book type="button">
+        Book a Strategy Call <span class="arrow">→</span>
+      </button>
+    </div>
+  </section>
+
+  <HomeInteractions />
+</BaseLayout>

@@ -1,0 +1,167 @@
+---
+interface Props {
+  /** Pin to viewport (recommended for cursor tracking). */
+  fixed?: boolean;
+  /** Hide the layer once this element leaves the viewport (e.g. "#hero"). */
+  observe?: string;
+}
+
+const { fixed = true, observe } = Astro.props;
+const canvasId = `fluid-canvas-${Astro.uid}`;
+---
+
+<div
+  data-fluid-layer
+  data-observe={observe}
+  class:list={[
+    'fluid-layer pointer-events-none',
+    fixed ? 'fixed inset-0 z-0' : 'absolute inset-0 z-0',
+  ]}
+>
+  <canvas id={canvasId} class="block h-full w-full" aria-hidden="true"></canvas>
+</div>
+
+<script define:vars={{ canvasId, observe }}>
+  import WebGLFluid from 'webgl-fluid';
+
+  const MOBILE_QUERY = '(max-width: 767px)';
+  const REDUCED_MOTION_QUERY = '(prefers-reduced-motion: reduce)';
+  const STATIC_GRADIENT = 'linear-gradient(180deg, #061733 0%, #0a2147 100%)';
+
+  const FLUID_CONFIG = {
+    TRIGGER: 'hover',
+    IMMEDIATE: false,
+    AUTO: false,
+    SIM_RESOLUTION: 128,
+    DYE_RESOLUTION: 1024,
+    DENSITY_DISSIPATION: 0.85,
+    VELOCITY_DISSIPATION: 0.18,
+    CURL: 24,
+    SPLAT_RADIUS: 0.22,
+    SPLAT_FORCE: 4500,
+    SHADING: true,
+    COLORFUL: true,
+    COLOR_UPDATE_SPEED: 4,
+    BACK_COLOR: { r: 6 / 255, g: 23 / 255, b: 51 / 255 },
+    TRANSPARENT: false,
+    BLOOM: true,
+    BLOOM_ITERATIONS: 6,
+    BLOOM_RESOLUTION: 256,
+    BLOOM_INTENSITY: 0.45,
+    BLOOM_THRESHOLD: 0.55,
+    BLOOM_SOFT_KNEE: 0.55,
+    SUNRAYS: false,
+  };
+
+  /** @type {(() => void) | null} */
+  let removeProxy = null;
+  /** @type {IntersectionObserver | null} */
+  let visibilityObserver = null;
+
+  function shouldUseStatic() {
+    return (
+      window.matchMedia(REDUCED_MOTION_QUERY).matches ||
+      window.matchMedia(MOBILE_QUERY).matches
+    );
+  }
+
+  function applyStaticFallback(canvas) {
+    canvas.style.background = STATIC_GRADIENT;
+  }
+
+  function dispatchCanvasPointer(canvas, type, clientX, clientY) {
+    const rect = canvas.getBoundingClientRect();
+    const offsetX = clientX - rect.left;
+    const offsetY = clientY - rect.top;
+    const event = new MouseEvent(type, {
+      bubbles: true,
+      cancelable: true,
+      clientX,
+      clientY,
+      view: window,
+    });
+
+    Object.defineProperty(event, 'offsetX', { value: offsetX });
+    Object.defineProperty(event, 'offsetY', { value: offsetY });
+    canvas.dispatchEvent(event);
+  }
+
+  function proxyPointerToCanvas(canvas) {
+    const onMouseMove = (event) => {
+      dispatchCanvasPointer(canvas, 'mousemove', event.clientX, event.clientY);
+    };
+
+    const onMouseDown = (event) => {
+      dispatchCanvasPointer(canvas, 'mousedown', event.clientX, event.clientY);
+    };
+
+    const onMouseUp = () => {
+      canvas.dispatchEvent(new MouseEvent('mouseup', { bubbles: true, view: window }));
+    };
+
+    window.addEventListener('mousemove', onMouseMove, { passive: true });
+    window.addEventListener('mousedown', onMouseDown, { passive: true });
+    window.addEventListener('mouseup', onMouseUp, { passive: true });
+
+    return () => {
+      window.removeEventListener('mousemove', onMouseMove);
+      window.removeEventListener('mousedown', onMouseDown);
+      window.removeEventListener('mouseup', onMouseUp);
+    };
+  }
+
+  function bindVisibilityObserver(layer) {
+    if (!observe) return;
+
+    const target = document.querySelector(observe);
+    if (!target) return;
+
+    visibilityObserver?.disconnect();
+    visibilityObserver = new IntersectionObserver(
+      ([entry]) => {
+        layer.style.opacity = entry.isIntersecting ? '1' : '0';
+      },
+      { threshold: 0.05 }
+    );
+    visibilityObserver.observe(target);
+  }
+
+  function initFluid() {
+    const layer = document.querySelector(`#${canvasId}`)?.closest('[data-fluid-layer]');
+    const canvas = document.getElementById(canvasId);
+
+    if (!(layer instanceof HTMLElement) || !(canvas instanceof HTMLCanvasElement)) return;
+    if (canvas.dataset.fluidInit === '1') return;
+
+    removeProxy?.();
+    removeProxy = null;
+
+    bindVisibilityObserver(layer);
+
+    if (shouldUseStatic()) {
+      applyStaticFallback(canvas);
+      canvas.dataset.fluidInit = '1';
+      return;
+    }
+
+    canvas.style.background = '';
+
+    const start = () => {
+      if (canvas.clientWidth < 2 || canvas.clientHeight < 2) {
+        requestAnimationFrame(start);
+        return;
+      }
+
+      WebGLFluid(canvas, FLUID_CONFIG);
+
+      // webgl-fluid attaches its own mousemove after 500ms; proxy immediately.
+      removeProxy = proxyPointerToCanvas(canvas);
+      canvas.dataset.fluidInit = '1';
+    };
+
+    requestAnimationFrame(start);
+  }
+
+  initFluid();
+  document.addEventListener('astro:page-load', initFluid);
+</script>

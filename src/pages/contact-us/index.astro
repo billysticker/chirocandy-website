@@ -1,0 +1,69 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import { buildGraph, breadcrumbSchema, webPageSchema } from '@/lib/schema';
+import { SITE } from '@/lib/site';
+
+const title = 'Contact ChiroCandy | Healthcare Practice Growth';
+const description =
+  'Contact ChiroCandy to discuss growth for your healthcare practice. Call 1-800-662-1745 or email support@chirocandy.com. Founder-led team serving practices worldwide.';
+
+const url = `${SITE.url}/contact-us/`;
+const schema = buildGraph(
+  webPageSchema({ url, name: title, description, dateModified: '2026-06-09' }),
+  breadcrumbSchema([
+    { name: 'Home', url: `${SITE.url}/` },
+    { name: 'Contact', url },
+  ])
+);
+---
+
+<BaseLayout title={title} description={description} canonical={url} schema={schema}>
+  <PageHero
+    title="Contact Us"
+    answer="The fastest way to reach ChiroCandy is by phone or a strategy call. Tell us about your practice goals and we will help you decide if the growth system is the right fit."
+  />
+
+  <section class="section">
+    <div class="container contact-grid">
+      <div>
+        <h2>How do I contact ChiroCandy?</h2>
+        <p>
+          <strong>Phone:</strong> <a href={`tel:${SITE.phone}`}>{SITE.phoneDisplay}</a><br />
+          <strong>Email:</strong> <a href={`mailto:${SITE.email}`}>{SITE.email}</a><br />
+          <strong>Hours:</strong> Monday through Friday, 9:00 am to 5:00 pm Central
+        </p>
+        <p>
+          <strong>Address:</strong><br />
+          {SITE.address.street}<br />
+          {SITE.address.city}, {SITE.address.region} {SITE.address.postalCode}
+        </p>
+      </div>
+      <div>
+        <h2>Schedule a strategy call</h2>
+        <p>
+          Ready to grow your healthcare practice? Book a strategy call or phone us now.
+        </p>
+        <div class="inner-cta">
+          <button class="btn btn--primary" data-book type="button">Book a Strategy Call</button>
+          <a href={`tel:${SITE.phone}`} class="btn btn--secondary">Call {SITE.phoneDisplay}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 900px;
+  }
+
+  @media (max-width: 700px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

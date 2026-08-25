@@ -1,0 +1,29 @@
+---
+import PodcastLayout from '@/layouts/PodcastLayout.astro';
+import podcasts from '@/data/podcasts.json';
+
+export function getStaticPaths() {
+  return podcasts.map((episode) => ({
+    params: { slug: episode.slug },
+    props: { episode },
+  }));
+}
+
+const { episode } = Astro.props;
+
+const summary =
+  episode.body.split('\n\n')[0]?.slice(0, 280) ??
+  episode.meta_description;
+---
+
+<PodcastLayout
+  title={episode.title}
+  description={episode.meta_description}
+  slug={episode.slug}
+  h1={episode.h1}
+  body={episode.body}
+  audioUrl={episode.audioUrl ?? undefined}
+  datePublished={episode.datePublished}
+  dateModified={episode.dateModified}
+  summary={summary}
+/>

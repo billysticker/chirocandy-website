@@ -1,0 +1,56 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import { buildGraph, breadcrumbSchema, webPageSchema } from '@/lib/schema';
+import { SITE } from '@/lib/site';
+
+const title = 'Privacy Policy | ChiroCandy';
+const description =
+  'How ChiroCandy collects, uses, and protects personal data on chirocandy.com, including contact forms, analytics, and strategy-call requests.';
+const url = `${SITE.url}/privacy-policy/`;
+const schema = buildGraph(
+  webPageSchema({ url, name: title, description, dateModified: '2026-08-25' }),
+  breadcrumbSchema([
+    { name: 'Home', url: `${SITE.url}/` },
+    { name: 'Privacy Policy', url },
+  ])
+);
+---
+
+<BaseLayout title={title} description={description} canonical={url} schema={schema}>
+  <PageHero
+    title="Privacy Policy"
+    answer="ChiroCandy Marketing, LLC operates chirocandy.com. This policy explains what data we collect, why we collect it, and how you can request access or deletion."
+  />
+  <section class="section">
+    <div class="container prose">
+      <h2>Who we are</h2>
+      <p>Our website address is https://chirocandy.com. ChiroCandy Marketing, LLC is a healthcare practice growth company founded in 2015.</p>
+      <h2>What personal data we collect and why</h2>
+      <h3>Strategy call and contact forms</h3>
+      <p>
+        When you request a strategy call or contact us, we collect your name, practice name, email address, and preferred time. We use that information only to schedule and follow up on your request.
+      </p>
+      <h3>Comments</h3>
+      <p>
+        If comments are enabled, we collect the data shown in the comment form, plus IP address and browser user agent string to help with spam detection.
+      </p>
+      <h3>Cookies and analytics</h3>
+      <p>
+        We may use cookies and analytics to understand how the site is used, improve pages, and measure marketing performance. You can control cookies in your browser.
+      </p>
+      <h3>Embedded content</h3>
+      <p>
+        Pages may include embeds such as Vimeo or YouTube. Those third parties may collect data as if you visited their site directly.
+      </p>
+      <h2>How long we retain data</h2>
+      <p>
+        Contact-form submissions are retained as long as needed to serve the inquiry and meet legal or accounting requirements. You can request deletion of personal data we hold about you, except data we must keep for administrative, legal, or security purposes.
+      </p>
+      <h2>Your rights</h2>
+      <p>
+        You can request an export or deletion of personal data we hold about you. Contact {SITE.email} or call {SITE.phoneDisplay}.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

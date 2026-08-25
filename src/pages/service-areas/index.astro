@@ -1,0 +1,113 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import { buildGraph, breadcrumbSchema, webPageSchema } from '@/lib/schema';
+import { SITE } from '@/lib/site';
+
+const title = 'Where We Serve Chiropractors | ChiroCandy Marketing, LLC';
+const description =
+  'ChiroCandy serves chiropractic practice owners across the US, Canada, UK, Australia, and worldwide. See where we work and how we support practices without geographic limits.';
+
+const url = `${SITE.url}/service-areas/`;
+const schema = buildGraph(
+  webPageSchema({ url, name: title, description, dateModified: '2026-06-09' }),
+  breadcrumbSchema([
+    { name: 'Home', url: `${SITE.url}/` },
+    { name: 'Where We Serve', url },
+  ])
+);
+
+const regions = [
+  {
+    name: 'United States',
+    answer:
+      'Most ChiroCandy clients are US-based chiropractic and functional medicine practices running Facebook, Google, SEO, and reactivation campaigns.',
+  },
+  {
+    name: 'Canada',
+    answer:
+      'We support Canadian chiropractors with compliant ad strategy, follow-up systems, and content tailored to their markets.',
+  },
+  {
+    name: 'United Kingdom',
+    answer:
+      'UK practice owners use ChiroCandy for patient acquisition systems adapted to their local ad platforms and patient expectations.',
+  },
+  {
+    name: 'Australia',
+    answer:
+      'Australian chiropractic practices work with our US-based team on campaigns, websites, and retention programs built for their time zones and audiences.',
+  },
+  {
+    name: 'International',
+    answer:
+      'If you run a chiropractic practice and need predictable new patient growth, geography is not a barrier. We configure campaigns for your market.',
+  },
+];
+---
+
+<BaseLayout title={title} description={description} canonical={url} schema={schema}>
+  <PageHero
+    title="Where ChiroCandy serves chiropractors"
+    answer="ChiroCandy is a global chiropractic marketing agency. We work with practice owners across the United States, Canada, the United Kingdom, Australia, and other international markets. Your location does not limit the systems we can deploy."
+    eyebrow="Worldwide reach"
+  />
+
+  <section class="section">
+    <div class="container">
+      <h2>Does ChiroCandy only work in one city or region?</h2>
+      <p class="answer-first">
+        No. ChiroCandy is not a local clinic and we do not market to patients on your behalf as a
+        local business would. We are a B2B agency that builds patient acquisition systems for
+        chiropractic practice owners wherever they operate.
+      </p>
+
+      <div class="region-grid">
+        {regions.map((region) => (
+          <article class="region-card reveal" data-animate>
+            <h3>Chiropractors in {region.name}</h3>
+            <p>{region.answer}</p>
+          </article>
+        ))}
+      </div>
+
+      <div class="definition-block">
+        <strong>Headquarters:</strong> ChiroCandy is based in Conroe, Texas, USA. Our team works
+        remotely with clients across time zones. That US base is a proof point for service quality,
+        not a limit on where you can practice.
+      </div>
+
+      <p>
+        <a href="/contact-us/" class="btn btn--primary">Talk to us about your market</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .region-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+
+  .region-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    background: var(--white);
+    box-shadow: var(--shadow);
+  }
+
+  .region-card h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.05rem;
+  }
+
+  .region-card p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+  }
+</style>

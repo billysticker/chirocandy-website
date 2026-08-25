@@ -1,0 +1,80 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import { NAV, SITE } from '@/lib/site';
+import { buildGraph, breadcrumbSchema, webPageSchema } from '@/lib/schema';
+
+const title = 'Chiropractic Marketing Services | ChiroCandy';
+const description =
+  'ChiroCandy offers chiropractic marketing services including Facebook ads, Google Ads, SEO, web design, patient reactivation, and social media. Each service is built only for chiropractic practices.';
+
+const url = `${SITE.url}/services/`;
+const schema = buildGraph(
+  webPageSchema({ url, name: title, description, dateModified: '2026-06-09' }),
+  breadcrumbSchema([
+    { name: 'Home', url: `${SITE.url}/` },
+    { name: 'Services', url },
+  ])
+);
+
+const summaries: Record<string, string> = {
+  '/services/facebook-advertising/':
+    'Targeted Facebook and Instagram campaigns that reach ideal chiropractic patients in your market.',
+  '/services/google-advertising/':
+    'Pay-per-click ads that put your practice at the top of Google when patients search for care.',
+  '/services/search-engine-optimization/':
+    'Local SEO that helps your practice rank for chiropractic searches in your service area.',
+  '/services/web-design/':
+    'Conversion-focused chiropractic websites built for speed, mobile, and search visibility.',
+  '/services/reactivation-campaigns/':
+    'Email and messaging systems that bring inactive patients back to your schedule.',
+  '/services/chiropractic-social-media-marketing/':
+    'Done-for-you social content that keeps your practice visible and trusted online.',
+};
+---
+
+<BaseLayout title={title} description={description} canonical={url} schema={schema}>
+  <PageHero
+    title="Chiropractic marketing services"
+    answer="ChiroCandy builds patient acquisition systems for chiropractic practices. Pick the service that matches your growth stage, or combine ads, SEO, and web design into one coordinated plan."
+  />
+
+  <section class="section">
+    <div class="container card-grid">
+      {NAV.services.map((service) => (
+        <a href={service.href} class="card reveal" data-animate>
+          <h2>{service.label}</h2>
+          <p>{summaries[service.href]}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+  }
+
+  .card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: var(--shadow);
+  }
+
+  .card h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.1rem;
+  }
+
+  .card p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+</style>

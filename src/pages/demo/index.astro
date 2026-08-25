@@ -1,0 +1,36 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import { buildGraph, breadcrumbSchema, webPageSchema } from '@/lib/schema';
+import { SITE } from '@/lib/site';
+
+const title = 'Demo | ChiroCandy';
+const description =
+  'See the ChiroCandy growth system: ads, SEO, websites, CTV, reactivation, and AI follow-up for healthcare practices. Book a strategy call for a live walkthrough.';
+const url = `${SITE.url}/demo/`;
+const schema = buildGraph(
+  webPageSchema({ url, name: title, description, dateModified: '2026-08-25' }),
+  breadcrumbSchema([
+    { name: 'Home', url: `${SITE.url}/` },
+    { name: 'Demo', url },
+  ])
+);
+---
+
+<BaseLayout title={title} description={description} canonical={url} schema={schema}>
+  <PageHero
+    title="See the system"
+    answer="The fastest demo is the homepage AI follow-up and the strategy call. Watch how the engine works, then get a diagnosis for your market."
+  />
+  <section class="section">
+    <div class="container prose">
+      <p>
+        The public demo lives on the homepage: a 24/7 AI patient coordinator simulation plus a video explaining the growth engine. For a live review of your market, book a strategy call.
+      </p>
+      <div class="inner-cta">
+        <a class="btn btn--secondary" href="/#ai">Run the AI demo</a>
+        <button class="btn btn--primary" data-book type="button">Book a Strategy Call</button>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,25 @@
+---
+import ArticleLayout from '@/layouts/ArticleLayout.astro';
+import posts from '@/data/uncategorized-posts.json';
+
+export function getStaticPaths() {
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+---
+
+<ArticleLayout
+  title={`${post.title} | ChiroCandy`}
+  description={post.meta_description}
+  h1={post.h1}
+  summary={post.meta_description}
+  bodyHtml={post.body_html}
+  datePublished={post.datePublished}
+  dateModified={post.dateModified}
+  crumbs={[{ name: 'Archive', href: '/blog/' }]}
+  canonicalPath={`/uncategorized/${post.slug}/`}
+/>

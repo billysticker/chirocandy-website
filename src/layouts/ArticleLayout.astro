@@ -1,0 +1,111 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import {
+  blogPostingSchema,
+  breadcrumbSchema,
+  buildGraph,
+  webPageSchema,
+} from '@/lib/schema';
+import { SITE } from '@/lib/site';
+
+interface Props {
+  title: string;
+  description: string;
+  h1: string;
+  summary: string;
+  bodyHtml: string;
+  datePublished: string;
+  dateModified: string;
+  crumbs: { name: string; href: string }[];
+  canonicalPath: string;
+}
+
+const {
+  title,
+  description,
+  h1,
+  summary,
+  bodyHtml,
+  datePublished,
+  dateModified,
+  crumbs,
+  canonicalPath,
+} = Astro.props;
+
+const url = `${SITE.url}${canonicalPath}`;
+const schema = buildGraph(
+  webPageSchema({ url, name: title, description, datePublished, dateModified }),
+  breadcrumbSchema([
+    { name: 'Home', url: `${SITE.url}/` },
+    ...crumbs.map((crumb) => ({ name: crumb.name, url: `${SITE.url}${crumb.href}` })),
+    { name: h1, url },
+  ]),
+  blogPostingSchema({
+    url,
+    headline: h1,
+    description,
+    datePublished,
+    dateModified,
+  })
+);
+---
+
+<BaseLayout title={title} description={description} canonical={url} ogType="article" schema={schema}>
+  <article class="section">
+    <div class="container prose">
+      <nav class="crumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        {
+          crumbs.map((crumb) => (
+            <>
+              {' / '}
+              <a href={crumb.href}>{crumb.name}</a>
+            </>
+          ))
+        }
+        {' / '}
+        <span>{h1}</span>
+      </nav>
+      <p class="eyebrow">Billy Sticker</p>
+      <h1>{h1}</h1>
+      <p class="answer-first">{summary}</p>
+      <p class="meta">
+        <time datetime={datePublished}>
+          Published {new Date(datePublished).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+        </time>
+      </p>
+      <div class="article-body" set:html={bodyHtml} />
+      <p>
+        Written for healthcare practice owners. More from <a href="/about/billy-sticker/">Billy Sticker</a>
+        and the <a href="/blog/">ChiroCandy blog</a>.
+      </p>
+      <div class="inner-cta">
+        <button class="btn btn--primary" data-book type="button">Book a Strategy Call</button>
+        <a class="btn btn--secondary" href="/contact-us/">Contact us</a>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .crumb {
+    font-size: 0.85rem;
+    color: var(--muted2);
+    margin-bottom: 1.4rem;
+  }
+  .meta {
+    font-size: 0.85rem;
+    color: var(--muted2);
+  }
+  .article-body :global(a) {
+    color: var(--green);
+  }
+  .article-body :global(h2),
+  .article-body :global(h3) {
+    margin-top: 2rem;
+  }
+  .article-body :global(p) {
+    margin: 0 0 1rem;
+  }
+</style>

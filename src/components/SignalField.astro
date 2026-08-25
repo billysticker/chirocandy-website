@@ -1,0 +1,272 @@
+---
+interface Props {
+  opacity?: number;
+  phase?: number;
+}
+
+const { opacity = 1, phase = 0 } = Astro.props;
+---
+
+<div class="signal-field-layer" data-signal-field data-opacity={opacity} data-phase={phase}>
+  <canvas class="signal-field-canvas" aria-hidden="true"></canvas>
+</div>
+
+<script>
+  const MOBILE_QUERY = '(max-width: 960px)';
+  const REDUCED_MOTION_QUERY = '(prefers-reduced-motion: reduce)';
+  const cleanupMap = globalThis.__signalFieldCleanupMap ?? new WeakMap();
+  globalThis.__signalFieldCleanupMap = cleanupMap;
+
+  const FOV = (55 * Math.PI) / 180;
+  const TAU = Math.PI * 2;
+  const NAVY = [41, 97, 184];
+  const GREEN = [125, 217, 87];
+
+  function clamp(value, min, max) {
+    return Math.min(max, Math.max(min, value));
+  }
+
+  function smoothstep(edge0, edge1, value) {
+    const t = clamp((value - edge0) / (edge1 - edge0), 0, 1);
+    return t * t * (3 - 2 * t);
+  }
+
+  function mix(start, end, amount) {
+    return start + (end - start) * amount;
+  }
+
+  function normalize(vector) {
+    const length = Math.hypot(vector.x, vector.y, vector.z) || 1;
+    return {
+      x: vector.x / length,
+      y: vector.y / length,
+      z: vector.z / length,
+    };
+  }
+
+  function cross(a, b) {
+    return {
+      x: a.y * b.z - a.z * b.y,
+      y: a.z * b.x - a.x * b.z,
+      z: a.x * b.y - a.y * b.x,
+    };
+  }
+
+  function dot(a, b) {
+    return a.x * b.x + a.y * b.y + a.z * b.z;
+  }
+
+  function buildPoints(step) {
+    const extent = 250;
+    const points = [];
+
+    for (let x = -extent; x <= extent; x += step) {
+      for (let z = -extent; z <= extent; z += step) {
+        const distance = Math.hypot(x, z);
+        if (distance <= extent) {
+          points.push({ x, z, distance });
+        }
+      }
+    }
+
+    return points;
+  }
+
+  function initSignalFieldLayer(layer) {
+    if (!(layer instanceof HTMLElement)) return;
+    const canvas = layer.querySelector('canvas');
+    if (!(canvas instanceof HTMLCanvasElement)) return;
+    if (layer.dataset.signalInit === '1') return;
+
+    const opacity = Number.parseFloat(layer.dataset.opacity || '1') || 1;
+    const phase = Number.parseFloat(layer.dataset.phase || '0') || 0;
+
+    const existingCleanup = cleanupMap.get(layer);
+    existingCleanup?.();
+    layer.dataset.signalInit = '1';
+
+    const reduced = window.matchMedia(REDUCED_MOTION_QUERY).matches;
+    const mobile = window.matchMedia(MOBILE_QUERY).matches;
+    const ctx = canvas.getContext('2d');
+
+    if (!ctx) {
+      canvas.style.opacity = '0';
+      return;
+    }
+
+    const points = buildPoints(mobile ? 7.5 : 5);
+    let width = 0;
+    let height = 0;
+    let dpr = 1;
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    let animationFrame = 0;
+    let disposed = false;
+    let time = phase;
+    let intro = reduced ? 1 : 0;
+    let rotation = phase * 0.01;
+
+    const resize = () => {
+      width = canvas.offsetWidth;
+      height = canvas.offsetHeight;
+      if (width < 2 || height < 2) return;
+
+      dpr = Math.min(window.devicePixelRatio || 1, mobile ? 1.35 : 2);
+      canvas.width = Math.round(width * dpr);
+      canvas.height = Math.round(height * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    };
+
+    const onPointerMove = (event) => {
+      if (mobile) return;
+      targetMouseX = event.clientX / window.innerWidth - 0.5;
+      targetMouseY = event.clientY / window.innerHeight - 0.5;
+    };
+
+    const drawPoint = (x, y, radius, alpha, colorMix) => {
+      const red = Math.round(mix(NAVY[0], GREEN[0], colorMix));
+      const green = Math.round(mix(NAVY[1], GREEN[1], colorMix));
+      const blue = Math.round(mix(NAVY[2], GREEN[2], colorMix));
+      const innerRadius = Math.max(0.5, radius * 0.42);
+      const gradient = ctx.createRadialGradient(x, y, 0, x, y, radius);
+
+      gradient.addColorStop(0, `rgba(${red}, ${green}, ${blue}, ${alpha})`);
+      gradient.addColorStop(0.58, `rgba(${red}, ${green}, ${blue}, ${alpha * 0.52})`);
+      gradient.addColorStop(1, `rgba(${red}, ${green}, ${blue}, 0)`);
+
+      ctx.fillStyle = gradient;
+      ctx.beginPath();
+      ctx.arc(x, y, radius, 0, TAU);
+      ctx.fill();
+
+      ctx.fillStyle = `rgba(${red}, ${green}, ${blue}, ${alpha})`;
+      ctx.beginPath();
+      ctx.arc(x, y, innerRadius, 0, TAU);
+      ctx.fill();
+    };
+
+    const renderFrame = () => {
+      if (disposed || width < 2 || height < 2) return;
+
+      time += 0.006;
+      if (intro < 1) intro = Math.min(1, intro + 0.012);
+      rotation += 0.0007;
+
+      mouseX += (targetMouseX - mouseX) * 0.04;
+      mouseY += (targetMouseY - mouseY) * 0.04;
+
+      const camera = {
+        x: mouseX * 42,
+        y: 92 + mouseY * -26,
+        z: 175,
+      };
+      const forward = normalize({ x: -camera.x, y: -camera.y, z: -camera.z });
+      const right = normalize(cross(forward, { x: 0, y: 1, z: 0 }));
+      const up = cross(right, forward);
+      const focal = height / (2 * Math.tan(FOV / 2));
+      const centerX = width / 2;
+      const centerY = height / 2;
+      const cos = Math.cos(rotation);
+      const sin = Math.sin(rotation);
+
+      ctx.clearRect(0, 0, width, height);
+      ctx.globalCompositeOperation = 'lighter';
+
+      for (const point of points) {
+        const wave =
+          Math.sin(point.distance * 0.045 - time * 1.5) +
+          Math.sin((point.x + point.z) * 0.028 + time * 1.05);
+        const scaledX = point.x * intro;
+        const scaledZ = point.z * intro;
+        const world = {
+          x: scaledX * cos - scaledZ * sin,
+          y: wave * 6.5,
+          z: scaledX * sin + scaledZ * cos,
+        };
+        const relative = {
+          x: world.x - camera.x,
+          y: world.y - camera.y,
+          z: world.z - camera.z,
+        };
+        const cameraX = dot(relative, right);
+        const cameraY = dot(relative, up);
+        const cameraZ = dot(relative, forward);
+
+        if (cameraZ <= 1) continue;
+
+        const pointSize = (2.1 + wave * 1.1) * (290 / cameraZ);
+        const radius = Math.max(0.35, pointSize * 0.65);
+        const screenX = centerX + (cameraX * focal) / cameraZ;
+        const screenY = centerY - (cameraY * focal) / cameraZ;
+
+        if (
+          screenX < -radius ||
+          screenX > width + radius ||
+          screenY < -radius ||
+          screenY > height + radius
+        ) {
+          continue;
+        }
+
+        const colorMix = 0.5 + 0.5 * Math.sin(point.distance * 0.02 - time * 0.75 + wave * 0.5);
+        const fade = smoothstep(255, 30, point.distance);
+        const alpha = clamp((0.26 + radius * 0.065) * fade * opacity, 0, 0.88);
+
+        if (alpha <= 0.01) continue;
+        drawPoint(screenX, screenY, radius, alpha, colorMix);
+      }
+
+      ctx.globalCompositeOperation = 'source-over';
+
+      if (!reduced) {
+        animationFrame = window.requestAnimationFrame(renderFrame);
+      }
+    };
+
+    resize();
+    window.addEventListener('resize', resize);
+    window.addEventListener('pointermove', onPointerMove, { passive: true });
+
+    if (reduced) {
+      intro = 1;
+      renderFrame();
+    } else {
+      animationFrame = window.requestAnimationFrame(renderFrame);
+    }
+
+    const cleanup = () => {
+      disposed = true;
+      window.cancelAnimationFrame(animationFrame);
+      window.removeEventListener('resize', resize);
+      window.removeEventListener('pointermove', onPointerMove);
+      cleanupMap.delete(layer);
+      delete layer.dataset.signalInit;
+    };
+
+    cleanupMap.set(layer, cleanup);
+  }
+
+  function initSignalFields() {
+    document.querySelectorAll('[data-signal-field]').forEach((layer) => initSignalFieldLayer(layer));
+  }
+
+  initSignalFields();
+  document.addEventListener('astro:page-load', initSignalFields);
+</script>
+
+<style>
+  .signal-field-layer {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .signal-field-canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+</style>

@@ -1,0 +1,218 @@
+---
+import { SITE } from '@/lib/site';
+---
+
+<div class="modal-overlay" id="bookModal" role="dialog" aria-modal="true" aria-labelledby="bookTitle">
+  <div class="modal">
+    <button class="modal-close" id="modalClose" type="button" aria-label="Close">✕</button>
+    <div id="modalBody">
+      <span class="eyebrow">Book a Strategy Call</span>
+      <h3 id="bookTitle">Get your marketing diagnosis</h3>
+      <p class="sub">Thirty minutes with the ChiroCandy team. A clear read on your growth and a plan for your market.</p>
+      <form id="bookForm">
+        <div class="field">
+          <label for="bf-name">Your name</label>
+          <input id="bf-name" name="name" type="text" required placeholder="Dr. Jane Smith" autocomplete="name" />
+        </div>
+        <div class="field">
+          <label for="bf-practice">Practice</label>
+          <input id="bf-practice" name="practice" type="text" required placeholder="Smith Family Practice" />
+        </div>
+        <div class="field">
+          <label for="bf-email">Email</label>
+          <input id="bf-email" name="email" type="email" required placeholder="jane@yourpractice.com" autocomplete="email" />
+        </div>
+        <div class="field">
+          <label for="bf-time">Best time to reach you</label>
+          <select id="bf-time" name="time">
+            <option>Morning (9am – 12pm)</option>
+            <option>Afternoon (12pm – 4pm)</option>
+            <option>Evening (4pm – 7pm)</option>
+          </select>
+        </div>
+        <button class="btn btn-green" type="submit">Request my call <span class="arrow">→</span></button>
+      </form>
+      <p class="modal-fine">
+        No pressure. No obligation. Prefer the phone? Call
+        <a href={`tel:${SITE.phone}`} style="color:var(--green);font-weight:600">{SITE.phoneDisplay}</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<style is:global>
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 120;
+    background: rgba(4, 16, 31, 0.74);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity 0.35s,
+      visibility 0.35s;
+  }
+  .modal-overlay.open {
+    opacity: 1;
+    visibility: visible;
+  }
+  .modal {
+    position: relative;
+    background: linear-gradient(160deg, rgba(18, 57, 100, 0.9), rgba(7, 28, 54, 0.98));
+    border: 1px solid rgba(126, 217, 87, 0.3);
+    border-radius: 24px;
+    padding: 2.6rem;
+    max-width: 480px;
+    width: 100%;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6);
+    transform: translateY(22px) scale(0.98);
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .modal-overlay.open .modal {
+    transform: none;
+  }
+  .modal-close {
+    position: absolute;
+    top: 1.1rem;
+    right: 1.1rem;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(150, 171, 198, 0.1);
+    border: 1px solid var(--line);
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    line-height: 1;
+    cursor: pointer;
+  }
+  .modal-close:hover {
+    color: var(--green);
+    border-color: rgba(126, 217, 87, 0.5);
+  }
+  .modal .eyebrow {
+    margin-bottom: 0.7rem;
+    display: block;
+  }
+  .modal h3 {
+    font-size: 1.65rem;
+    line-height: 1.15;
+    margin-bottom: 0.5rem;
+  }
+  .modal .sub {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 1.6rem;
+  }
+  .field {
+    margin-bottom: 1rem;
+  }
+  .field label {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-bottom: 0.4rem;
+  }
+  .field input,
+  .field select {
+    width: 100%;
+    background: rgba(150, 171, 198, 0.08);
+    border: 1px solid var(--line);
+    border-radius: 11px;
+    padding: 0.8rem 1rem;
+    color: var(--ink);
+    font-size: 0.92rem;
+    font-family: inherit;
+  }
+  .field input:focus,
+  .field select:focus {
+    outline: none;
+    border-color: rgba(126, 217, 87, 0.6);
+  }
+  .modal .btn {
+    width: 100%;
+    justify-content: center;
+    margin-top: 0.6rem;
+  }
+  .modal-fine {
+    text-align: center;
+    font-size: 0.74rem;
+    color: var(--muted2);
+    margin-top: 1rem;
+  }
+  .modal-success {
+    text-align: center;
+    padding: 1rem 0;
+  }
+  .modal-success .tick {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: rgba(126, 217, 87, 0.14);
+    border: 1px solid rgba(126, 217, 87, 0.5);
+    color: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.9rem;
+    margin: 0 auto 1.3rem;
+  }
+</style>
+
+<script>
+  const modal = document.querySelector('#bookModal');
+  const modalBody = document.querySelector('#modalBody');
+  if (modal instanceof HTMLElement && modalBody instanceof HTMLElement) {
+    const template = modalBody.innerHTML;
+    let lastFocus: Element | null = null;
+
+    const wireForm = () => {
+      document.querySelector('#modalClose')?.addEventListener('click', closeModal);
+      document.querySelector('#bookForm')?.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const raw = String((document.querySelector('#bf-name') as HTMLInputElement | null)?.value || '')
+          .trim()
+          .replace(/^(dr|doctor|mr|mrs|ms|miss)\.?\s+/i, '');
+        const name = (raw.split(/\s+/)[0] || 'there').replace(/[<>]/g, '').replace(/[.,]+$/, '');
+        modalBody.innerHTML =
+          '<div class="modal-success"><div class="tick">✓</div><h3>You\'re on the calendar, ' +
+          name +
+          '.</h3><p>The ChiroCandy team will reach out within one business day to lock in your strategy call. Watch your inbox.</p><button class="btn btn-green" id="successClose" type="button" style="width:100%;justify-content:center;margin-top:1.6rem">Done</button></div>';
+        document.querySelector('#successClose')?.addEventListener('click', closeModal);
+      });
+    };
+
+    const openModal = (event?: Event) => {
+      event?.preventDefault();
+      lastFocus = document.activeElement;
+      modalBody.innerHTML = template;
+      wireForm();
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      window.setTimeout(() => (document.querySelector('#bf-name') as HTMLInputElement | null)?.focus(), 350);
+    };
+
+    const closeModal = () => {
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+      if (lastFocus instanceof HTMLElement) lastFocus.focus();
+    };
+
+    document.querySelectorAll('[data-book]').forEach((button) => {
+      button.addEventListener('click', (event) => openModal(event));
+    });
+    modal.addEventListener('click', (event) => {
+      if (event.target === modal) closeModal();
+    });
+    window.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && modal.classList.contains('open')) closeModal();
+    });
+  }
+</script>

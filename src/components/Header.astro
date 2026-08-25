@@ -1,0 +1,215 @@
+---
+import { SITE } from '@/lib/site';
+---
+
+<header id="nav" class="scrolled">
+  <div class="wrap nav-in">
+    <a class="nav-logo" href="/" aria-label={`${SITE.title} home`}>
+      <img src="/images/logo-white.png" alt="ChiroCandy" width="160" height="40" />
+    </a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="/services/">Services</a>
+        <a href="/frameworks/">Frameworks</a>
+        <a href="/blog/">Resources</a>
+        <a href="/about-us/">About</a>
+        <a href="/faqs/">FAQs</a>
+      </div>
+      <a class="nav-phone" href={`tel:${SITE.phone}`}><b>{SITE.phoneDisplay}</b></a>
+      <button class="btn btn-green nav-cta magnetic" data-book type="button">Book a Strategy Call</button>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/services/">Services</a>
+  <a href="/frameworks/">Frameworks</a>
+  <a href="/blog/">Blog</a>
+  <a href="/podcasts/">Podcast</a>
+  <a href="/about-us/">About</a>
+  <a href="/faqs/">FAQs</a>
+  <a href="/contact-us/">Contact</a>
+  <button class="btn btn-green mm-cta" data-book type="button">Book a Strategy Call <span class="arrow">→</span></button>
+  <a href={`tel:${SITE.phone}`} style="font-size:1rem;font-family:'Inter',sans-serif;color:var(--muted)">
+    Or call <b style="color:var(--green)">{SITE.phoneDisplay}</b>
+  </a>
+</div>
+
+<style is:global>
+  #nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 60;
+    transition:
+      background 0.35s,
+      border-color 0.35s;
+    border-bottom: 1px solid transparent;
+  }
+  #nav.scrolled {
+    background: rgba(4, 16, 31, 0.72);
+    backdrop-filter: blur(18px);
+    border-color: var(--line);
+  }
+  .wrap {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+  .nav-in {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 78px;
+  }
+  .nav-logo img {
+    height: 34px;
+    width: auto;
+    display: block;
+  }
+  .nav-links {
+    display: flex;
+    gap: 2.2rem;
+    font-size: 0.92rem;
+    color: var(--muted);
+  }
+  .nav-links a {
+    position: relative;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    height: 2px;
+    width: 0;
+    background: var(--green);
+    transition: width 0.25s;
+  }
+  .nav-links a:hover {
+    color: #fff;
+  }
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+  .nav-cta {
+    font-size: 0.86rem;
+    padding: 0.68rem 1.3rem;
+  }
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+  }
+  .nav-phone {
+    font-size: 0.88rem;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .nav-phone b {
+    color: var(--ink);
+    font-weight: 600;
+  }
+  .nav-phone:hover b {
+    color: var(--green);
+  }
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 42px;
+    height: 42px;
+    background: none;
+    border: 1px solid var(--line);
+    border-radius: 11px;
+    align-items: center;
+    cursor: pointer;
+  }
+  .nav-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--ink);
+    border-radius: 2px;
+  }
+  .nav-toggle.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .nav-toggle.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .nav-toggle.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+  .mobile-menu {
+    position: fixed;
+    inset: 0;
+    z-index: 55;
+    background: rgba(4, 16, 31, 0.96);
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.6rem;
+    padding: 0 40px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-12px);
+    transition:
+      opacity 0.35s,
+      visibility 0.35s,
+      transform 0.35s;
+  }
+  .mobile-menu.open {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+  .mobile-menu a {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  @media (max-width: 960px) {
+    .nav-links,
+    .nav-cta,
+    .nav-phone {
+      display: none;
+    }
+    .nav-toggle {
+      display: flex;
+    }
+  }
+</style>
+
+<script>
+  const toggle = document.querySelector('#navToggle');
+  const menu = document.querySelector('#mobileMenu');
+  const nav = document.querySelector('#nav');
+  const closeMenu = () => {
+    toggle?.classList.remove('open');
+    menu?.classList.remove('open');
+    document.body.style.overflow = '';
+    toggle?.setAttribute('aria-expanded', 'false');
+    toggle?.setAttribute('aria-label', 'Open menu');
+  };
+  toggle?.addEventListener('click', () => {
+    const open = menu?.classList.toggle('open');
+    toggle.classList.toggle('open', !!open);
+    document.body.style.overflow = open ? 'hidden' : '';
+    toggle.setAttribute('aria-expanded', String(!!open));
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+  menu?.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+  if (nav) {
+    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  }
+</script>
