@@ -4,9 +4,9 @@ import PageHero from '@/components/PageHero.astro';
 import { buildGraph, breadcrumbSchema, webPageSchema } from '@/lib/schema';
 import { SITE } from '@/lib/site';
 
-const title = 'Where We Serve Chiropractors | ChiroCandy Marketing, LLC';
+const title = 'Where We Serve Chiropractic and Healthcare Practices | ChiroCandy';
 const description =
-  'ChiroCandy serves chiropractic practice owners across the US, Canada, UK, Australia, and worldwide. See where we work and how we support practices without geographic limits.';
+  'ChiroCandy serves chiropractic and healthcare practice owners across the US, Canada, UK, Australia, and worldwide. See where we work and how we support practices without geographic limits.';
 
 const url = `${SITE.url}/service-areas/`;
 const schema = buildGraph(
@@ -41,15 +41,15 @@ const regions = [
   {
     name: 'International',
     answer:
-      'If you run a chiropractic practice and need predictable new patient growth, geography is not a barrier. We configure campaigns for your market.',
+      'If you run a chiropractic or healthcare practice and need predictable new patient growth, geography is not a barrier. We configure campaigns for your market.',
   },
 ];
 ---
 
 <BaseLayout title={title} description={description} canonical={url} schema={schema}>
   <PageHero
-    title="Where ChiroCandy serves chiropractors"
-    answer="ChiroCandy is a global chiropractic marketing agency. We work with practice owners across the United States, Canada, the United Kingdom, Australia, and other international markets. Your location does not limit the systems we can deploy."
+    title="Where ChiroCandy serves practices"
+    answer="ChiroCandy is a global marketing agency for chiropractic and healthcare practices. We work with practice owners across the United States, Canada, the United Kingdom, Australia, and other international markets. Your location does not limit the systems we can deploy."
     eyebrow="Worldwide reach"
   />
 
@@ -59,13 +59,13 @@ const regions = [
       <p class="answer-first">
         No. ChiroCandy is not a local clinic and we do not market to patients on your behalf as a
         local business would. We are a B2B agency that builds patient acquisition systems for
-        chiropractic practice owners wherever they operate.
+        chiropractic and healthcare practice owners wherever they operate.
       </p>
 
       <div class="region-grid">
         {regions.map((region) => (
           <article class="region-card reveal" data-animate>
-            <h3>Chiropractors in {region.name}</h3>
+            <h3>Practices in {region.name}</h3>
             <p>{region.answer}</p>
           </article>
         ))}

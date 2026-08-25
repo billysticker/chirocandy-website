@@ -3,6 +3,7 @@ import BookingModal from '@/components/BookingModal.astro';
 import Footer from '@/components/Footer.astro';
 import Header from '@/components/Header.astro';
 import SEO from '@/components/SEO.astro';
+import { SITE } from '@/lib/site';
 import '@/styles/global.css';
 
 interface Props {
@@ -26,8 +27,48 @@ const { hideHeader = false, hideFooter = false, bodyClass } = props;
 <html lang="en">
   <head>
     <SEO {...props} />
+    <script is:inline define:vars={{ gtmId: SITE.gtmId }}>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', gtmId);
+    </script>
+    <script is:inline define:vars={{ pixelId: SITE.facebookPixelId }}>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', pixelId);
+      fbq('track', 'PageView');
+    </script>
   </head>
   <body class:list={['relative font-body text-on-surface antialiased', bodyClass]}>
+    <noscript>
+      <iframe
+        src={`https://www.googletagmanager.com/ns.html?id=${SITE.gtmId}`}
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+        title="Google Tag Manager"></iframe>
+    </noscript>
     <a href="#main" class="sr-only">Skip to main content</a>
     <div class="relative z-10">
       {!hideHeader && <Header />}

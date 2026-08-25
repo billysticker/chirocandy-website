@@ -11,7 +11,8 @@ export default defineConfig({
   integrations: [
     tailwind({ applyBaseStyles: false }),
     sitemap({
-      filter: (page) => !page.includes('/sample-page'),
+      filter: (page) =>
+        !page.includes('/sample-page') && !page.includes('/thank-you'),
     }),
     mdx(),
   ],

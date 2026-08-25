@@ -1,5 +1,6 @@
 ---
 import { SITE } from '@/lib/site';
+import TrainingsMenu from '@/components/TrainingsMenu.astro';
 ---
 
 <header id="nav" class="scrolled">
@@ -10,7 +11,7 @@ import { SITE } from '@/lib/site';
     <div class="nav-right">
       <div class="nav-links">
         <a href="/services/">Services</a>
-        <a href="/frameworks/">Frameworks</a>
+        <TrainingsMenu />
         <a href="/blog/">Resources</a>
         <a href="/about-us/">About</a>
         <a href="/faqs/">FAQs</a>
@@ -26,7 +27,7 @@ import { SITE } from '@/lib/site';
 
 <div class="mobile-menu" id="mobileMenu">
   <a href="/services/">Services</a>
-  <a href="/frameworks/">Frameworks</a>
+  <TrainingsMenu variant="mobile" />
   <a href="/blog/">Blog</a>
   <a href="/podcasts/">Podcast</a>
   <a href="/about-us/">About</a>
@@ -77,10 +78,10 @@ import { SITE } from '@/lib/site';
     font-size: 0.92rem;
     color: var(--muted);
   }
-  .nav-links a {
+  .nav-links > a {
     position: relative;
   }
-  .nav-links a::after {
+  .nav-links > a::after {
     content: '';
     position: absolute;
     left: 0;
@@ -90,10 +91,10 @@ import { SITE } from '@/lib/site';
     background: var(--green);
     transition: width 0.25s;
   }
-  .nav-links a:hover {
+  .nav-links > a:hover {
     color: #fff;
   }
-  .nav-links a:hover::after {
+  .nav-links > a:hover::after {
     width: 100%;
   }
   .nav-cta {
@@ -157,6 +158,7 @@ import { SITE } from '@/lib/site';
     justify-content: center;
     gap: 1.6rem;
     padding: 0 40px;
+    overflow-y: auto;
     opacity: 0;
     visibility: hidden;
     transform: translateY(-12px);

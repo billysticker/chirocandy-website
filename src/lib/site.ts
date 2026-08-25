@@ -3,10 +3,12 @@ export const SITE = {
   title: 'ChiroCandy',
   url: 'https://chirocandy.com',
   description:
-    'ChiroCandy is the growth system for healthcare practices. Ads, SEO, websites, CTV, reactivation, and AI follow-up, founder-led since 2015.',
+    'ChiroCandy is the growth system for chiropractic and healthcare practices. Ads, SEO, websites, CTV, reactivation, and AI follow-up, founder-led since 2015.',
   phone: '+1-800-662-1745',
   phoneDisplay: '1-800-662-1745',
   email: 'support@chirocandy.com',
+  gtmId: 'GTM-WTMHXMN',
+  facebookPixelId: '1677430622530607',
   foundingYear: 2015,
   logo: '/images/logo-white.png',
   ogImage: '/images/billy-speaking.jpg',
@@ -44,7 +46,7 @@ export const BILLY_STICKER = {
   url: '/about/billy-sticker/',
   image: '/images/billy-speaking.jpg',
   description:
-    'Billy Sticker founded ChiroCandy in 2015. Over 11 years he has helped more than 2,000 healthcare practices, including chiropractic offices worldwide, build predictable patient growth.',
+    'Billy Sticker founded ChiroCandy in 2015. Over 11 years he has helped more than 2,000 chiropractic and healthcare practices worldwide build predictable patient growth.',
 } as const;
 
 export const NAV = {
@@ -66,6 +68,32 @@ export const NAV = {
     { href: '/frameworks/7-11-4-framework/', label: '7-11-4 Framework' },
     { href: '/frameworks/4-o-framework/', label: '4-O Framework' },
   ],
+  trainings: [
+    {
+      href: 'https://go.chirocandy.com/next-1-million-training',
+      label: 'Your Next $1M',
+    },
+    {
+      href: 'https://chirocandy.com/12-ways-recut',
+      label: '12-Ways Training (Recut)',
+    },
+    {
+      href: 'https://go.chirocandy.com/2026-workshop',
+      label: '2026 Marketing Plan Workshop',
+    },
+    {
+      href: 'https://go.chirocandy.com/aitlas-agent-training',
+      label: 'Aitlas Agent',
+    },
+    {
+      href: 'https://chatcandy.ai/local-seo-replay',
+      label: 'Local SEO',
+    },
+    {
+      href: 'https://go.chirocandy.com/hooks',
+      label: 'Video Hooks',
+    },
+  ],
   resources: [
     { href: '/blog/', label: 'Blog' },
     { href: '/podcasts/', label: 'Podcast' },
@@ -83,12 +111,12 @@ export const HOME_FAQS = [
   {
     question: 'What is ChiroCandy?',
     answer:
-      'ChiroCandy is a founder-led growth system for healthcare practices. Since 2015 it has combined ads, SEO, websites, CTV, reactivation, and AI follow-up so practices become known, found, and trusted in their market.',
+      'ChiroCandy is a founder-led growth system for chiropractic and healthcare practices. Since 2015 it has combined ads, SEO, websites, CTV, reactivation, and AI follow-up so practices become known, found, and trusted in their market.',
   },
   {
     question: 'Who does ChiroCandy work with?',
     answer:
-      'ChiroCandy works with healthcare practices that need a predictable patient-acquisition system. The company was built inside chiropractic in 2015 and now serves healthcare practices that want one accountable growth engine instead of disconnected vendors.',
+      'ChiroCandy works with chiropractic and healthcare practices that need a predictable patient-acquisition system. The company was built inside chiropractic in 2015 and now serves both chiropractic offices and healthcare practices that want one accountable growth engine instead of disconnected vendors.',
   },
   {
     question: 'How does ChiroCandy help a practice get found by AI search?',

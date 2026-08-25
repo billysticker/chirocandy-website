@@ -4,6 +4,7 @@ import PageHero from '@/components/PageHero.astro';
 import { buildGraph, breadcrumbSchema, webPageSchema } from '@/lib/schema';
 import { SITE } from '@/lib/site';
 import podcasts from '@/data/podcasts.json';
+import { episodeDisplayTitle } from '@/lib/podcasts';
 
 const title = 'Podcasts | ChiroCandy Marketing, LLC';
 const description =
@@ -36,7 +37,7 @@ const sorted = [...podcasts].sort(
         {sorted.map((episode) => (
           <li class="episode-item reveal" data-animate>
             <a href={`/podcast/${episode.slug}/`}>
-              <span class="episode-item__title">{episode.h1}</span>
+              <span class="episode-item__title">{episodeDisplayTitle(episode)}</span>
               <span class="episode-item__date">
                 {new Date(episode.datePublished).toLocaleDateString('en-US', {
                   year: 'numeric',

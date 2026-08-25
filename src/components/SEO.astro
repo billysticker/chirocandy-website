@@ -44,11 +44,13 @@ const imageUrl = new URL(ogImage ?? SITE.ogImage, SITE.url).href;
 <meta property="og:image" content={imageUrl} />
 
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@billysticker" />
 <meta name="twitter:title" content={fullTitle} />
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={imageUrl} />
 
 <link rel="alternate" type="text/plain" href={`${SITE.url}/llms.txt`} title="LLM index" />
+<link rel="alternate" type="text/plain" href={`${SITE.url}/llms-full.txt`} title="LLM full context" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

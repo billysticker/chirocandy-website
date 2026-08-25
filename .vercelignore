@@ -1,0 +1,12 @@
+.git
+archive
+content
+dist
+.astro
+.env*
+*.zip
+crawl_data.json
+urls.json
+url_list.txt
+inventory_table.md
+tmp-ep.html

@@ -7,7 +7,7 @@ import posts from '@/data/blog-posts.json';
 
 const title = 'Blog | ChiroCandy';
 const description =
-  'ChiroCandy blog articles on healthcare practice marketing: Facebook ads, websites, SEO, and patient acquisition systems for practice owners.';
+  'ChiroCandy blog articles on chiropractic and healthcare practice marketing: Facebook ads, websites, SEO, and patient acquisition systems for practice owners.';
 const url = `${SITE.url}/blog/`;
 const schema = buildGraph(
   webPageSchema({ url, name: title, description, dateModified: '2026-08-25' }),
@@ -24,7 +24,7 @@ const sorted = [...posts].sort(
 <BaseLayout title={title} description={description} canonical={url} schema={schema}>
   <PageHero
     title="ChiroCandy Blog"
-    answer="These articles cover patient acquisition for healthcare practices: ads, websites, SEO, and the systems that turn inquiries into booked visits."
+    answer="These articles cover patient acquisition for chiropractic and healthcare practices: ads, websites, SEO, and the systems that turn inquiries into booked visits."
     eyebrow="Resources"
   />
   <section class="section">

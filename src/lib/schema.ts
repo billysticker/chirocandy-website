@@ -12,14 +12,17 @@ export function organizationSchema() {
     alternateName: 'ChiroCandy',
     url: SITE.url,
     foundingDate: String(SITE.foundingYear),
-    logo: `${SITE.url}${SITE.logo}`,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${SITE.url}/images/logo-navy.png`,
+    },
     image: `${SITE.url}${SITE.ogImage}`,
     email: SITE.email,
     telephone: SITE.phone,
     sameAs: [...SITE.sameAs],
     knowsAbout: [...SITE.knowsAbout],
     areaServed: 'Worldwide',
-    serviceType: 'Healthcare practice marketing',
+    serviceType: 'Chiropractic and healthcare practice marketing',
     slogan: 'Build Trust. Become Known. Get Found.',
     contactPoint: [
       {
@@ -50,7 +53,7 @@ export function professionalServiceSchema(name: string, description: string, url
     url,
     provider: { '@id': orgId },
     areaServed: 'Worldwide',
-    serviceType: 'Healthcare practice marketing',
+    serviceType: 'Chiropractic and healthcare practice marketing',
   };
 }
 
@@ -64,6 +67,10 @@ export function billyStickerPersonSchema() {
     image: `${SITE.url}${BILLY_STICKER.image}`,
     description: BILLY_STICKER.description,
     worksFor: { '@id': orgId },
+    sameAs: [
+      'https://www.youtube.com/c/BillySticker',
+      'https://twitter.com/billysticker',
+    ],
   };
 }
 

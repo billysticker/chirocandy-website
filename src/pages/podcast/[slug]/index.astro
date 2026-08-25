@@ -1,6 +1,7 @@
 ---
 import PodcastLayout from '@/layouts/PodcastLayout.astro';
 import podcasts from '@/data/podcasts.json';
+import { episodeDisplayTitle, secureAudioUrl } from '@/lib/podcasts';
 
 export function getStaticPaths() {
   return podcasts.map((episode) => ({
@@ -20,9 +21,9 @@ const summary =
   title={episode.title}
   description={episode.meta_description}
   slug={episode.slug}
-  h1={episode.h1}
+  h1={episodeDisplayTitle(episode)}
   body={episode.body}
-  audioUrl={episode.audioUrl ?? undefined}
+  audioUrl={secureAudioUrl(episode.audioUrl)}
   datePublished={episode.datePublished}
   dateModified={episode.dateModified}
   summary={summary}

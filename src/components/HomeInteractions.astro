@@ -123,6 +123,12 @@
       const lines = gsap.utils.toArray<SVGLineElement>('.ring-svg line');
       const nodes = gsap.utils.toArray<HTMLElement>('.node');
       const items = gsap.utils.toArray<HTMLElement>('#engineList li');
+      const setStack = (current: number) => {
+        items.forEach((item, i) => {
+          item.classList.toggle('on', current >= 0 && i <= current);
+          item.classList.toggle('now', i === current);
+        });
+      };
       const timeline = gsap.timeline({
         scrollTrigger: { trigger: '#engineStage', start: 'top top', end: '+=3600', scrub: 0.6, pin: true },
       });
@@ -136,26 +142,37 @@
               scale: 1,
               duration: 0.35,
               ease: 'none',
-              onStart: () => nodes[index]?.classList.add('on'),
-              onReverseComplete: () => nodes[index]?.classList.remove('on'),
-            },
-            index + 0.25
-          )
-          .to(
-            items[index],
-            {
-              backgroundColor: 'rgba(126,217,87,.07)',
-              duration: 0.3,
-              ease: 'none',
-              onStart: () => items[index]?.classList.add('on'),
-              onReverseComplete: () => items[index]?.classList.remove('on'),
+              onStart: () => {
+                nodes[index]?.classList.add('on');
+                setStack(index);
+              },
+              onReverseComplete: () => {
+                nodes[index]?.classList.remove('on');
+                setStack(index - 1);
+              },
             },
             index + 0.25
           );
       });
       timeline
         .to('#coreGlow', { opacity: 1, scale: 1.15, duration: 1, ease: 'none' }, 9)
-        .to('#engineFinal', { opacity: 1, y: 0, duration: 0.8, ease: 'none' }, 9.3);
+        .to(
+          '#engineFinal',
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: 'none',
+            onStart: () => {
+              items.forEach((item) => {
+                item.classList.add('on');
+                item.classList.remove('now');
+              });
+            },
+            onReverseComplete: () => setStack(items.length - 1),
+          },
+          9.3
+        );
     } else {
       gsap.set('.node', { opacity: 1, scale: 1 });
       $$('.node').forEach((node) => node.classList.add('on'));

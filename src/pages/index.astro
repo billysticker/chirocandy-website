@@ -1,6 +1,7 @@
 ---
 import HomeInteractions from '@/components/HomeInteractions.astro';
 import SignalField from '@/components/SignalField.astro';
+import TrainingsMenu from '@/components/TrainingsMenu.astro';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { HOME_FAQS, SITE } from '@/lib/site';
 import {
@@ -11,9 +12,9 @@ import {
 } from '@/lib/schema';
 import '@/styles/homepage.css';
 
-const title = 'ChiroCandy | Build Trust. Become Known. Get Found.';
+const title = 'Chiropractic Marketing Company for Healthcare Practices | ChiroCandy';
 const description =
-  'ChiroCandy is the growth system for healthcare practices. Ads, SEO, websites, CTV, reactivation, and AI follow-up in one founder-led engine since 2015.';
+  'ChiroCandy is the growth system for chiropractic and healthcare practices. Ads, SEO, websites, CTV, reactivation, and AI follow-up in one founder-led engine since 2015.';
 
 const schema = buildGraph(
   webPageSchema({
@@ -67,6 +68,7 @@ const schema = buildGraph(
         <div class="nav-links">
           <a href="#engine">The System</a>
           <a href="/services/">Services</a>
+          <TrainingsMenu />
           <a href="#ai">AI Demo</a>
           <a href="#founder">About</a>
         </div>
@@ -82,6 +84,7 @@ const schema = buildGraph(
   <div class="mobile-menu" id="mobileMenu">
     <a href="#engine">The System</a>
     <a href="/services/">Services</a>
+    <TrainingsMenu variant="mobile" />
     <a href="/blog/">Blog</a>
     <a href="/podcasts/">Podcast</a>
     <a href="#ai">AI Demo</a>
@@ -98,15 +101,15 @@ const schema = buildGraph(
     <SignalField />
     <div class="hero-veil" aria-hidden="true"></div>
     <div class="wrap hero-in" id="heroIn">
-      <span class="eyebrow"><span class="pulse-dot"></span> The Growth System for Healthcare Practices</span>
+      <span class="eyebrow"><span class="pulse-dot"></span> The Growth System for Chiropractic & Healthcare Practices</span>
       <h1>
         <span class="w">Build <em class="grad">Trust.</em></span>
         <span class="w">Become <em class="grad">Known.</em></span>
         <span class="w">Get <em class="grad">Found.</em></span>
       </h1>
       <p class="lede">
-        Ads, SEO, websites, CTV, reactivation, and AI follow-up. One integrated engine for healthcare
-        practices, founder-led since 2015.
+        Ads, SEO, websites, CTV, reactivation, and AI follow-up. One integrated engine for
+        chiropractic and healthcare practices, founder-led since 2015.
       </p>
       <div class="hero-ctas">
         <button class="btn btn-green magnetic" data-book type="button">Book a Strategy Call <span class="arrow">→</span></button>
@@ -132,12 +135,12 @@ const schema = buildGraph(
     <div class="marquee-track">
       <span><b>2,000+</b> practices served</span>
       <span><b>$450M+</b> client revenue generated</span>
-      <span>Healthcare marketing, <b>since 2015</b></span>
+      <span>Chiropractic & healthcare marketing, <b>since 2015</b></span>
       <span><b>Founder-led</b> strategy</span>
       <span><b>9 services,</b> one growth engine</span>
       <span><b>2,000+</b> practices served</span>
       <span><b>$450M+</b> client revenue generated</span>
-      <span>Healthcare marketing, <b>since 2015</b></span>
+      <span>Chiropractic & healthcare marketing, <b>since 2015</b></span>
       <span><b>Founder-led</b> strategy</span>
       <span><b>9 services,</b> one growth engine</span>
     </div>
@@ -175,7 +178,7 @@ const schema = buildGraph(
       </div>
       <div class="stat reveal d2">
         <div class="n"><span class="count" data-to="11">0</span> <em>yrs</em></div>
-        <div class="l">Years inside healthcare marketing</div>
+        <div class="l">Years inside chiropractic and healthcare marketing</div>
       </div>
       <div class="stat reveal d3">
         <div class="n"><span class="count" data-to="9">0</span></div>
@@ -199,7 +202,7 @@ const schema = buildGraph(
             <li><span class="lx">✕</span><div><b>Disconnected tactics</b><span>Campaigns that never compound into real growth</span></div></li>
             <li><span class="lx">✕</span><div><b>Leads that never arrive</b><span>Names on a list instead of patients in your chairs</span></div></li>
             <li><span class="lx">✕</span><div><b>Slow follow-up</b><span>The fastest response wins, and it is rarely yours</span></div></li>
-            <li><span class="lx">✕</span><div><b>Generalist agencies</b><span>Teams learning healthcare on your dime and your reputation</span></div></li>
+            <li><span class="lx">✕</span><div><b>Generalist agencies</b><span>Teams learning chiropractic and healthcare on your dime and your reputation</span></div></li>
           </ul>
         </div>
         <div class="reveal d1">
@@ -243,7 +246,7 @@ const schema = buildGraph(
       <div class="wrap engine-grid">
         <div>
           <span class="eyebrow">The ChiroCandy System</span>
-          <h2 style="font-size:clamp(2rem,3.6vw,2.9rem);margin:.8rem 0 1.8rem;line-height:1.12">
+          <h2 style="font-size:clamp(2rem,3.6vw,2.9rem);margin:.6rem 0 1.2rem;line-height:1.12">
             One engine.<br />Watch it assemble.
           </h2>
           <ul class="engine-list" id="engineList">
@@ -369,10 +372,10 @@ const schema = buildGraph(
         </div>
       </div>
       <div class="founder-body reveal d1">
-        <span class="eyebrow">Built Inside Healthcare Marketing</span>
+        <span class="eyebrow">Built Inside Chiropractic. Built for Healthcare.</span>
         <h2 class="founder-h">Eleven years in patient acquisition changes how you see the market.</h2>
         <p>
-          Billy Sticker built ChiroCandy around a simple conviction: healthcare practices should not have to teach their marketing company how patient care, local trust, and the front desk really work.
+          Billy Sticker built ChiroCandy around a simple conviction: chiropractic and healthcare practices should not have to teach their marketing company how patient care, local trust, and the front desk really work.
         </p>
         <p>
           He currently chairs the Technology and Innovation Committee for the Texas Chiropractic Association, helping set the standard for how practices adopt AI responsibly.

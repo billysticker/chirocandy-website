@@ -3,8 +3,153 @@
   "redirects": [
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "www.chirocandy.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "www.chirocandy.com"
+        }
+      ],
       "destination": "https://chirocandy.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/sitemap_index.xml",
+      "destination": "/sitemap-index.xml",
+      "permanent": true
+    },
+    {
+      "source": "/sitemap.xml",
+      "destination": "/sitemap-index.xml",
+      "permanent": true
+    },
+    {
+      "source": "/post-sitemap1.xml",
+      "destination": "/sitemap-index.xml",
+      "permanent": true
+    },
+    {
+      "source": "/post-sitemap2.xml",
+      "destination": "/sitemap-index.xml",
+      "permanent": true
+    },
+    {
+      "source": "/page-sitemap.xml",
+      "destination": "/sitemap-index.xml",
+      "permanent": true
+    },
+    {
+      "source": "/divi_overlay-sitemap.xml",
+      "destination": "/sitemap-index.xml",
+      "permanent": true
+    },
+    {
+      "source": "/2017/10/09/marketing-dream-practice/",
+      "destination": "/uncategorized/marketing-dream-practice/",
+      "permanent": true
+    },
+    {
+      "source": "/2017/10/09/marketing-dream-practice",
+      "destination": "/uncategorized/marketing-dream-practice/",
+      "permanent": true
+    },
+    {
+      "source": "/2019/03/07/integrity-doctors/",
+      "destination": "/podcasts/",
+      "permanent": true
+    },
+    {
+      "source": "/2019/03/07/integrity-doctors",
+      "destination": "/podcasts/",
+      "permanent": true
+    },
+    {
+      "source": "/2015/12/26/businessorjob/",
+      "destination": "/blog/businessorjob/",
+      "permanent": true
+    },
+    {
+      "source": "/2015/12/26/businessorjob",
+      "destination": "/blog/businessorjob/",
+      "permanent": true
+    },
+    {
+      "source": "/2015/12/26/update/",
+      "destination": "/blog/update/",
+      "permanent": true
+    },
+    {
+      "source": "/2015/12/26/update",
+      "destination": "/blog/update/",
+      "permanent": true
+    },
+    {
+      "source": "/2015/05/24/new-noteworthy/",
+      "destination": "/blog/new-noteworthy/",
+      "permanent": true
+    },
+    {
+      "source": "/2015/05/24/new-noteworthy",
+      "destination": "/blog/new-noteworthy/",
+      "permanent": true
+    },
+    {
+      "source": "/2015/05/03/itunesreview/",
+      "destination": "/blog/itunesreview/",
+      "permanent": true
+    },
+    {
+      "source": "/2015/05/03/itunesreview",
+      "destination": "/blog/itunesreview/",
+      "permanent": true
+    },
+    {
+      "source": "/2015/05/01/12-month-plan/",
+      "destination": "/uncategorized/12-month-plan/",
+      "permanent": true
+    },
+    {
+      "source": "/2015/05/01/12-month-plan",
+      "destination": "/uncategorized/12-month-plan/",
+      "permanent": true
+    },
+    {
+      "source": "/2015/05/01/building-trust/",
+      "destination": "/blog/building-trust/",
+      "permanent": true
+    },
+    {
+      "source": "/2015/05/01/building-trust",
+      "destination": "/blog/building-trust/",
+      "permanent": true
+    },
+    {
+      "source": "/2015/05/01/reasons/",
+      "destination": "/blog/reasons/",
+      "permanent": true
+    },
+    {
+      "source": "/2015/05/01/reasons",
+      "destination": "/blog/reasons/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/:slug/",
+      "destination": "/podcast/:slug/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/:slug",
+      "destination": "/podcast/:slug/",
+      "permanent": true
+    },
+    {
+      "source": "/services/social-media-and-content-strategy/",
+      "destination": "/services/chiropractic-social-media-marketing/",
+      "permanent": true
+    },
+    {
+      "source": "/services/social-media-and-content-strategy",
+      "destination": "/services/chiropractic-social-media-marketing/",
       "permanent": true
     },
     {
@@ -45,6 +190,16 @@
     {
       "source": "/divi_overlay/form",
       "destination": "/contact-us/",
+      "permanent": true
+    },
+    {
+      "source": "/12-ways-recut/",
+      "destination": "https://chatcandy.ai/12-ways-recut",
+      "permanent": true
+    },
+    {
+      "source": "/12-ways-recut",
+      "destination": "https://chatcandy.ai/12-ways-recut",
       "permanent": true
     }
   ],

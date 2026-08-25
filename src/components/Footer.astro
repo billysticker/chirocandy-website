@@ -10,7 +10,7 @@ import { NAV, SITE } from '@/lib/site';
           <img src="/images/logo-white.png" alt="ChiroCandy" width="128" height="32" />
         </a>
         <p class="foot-blurb">
-          The growth system for healthcare practices. Founder-led since 2015.
+          The growth system for chiropractic and healthcare practices. Founder-led since 2015.
         </p>
         <p>
           <a href={`tel:${SITE.phone}`}>{SITE.phoneDisplay}</a>
@@ -29,11 +29,12 @@ import { NAV, SITE } from '@/lib/site';
         </ul>
       </div>
       <div>
-        <h4>Frameworks</h4>
+        <h4>Trainings</h4>
         <ul>
-          <li><a href="/frameworks/">All frameworks</a></li>
-          {NAV.frameworks.map((item) => (
-            <li><a href={item.href}>{item.label}</a></li>
+          {NAV.trainings.map((item) => (
+            <li>
+              <a href={item.href} target="_blank" rel="noopener noreferrer">{item.label}</a>
+            </li>
           ))}
         </ul>
       </div>
@@ -51,12 +52,13 @@ import { NAV, SITE } from '@/lib/site';
       </div>
     </div>
     <div class="foot-bottom">
-      <p>© {new Date().getFullYear()} ChiroCandy Marketing LLC. Healthcare practice growth since 2015.</p>
+      <p>© {new Date().getFullYear()} ChiroCandy Marketing LLC. Chiropractic and healthcare practice growth since 2015.</p>
       <div class="foot-legal">
         <a href="/terms-conditions/">Terms</a>
         <a href="/privacy-policy/">Privacy</a>
         <a href="/sitemap/">Sitemap</a>
         <a href="/llms.txt">llms.txt</a>
+        <a href="/llms-full.txt">llms-full.txt</a>
       </div>
     </div>
   </div>
