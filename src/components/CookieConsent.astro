@@ -119,6 +119,7 @@ import { SITE } from '@/lib/site';
       var target = event.target.closest('[data-cookie-choice], [data-cookie-settings]');
       if (!target) return;
       if (target.hasAttribute('data-cookie-settings')) {
+        event.preventDefault();
         showBar();
         return;
       }

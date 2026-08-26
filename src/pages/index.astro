@@ -14,7 +14,7 @@ import '@/styles/homepage.css';
 
 const title = 'Chiropractic Marketing Company for Healthcare Practices | ChiroCandy';
 const description =
-  'ChiroCandy is the growth system for chiropractic and healthcare practices. Ads, SEO, websites, CTV, reactivation, and AI follow-up in one founder-led engine since 2015.';
+  'ChiroCandy is the growth system for chiropractic and healthcare practices. Ads, SEO, websites, CTV, reactivation, and AI for campaign audits, market research, and 24/7 follow-up, founder-led since 2015.';
 
 const schema = buildGraph(
   webPageSchema({
@@ -22,7 +22,7 @@ const schema = buildGraph(
     name: title,
     description,
     datePublished: '2015-05-01',
-    dateModified: '2026-08-25',
+    dateModified: '2026-08-26',
     speakable: ['.hero h1', '.lede', '.home-faq-item'],
   }),
   faqPageSchema([...HOME_FAQS]),
@@ -33,7 +33,7 @@ const schema = buildGraph(
     steps: [
       {
         name: 'Book a time',
-        text: 'Pick a slot that works. We review your market, your competitors, and where patients are already looking for you.',
+        text: 'Pick a slot that works. We use AI to audit what is live, research your market, and map competitors before we get on the call.',
       },
       {
         name: 'Get the diagnosis',
@@ -108,8 +108,7 @@ const schema = buildGraph(
         <span class="w">Get <em class="grad">Found.</em></span>
       </h1>
       <p class="lede">
-        Ads, SEO, websites, CTV, reactivation, and AI follow-up. One integrated engine for
-        chiropractic and healthcare practices, founder-led since 2015.
+        Ads, SEO, websites, CTV, reactivation, and AI. We use AI to audit campaigns, research your market, and answer every lead in seconds. One integrated engine for chiropractic and healthcare practices, founder-led since 2015.
       </p>
       <div class="hero-ctas">
         <a class="btn btn-green magnetic" href={SITE.scheduleUrl}>Book a Strategy Call <span class="arrow">→</span></a>
@@ -137,11 +136,13 @@ const schema = buildGraph(
       <span><b>$450M+</b> client revenue generated</span>
       <span>Chiropractic & healthcare marketing, <b>since 2015</b></span>
       <span><b>Founder-led</b> strategy</span>
+      <span>AI for <b>audits, research, and follow-up</b></span>
       <span><b>9 services,</b> one growth engine</span>
       <span><b>2,000+</b> practices served</span>
       <span><b>$450M+</b> client revenue generated</span>
       <span>Chiropractic & healthcare marketing, <b>since 2015</b></span>
       <span><b>Founder-led</b> strategy</span>
+      <span>AI for <b>audits, research, and follow-up</b></span>
       <span><b>9 services,</b> one growth engine</span>
     </div>
   </div>
@@ -228,7 +229,7 @@ const schema = buildGraph(
             <div class="eng-rows">
               <div class="eng-row"><div class="eng-chip">M</div><div class="rt"><b>Meta Ads</b><span>Demand generation</span></div><span class="eng-on">ON</span></div>
               <div class="eng-row"><div class="eng-chip">G</div><div class="rt"><b>Google + Maps</b><span>High-intent search</span></div><span class="eng-on">ON</span></div>
-              <div class="eng-row"><div class="eng-chip">AI</div><div class="rt"><b>AI Patient Coordinator</b><span>Instant follow-up</span></div><span class="eng-on">ON</span></div>
+              <div class="eng-row"><div class="eng-chip">AI</div><div class="rt"><b>AI Patient Coordinator</b><span>Chat, voice, and booking</span></div><span class="eng-on">ON</span></div>
             </div>
             <div class="eng-foot">
               <span><span class="chk">✓</span>One strategy</span>
@@ -250,7 +251,7 @@ const schema = buildGraph(
             One engine.<br />Watch it assemble.
           </h2>
           <ul class="engine-list" id="engineList">
-            <li><span class="k">01</span><div><b>AI CA™</b><span>Every lead answered and booked, 24/7</span></div></li>
+            <li><span class="k">01</span><div><b>AI CA™</b><span>Chat and voice that answers and books, 24/7</span></div></li>
             <li><span class="k">02</span><div><b>Meta Ads</b><span>Patient campaigns proven on Facebook and Instagram</span></div></li>
             <li><span class="k">03</span><div><b>Streaming TV</b><span>Your face on your community's living room TVs</span></div></li>
             <li><span class="k">04</span><div><b>Retargeting</b><span>Stay in front of every visitor until they book</span></div></li>
@@ -296,14 +297,15 @@ const schema = buildGraph(
     <div class="wrap ai-grid">
       <div class="reveal">
         <span class="eyebrow">AI, Applied Practically</span>
-        <h2 style="font-size:clamp(1.9rem,3.2vw,2.6rem);margin:.8rem 0 1rem">Don't take our word for it. Run the demo.</h2>
+        <h2 style="font-size:clamp(1.9rem,3.2vw,2.6rem);margin:.8rem 0 1rem">AI runs the research. The demo is the follow-up.</h2>
         <p style="color:var(--muted)">
-          This is what happens the moment a new patient reaches out to a ChiroCandy-powered practice. Type your city and watch the AI handle the lead in real time.
+          We use AI to audit campaigns, research the markets we target, and map competitors before we spend. Voice AI is available at the front desk. AI CA is the part patients feel: every new lead answered in seconds. Type your city and watch that last part happen live.
         </p>
         <ul class="ai-list">
+          <li><span class="chk">✓</span> Campaign audits and competitive research before we spend</li>
+          <li><span class="chk">✓</span> Market research on the areas we target</li>
+          <li><span class="chk">✓</span> Voice AI at the front desk, when you want it</li>
           <li><span class="chk">✓</span> Every lead answered in under 60 seconds, 24/7</li>
-          <li><span class="chk">✓</span> Found when patients ask AI for the best practice near them</li>
-          <li><span class="chk">✓</span> Follow-up that books while your front desk sleeps</li>
         </ul>
       </div>
       <div class="reveal d1">
@@ -339,7 +341,7 @@ const schema = buildGraph(
           <div class="sn">01</div>
           <span class="day">Before the call</span>
           <h3>Book a time</h3>
-          <p>Pick a slot that works. We review your market, your competitors, and where patients are already looking for you.</p>
+          <p>Pick a slot that works. We use AI to audit what is live, research your market, and map competitors before we get on the call.</p>
         </div>
         <div class="step reveal d1">
           <div class="sn">02</div>

@@ -3,7 +3,7 @@ export const SITE = {
   title: 'ChiroCandy',
   url: 'https://chirocandy.com',
   description:
-    'ChiroCandy is the growth system for chiropractic and healthcare practices. Ads, SEO, websites, CTV, reactivation, and AI follow-up, founder-led since 2015.',
+    'ChiroCandy is the growth system for chiropractic and healthcare practices. Ads, SEO, websites, CTV, reactivation, and AI for campaign audits, market research, and 24/7 follow-up, founder-led since 2015.',
   phone: '+1-800-662-1745',
   phoneDisplay: '1-800-662-1745',
   scheduleUrl: '/schedule/',
@@ -35,7 +35,9 @@ export const SITE = {
     'Google Ads for healthcare',
     'Local SEO',
     'Answer engine optimization',
+    'AI campaign audits',
     'AI patient follow-up',
+    'Voice AI for healthcare practices',
     'Practice websites',
     'Patient reactivation',
   ],
@@ -112,7 +114,7 @@ export const HOME_FAQS = [
   {
     question: 'What is ChiroCandy?',
     answer:
-      'ChiroCandy is a founder-led growth system for chiropractic and healthcare practices. Since 2015 it has combined ads, SEO, websites, CTV, reactivation, and AI follow-up so practices become known, found, and trusted in their market.',
+      'ChiroCandy is a founder-led growth system for chiropractic and healthcare practices. Since 2015 it has combined ads, SEO, websites, CTV, reactivation, and AI so practices become known, found, and trusted in their market.',
   },
   {
     question: 'Who does ChiroCandy work with?',
@@ -125,9 +127,14 @@ export const HOME_FAQS = [
       'ChiroCandy builds websites, local SEO, and answer-first content so patients can find a practice in Google, Maps, and AI answers. The system pairs that visibility with ads and 24/7 AI follow-up so new inquiries get booked.',
   },
   {
+    question: 'How does ChiroCandy use AI?',
+    answer:
+      'AI CA answers new-patient inquiries in seconds, by chat or voice. The same stack audits campaigns, researches target markets, and maps competitors so strategy is not a guess. Speed to lead is the part you can demo. The rest is how the team decides what to run.',
+  },
+  {
     question: 'What happens on a ChiroCandy strategy call?',
     answer:
-      'A strategy call is a 30-minute diagnosis of your marketing health. ChiroCandy reviews your market, competitors, and channels, then outlines a plan to build trust, become known, and get found. There is no canned pitch.',
+      'A strategy call is a 30-minute diagnosis of your marketing health. ChiroCandy uses AI to audit what is live, research your market, and map competitors, then outlines a plan to build trust, become known, and get found. There is no canned pitch.',
   },
   {
     question: 'How do I contact ChiroCandy?',
