@@ -1,5 +1,4 @@
 ---
-import BookingModal from '@/components/BookingModal.astro';
 import Footer from '@/components/Footer.astro';
 import Header from '@/components/Header.astro';
 import SEO from '@/components/SEO.astro';
@@ -77,7 +76,6 @@ const { hideHeader = false, hideFooter = false, bodyClass } = props;
       </main>
       {!hideFooter && <Footer />}
     </div>
-    <BookingModal />
     <script>
       if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         const observer = new IntersectionObserver(

@@ -363,16 +363,6 @@
       "permanent": false
     },
     {
-      "source": "/schedule/",
-      "destination": "https://api.leadconnectorhq.com/widget/booking/SkKWlvkZrPeFJguQHylX",
-      "permanent": false
-    },
-    {
-      "source": "/schedule",
-      "destination": "https://api.leadconnectorhq.com/widget/booking/SkKWlvkZrPeFJguQHylX",
-      "permanent": false
-    },
-    {
       "source": "/8/",
       "destination": "https://chirocandy.com/7-figure-practice-building-part-2/",
       "permanent": false

@@ -6,6 +6,7 @@ export const SITE = {
     'ChiroCandy is the growth system for chiropractic and healthcare practices. Ads, SEO, websites, CTV, reactivation, and AI follow-up, founder-led since 2015.',
   phone: '+1-800-662-1745',
   phoneDisplay: '1-800-662-1745',
+  scheduleUrl: '/schedule/',
   email: 'support@chirocandy.com',
   gtmId: 'GTM-WTMHXMN',
   facebookPixelId: '1677430622530607',

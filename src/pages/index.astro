@@ -73,7 +73,7 @@ const schema = buildGraph(
           <a href="#founder">About</a>
         </div>
         <a class="nav-phone" href={`tel:${SITE.phone}`}><b>{SITE.phoneDisplay}</b></a>
-        <button class="btn btn-green nav-cta magnetic" data-book type="button">Book a Strategy Call</button>
+        <a class="btn btn-green nav-cta magnetic" href={SITE.scheduleUrl}>Book a Strategy Call</a>
         <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu">
           <span></span><span></span><span></span>
         </button>
@@ -91,7 +91,7 @@ const schema = buildGraph(
     <a href="#founder">About</a>
     <a href="/faqs/">FAQs</a>
     <a href="/contact-us/">Contact</a>
-    <button class="btn btn-green mm-cta" data-book type="button">Book a Strategy Call <span class="arrow">→</span></button>
+    <a class="btn btn-green mm-cta" href={SITE.scheduleUrl}>Book a Strategy Call <span class="arrow">→</span></a>
     <a href={`tel:${SITE.phone}`} style="font-size:1rem;font-family:'Inter',sans-serif;color:var(--muted)">
       Or call <b style="color:var(--green)">{SITE.phoneDisplay}</b>
     </a>
@@ -112,7 +112,7 @@ const schema = buildGraph(
         chiropractic and healthcare practices, founder-led since 2015.
       </p>
       <div class="hero-ctas">
-        <button class="btn btn-green magnetic" data-book type="button">Book a Strategy Call <span class="arrow">→</span></button>
+        <a class="btn btn-green magnetic" href={SITE.scheduleUrl}>Book a Strategy Call <span class="arrow">→</span></a>
         <a class="btn btn-ghost magnetic" href="#watch">See How It Works</a>
       </div>
     </div>
@@ -160,7 +160,7 @@ const schema = buildGraph(
           allowfullscreen></iframe>
       </div>
       <div class="vsl-cta reveal d2">
-        <button class="btn btn-green magnetic" data-book type="button">Book a Strategy Call <span class="arrow">→</span></button>
+        <a class="btn btn-green magnetic" href={SITE.scheduleUrl}>Book a Strategy Call <span class="arrow">→</span></a>
         <span class="call">Prefer to talk now? Call <a href={`tel:${SITE.phone}`}>{SITE.phoneDisplay}</a></span>
       </div>
     </div>
@@ -355,7 +355,7 @@ const schema = buildGraph(
         </div>
       </div>
       <div class="reveal d2" style="text-align:center;margin-top:2.8rem">
-        <button class="btn btn-green magnetic" data-book type="button">Book a Strategy Call <span class="arrow">→</span></button>
+        <a class="btn btn-green magnetic" href={SITE.scheduleUrl}>Book a Strategy Call <span class="arrow">→</span></a>
       </div>
     </div>
   </section>
@@ -424,9 +424,9 @@ const schema = buildGraph(
         Ready to become the <span class="shimmer">most trusted</span> and best-known practice in your market?
       </h2>
       <p class="reveal d1">One call. A clear diagnosis of your marketing health and a personalized plan to grow.</p>
-      <button class="btn btn-green magnetic reveal d2" data-book type="button">
+      <a class="btn btn-green magnetic reveal d2" href={SITE.scheduleUrl}>
         Book a Strategy Call <span class="arrow">→</span>
-      </button>
+      </a>
     </div>
   </section>
 

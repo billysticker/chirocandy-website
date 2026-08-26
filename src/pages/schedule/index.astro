@@ -1,0 +1,326 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { SITE } from '@/lib/site';
+import { buildGraph, breadcrumbSchema, howToSchema, webPageSchema } from '@/lib/schema';
+
+const title = 'Book a Strategy Call | ChiroCandy';
+const description =
+  'Book a strategy call with ChiroCandy. Thirty minutes, a clear diagnosis of your marketing health, and a plan for your market.';
+const url = `${SITE.url}/schedule/`;
+const widgetSrc = 'https://api.leadconnectorhq.com/widget/booking/SkKWlvkZrPeFJguQHylX';
+const schema = buildGraph(
+  webPageSchema({ url, name: title, description, dateModified: '2026-08-25' }),
+  breadcrumbSchema([
+    { name: 'Home', url: `${SITE.url}/` },
+    { name: 'Book a Strategy Call', url },
+  ]),
+  howToSchema({
+    name: 'How a ChiroCandy strategy call works',
+    description:
+      'Thirty minutes. No pressure, no canned pitch. You leave with a clear read on your marketing health and a plan built for your market.',
+    steps: [
+      { name: 'We audit what is live now', text: 'Ads, search visibility, site, reviews, follow-up.' },
+      { name: 'We name the gap', text: 'Where new patients are leaking out of the funnel.' },
+      { name: 'You leave with a plan', text: 'Yours to keep, whether or not we work together.' },
+    ],
+  })
+);
+---
+
+<BaseLayout title={title} description={description} canonical={url} schema={schema} bodyClass="schedule-page">
+  <section class="sched">
+    <div class="sched-bg" aria-hidden="true"></div>
+    <div class="sched-glow" aria-hidden="true"></div>
+    <div class="sched-wrap">
+      <div class="sched-grid">
+        <div class="sched-copy">
+          <span class="sched-pill">
+            <span class="sched-dot"></span>
+            Free strategy call
+          </span>
+          <h1>One call. A real diagnosis of your <span class="shimmer">growth</span>.</h1>
+          <p class="lede">
+            Pick a time that works. We will look at how your practice is found, known, and trusted in your market, then map what to fix first.
+          </p>
+          <ol class="steps">
+            <li>
+              <span class="sn">01</span>
+              <div>
+                <b>We audit what is live now</b>
+                <span>Ads, search visibility, site, reviews, follow-up.</span>
+              </div>
+            </li>
+            <li>
+              <span class="sn">02</span>
+              <div>
+                <b>We name the gap</b>
+                <span>Where new patients are leaking out of the funnel.</span>
+              </div>
+            </li>
+            <li>
+              <span class="sn">03</span>
+              <div>
+                <b>You leave with a plan</b>
+                <span>Yours to keep, whether or not we work together.</span>
+              </div>
+            </li>
+          </ol>
+          <div class="pills">
+            <span><b>2,000+</b> offices served</span>
+            <span><b>11 years</b> healthcare only</span>
+            <span><b>$450M+</b> client revenue</span>
+          </div>
+          <p class="fine">
+            No pitch deck, no pressure. Prefer the phone? Call
+            <a href={`tel:${SITE.phone}`}>{SITE.phoneDisplay}</a>.
+          </p>
+        </div>
+        <div class="sched-cal">
+          <div class="cal-frame">
+            <div class="cal-head">
+              <span class="cal-label">Select a time</span>
+              <span class="live"><span class="sched-dot"></span>Live availability</span>
+            </div>
+            <div class="cal-embed">
+              <iframe
+                src={widgetSrc}
+                id="SkKWlvkZrPeFJguQHylX_booking"
+                title="Book a strategy call with ChiroCandy"
+                scrolling="no"
+                style="display:block;width:100%;min-height:760px;border:none;background:transparent"
+              ></iframe>
+            </div>
+          </div>
+          <p class="cal-note">Times shown in your local timezone. You will get a confirmation and a reminder.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script is:inline src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
+</BaseLayout>
+
+<style>
+  .sched {
+    position: relative;
+    overflow: hidden;
+    padding: 2.4rem 0 7rem;
+  }
+  .sched-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: radial-gradient(rgba(126, 217, 87, 0.16) 1px, transparent 1px);
+    background-size: 26px 26px;
+    mask-image: radial-gradient(ellipse 90% 60% at 50% 0%, #000 20%, transparent 75%);
+  }
+  .sched-glow {
+    position: absolute;
+    top: -320px;
+    left: 50%;
+    width: 1100px;
+    height: 800px;
+    transform: translateX(-50%);
+    pointer-events: none;
+    background: radial-gradient(circle, rgba(18, 57, 100, 0.55), transparent 65%);
+  }
+  .sched-wrap {
+    position: relative;
+    z-index: 2;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+  .sched-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    gap: 4.5rem;
+    align-items: start;
+  }
+  .sched-copy {
+    padding-top: 2.4rem;
+  }
+  .sched-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    border: 1px solid rgba(126, 217, 87, 0.34);
+    background: rgba(126, 217, 87, 0.08);
+    font-size: 0.74rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--green);
+  }
+  .sched-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--green);
+    animation: schedPulse 2.4s ease-in-out infinite;
+  }
+  h1 {
+    font-size: clamp(2.6rem, 4.6vw, 3.9rem);
+    font-weight: 700;
+    line-height: 1.04;
+    margin: 1.4rem 0 1.1rem;
+  }
+  .shimmer {
+    background: linear-gradient(105deg, #9bf07a, #5cbf3e);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .lede {
+    color: var(--muted);
+    font-size: 1.06rem;
+    max-width: 34ch;
+  }
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1.15rem;
+    margin: 2.6rem 0 2.4rem;
+    padding: 0;
+    list-style: none;
+  }
+  .steps li {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  .sn {
+    flex: none;
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    background: rgba(126, 217, 87, 0.14);
+    border: 1px solid rgba(126, 217, 87, 0.3);
+    color: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-headline);
+    font-size: 0.86rem;
+    font-weight: 600;
+  }
+  .steps b {
+    display: block;
+    font-size: 0.98rem;
+    margin-bottom: 0.15rem;
+  }
+  .steps span:last-child {
+    color: var(--muted2);
+    font-size: 0.9rem;
+  }
+  .pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--line);
+  }
+  .pills span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.44rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid rgba(150, 171, 198, 0.2);
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+  .pills b {
+    color: var(--green);
+  }
+  .fine {
+    margin-top: 2rem;
+    color: var(--muted2);
+    font-size: 0.84rem;
+  }
+  .fine a {
+    color: var(--green);
+    font-weight: 600;
+  }
+  .cal-frame {
+    border-radius: 24px;
+    padding: 14px;
+    background: linear-gradient(160deg, rgba(18, 57, 100, 0.6), rgba(7, 28, 54, 0.92));
+    border: 1px solid rgba(126, 217, 87, 0.24);
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6);
+  }
+  .cal-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0.8rem 1rem;
+    gap: 1rem;
+  }
+  .cal-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--green);
+  }
+  .live {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.74rem;
+    color: var(--muted2);
+  }
+  .live .sched-dot {
+    width: 6px;
+    height: 6px;
+  }
+  .cal-embed {
+    border-radius: 14px;
+    overflow: hidden;
+    background: #071c36;
+  }
+  .cal-embed iframe {
+    display: block;
+    width: 100%;
+    min-height: 760px;
+    border: 0;
+    background: transparent;
+  }
+  .cal-note {
+    text-align: center;
+    color: var(--muted2);
+    font-size: 0.78rem;
+    margin-top: 1.1rem;
+  }
+  @keyframes schedPulse {
+    0%,
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.45;
+      transform: scale(0.82);
+    }
+  }
+  @media (max-width: 1080px) {
+    .sched-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  }
+  @media (max-width: 640px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+    .sched-wrap {
+      padding: 0 20px;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .sched-dot {
+      animation: none;
+    }
+  }
+</style>
