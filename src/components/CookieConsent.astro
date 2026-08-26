@@ -1,0 +1,250 @@
+---
+import { SITE } from '@/lib/site';
+---
+
+<div
+  class="cc-bar"
+  id="cookieBar"
+  role="dialog"
+  aria-modal="false"
+  aria-labelledby="cookieTitle"
+  aria-describedby="cookieCopy"
+  hidden
+>
+  <div class="cc-inner">
+    <div class="cc-copy">
+      <p class="cc-kicker" id="cookieTitle">
+        <span class="cc-dot" aria-hidden="true"></span>
+        Cookies
+      </p>
+      <p id="cookieCopy">
+        We use analytics and ads cookies to measure how the site is used and to improve our marketing. Necessary cookies stay on so the site works.
+        <a href="/privacy-policy/">Privacy policy</a>
+      </p>
+    </div>
+    <div class="cc-actions">
+      <button class="btn btn-ghost cc-btn" type="button" data-cookie-choice="rejected">Reject</button>
+      <button class="btn btn-green cc-btn" type="button" data-cookie-choice="accepted">Accept</button>
+    </div>
+  </div>
+</div>
+
+<button class="cc-reopen" id="cookieReopen" type="button" data-cookie-settings hidden>
+  <span class="cc-dot" aria-hidden="true"></span>
+  Cookies
+</button>
+
+<script is:inline define:vars={{ gtmId: SITE.gtmId, pixelId: SITE.facebookPixelId }}>
+  (function () {
+    var KEY = 'chirocandy-cookie-consent';
+    var loaded = false;
+
+    window.__ccLoadMarketing = function () {
+      if (loaded) return;
+      loaded = true;
+
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var gtm = document.createElement('script');
+      gtm.async = true;
+      gtm.src = 'https://www.googletagmanager.com/gtm.js?id=' + gtmId;
+      document.head.appendChild(gtm);
+
+      if (window.fbq) return;
+      var fbq = (window.fbq = function () {
+        fbq.callMethod ? fbq.callMethod.apply(fbq, arguments) : fbq.queue.push(arguments);
+      });
+      if (!window._fbq) window._fbq = fbq;
+      fbq.push = fbq;
+      fbq.loaded = true;
+      fbq.version = '2.0';
+      fbq.queue = [];
+      var pixel = document.createElement('script');
+      pixel.async = true;
+      pixel.src = 'https://connect.facebook.net/en_US/fbevents.js';
+      document.head.appendChild(pixel);
+      window.fbq('init', pixelId);
+      window.fbq('track', 'PageView');
+    };
+
+    function readChoice() {
+      try {
+        return localStorage.getItem(KEY);
+      } catch (e) {
+        return null;
+      }
+    }
+
+    function writeChoice(value) {
+      try {
+        localStorage.setItem(KEY, value);
+      } catch (e) {}
+    }
+
+    var bar = document.getElementById('cookieBar');
+    var reopen = document.getElementById('cookieReopen');
+
+    function showBar() {
+      if (!bar) return;
+      bar.hidden = false;
+      if (reopen) reopen.hidden = true;
+    }
+
+    function hideBar() {
+      if (!bar) return;
+      bar.hidden = true;
+      if (reopen) reopen.hidden = false;
+    }
+
+    function applyChoice(value, previous) {
+      writeChoice(value);
+      if (value === 'accepted') window.__ccLoadMarketing();
+      hideBar();
+      if (value === 'rejected' && previous === 'accepted' && loaded) {
+        window.location.reload();
+      }
+    }
+
+    var saved = readChoice();
+    if (saved === 'accepted') {
+      window.__ccLoadMarketing();
+      hideBar();
+    } else if (saved === 'rejected') {
+      hideBar();
+    } else {
+      showBar();
+    }
+
+    document.addEventListener('click', function (event) {
+      var target = event.target.closest('[data-cookie-choice], [data-cookie-settings]');
+      if (!target) return;
+      if (target.hasAttribute('data-cookie-settings')) {
+        showBar();
+        return;
+      }
+      applyChoice(target.getAttribute('data-cookie-choice'), readChoice());
+    });
+  })();
+</script>
+
+<style>
+  .cc-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 80;
+    padding: 1.1rem 1.25rem calc(1.1rem + env(safe-area-inset-bottom));
+    background: linear-gradient(180deg, rgba(7, 28, 54, 0.72), rgba(4, 16, 31, 0.96));
+    border-top: 1px solid rgba(126, 217, 87, 0.22);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 -24px 80px rgba(0, 0, 0, 0.45);
+  }
+  .cc-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.6rem;
+  }
+  .cc-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0 0 0.45rem;
+    font-family: var(--font-headline);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--green);
+  }
+  .cc-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 10px var(--green);
+    animation: ccPulse 2.4s ease-in-out infinite;
+  }
+  .cc-copy p:last-child {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.92rem;
+    max-width: 62ch;
+  }
+  .cc-copy a {
+    color: var(--green);
+    font-weight: 600;
+  }
+  .cc-actions {
+    display: flex;
+    flex-shrink: 0;
+    gap: 0.7rem;
+  }
+  .cc-btn {
+    padding: 0.72rem 1.25rem;
+    font-size: 0.88rem;
+    min-width: 7.2rem;
+  }
+  .cc-reopen {
+    position: fixed;
+    left: 18px;
+    bottom: calc(18px + env(safe-area-inset-bottom));
+    z-index: 70;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.55rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid rgba(126, 217, 87, 0.34);
+    background: rgba(4, 16, 31, 0.88);
+    color: var(--green);
+    font-family: var(--font-headline);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    cursor: pointer;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  }
+  .cc-reopen:hover {
+    border-color: rgba(126, 217, 87, 0.7);
+    color: var(--green);
+  }
+  .cc-bar[hidden],
+  .cc-reopen[hidden] {
+    display: none;
+  }
+  @keyframes ccPulse {
+    0%,
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.45;
+      transform: scale(0.82);
+    }
+  }
+  @media (max-width: 720px) {
+    .cc-inner {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 1rem;
+    }
+    .cc-actions {
+      width: 100%;
+    }
+    .cc-btn {
+      flex: 1;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .cc-dot {
+      animation: none;
+    }
+  }
+</style>

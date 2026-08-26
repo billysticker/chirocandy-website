@@ -56,6 +56,7 @@ import { NAV, SITE } from '@/lib/site';
       <div class="foot-legal">
         <a href="/terms-conditions/">Terms</a>
         <a href="/privacy-policy/">Privacy</a>
+        <button type="button" data-cookie-settings>Cookies</button>
         <a href="/sitemap/">Sitemap</a>
         <a href="/llms.txt">llms.txt</a>
         <a href="/llms-full.txt">llms-full.txt</a>
@@ -114,6 +115,17 @@ import { NAV, SITE } from '@/lib/site';
     display: flex;
     flex-wrap: wrap;
     gap: 1.2rem;
+  }
+  .foot-legal button {
+    background: none;
+    border: 0;
+    padding: 0;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+  }
+  .foot-legal button:hover {
+    color: var(--green);
   }
   @media (max-width: 900px) {
     .foot-grid {
