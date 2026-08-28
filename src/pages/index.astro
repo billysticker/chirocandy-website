@@ -1,4 +1,5 @@
 ---
+import DemoChat from '@/components/DemoChat.astro';
 import HomeInteractions from '@/components/HomeInteractions.astro';
 import SignalField from '@/components/SignalField.astro';
 import TrainingsMenu from '@/components/TrainingsMenu.astro';
@@ -297,30 +298,18 @@ const schema = buildGraph(
     <div class="wrap ai-grid">
       <div class="reveal">
         <span class="eyebrow">AI, Applied Practically</span>
-        <h2 style="font-size:clamp(1.9rem,3.2vw,2.6rem);margin:.8rem 0 1rem">AI runs the research. The demo is the follow-up.</h2>
+        <h2 style="font-size:clamp(1.9rem,3.2vw,2.6rem);margin:.8rem 0 1rem">Don’t take our word for it. Run the demo.</h2>
         <p style="color:var(--muted)">
-          We use AI to audit campaigns, research the markets we target, and map competitors before we spend. Voice AI is available at the front desk. AI CA is the part patients feel: every new lead answered in seconds. Type your city and watch that last part happen live.
+          This is what happens the moment a new patient reaches out to a ChiroCandy-powered practice. Open the demo and talk to Atlas, the same AI that answers leads in seconds.
         </p>
         <ul class="ai-list">
-          <li><span class="chk">✓</span> Campaign audits and competitive research before we spend</li>
-          <li><span class="chk">✓</span> Market research on the areas we target</li>
-          <li><span class="chk">✓</span> Voice AI at the front desk, when you want it</li>
           <li><span class="chk">✓</span> Every lead answered in under 60 seconds, 24/7</li>
+          <li><span class="chk">✓</span> Found when patients ask AI for the best practice near them</li>
+          <li><span class="chk">✓</span> Follow-up that books while your front desk sleeps</li>
         </ul>
       </div>
       <div class="reveal d1">
-        <div class="phone">
-          <div class="phone-head">
-            <div class="pav">AI</div>
-            <div><b>Your Practice AI</b><span><span class="live-dot"></span>Responds in seconds</span></div>
-          </div>
-          <div class="chat" id="chat" aria-live="polite"></div>
-          <div class="demo-bar">
-            <input id="cityInput" type="text" placeholder="Type your city..." maxlength="40" aria-label="Your city" />
-            <button id="runDemo" type="button">Run the demo</button>
-          </div>
-          <div class="demo-hint">Simulation. No data is sent anywhere.</div>
-        </div>
+        <DemoChat />
       </div>
     </div>
   </section>

@@ -1,0 +1,40 @@
+<div class="phone demo-chat">
+  <div class="demo-chat-embed" id="aiDemoChat">
+    <script
+      is:inline
+      src="https://widgets.leadconnectorhq.com/loader.js"
+      data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+      data-widget-id="6a91ce0369049b9fa4aed805"></script>
+    <noscript>
+      <p>Enable JavaScript to run the live demo.</p>
+    </noscript>
+  </div>
+  <p class="demo-hint">Live demo. Enter your practice details and talk to Atlas.</p>
+</div>
+
+<script>
+  const mount = document.getElementById('aiDemoChat');
+  if (mount) {
+    const adopt = () => {
+      const widget = document.querySelector('chat-widget');
+      if (widget && widget.parentElement !== mount) mount.appendChild(widget);
+    };
+    const open = () => {
+      window.leadConnector?.chatWidget?.openWidget?.();
+    };
+    adopt();
+    const observer = new MutationObserver(adopt);
+    observer.observe(document.documentElement, { childList: true, subtree: true });
+    window.addEventListener('LC_chatWidgetLoaded', open);
+    const timer = window.setInterval(() => {
+      if (window.leadConnector?.chatWidget?.isLoaded) {
+        open();
+        window.clearInterval(timer);
+      }
+    }, 300);
+    window.setTimeout(() => {
+      observer.disconnect();
+      window.clearInterval(timer);
+    }, 20000);
+  }
+</script>
