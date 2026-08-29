@@ -29,6 +29,23 @@ import { NAV, SITE } from '@/lib/site';
         </ul>
       </div>
       <div>
+        <h4>Programs</h4>
+        <ul>
+          {NAV.programs.map((item) => (
+            <li><a href={item.href}>{item.label}</a></li>
+          ))}
+          <li><a href="/case-studies/">Case Studies</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Frameworks</h4>
+        <ul>
+          {NAV.frameworks.map((item) => (
+            <li><a href={item.href}>{item.label}</a></li>
+          ))}
+        </ul>
+      </div>
+      <div>
         <h4>Trainings</h4>
         <ul>
           {NAV.trainings.map((item) => (
@@ -54,6 +71,7 @@ import { NAV, SITE } from '@/lib/site';
     <div class="foot-bottom">
       <p>© {new Date().getFullYear()} ChiroCandy Marketing LLC. Chiropractic and healthcare practice growth since 2015.</p>
       <div class="foot-legal">
+        <a href="/case-studies/">Case Studies</a>
         <a href="/terms-conditions/">Terms</a>
         <a href="/privacy-policy/">Privacy</a>
         <a href="#cookie-settings" data-cookie-settings>Cookies</a>
@@ -74,8 +92,8 @@ import { NAV, SITE } from '@/lib/site';
   }
   .foot-grid {
     display: grid;
-    grid-template-columns: 1.2fr 1fr 1fr 1fr;
-    gap: 2.5rem;
+    grid-template-columns: 1.2fr 1fr 1fr 1fr 1fr;
+    gap: 2rem;
     margin-bottom: 3rem;
   }
   .foot-logo img {

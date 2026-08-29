@@ -64,6 +64,11 @@ export const NAV = {
       label: 'Social Media Marketing',
     },
   ],
+  programs: [
+    { href: '/get-new-patients/', label: 'Get New Patients' },
+    { href: '/done-for-you-program/', label: 'Done-For-You Program' },
+    { href: '/training-program/', label: 'Training Program' },
+  ],
   frameworks: [
     { href: '/frameworks/known-found-trusted/', label: 'Known / Found / Trusted' },
     { href: '/frameworks/perfect-patient-tribe-turbine/', label: 'Perfect Patient Tribe Turbine' },
@@ -98,6 +103,7 @@ export const NAV = {
     },
   ],
   resources: [
+    { href: '/case-studies/', label: 'Case Studies' },
     { href: '/blog/', label: 'Blog' },
     { href: '/podcasts/', label: 'Podcast' },
     { href: '/news-and-media/', label: 'News & Media' },
