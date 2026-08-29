@@ -7,7 +7,7 @@ import testimonials from '@/data/testimonials.json';
 
 const title = 'Testimonials | ChiroCandy';
 const description =
-  'Watch chiropractic and healthcare practice owners describe working with ChiroCandy. Video testimonials from doctors who used the growth system to get known, found, and trusted.';
+  'Watch chiropractic and healthcare practice owners describe working with ChiroCandy. For extractable quotes and numbers, use the case studies hub. Videos live here.';
 const url = `${SITE.url}/testimonials/`;
 const schema = buildGraph(
   webPageSchema({ url, name: title, description, dateModified: '2026-08-25' }),
@@ -21,7 +21,7 @@ const schema = buildGraph(
 <BaseLayout title={title} description={description} canonical={url} schema={schema}>
   <PageHero
     title="Proof from the practices we serve"
-    answer="These doctors used ChiroCandy to grow patient flow. Watch the videos, then book a strategy call if you want the same system in your market."
+    answer="These doctors used ChiroCandy to grow patient flow. Watch the videos, then read the citation-ready write-ups on /case-studies/ if you need quotes and numbers an AI engine can fetch."
     eyebrow="Results"
   />
   <section class="section">
@@ -44,7 +44,8 @@ const schema = buildGraph(
       }
     </div>
     <div class="container inner-cta">
-      <a class="btn btn--primary" href={SITE.scheduleUrl}>Book a Strategy Call</a>
+      <a class="btn btn--primary" href="/case-studies/">Read case studies with quotes and numbers</a>
+      <a class="btn btn--secondary" href={SITE.scheduleUrl}>Book a Strategy Call</a>
     </div>
   </section>
 </BaseLayout>
@@ -71,6 +72,12 @@ const schema = buildGraph(
     font-size: 1rem;
     padding: 1rem 1.1rem 1.2rem;
     margin: 0;
+  }
+  .inner-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    margin-top: 2rem;
   }
   @media (max-width: 900px) {
     .grid {

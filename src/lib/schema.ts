@@ -126,6 +126,23 @@ export function breadcrumbSchema(items: { name: string; url: string }[]) {
   };
 }
 
+export function reviewSchema(opts: {
+  author: string;
+  reviewBody: string;
+  url: string;
+}) {
+  return {
+    '@type': 'Review',
+    '@id': `${opts.url}#review`,
+    author: {
+      '@type': 'Person',
+      name: opts.author,
+    },
+    reviewBody: opts.reviewBody,
+    itemReviewed: { '@id': orgId },
+  };
+}
+
 export function faqPageSchema(faqs: { question: string; answer: string }[]) {
   return {
     '@type': 'FAQPage',

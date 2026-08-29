@@ -2,9 +2,9 @@
 import DemoChat from '@/components/DemoChat.astro';
 import HomeInteractions from '@/components/HomeInteractions.astro';
 import SignalField from '@/components/SignalField.astro';
-import TrainingsMenu from '@/components/TrainingsMenu.astro';
+import NavDropdown from '@/components/NavDropdown.astro';
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import { HOME_FAQS, SITE } from '@/lib/site';
+import { HOME_FAQS, NAV, SITE } from '@/lib/site';
 import {
   buildGraph,
   faqPageSchema,
@@ -68,10 +68,11 @@ const schema = buildGraph(
       <div class="nav-right">
         <div class="nav-links">
           <a href="#engine">The System</a>
-          <a href="/services/">Services</a>
-          <TrainingsMenu />
-          <a href="#ai">AI Demo</a>
-          <a href="#founder">About</a>
+          <NavDropdown label="Services" items={NAV.services} hubHref="/services/" />
+          <NavDropdown label="Frameworks" items={NAV.frameworks} hubHref="/frameworks/" />
+          <NavDropdown label="Programs" items={NAV.programs} />
+          <NavDropdown label="Trainings" items={NAV.trainings} numbered />
+          <a href="/case-studies/">Proof</a>
         </div>
         <a class="nav-phone" href={`tel:${SITE.phone}`}><b>{SITE.phoneDisplay}</b></a>
         <a class="btn btn-green nav-cta magnetic" href={SITE.scheduleUrl}>Book a Strategy Call</a>
@@ -84,8 +85,11 @@ const schema = buildGraph(
 
   <div class="mobile-menu" id="mobileMenu">
     <a href="#engine">The System</a>
-    <a href="/services/">Services</a>
-    <TrainingsMenu variant="mobile" />
+    <NavDropdown variant="mobile" label="Services" items={NAV.services} hubHref="/services/" />
+    <NavDropdown variant="mobile" label="Frameworks" items={NAV.frameworks} hubHref="/frameworks/" />
+    <NavDropdown variant="mobile" label="Programs" items={NAV.programs} />
+    <NavDropdown variant="mobile" label="Trainings" items={NAV.trainings} numbered />
+    <a href="/case-studies/">Case Studies</a>
     <a href="/blog/">Blog</a>
     <a href="/podcasts/">Podcast</a>
     <a href="#ai">AI Demo</a>
