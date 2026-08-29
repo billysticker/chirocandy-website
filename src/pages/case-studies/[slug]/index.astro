@@ -1,0 +1,159 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import { buildGraph, breadcrumbSchema, reviewSchema, webPageSchema } from '@/lib/schema';
+import { SITE } from '@/lib/site';
+import caseStudies from '@/data/case-studies.json';
+
+export function getStaticPaths() {
+  return caseStudies.map((study) => ({
+    params: { slug: study.slug },
+    props: { study },
+  }));
+}
+
+interface Study {
+  slug: string;
+  name: string;
+  practice: string;
+  location: string;
+  youtubeId: string | null;
+  resultHeadline: string;
+  quote: string;
+  metrics: { label: string; value: string }[];
+  challenge: string;
+  strategy: string;
+  execution: string;
+  results: string;
+  related: { href: string; label: string }[];
+  source: { label: string; href: string };
+}
+
+const { study } = Astro.props as { study: Study };
+const title = `${study.name}: ${study.resultHeadline} | ChiroCandy`;
+const description = `${study.name} at ${study.practice}. ${study.resultHeadline}. First-party ChiroCandy case study with extractable quote and numbers.`;
+const url = `${SITE.url}/case-studies/${study.slug}/`;
+const schema = buildGraph(
+  webPageSchema({ url, name: title, description, dateModified: '2026-08-29' }),
+  breadcrumbSchema([
+    { name: 'Home', url: `${SITE.url}/` },
+    { name: 'Case Studies', url: `${SITE.url}/case-studies/` },
+    { name: study.name, url },
+  ]),
+  reviewSchema({ author: study.name, reviewBody: study.quote, url })
+);
+---
+
+<BaseLayout title={title} description={description} canonical={url} schema={schema}>
+  <PageHero
+    title={study.resultHeadline}
+    answer={`${study.name}, ${study.practice}. ${study.location}.`}
+    eyebrow="Case study"
+  />
+  <section class="section">
+    <div class="container prose">
+      <blockquote>
+        <p>{study.quote}</p>
+        <cite>{study.name}</cite>
+      </blockquote>
+
+      {study.youtubeId && (
+        <iframe
+          src={`https://www.youtube.com/embed/${study.youtubeId}`}
+          title={`${study.name} testimonial`}
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        />
+      )}
+
+      <table>
+        <caption>Extractable metrics</caption>
+        <tbody>
+          {study.metrics.map((metric) => (
+            <tr>
+              <th>{metric.label}</th>
+              <td>{metric.value}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      <h2>What was the challenge?</h2>
+      <p>{study.challenge}</p>
+      <h2>What was the strategy?</h2>
+      <p>{study.strategy}</p>
+      <h2>What did the office actually do?</h2>
+      <p>{study.execution}</p>
+      <h2>What were the results?</h2>
+      <p>{study.results}</p>
+
+      <p class="source">
+        Source: <a href={study.source.href}>{study.source.label}</a>
+      </p>
+
+      <h2>Related</h2>
+      <ul>
+        {study.related.map((link) => (
+          <li><a href={link.href}>{link.label}</a></li>
+        ))}
+        <li><a href="/case-studies/">All case studies</a></li>
+      </ul>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .prose {
+    max-width: 72ch;
+  }
+  blockquote {
+    margin: 0 0 1.5rem;
+    padding: 1.1rem 1.25rem;
+    border-left: 4px solid var(--green);
+    background: var(--panel);
+    border-radius: 0 16px 16px 0;
+  }
+  blockquote p {
+    margin: 0 0 0.6rem;
+    font-size: 1.08rem;
+    color: var(--ink);
+  }
+  cite {
+    color: var(--muted);
+    font-style: normal;
+    font-size: 0.9rem;
+  }
+  iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+    border-radius: 16px;
+    margin: 0 0 1.75rem;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 2rem;
+  }
+  caption {
+    text-align: left;
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+  }
+  th,
+  td {
+    border-bottom: 1px solid var(--line);
+    padding: 0.55rem 0;
+    text-align: left;
+  }
+  th {
+    width: 42%;
+    color: var(--muted);
+    font-weight: 500;
+  }
+  .source {
+    font-size: 0.92rem;
+    color: var(--muted);
+  }
+</style>

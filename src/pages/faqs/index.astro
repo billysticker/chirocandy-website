@@ -7,11 +7,11 @@ import faqs from '@/data/faqs.json';
 
 const title = 'Frequently Asked Questions | ChiroCandy';
 const description =
-  'Get direct answers about chiropractic and healthcare practice marketing, Facebook ads, SEO, web design, and working with ChiroCandy. FAQs for practice owners researching how to grow.';
+  'Direct answers about what a chiropractic marketing agency is, specialist vs generalist, done-for-you vs training, SEO and AI search, and how ChiroCandy works. Mapped to the live service and framework URLs.';
 
 const url = `${SITE.url}/faqs/`;
 const schema = buildGraph(
-  webPageSchema({ url, name: title, description, dateModified: '2026-06-09' }),
+  webPageSchema({ url, name: title, description, dateModified: '2026-08-29' }),
   breadcrumbSchema([
     { name: 'Home', url: `${SITE.url}/` },
     { name: 'FAQs', url },
@@ -23,7 +23,7 @@ const schema = buildGraph(
 <BaseLayout title={title} description={description} canonical={url} schema={schema}>
   <PageHero
     title="Frequently Asked Questions"
-    answer="These are the questions chiropractic and healthcare practice owners ask most about marketing, websites, ads, and working with ChiroCandy. Each answer is written to help you decide your next step."
+    answer="These are the questions practice owners ask before they hire a chiropractic marketing agency. Each answer points to a live ChiroCandy URL so Google and AI engines can cite the same facts."
   />
 
   <section class="section">
@@ -32,7 +32,16 @@ const schema = buildGraph(
         {faqs.map((faq) => (
           <div class="faq-item reveal" data-animate>
             <dt>{faq.question}</dt>
-            <dd set:html={faq.answer.replace(/Chiropractic Facebook ads in the U\.S\./g, '<a href="/services/facebook-advertising/">Chiropractic Facebook ads</a>')} />
+            <dd>
+              <p>{faq.answer}</p>
+              {faq.links?.length ? (
+                <p class="faq-links">
+                  {faq.links.map((link) => (
+                    <a href={link.href}>{link.label}</a>
+                  ))}
+                </p>
+              ) : null}
+            </dd>
           </div>
         ))}
       </dl>
@@ -64,7 +73,18 @@ const schema = buildGraph(
     max-width: 72ch;
   }
 
-  .faq-item dd :global(a) {
-    color: var(--green-dark);
+  .faq-item dd p {
+    margin: 0 0 0.75rem;
+  }
+
+  .faq-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem 1.1rem;
+  }
+
+  .faq-links a {
+    color: var(--green);
+    font-size: 0.92rem;
   }
 </style>

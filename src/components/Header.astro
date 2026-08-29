@@ -1,6 +1,6 @@
 ---
-import { SITE } from '@/lib/site';
-import TrainingsMenu from '@/components/TrainingsMenu.astro';
+import { NAV, SITE } from '@/lib/site';
+import NavDropdown from '@/components/NavDropdown.astro';
 ---
 
 <header id="nav" class="scrolled">
@@ -10,10 +10,11 @@ import TrainingsMenu from '@/components/TrainingsMenu.astro';
     </a>
     <div class="nav-right">
       <div class="nav-links">
-        <a href="/services/">Services</a>
-        <TrainingsMenu />
-        <a href="/blog/">Resources</a>
-        <a href="/about-us/">About</a>
+        <NavDropdown label="Services" items={NAV.services} hubHref="/services/" />
+        <NavDropdown label="Frameworks" items={NAV.frameworks} hubHref="/frameworks/" />
+        <NavDropdown label="Programs" items={NAV.programs} />
+        <NavDropdown label="Trainings" items={NAV.trainings} numbered />
+        <a href="/case-studies/">Proof</a>
         <a href="/faqs/">FAQs</a>
       </div>
       <a class="nav-phone" href={`tel:${SITE.phone}`}><b>{SITE.phoneDisplay}</b></a>
@@ -26,8 +27,11 @@ import TrainingsMenu from '@/components/TrainingsMenu.astro';
 </header>
 
 <div class="mobile-menu" id="mobileMenu">
-  <a href="/services/">Services</a>
-  <TrainingsMenu variant="mobile" />
+  <NavDropdown variant="mobile" label="Services" items={NAV.services} hubHref="/services/" />
+  <NavDropdown variant="mobile" label="Frameworks" items={NAV.frameworks} hubHref="/frameworks/" />
+  <NavDropdown variant="mobile" label="Programs" items={NAV.programs} />
+  <NavDropdown variant="mobile" label="Trainings" items={NAV.trainings} numbered />
+  <a href="/case-studies/">Case Studies</a>
   <a href="/blog/">Blog</a>
   <a href="/podcasts/">Podcast</a>
   <a href="/about-us/">About</a>
@@ -74,9 +78,10 @@ import TrainingsMenu from '@/components/TrainingsMenu.astro';
   }
   .nav-links {
     display: flex;
-    gap: 2.2rem;
-    font-size: 0.92rem;
+    gap: 1.35rem;
+    font-size: 0.9rem;
     color: var(--muted);
+    align-items: center;
   }
   .nav-links > a {
     position: relative;
@@ -104,7 +109,7 @@ import TrainingsMenu from '@/components/TrainingsMenu.astro';
   .nav-right {
     display: flex;
     align-items: center;
-    gap: 1.4rem;
+    gap: 1.1rem;
   }
   .nav-phone {
     font-size: 0.88rem;
@@ -156,8 +161,8 @@ import TrainingsMenu from '@/components/TrainingsMenu.astro';
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1.6rem;
-    padding: 0 40px;
+    gap: 1.2rem;
+    padding: 5rem 40px 2rem;
     overflow-y: auto;
     opacity: 0;
     visibility: hidden;
@@ -178,10 +183,14 @@ import TrainingsMenu from '@/components/TrainingsMenu.astro';
     font-weight: 600;
     color: var(--ink);
   }
+  @media (max-width: 1100px) {
+    .nav-phone {
+      display: none;
+    }
+  }
   @media (max-width: 960px) {
     .nav-links,
-    .nav-cta,
-    .nav-phone {
+    .nav-cta {
       display: none;
     }
     .nav-toggle {

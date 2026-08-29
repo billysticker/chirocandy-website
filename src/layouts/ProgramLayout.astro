@@ -1,8 +1,18 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import PageHero from '@/components/PageHero.astro';
-import { buildGraph, breadcrumbSchema, webPageSchema } from '@/lib/schema';
+import {
+  buildGraph,
+  breadcrumbSchema,
+  faqPageSchema,
+  webPageSchema,
+} from '@/lib/schema';
 import { SITE } from '@/lib/site';
+
+interface FAQ {
+  question: string;
+  answer: string;
+}
 
 interface Props {
   title: string;
@@ -10,16 +20,18 @@ interface Props {
   slug: string;
   heroTitle: string;
   heroAnswer: string;
+  faqs?: FAQ[];
 }
 
-const { title, description, slug, heroTitle, heroAnswer } = Astro.props;
+const { title, description, slug, heroTitle, heroAnswer, faqs = [] } = Astro.props;
 const url = `${SITE.url}/${slug}/`;
 const schema = buildGraph(
-  webPageSchema({ url, name: title, description, dateModified: '2026-06-09' }),
+  webPageSchema({ url, name: title, description, dateModified: '2026-08-29' }),
   breadcrumbSchema([
     { name: 'Home', url: `${SITE.url}/` },
     { name: heroTitle, url },
-  ])
+  ]),
+  ...(faqs.length ? [faqPageSchema(faqs)] : [])
 );
 ---
 
@@ -30,6 +42,21 @@ const schema = buildGraph(
       <slot />
     </div>
   </section>
+  {faqs.length > 0 && (
+    <section class="section section--alt">
+      <div class="container">
+        <h2>Program FAQ</h2>
+        <dl class="faq-list">
+          {faqs.map((faq) => (
+            <div class="faq-item">
+              <dt>{faq.question}</dt>
+              <dd>{faq.answer}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+    </section>
+  )}
   <section class="section section--alt">
     <div class="container cta-band">
       <a href={SITE.scheduleUrl} class="btn btn--primary">Schedule a Call</a>
@@ -44,5 +71,20 @@ const schema = buildGraph(
 
   .cta-band {
     text-align: center;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 0;
+  }
+
+  .faq-item dt {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .faq-item dd {
+    margin: 0;
+    color: var(--text-muted);
   }
 </style>

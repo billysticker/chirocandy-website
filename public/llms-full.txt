@@ -59,10 +59,15 @@ A: Call 1-800-662-1745 or book a strategy call at https://chirocandy.com. Email 
 - Services: https://chirocandy.com/services/
 - Facebook Ads: https://chirocandy.com/services/facebook-advertising/
 - Google Ads: https://chirocandy.com/services/google-advertising/
-- SEO: https://chirocandy.com/services/search-engine-optimization/
+- SEO & AI Search: https://chirocandy.com/services/search-engine-optimization/
 - Web Design: https://chirocandy.com/services/web-design/
 - Reactivation: https://chirocandy.com/services/reactivation-campaigns/
+- Get New Patients: https://chirocandy.com/get-new-patients/
+- Done-For-You: https://chirocandy.com/done-for-you-program/
+- Training: https://chirocandy.com/training-program/
+- Case studies: https://chirocandy.com/case-studies/
 - FAQs: https://chirocandy.com/faqs/
+- Frameworks: https://chirocandy.com/frameworks/
 - About: https://chirocandy.com/about-us/
 - Billy Sticker: https://chirocandy.com/about/billy-sticker/
 - Contact: https://chirocandy.com/contact-us/

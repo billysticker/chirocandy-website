@@ -23,13 +23,22 @@ const summaries: Record<string, string> = {
   '/services/google-advertising/':
     'Pay-per-click ads that put your practice at the top of Google when patients search for care.',
   '/services/search-engine-optimization/':
-    'Local SEO that helps your practice rank for chiropractic searches in your service area.',
+    'Local SEO and AI search so your practice is findable in Google, Maps, ChatGPT, and Copilot.',
   '/services/web-design/':
     'Conversion-focused chiropractic websites built for speed, mobile, and search visibility.',
   '/services/reactivation-campaigns/':
     'Email and messaging systems that bring inactive patients back to your schedule.',
   '/services/chiropractic-social-media-marketing/':
     'Done-for-you social content that keeps your practice visible and trusted online.',
+};
+
+const programBlurb: Record<string, string> = {
+  '/get-new-patients/':
+    'Ads, follow-up, and booking so new patients show up instead of dying in the inbox.',
+  '/done-for-you-program/':
+    'ChiroCandy runs the system. Your team stays on care. Month-to-month after the start period.',
+  '/training-program/':
+    'Your staff learns the same frameworks and playbooks, then executes in-house with coaching.',
 };
 ---
 
@@ -47,6 +56,25 @@ const summaries: Record<string, string> = {
           <p>{summaries[service.href]}</p>
         </a>
       ))}
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <h2>Programs that put the services to work</h2>
+      <p class="lede">
+        Services are the channels. Programs are how you buy the system. Get New Patients is the
+        acquisition engine. Done-for-you is ChiroCandy executing. Training is your team executing
+        with our playbooks.
+      </p>
+      <div class="card-grid">
+        {NAV.programs.map((program) => (
+          <a href={program.href} class="card reveal" data-animate>
+            <h2>{program.label}</h2>
+            <p>{programBlurb[program.href]}</p>
+          </a>
+        ))}
+      </div>
     </div>
   </section>
 </BaseLayout>
@@ -76,5 +104,19 @@ const summaries: Record<string, string> = {
     margin: 0;
     color: var(--text-muted);
     font-size: 0.9rem;
+  }
+
+  .lede {
+    max-width: 68ch;
+    color: var(--muted);
+    margin: 0 0 1.5rem;
+  }
+
+  .section--alt {
+    padding-top: 0;
+  }
+
+  .section--alt h2 {
+    margin-bottom: 0.75rem;
   }
 </style>

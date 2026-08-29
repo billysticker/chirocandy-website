@@ -1,26 +1,46 @@
 ---
-import { NAV } from '@/lib/site';
-
-interface Props {
-  variant?: 'desktop' | 'mobile';
+interface NavItem {
+  href: string;
+  label: string;
 }
 
-const { variant = 'desktop' } = Astro.props;
+interface Props {
+  label: string;
+  items: readonly NavItem[] | NavItem[];
+  numbered?: boolean;
+  variant?: 'desktop' | 'mobile';
+  hubHref?: string;
+}
+
+const { label, items, numbered = false, variant = 'desktop', hubHref } = Astro.props;
+
+const isExternal = (href: string) => href.startsWith('http');
 ---
 
 {
   variant === 'desktop' ? (
     <div class="nav-drop">
       <button class="nav-drop-toggle" type="button" aria-expanded="false" aria-haspopup="true">
-        Trainings
+        {label}
         <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
           <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
         </svg>
       </button>
       <div class="nav-drop-panel" role="menu">
-        {NAV.trainings.map((item, index) => (
-          <a href={item.href} role="menuitem" target="_blank" rel="noopener noreferrer">
-            <span class="nav-drop-num">{String(index + 1).padStart(2, '0')}</span>
+        {hubHref && (
+          <a href={hubHref} role="menuitem">
+            {numbered && <span class="nav-drop-num">00</span>}
+            <span>All {label.toLowerCase()}</span>
+          </a>
+        )}
+        {items.map((item, index) => (
+          <a
+            href={item.href}
+            role="menuitem"
+            target={isExternal(item.href) ? '_blank' : undefined}
+            rel={isExternal(item.href) ? 'noopener noreferrer' : undefined}
+          >
+            {numbered && <span class="nav-drop-num">{String(index + 1).padStart(2, '0')}</span>}
             <span>{item.label}</span>
           </a>
         ))}
@@ -28,9 +48,14 @@ const { variant = 'desktop' } = Astro.props;
     </div>
   ) : (
     <div class="mm-trainings">
-      <p class="mm-trainings-label">Trainings</p>
-      {NAV.trainings.map((item) => (
-        <a href={item.href} target="_blank" rel="noopener noreferrer">
+      <p class="mm-trainings-label">{label}</p>
+      {hubHref && <a href={hubHref}>All {label.toLowerCase()}</a>}
+      {items.map((item) => (
+        <a
+          href={item.href}
+          target={isExternal(item.href) ? '_blank' : undefined}
+          rel={isExternal(item.href) ? 'noopener noreferrer' : undefined}
+        >
           {item.label}
         </a>
       ))}
@@ -87,7 +112,7 @@ const { variant = 'desktop' } = Astro.props;
     top: calc(100% + 14px);
     left: 50%;
     transform: translateX(-50%) translateY(8px);
-    min-width: 320px;
+    min-width: 300px;
     padding: 0.55rem;
     background: rgba(7, 28, 54, 0.96);
     border: 1px solid rgba(126, 217, 87, 0.28);
@@ -110,7 +135,7 @@ const { variant = 'desktop' } = Astro.props;
   }
   .nav-drop-panel a {
     display: grid;
-    grid-template-columns: 1.7rem 1fr;
+    grid-template-columns: auto 1fr;
     gap: 0.7rem;
     align-items: baseline;
     padding: 0.72rem 0.85rem;
@@ -122,6 +147,9 @@ const { variant = 'desktop' } = Astro.props;
     line-height: 1.25;
     position: static;
   }
+  .nav-drop-panel a:not(:has(.nav-drop-num)) {
+    grid-template-columns: 1fr;
+  }
   .nav-drop-panel a::after {
     display: none;
   }
@@ -129,9 +157,6 @@ const { variant = 'desktop' } = Astro.props;
   .nav-drop-panel a:focus-visible {
     background: rgba(126, 217, 87, 0.1);
     color: #fff;
-  }
-  .nav-drop-panel a:first-child {
-    background: rgba(126, 217, 87, 0.08);
   }
   .nav-drop-num {
     font-size: 0.68rem;
@@ -160,21 +185,34 @@ const { variant = 'desktop' } = Astro.props;
 </style>
 
 <script>
-  document.querySelectorAll('.nav-drop').forEach((drop) => {
-    const toggle = drop.querySelector('.nav-drop-toggle');
-    if (!(toggle instanceof HTMLButtonElement)) return;
+  const bindNavDropdowns = () => {
+    document.querySelectorAll('.nav-drop').forEach((drop) => {
+      if (!(drop instanceof HTMLElement) || drop.dataset.bound === 'true') return;
+      drop.dataset.bound = 'true';
+      const toggle = drop.querySelector('.nav-drop-toggle');
+      if (!(toggle instanceof HTMLButtonElement)) return;
 
-    toggle.addEventListener('click', (event) => {
-      event.stopPropagation();
-      const open = drop.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', String(open));
-    });
+      toggle.addEventListener('click', (event) => {
+        event.stopPropagation();
+        document.querySelectorAll('.nav-drop.open').forEach((openDrop) => {
+          if (openDrop !== drop) {
+            openDrop.classList.remove('open');
+            openDrop.querySelector('.nav-drop-toggle')?.setAttribute('aria-expanded', 'false');
+          }
+        });
+        const open = drop.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(open));
+      });
 
-    document.addEventListener('click', (event) => {
-      if (!drop.contains(event.target as Node)) {
-        drop.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-      }
+      document.addEventListener('click', (event) => {
+        if (!drop.contains(event.target as Node)) {
+          drop.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
     });
-  });
+  };
+
+  bindNavDropdowns();
+  document.addEventListener('astro:page-load', bindNavDropdowns);
 </script>

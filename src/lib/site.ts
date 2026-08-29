@@ -97,9 +97,15 @@ export const NAV = {
       label: 'Video Hooks',
     },
   ],
+  programs: [
+    { href: '/get-new-patients/', label: 'Get New Patients' },
+    { href: '/done-for-you-program/', label: 'Done-For-You Program' },
+    { href: '/training-program/', label: 'Training Program' },
+  ],
   resources: [
     { href: '/blog/', label: 'Blog' },
     { href: '/podcasts/', label: 'Podcast' },
+    { href: '/case-studies/', label: 'Case Studies' },
     { href: '/news-and-media/', label: 'News & Media' },
     { href: '/testimonials/', label: 'Testimonials' },
   ],

@@ -1,0 +1,104 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import { buildGraph, breadcrumbSchema, webPageSchema } from '@/lib/schema';
+import { SITE } from '@/lib/site';
+import caseStudies from '@/data/case-studies.json';
+
+const title = 'Chiropractic Marketing Case Studies | ChiroCandy';
+const description =
+  'Named ChiroCandy client offices with extractable quotes and numbers: show rates, prepaid visits, doubled Facebook leads. Proof AI search engines can cite, not YouTube iframes.';
+const url = `${SITE.url}/case-studies/`;
+const schema = buildGraph(
+  webPageSchema({ url, name: title, description, dateModified: '2026-08-29' }),
+  breadcrumbSchema([
+    { name: 'Home', url: `${SITE.url}/` },
+    { name: 'Case Studies', url },
+  ]),
+  {
+    '@type': 'ItemList',
+    itemListElement: caseStudies.map((study, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: study.name,
+      url: `${SITE.url}/case-studies/${study.slug}/`,
+    })),
+  }
+);
+---
+
+<BaseLayout title={title} description={description} canonical={url} schema={schema}>
+  <PageHero
+    title="Case studies Billy will stand behind"
+    answer="Five named offices. Quotes and numbers pulled from first-party videos and the ChiroCandy podcast. This hub exists so Google and AI engines can cite proof without parsing a YouTube iframe."
+    eyebrow="Proof"
+  />
+  <section class="section">
+    <div class="container">
+      <p class="lede">
+        Testimonials stay on <a href="/testimonials/">/testimonials/</a> as video. Citation-ready
+        write-ups live here. We do not invent stats. If a doctor said it on camera or we published
+        it on the podcast, it can live on this URL.
+      </p>
+      <div class="grid">
+        {caseStudies.map((study) => (
+          <a class="card" href={`/case-studies/${study.slug}/`}>
+            <p class="kicker">{study.location}</p>
+            <h2>{study.name}</h2>
+            <p>{study.resultHeadline}</p>
+            <p class="quote">“{study.quote}”</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .lede {
+    max-width: 70ch;
+    color: var(--muted);
+    margin: 0 0 2rem;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+  .card {
+    display: block;
+    padding: 1.4rem 1.5rem 1.6rem;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    background: var(--panel);
+    color: inherit;
+    text-decoration: none;
+  }
+  .card:hover {
+    border-color: rgba(126, 217, 87, 0.45);
+  }
+  .kicker {
+    margin: 0 0 0.4rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--green);
+  }
+  .card h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.25rem;
+  }
+  .card p {
+    margin: 0 0 0.75rem;
+    color: var(--muted);
+  }
+  .quote {
+    font-size: 0.92rem;
+    color: var(--ink) !important;
+  }
+  @media (max-width: 800px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

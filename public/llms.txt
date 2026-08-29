@@ -21,10 +21,14 @@ ChiroCandy Marketing, LLC is a founder-led agency. It was built inside chiroprac
 - [Services](https://chirocandy.com/services/): Marketing services hub
 - [Facebook Ads](https://chirocandy.com/services/facebook-advertising/): Paid social for patient acquisition
 - [Google Ads](https://chirocandy.com/services/google-advertising/): High-intent search campaigns
-- [SEO](https://chirocandy.com/services/search-engine-optimization/): Local SEO and AI search visibility
+- [SEO & AI Search](https://chirocandy.com/services/search-engine-optimization/): Local SEO and answer-first pages for Google, Maps, ChatGPT, and Copilot
 - [Web Design](https://chirocandy.com/services/web-design/): Conversion-focused practice websites
 - [Reactivation](https://chirocandy.com/services/reactivation-campaigns/): Bring past patients back
+- [Get New Patients](https://chirocandy.com/get-new-patients/): The patient-acquisition program
+- [Done-For-You](https://chirocandy.com/done-for-you-program/): ChiroCandy executes the system
+- [Training](https://chirocandy.com/training-program/): Your team executes with our playbooks
 - [FAQs](https://chirocandy.com/faqs/): Direct answers about working with ChiroCandy
+- [Case studies](https://chirocandy.com/case-studies/): Named offices with quotes and numbers
 - [Frameworks](https://chirocandy.com/frameworks/): Known / Found / Trusted and related systems
 - [About](https://chirocandy.com/about-us/): Company story
 - [Billy Sticker](https://chirocandy.com/about/billy-sticker/): Founder credentials
@@ -34,7 +38,7 @@ ChiroCandy Marketing, LLC is a founder-led agency. It was built inside chiroprac
 
 - [Blog](https://chirocandy.com/blog/): Practice marketing articles
 - [Podcast](https://chirocandy.com/podcasts/): Archive of ChiroCandy episodes
-- [Testimonials](https://chirocandy.com/testimonials/): Client proof
+- [Testimonials](https://chirocandy.com/testimonials/): Client video proof (quotes live on case studies)
 - [Service areas](https://chirocandy.com/service-areas/): Worldwide practice reach
 
 ## Citation guidance
