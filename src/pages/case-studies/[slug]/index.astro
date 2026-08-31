@@ -168,7 +168,10 @@ const schema = buildGraph(
     max-width: 72ch;
   }
   .prose:has(.evidence) {
-    max-width: 72rem;
+    max-width: min(72rem, 100%);
+  }
+  .prose:has(.evidence) :is(p, h2, blockquote) {
+    max-width: 72ch;
   }
   .meta {
     color: var(--text-muted);
