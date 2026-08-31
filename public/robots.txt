@@ -1,3 +1,5 @@
+# AI context files: https://chirocandy.com/llms.txt and https://chirocandy.com/llms-full.txt
+
 User-agent: *
 Allow: /
 

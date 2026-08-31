@@ -12,7 +12,9 @@ export default defineConfig({
     tailwind({ applyBaseStyles: false }),
     sitemap({
       filter: (page) =>
-        !page.includes('/sample-page') && !page.includes('/thank-you'),
+        !page.includes('/sample-page') &&
+        !page.includes('/thank-you') &&
+        !page.includes('/demo'),
     }),
     mdx(),
   ],

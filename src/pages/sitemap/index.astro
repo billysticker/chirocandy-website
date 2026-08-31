@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import PageHero from '@/components/PageHero.astro';
+import { CASE_STUDIES } from '@/data/case-studies';
 import { NAV, SITE } from '@/lib/site';
 import { buildGraph, breadcrumbSchema, webPageSchema } from '@/lib/schema';
 import blogPosts from '@/data/blog-posts.json';
@@ -24,6 +25,11 @@ const core = [
   { href: '/', label: 'Home' },
   { href: '/services/', label: 'Services' },
   ...NAV.services,
+  { href: '/case-studies/', label: 'Case Studies' },
+  ...CASE_STUDIES.map((study) => ({
+    href: `/case-studies/${study.slug}/`,
+    label: `${study.practice} case study`,
+  })),
   { href: '/frameworks/', label: 'Frameworks' },
   ...NAV.frameworks,
   { href: '/get-new-patients/', label: 'Get New Patients' },
@@ -39,7 +45,6 @@ const core = [
   { href: '/podcasts/', label: 'Podcasts' },
   { href: '/blog/', label: 'Blog' },
   { href: '/service-areas/', label: 'Service Areas' },
-  { href: '/demo/', label: 'Demo' },
   { href: '/privacy-policy/', label: 'Privacy Policy' },
   { href: '/terms-conditions/', label: 'Terms & Conditions' },
 ];
