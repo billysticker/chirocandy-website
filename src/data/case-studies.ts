@@ -10,9 +10,9 @@ export interface CaseStudy {
   summary: string;
   metaDescription: string;
   sourceLabel: string;
-  sourceUrl: string;
-  youtubeId: string;
-  youtubeTitle: string;
+  sourceUrl?: string;
+  youtubeId?: string;
+  youtubeTitle?: string;
   quotes: { text: string; attribution: string }[];
   challenge: string;
   whatWeDid: string;
@@ -73,6 +73,48 @@ export const CASE_STUDIES: CaseStudy[] = [
         question: 'What did the practice do besides running ads?',
         answer:
           'He said a practice needs a CRM and people whose job is follow-up. He staffs two people on that. He films regularly, including personality and staff content, and talks with his ChiroCandy account manager every week about what is actually converting.',
+      },
+    ],
+  },
+  {
+    slug: 'lifeworks-family-chiropractic-kelowna',
+    practice: 'LifeWorks Family Chiropractic',
+    doctor: 'Dr. James Whillans, DC',
+    city: 'Kelowna, BC',
+    practiceType:
+      'Family chiropractic practice in Kelowna, British Columbia. The live Meta offer in this window was a free neuropathy workshop',
+    channels: 'Meta (Facebook and Instagram)',
+    headlineStat: '185 leads',
+    headlineLabel: '~$16.06 average CPL on Meta, 90 days',
+    summary:
+      'LifeWorks Family Chiropractic in Kelowna, BC produced 185 Meta leads from June 2 to August 31, 2026 at about $16.06 average cost per lead. The main campaign was a neuropathy workshop using Facebook Lead Forms. These are ad-platform leads, not booked-patient counts from the EHR.',
+    metaDescription:
+      'LifeWorks Family Chiropractic (Kelowna, BC): 185 Meta leads at ~$16.06 CPL, June 2–Aug 31, 2026. Neuropathy workshop Lead Forms.',
+    sourceLabel: 'Meta Ads reporting, June 2–August 31, 2026',
+    quotes: [],
+    challenge:
+      'Inbound lead flow was inconsistent. Meta tracking was unreliable from March 4 through June 1, 2026, so the office could not trust conversion reporting on the old setup.',
+    whatWeDid:
+      'We moved sign-up from a website conversion ad to a Facebook Lead Form, refreshed creative and added audience exclusions to keep frequency in check, and set up HighLevel pipelines with automated appointment tagging for new leads.',
+    whatOfficeDid:
+      'The office works the CRM pipeline to confirm unconfirmed appointment requests, follows the communication guidance, and stays in the loop on account changes.',
+    result:
+      'In the 90 days from June 2 to August 31, 2026, Meta reported 185 leads at about $16.06 average CPL. The primary neuropathy workshop campaign produced 176 Lead Form leads at $14.55 each. A smaller website-conversion campaign added 9 leads. That is lead volume from Ads Manager, not confirmed visits.',
+    faqs: [
+      {
+        question: 'What Meta results did LifeWorks Family Chiropractic see?',
+        answer:
+          'From June 2 to August 31, 2026, Meta reported 185 leads at about $16.06 average cost per lead. The main neuropathy workshop campaign used Facebook Lead Forms and produced 176 form leads at $14.55 each.',
+      },
+      {
+        question: 'Where is LifeWorks Family Chiropractic?',
+        answer:
+          'LifeWorks Family Chiropractic is a family practice in Kelowna, British Columbia, led by Dr. James Whillans. The campaign in this window promoted a neuropathy workshop.',
+      },
+      {
+        question: 'Are those 185 leads the same as new patients?',
+        answer:
+          'No. 185 is the Meta lead count for that 90-day window. Booked visits and EHR data are not published here.',
       },
     ],
   },

@@ -26,8 +26,10 @@ if (!study) throw new Error(`Unknown case study: ${slug}`);
 const title = `${study.practice} Case Study | ChiroCandy`;
 const description = study.metaDescription;
 const url = `${SITE.url}/case-studies/${study.slug}/`;
-const embedUrl = `https://www.youtube-nocookie.com/embed/${study.youtubeId}`;
 const published = '2026-08-31';
+const embedUrl = study.youtubeId
+  ? `https://www.youtube-nocookie.com/embed/${study.youtubeId}`
+  : undefined;
 
 const schema = buildGraph(
   webPageSchema({
@@ -49,12 +51,16 @@ const schema = buildGraph(
     datePublished: published,
     dateModified: published,
   }),
-  videoObjectSchema({
-    name: study.youtubeTitle,
-    description: study.summary,
-    embedUrl,
-    watchUrl: study.sourceUrl,
-  }),
+  ...(study.youtubeId && study.sourceUrl && study.youtubeTitle
+    ? [
+        videoObjectSchema({
+          name: study.youtubeTitle,
+          description: study.summary,
+          embedUrl: `https://www.youtube-nocookie.com/embed/${study.youtubeId}`,
+          watchUrl: study.sourceUrl,
+        }),
+      ]
+    : []),
   faqPageSchema(study.faqs)
 );
 ---
@@ -68,19 +74,25 @@ const schema = buildGraph(
         {study.doctor} · {study.city} · {study.channels}
       </p>
 
-      <figure class="video">
-        <iframe
-          src={embedUrl}
-          title={study.youtubeTitle}
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        />
-        <figcaption>
-          Source: <a href={study.sourceUrl} rel="noopener noreferrer">{study.sourceLabel}</a>.
-          Numbers below are what {study.doctor.split(',')[0]} said on that recording.
-        </figcaption>
-      </figure>
+      {
+        study.youtubeId && embedUrl && study.youtubeTitle && study.sourceUrl ? (
+          <figure class="video">
+            <iframe
+              src={embedUrl}
+              title={study.youtubeTitle}
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            />
+            <figcaption>
+              Source: <a href={study.sourceUrl} rel="noopener noreferrer">{study.sourceLabel}</a>.
+              Numbers below are what {study.doctor.split(',')[0]} said on that recording.
+            </figcaption>
+          </figure>
+        ) : (
+          <p class="source-line">Source: {study.sourceLabel}.</p>
+        )
+      }
 
       {study.quotes.map((quote) => (
         <blockquote>
@@ -141,6 +153,11 @@ const schema = buildGraph(
   .meta {
     color: var(--text-muted);
     font-size: 0.95rem;
+    margin: 0 0 1.5rem;
+  }
+  .source-line {
+    color: var(--text-muted);
+    font-size: 0.9rem;
     margin: 0 0 1.5rem;
   }
   .video {
