@@ -7,7 +7,7 @@ import {
   faqPageSchema,
   webPageSchema,
 } from '@/lib/schema';
-import { SITE } from '@/lib/site';
+import { NAV, SITE } from '@/lib/site';
 
 interface FAQ {
   question: string;
@@ -40,7 +40,7 @@ const {
 
 const url = `${SITE.url}/frameworks/${slug}/`;
 const schema = buildGraph(
-  webPageSchema({ url, name: title, description, dateModified: '2026-06-09' }),
+  webPageSchema({ url, name: title, description, dateModified: '2026-08-31' }),
   breadcrumbSchema([
     { name: 'Home', url: `${SITE.url}/` },
     { name: 'Frameworks', url: `${SITE.url}/frameworks/` },
@@ -70,6 +70,13 @@ const schema = buildGraph(
       <h2>Related services</h2>
       <ul>
         {relatedServices.map((link) => (
+          <li><a href={link.href}>{link.label}</a></li>
+        ))}
+      </ul>
+
+      <h2>Related programs</h2>
+      <ul>
+        {NAV.programs.map((link) => (
           <li><a href={link.href}>{link.label}</a></li>
         ))}
       </ul>

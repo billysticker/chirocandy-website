@@ -3695,12 +3695,12 @@
     {
       "source": "/12-ways-recut/",
       "destination": "https://chatcandy.ai/12-ways-recut",
-      "permanent": false
+      "permanent": true
     },
     {
       "source": "/12-ways-recut",
       "destination": "https://chatcandy.ai/12-ways-recut",
-      "permanent": false
+      "permanent": true
     },
     {
       "source": "/update-billing/",

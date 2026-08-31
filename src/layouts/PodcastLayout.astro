@@ -19,6 +19,7 @@ interface Props {
   datePublished: string;
   dateModified: string;
   summary?: string;
+  related?: { href: string; label: string }[];
 }
 
 const {
@@ -31,6 +32,7 @@ const {
   datePublished,
   dateModified,
   summary,
+  related = [],
 } = Astro.props;
 
 const url = `${SITE.url}/podcast/${slug}/`;
@@ -113,6 +115,20 @@ const schema = buildGraph(
       </div>
 
       <footer class="podcast-episode__footer">
+        {
+          related.length > 0 && (
+            <nav class="podcast-related" aria-label="Related episodes">
+              <h2>Related episodes</h2>
+              <ul>
+                {related.map((item) => (
+                  <li>
+                    <a href={item.href}>{item.label}</a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          )
+        }
         <p>
           Hosted by <a href="/about/billy-sticker/">Billy Sticker</a>. More episodes on the{' '}
           <a href="/podcasts/">ChiroCandy podcast archive</a>.
@@ -196,5 +212,22 @@ const schema = buildGraph(
     gap: 1rem;
     align-items: center;
     justify-content: space-between;
+  }
+
+  .podcast-related {
+    flex: 1 1 100%;
+    margin: 0 0 0.5rem;
+  }
+
+  .podcast-related h2 {
+    font-size: 1.15rem;
+    margin: 0 0 0.75rem;
+  }
+
+  .podcast-related ul {
+    margin: 0;
+    padding-left: 1.2rem;
+    display: grid;
+    gap: 0.4rem;
   }
 </style>

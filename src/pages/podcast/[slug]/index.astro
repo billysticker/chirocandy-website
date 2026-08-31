@@ -1,7 +1,7 @@
 ---
 import PodcastLayout from '@/layouts/PodcastLayout.astro';
 import podcasts from '@/data/podcasts.json';
-import { episodeDisplayTitle, secureAudioUrl } from '@/lib/podcasts';
+import { episodeDisplayTitle, relatedEpisodes, episodeSeoDescription, secureAudioUrl } from '@/lib/podcasts';
 
 export function getStaticPaths() {
   return podcasts.map((episode) => ({
@@ -15,11 +15,12 @@ const { episode } = Astro.props;
 const summary =
   episode.body.split('\n\n')[0]?.slice(0, 280) ??
   episode.meta_description;
+const related = relatedEpisodes(episode, podcasts);
 ---
 
 <PodcastLayout
   title={episode.title}
-  description={episode.meta_description}
+  description={episodeSeoDescription(episode)}
   slug={episode.slug}
   h1={episodeDisplayTitle(episode)}
   body={episode.body}
@@ -27,4 +28,8 @@ const summary =
   datePublished={episode.datePublished}
   dateModified={episode.dateModified}
   summary={summary}
+  related={related.map((item) => ({
+    href: `/podcast/${item.slug}/`,
+    label: episodeDisplayTitle(item),
+  }))}
 />

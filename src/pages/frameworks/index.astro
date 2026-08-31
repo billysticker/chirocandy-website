@@ -1,17 +1,16 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import PageHero from '@/components/PageHero.astro';
-import { NAV } from '@/lib/site';
+import { NAV, SITE } from '@/lib/site';
 import { buildGraph, breadcrumbSchema, webPageSchema } from '@/lib/schema';
-import { SITE } from '@/lib/site';
 
 const title = 'Chiropractic Marketing Frameworks | ChiroCandy';
 const description =
-  'ChiroCandy proprietary frameworks help chiropractic practice owners build authority, attract ideal patients, and convert trust into predictable growth. Explore Known/Found/Trusted and more.';
+  'ChiroCandy frameworks for chiropractors: Known / Found / Trusted and related systems for ads, content, and patient growth.';
 
 const url = `${SITE.url}/frameworks/`;
 const schema = buildGraph(
-  webPageSchema({ url, name: title, description, dateModified: '2026-06-09' }),
+  webPageSchema({ url, name: title, description, dateModified: '2026-08-31' }),
   breadcrumbSchema([
     { name: 'Home', url: `${SITE.url}/` },
     { name: 'Frameworks', url },
@@ -33,6 +32,23 @@ const schema = buildGraph(
           <p>Learn how this framework drives patient acquisition and practice growth.</p>
         </a>
       ))}
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <h2 style="font-size:1.5rem; margin-bottom:1rem; color:var(--ink)">Put a framework to work</h2>
+      <p style="color:var(--muted); max-width:68ch; margin-bottom:1.5rem">
+        Frameworks are the operating model. Programs are how a practice runs them — with ChiroCandy, or in-house.
+      </p>
+      <div class="card-grid">
+        {NAV.programs.map((program) => (
+          <a href={program.href} class="card reveal" data-animate>
+            <h2>{program.label}</h2>
+            <p>See how this program uses the frameworks on a live patient-acquisition engine.</p>
+          </a>
+        ))}
+      </div>
     </div>
   </section>
 </BaseLayout>
