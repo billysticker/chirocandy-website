@@ -4,7 +4,7 @@ import HomeInteractions from '@/components/HomeInteractions.astro';
 import SignalField from '@/components/SignalField.astro';
 import TrainingsMenu from '@/components/TrainingsMenu.astro';
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import { HOME_FAQS, SITE } from '@/lib/site';
+import { HOME_FAQS, NAV, SITE } from '@/lib/site';
 import {
   buildGraph,
   faqPageSchema,
@@ -69,6 +69,23 @@ const schema = buildGraph(
         <div class="nav-links">
           <a href="#engine">The System</a>
           <a href="/services/">Services</a>
+          <div class="nav-drop">
+            <button class="nav-drop-toggle" type="button" aria-expanded="false" aria-haspopup="true">
+              Programs
+              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+                <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+            </button>
+            <div class="nav-drop-panel" role="menu">
+              {NAV.programs.map((item, index) => (
+                <a href={item.href} role="menuitem">
+                  <span class="nav-drop-num">{String(index + 1).padStart(2, '0')}</span>
+                  <span>{item.label}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+          <a href="/frameworks/">Frameworks</a>
           <TrainingsMenu />
           <a href="#ai">AI Demo</a>
           <a href="#founder">About</a>
@@ -85,6 +102,13 @@ const schema = buildGraph(
   <div class="mobile-menu" id="mobileMenu">
     <a href="#engine">The System</a>
     <a href="/services/">Services</a>
+    <div class="mm-trainings">
+      <p class="mm-trainings-label">Programs</p>
+      {NAV.programs.map((item) => (
+        <a href={item.href}>{item.label}</a>
+      ))}
+    </div>
+    <a href="/frameworks/">Frameworks</a>
     <TrainingsMenu variant="mobile" />
     <a href="/blog/">Blog</a>
     <a href="/podcasts/">Podcast</a>

@@ -37,7 +37,7 @@ button{font:inherit;cursor:pointer}
 #nav.scrolled{background:rgba(4,16,31,.72);backdrop-filter:blur(18px);border-color:var(--line)}
 .nav-in{display:flex;align-items:center;justify-content:space-between;height:78px}
 .nav-logo img{height:34px;display:block}
-.nav-links{display:flex;gap:2.2rem;font-size:.92rem;color:var(--muted)}
+.nav-links{display:flex;gap:1.5rem;font-size:.92rem;color:var(--muted)}
 .nav-links > a{position:relative}
 .nav-links > a::after{content:'';position:absolute;left:0;bottom:-6px;height:2px;width:0;background:var(--green);transition:width .25s}
 .nav-links > a:hover{color:#fff}
