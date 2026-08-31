@@ -39,6 +39,17 @@ const schema = buildGraph(
           <a href={`/case-studies/${study.slug}/`} class="cs-card">
             <div class="cs-badge">{study.city}</div>
             <h3>{study.practice}</h3>
+            {study.evidenceImage && (
+              <img
+                class="cs-evidence"
+                src={study.evidenceImage}
+                alt={study.evidenceAlt ?? study.sourceLabel}
+                width="2648"
+                height="632"
+                loading="lazy"
+                decoding="async"
+              />
+            )}
             <p class="cs-stat">
               <b>{study.headlineStat}</b>
               {study.headlineLabel}
@@ -114,6 +125,17 @@ const schema = buildGraph(
     font-size: 1.25rem;
     margin: 0 0 0.75rem;
     color: #04101f;
+  }
+  .cs-evidence {
+    width: 100%;
+    height: auto;
+    max-height: 120px;
+    object-fit: cover;
+    object-position: left center;
+    border-radius: 8px;
+    border: 1px solid rgba(18, 57, 100, 0.12);
+    margin: 0 0 1rem;
+    background: #fff;
   }
   .cs-stat {
     margin: 0 0 1rem;

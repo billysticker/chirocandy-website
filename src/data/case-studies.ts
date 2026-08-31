@@ -13,6 +13,9 @@ export interface CaseStudy {
   sourceUrl?: string;
   youtubeId?: string;
   youtubeTitle?: string;
+  evidenceImage?: string;
+  evidenceAlt?: string;
+  evidenceCaption?: string;
   quotes: { text: string; attribution: string }[];
   challenge: string;
   whatWeDid: string;
@@ -90,7 +93,12 @@ export const CASE_STUDIES: CaseStudy[] = [
       'LifeWorks Family Chiropractic in Kelowna, BC produced 185 Meta leads from June 2 to August 31, 2026 at about $16.06 average cost per lead. The main campaign was a neuropathy workshop using Facebook Lead Forms. These are ad-platform leads, not booked-patient counts from the EHR.',
     metaDescription:
       'LifeWorks Family Chiropractic (Kelowna, BC): 185 Meta leads at ~$16.06 CPL, June 2–Aug 31, 2026. Neuropathy workshop Lead Forms.',
-    sourceLabel: 'Meta Ads reporting, June 2–August 31, 2026',
+    sourceLabel: 'Meta Ads Manager campaign report, June 2–August 31, 2026',
+    evidenceImage: '/images/case-studies/lifeworks-meta-ads-jun-aug-2026.png',
+    evidenceAlt:
+      'Meta Ads Manager screenshot for LifeWorks Family Chiropractic covering June 2 to August 31 2026. The neuropathy workshop campaign shows 176 form leads at $14.55 cost per lead. A paused conversion campaign shows 9 website leads. A video views campaign shows 41,141 ThruPlays at one cent each.',
+    evidenceCaption:
+      'Meta Ads Manager, LifeWorks Family Chiropractic, June 2–August 31, 2026. Totals are ad-platform leads, not EHR-confirmed booked patients.',
     quotes: [],
     challenge:
       'Inbound lead flow was inconsistent. Meta tracking was unreliable from March 4 through June 1, 2026, so the office could not trust conversion reporting on the old setup.',

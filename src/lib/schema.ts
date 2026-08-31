@@ -165,6 +165,7 @@ export function blogPostingSchema(opts: {
   datePublished: string;
   dateModified: string;
   authorName?: string;
+  image?: string;
 }) {
   const author =
     opts.authorName && opts.authorName !== BILLY_STICKER.name
@@ -185,7 +186,7 @@ export function blogPostingSchema(opts: {
     author,
     publisher: { '@id': orgId },
     mainEntityOfPage: { '@id': `${opts.url}#webpage` },
-    image: `${SITE.url}${SITE.ogImage}`,
+    image: opts.image ?? `${SITE.url}${SITE.ogImage}`,
   };
 }
 
