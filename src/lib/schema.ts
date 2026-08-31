@@ -219,6 +219,22 @@ export function podcastEpisodeSchema(opts: {
   };
 }
 
+export function videoObjectSchema(opts: {
+  name: string;
+  description: string;
+  embedUrl: string;
+  watchUrl: string;
+}) {
+  return {
+    '@type': 'VideoObject',
+    name: opts.name,
+    description: opts.description,
+    embedUrl: opts.embedUrl,
+    contentUrl: opts.watchUrl,
+    thumbnailUrl: `https://i.ytimg.com/vi/${opts.watchUrl.split('v=')[1] || ''}/hqdefault.jpg`,
+  };
+}
+
 export function buildGraph(...nodes: Record<string, unknown>[]) {
   return {
     '@context': 'https://schema.org',

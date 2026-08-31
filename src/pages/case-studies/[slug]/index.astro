@@ -1,0 +1,195 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import { CASE_STUDIES, getCaseStudy } from '@/data/case-studies';
+import {
+  blogPostingSchema,
+  breadcrumbSchema,
+  buildGraph,
+  faqPageSchema,
+  videoObjectSchema,
+  webPageSchema,
+} from '@/lib/schema';
+import { SITE } from '@/lib/site';
+
+export function getStaticPaths() {
+  return CASE_STUDIES.map((study) => ({
+    params: { slug: study.slug },
+    props: { slug: study.slug },
+  }));
+}
+
+const { slug } = Astro.props;
+const study = getCaseStudy(slug);
+if (!study) throw new Error(`Unknown case study: ${slug}`);
+
+const title = `${study.practice} Case Study | ChiroCandy`;
+const description = study.metaDescription;
+const url = `${SITE.url}/case-studies/${study.slug}/`;
+const embedUrl = `https://www.youtube-nocookie.com/embed/${study.youtubeId}`;
+const published = '2026-08-31';
+
+const schema = buildGraph(
+  webPageSchema({
+    url,
+    name: title,
+    description,
+    datePublished: published,
+    dateModified: published,
+  }),
+  breadcrumbSchema([
+    { name: 'Home', url: `${SITE.url}/` },
+    { name: 'Case Studies', url: `${SITE.url}/case-studies/` },
+    { name: study.practice, url },
+  ]),
+  blogPostingSchema({
+    url,
+    headline: `${study.practice}: ${study.headlineStat}`,
+    description,
+    datePublished: published,
+    dateModified: published,
+  }),
+  videoObjectSchema({
+    name: study.youtubeTitle,
+    description: study.summary,
+    embedUrl,
+    watchUrl: study.sourceUrl,
+  }),
+  faqPageSchema(study.faqs)
+);
+---
+
+<BaseLayout title={title} description={description} canonical={url} ogType="article" schema={schema}>
+  <PageHero title={study.practice} answer={study.summary} eyebrow="Case study" />
+
+  <article class="section">
+    <div class="container prose">
+      <p class="meta">
+        {study.doctor} · {study.city} · {study.channels}
+      </p>
+
+      <figure class="video">
+        <iframe
+          src={embedUrl}
+          title={study.youtubeTitle}
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        />
+        <figcaption>
+          Source: <a href={study.sourceUrl} rel="noopener noreferrer">{study.sourceLabel}</a>.
+          Numbers below are what {study.doctor.split(',')[0]} said on that recording.
+        </figcaption>
+      </figure>
+
+      {study.quotes.map((quote) => (
+        <blockquote>
+          <p>{quote.text}</p>
+          <cite>{quote.attribution}</cite>
+        </blockquote>
+      ))}
+
+      <h2>What kind of practice is this?</h2>
+      <p class="answer-first">{study.practiceType}.</p>
+
+      <h2>What was the challenge?</h2>
+      <p class="answer-first">{study.challenge}</p>
+
+      <h2>What did ChiroCandy run?</h2>
+      <p class="answer-first">{study.whatWeDid}</p>
+
+      <h2>What did the office do?</h2>
+      <p class="answer-first">{study.whatOfficeDid}</p>
+
+      <h2>What result will we stand behind?</h2>
+      <p class="answer-first">{study.result}</p>
+
+      <p>
+        <a href="/get-new-patients/">Get New Patients</a>
+        · <a href="/services/facebook-advertising/">Facebook ads</a>
+        · <a href="/services/chiropractic-social-media-marketing/">Social media</a>
+        · <a href="/case-studies/">All case studies</a>
+      </p>
+    </div>
+  </article>
+
+  <section class="section section--alt">
+    <div class="container">
+      <h2>Case study FAQ</h2>
+      <dl class="faq-list">
+        {study.faqs.map((faq) => (
+          <div class="faq-item">
+            <dt>{faq.question}</dt>
+            <dd>{faq.answer}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container cta-band">
+      <a href={SITE.scheduleUrl} class="btn btn--primary">Schedule a Call</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .prose {
+    max-width: 72ch;
+  }
+  .meta {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin: 0 0 1.5rem;
+  }
+  .video {
+    margin: 0 0 2rem;
+  }
+  .video iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+    border-radius: var(--radius);
+    display: block;
+  }
+  .video figcaption {
+    margin-top: 0.6rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+  .prose :global(h2) {
+    margin-top: 2rem;
+  }
+  blockquote {
+    margin: 0 0 1.5rem;
+    padding: 1rem 1.25rem;
+    border-left: 3px solid var(--green, #7ed957);
+    background: rgba(126, 217, 87, 0.06);
+  }
+  blockquote p {
+    margin: 0 0 0.5rem;
+    color: var(--ink);
+  }
+  cite {
+    font-style: normal;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 0;
+  }
+  .faq-item dt {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .faq-item dd {
+    margin: 0;
+    color: var(--text-muted);
+    max-width: 72ch;
+  }
+  .cta-band {
+    text-align: center;
+  }
+</style>

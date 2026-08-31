@@ -1,16 +1,17 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import PageHero from '@/components/PageHero.astro';
+import { CASE_STUDIES } from '@/data/case-studies';
 import { buildGraph, breadcrumbSchema, webPageSchema } from '@/lib/schema';
 import { SITE } from '@/lib/site';
 
-const title = 'Case Studies & Patient Growth Results | ChiroCandy';
+const title = 'Chiropractic Marketing Case Studies | ChiroCandy';
 const description =
-  'Real results from real chiropractic practices. Discover how clinics nationwide use ChiroCandy growth systems to scale new patient acquisition, show rates, and practice revenue.';
+  'Named practice results sourced from the owners. Dr. Michael Schulman of Revive Medical Center describes going from $20k a month to a nearly $3M run rate in one office.';
 
 const url = `${SITE.url}/case-studies/`;
 const schema = buildGraph(
-  webPageSchema({ url, name: title, description, dateModified: '2026-08-28' }),
+  webPageSchema({ url, name: title, description, dateModified: '2026-08-31' }),
   breadcrumbSchema([
     { name: 'Home', url: `${SITE.url}/` },
     { name: 'Case Studies', url },
@@ -20,66 +21,41 @@ const schema = buildGraph(
 
 <BaseLayout title={title} description={description} canonical={url} schema={schema}>
   <PageHero
-    title="Practice Case Studies"
-    answer="Verifiable patient acquisition results from chiropractic clinics nationwide. See how practices use ChiroCandy's ads, local SEO, and AI follow-up to build predictable patient volume."
+    title="Practice case studies"
+    answer="These are results the practice owner said on the record. We do not invent patient counts or map-pack ranks. More named studies land here as the team files them."
   />
 
   <section class="section">
     <div class="container">
       <div class="cs-intro">
-        <h2>Documented proof, not agency hype</h2>
+        <h2>Sourced from the office, not a composite</h2>
         <p>
-          Over 11 years and 2,000+ chiropractic offices served, ChiroCandy has tracked the key metrics that actually move clinic revenue: qualified new patient leads, appointment show rates, cost per acquisition (CPA), and reactivated patient care plans.
+          Each study names the doctor, the market, and the clip or report it came from. If we cannot stand behind a number, it does not go on this page.
         </p>
       </div>
 
       <div class="cs-grid">
-        <article class="cs-card">
-          <div class="cs-badge">Case Study</div>
-          <h3>High-Volume Family Wellness Practice</h3>
-          <p class="cs-stat"><b>42</b> New Patients / Mo</p>
-          <p class="cs-desc">
-            Deployed a multi-channel Meta Ads and Google Search campaign paired with automated 60-second SMS follow-up, increasing average monthly new patient visits from 14 to 42 within 90 days.
-          </p>
-          <ul class="cs-highlights">
-            <li><strong>Challenge:</strong> Inconsistent word-of-mouth referrals, low ad conversion from generic agency.</li>
-            <li><strong>Solution:</strong> Custom condition-specific video ads + Known/Found/Trusted local search campaign.</li>
-            <li><strong>Result:</strong> 68% appointment show rate and $38 average lead cost.</li>
-          </ul>
-        </article>
-
-        <article class="cs-card">
-          <div class="cs-badge">Case Study</div>
-          <h3>Multi-Doctor Integrated Rehab Clinic</h3>
-          <p class="cs-stat"><b>118</b> Reactivated Patients</p>
-          <p class="cs-desc">
-            Implemented the ChiroCandy Patient Reactivation Engine across a dormant database of 1,400 past patients who had not visited in 6+ months, generating 118 booked adjustments in 21 days.
-          </p>
-          <ul class="cs-highlights">
-            <li><strong>Challenge:</strong> Large unmonetized inactive patient list with zero systematic follow-up.</li>
-            <li><strong>Solution:</strong> 4-part automated SMS &amp; email reactivation sequence with zero ad spend.</li>
-            <li><strong>Result:</strong> $42,000+ in estimated re-established care plan value with 98% positive patient feedback.</li>
-          </ul>
-        </article>
-
-        <article class="cs-card">
-          <div class="cs-badge">Case Study</div>
-          <h3>Solo Pediatric &amp; Prenatal Practitioner</h3>
-          <p class="cs-stat"><b>#1</b> Map Pack Ranking</p>
-          <p class="cs-desc">
-            Complete local SEO and AEO website overhaul targeting pediatric, pregnancy, and family wellness search intent, moving from unranked to the #1 Google Map Pack position in a competitive suburban market.
-          </p>
-          <ul class="cs-highlights">
-            <li><strong>Challenge:</strong> Outdated website with no schema markup and zero organic search visibility.</li>
-            <li><strong>Solution:</strong> Answer-first site architecture, schema markup, and Google Business Profile authority optimization.</li>
-            <li><strong>Result:</strong> 310% increase in organic phone calls and direct website appointment bookings.</li>
-          </ul>
-        </article>
+        {CASE_STUDIES.map((study) => (
+          <a href={`/case-studies/${study.slug}/`} class="cs-card">
+            <div class="cs-badge">{study.city}</div>
+            <h3>{study.practice}</h3>
+            <p class="cs-stat">
+              <b>{study.headlineStat}</b>
+              {study.headlineLabel}
+            </p>
+            <p class="cs-desc">{study.summary}</p>
+            <ul class="cs-highlights">
+              <li><strong>Doctor:</strong> {study.doctor}</li>
+              <li><strong>Channels:</strong> {study.channels}</li>
+              <li><strong>Source:</strong> {study.sourceLabel}</li>
+            </ul>
+          </a>
+        ))}
       </div>
 
       <div class="cs-cta-box">
-        <h3>Ready to build predictable patient growth for your practice?</h3>
-        <p>Book a 1-on-1 practice growth strategy session. We will analyze your local market and build a custom acquisition blueprint for your clinic.</p>
+        <h3>Want a read on your market, not a composite story?</h3>
+        <p>Book a strategy call. We will look at what is live, then tell you whether this engine fits.</p>
         <a href={SITE.scheduleUrl} class="btn btn-green">Book a Strategy Call <span class="arrow">→</span></a>
       </div>
     </div>
@@ -103,7 +79,7 @@ const schema = buildGraph(
   }
   .cs-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(320px, 420px));
     gap: 2rem;
     margin-bottom: 3.5rem;
   }
@@ -115,6 +91,11 @@ const schema = buildGraph(
     box-shadow: 0 10px 30px rgba(4, 16, 31, 0.04);
     display: flex;
     flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+  }
+  .cs-card:hover h3 {
+    color: var(--green-dark, #3d9a2e);
   }
   .cs-badge {
     display: inline-block;
