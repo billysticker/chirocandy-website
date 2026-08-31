@@ -96,14 +96,23 @@ const schema = buildGraph(
               <img
                 src={study.evidenceImage}
                 alt={study.evidenceAlt ?? study.sourceLabel}
-                width="2648"
-                height="632"
+                width={study.evidenceWidth ?? 2648}
+                height={study.evidenceHeight ?? 632}
                 loading="lazy"
                 decoding="async"
               />
             </div>
             <figcaption>
               Source: {study.evidenceCaption ?? study.sourceLabel}
+              {study.sourceUrl && !study.youtubeId && (
+                <>
+                  {' '}
+                  <a href={study.sourceUrl} rel="noopener noreferrer">
+                    {study.sourceLinkLabel ?? 'Source report'}
+                  </a>
+                  .
+                </>
+              )}
             </figcaption>
           </figure>
         ) : (

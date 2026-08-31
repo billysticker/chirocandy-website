@@ -7,7 +7,7 @@ import { SITE } from '@/lib/site';
 
 const title = 'Chiropractic Marketing Case Studies | ChiroCandy';
 const description =
-  'Named chiropractic marketing results: LifeWorks Family Chiropractic Meta leads in Kelowna, and Revive Medical Center in Lawrenceville. Sourced from ads reporting or the owner.';
+  'Named chiropractic marketing results from Ads Manager and from the owners: Ipswich Spine Clinic, Lemmata Chiropractic, 100% Chiropractic Chattanooga, Advanced Care Chiropractic, LifeWorks Family Chiropractic, and Revive Medical Center.';
 
 const url = `${SITE.url}/case-studies/`;
 const schema = buildGraph(
@@ -44,8 +44,8 @@ const schema = buildGraph(
                 class="cs-evidence"
                 src={study.evidenceImage}
                 alt={study.evidenceAlt ?? study.sourceLabel}
-                width="2648"
-                height="632"
+                width={study.evidenceWidth ?? 2648}
+                height={study.evidenceHeight ?? 632}
                 loading="lazy"
                 decoding="async"
               />
