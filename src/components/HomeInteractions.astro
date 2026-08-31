@@ -24,31 +24,6 @@
     });
   }
 
-  const nav = $('#nav');
-  if (nav) {
-    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40), {
-      passive: true,
-    });
-  }
-
-  const toggle = $('#navToggle');
-  const menu = $('#mobileMenu');
-  if (toggle && menu) {
-    const closeMenu = () => {
-      toggle.classList.remove('open');
-      menu.classList.remove('open');
-      document.body.style.overflow = '';
-      toggle.setAttribute('aria-label', 'Open menu');
-    };
-    toggle.addEventListener('click', () => {
-      const open = menu.classList.toggle('open');
-      toggle.classList.toggle('open', open);
-      document.body.style.overflow = open ? 'hidden' : '';
-      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-    });
-    $$('#mobileMenu a').forEach((link) => link.addEventListener('click', closeMenu));
-  }
-
   const io = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {

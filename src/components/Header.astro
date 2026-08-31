@@ -12,11 +12,8 @@ import TrainingsMenu from '@/components/TrainingsMenu.astro';
       <div class="nav-links">
         <a href="/services/">Services</a>
         <TrainingsMenu />
-        <a href="/blog/">Resources</a>
         <a href="/about-us/">About</a>
-        <a href="/faqs/">FAQs</a>
       </div>
-      <a class="nav-phone" href={`tel:${SITE.phone}`}><b>{SITE.phoneDisplay}</b></a>
       <a class="btn btn-green nav-cta magnetic" href={SITE.scheduleUrl}>Book a Strategy Call</a>
       <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -28,14 +25,13 @@ import TrainingsMenu from '@/components/TrainingsMenu.astro';
 <div class="mobile-menu" id="mobileMenu">
   <a href="/services/">Services</a>
   <TrainingsMenu variant="mobile" />
-  <a href="/blog/">Blog</a>
-  <a href="/podcasts/">Podcast</a>
   <a href="/about-us/">About</a>
+  <a href="/blog/">Resources</a>
   <a href="/faqs/">FAQs</a>
   <a href="/contact-us/">Contact</a>
   <a class="btn btn-green mm-cta" href={SITE.scheduleUrl}>Book a Strategy Call <span class="arrow">→</span></a>
-  <a href={`tel:${SITE.phone}`} style="font-size:1rem;font-family:'Inter',sans-serif;color:var(--muted)">
-    Or call <b style="color:var(--green)">{SITE.phoneDisplay}</b>
+  <a href={`tel:${SITE.phone}`} class="mm-phone">
+    Or call <b>{SITE.phoneDisplay}</b>
   </a>
 </div>
 
@@ -74,7 +70,7 @@ import TrainingsMenu from '@/components/TrainingsMenu.astro';
   }
   .nav-links {
     display: flex;
-    gap: 2.2rem;
+    gap: 1.65rem;
     font-size: 0.92rem;
     color: var(--muted);
   }
@@ -104,19 +100,7 @@ import TrainingsMenu from '@/components/TrainingsMenu.astro';
   .nav-right {
     display: flex;
     align-items: center;
-    gap: 1.4rem;
-  }
-  .nav-phone {
-    font-size: 0.88rem;
-    color: var(--muted);
-    white-space: nowrap;
-  }
-  .nav-phone b {
-    color: var(--ink);
-    font-weight: 600;
-  }
-  .nav-phone:hover b {
-    color: var(--green);
+    gap: 1.1rem;
   }
   .nav-toggle {
     display: none;
@@ -178,10 +162,22 @@ import TrainingsMenu from '@/components/TrainingsMenu.astro';
     font-weight: 600;
     color: var(--ink);
   }
+  .mobile-menu a.mm-cta {
+    font-size: 1rem;
+    margin-top: 1rem;
+    width: fit-content;
+  }
+  .mm-phone {
+    font-size: 1rem !important;
+    font-family: 'Inter', sans-serif !important;
+    color: var(--muted) !important;
+  }
+  .mm-phone b {
+    color: var(--green);
+  }
   @media (max-width: 960px) {
     .nav-links,
-    .nav-cta,
-    .nav-phone {
+    #nav .nav-cta {
       display: none;
     }
     .nav-toggle {
@@ -193,7 +189,6 @@ import TrainingsMenu from '@/components/TrainingsMenu.astro';
 <script>
   const toggle = document.querySelector('#navToggle');
   const menu = document.querySelector('#mobileMenu');
-  const nav = document.querySelector('#nav');
   const closeMenu = () => {
     toggle?.classList.remove('open');
     menu?.classList.remove('open');
@@ -209,9 +204,4 @@ import TrainingsMenu from '@/components/TrainingsMenu.astro';
     toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
   });
   menu?.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
-  if (nav) {
-    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
-    onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
-  }
 </script>

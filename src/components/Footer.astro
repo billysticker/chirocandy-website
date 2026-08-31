@@ -22,7 +22,6 @@ import { NAV, SITE } from '@/lib/site';
       <div>
         <h4>Services</h4>
         <ul>
-          <li><a href="/services/">All services</a></li>
           {NAV.services.map((item) => (
             <li><a href={item.href}>{item.label}</a></li>
           ))}
@@ -41,12 +40,10 @@ import { NAV, SITE } from '@/lib/site';
       <div>
         <h4>Company</h4>
         <ul>
-          {NAV.resources.map((item) => (
-            <li><a href={item.href}>{item.label}</a></li>
-          ))}
-          {NAV.company.map((item) => (
-            <li><a href={item.href}>{item.label}</a></li>
-          ))}
+          <li><a href="/about-us/">About</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/faqs/">FAQs</a></li>
+          <li><a href="/contact-us/">Contact</a></li>
           <li><a href="/service-areas/">Where we serve</a></li>
         </ul>
       </div>
@@ -58,8 +55,6 @@ import { NAV, SITE } from '@/lib/site';
         <a href="/privacy-policy/">Privacy</a>
         <a href="#cookie-settings" data-cookie-settings>Cookies</a>
         <a href="/sitemap/">Sitemap</a>
-        <a href="/llms.txt">llms.txt</a>
-        <a href="/llms-full.txt">llms-full.txt</a>
       </div>
     </div>
   </div>

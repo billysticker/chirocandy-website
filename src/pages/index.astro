@@ -2,7 +2,6 @@
 import DemoChat from '@/components/DemoChat.astro';
 import HomeInteractions from '@/components/HomeInteractions.astro';
 import SignalField from '@/components/SignalField.astro';
-import TrainingsMenu from '@/components/TrainingsMenu.astro';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { HOME_FAQS, SITE } from '@/lib/site';
 import {
@@ -54,49 +53,10 @@ const schema = buildGraph(
   description={description}
   canonical={`${SITE.url}/`}
   schema={schema}
-  hideHeader
   bodyClass="landing-home"
 >
   <div id="intro"><img src="/images/logo-white.png" alt="ChiroCandy" /></div>
   <div id="aura" aria-hidden="true"></div>
-
-  <nav id="nav">
-    <div class="wrap nav-in">
-      <a class="nav-logo" href="/" aria-label={`${SITE.title} home`}>
-        <img src="/images/logo-white.png" alt="ChiroCandy" width="160" height="40" />
-      </a>
-      <div class="nav-right">
-        <div class="nav-links">
-          <a href="#engine">The System</a>
-          <a href="/services/">Services</a>
-          <TrainingsMenu />
-          <a href="#ai">AI Demo</a>
-          <a href="#founder">About</a>
-        </div>
-        <a class="nav-phone" href={`tel:${SITE.phone}`}><b>{SITE.phoneDisplay}</b></a>
-        <a class="btn btn-green nav-cta magnetic" href={SITE.scheduleUrl}>Book a Strategy Call</a>
-        <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-  </nav>
-
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#engine">The System</a>
-    <a href="/services/">Services</a>
-    <TrainingsMenu variant="mobile" />
-    <a href="/blog/">Blog</a>
-    <a href="/podcasts/">Podcast</a>
-    <a href="#ai">AI Demo</a>
-    <a href="#founder">About</a>
-    <a href="/faqs/">FAQs</a>
-    <a href="/contact-us/">Contact</a>
-    <a class="btn btn-green mm-cta" href={SITE.scheduleUrl}>Book a Strategy Call <span class="arrow">→</span></a>
-    <a href={`tel:${SITE.phone}`} style="font-size:1rem;font-family:'Inter',sans-serif;color:var(--muted)">
-      Or call <b style="color:var(--green)">{SITE.phoneDisplay}</b>
-    </a>
-  </div>
 
   <header class="hero" id="hero">
     <SignalField />
