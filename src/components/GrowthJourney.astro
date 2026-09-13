@@ -1,0 +1,208 @@
+---
+import { channels, pillars, practiceStages } from '@/lib/growth-journey.mjs';
+import { SITE } from '@/lib/site';
+---
+<section class="journey container" data-journey aria-label="Practice growth planner">
+  <ol class="journey-progress" aria-label="Planning steps">
+    <li data-progress="1" aria-current="step"><span>01</span> Understand your growth</li>
+    <li data-progress="2"><span>02</span> Build your marketing plan</li>
+  </ol>
+  <div data-step="1">
+    <div class="journey-heading"><p class="eyebrow">First, see the opportunity</p><h2 tabindex="-1" data-step-heading="1">What is one more patient worth?</h2><p>Start with patient value. Then see how a bigger goal translates into a manageable number of new patients.</p></div>
+    <form data-journey-form novalidate autocomplete="off">
+      <div class="journey-layout">
+        <div class="journey-fields">
+          <div class="value-field">
+            <label for="journey-ltv">Patient lifetime value ($)</label>
+            <input id="journey-ltv" name="ltv" type="number" inputmode="decimal" min="0.01" max="1000000000" step="any" placeholder="Enter your LTV if you know it" aria-describedby="journey-ltv-help journey-error-ltv" />
+            <p id="journey-ltv-help" class="help">Don’t know it? Leave this blank. We’ll estimate a rough patient-value proxy from last year’s numbers below.</p>
+            <p data-value-preview class="value-preview" role="status">Your patient value starts here.</p>
+            <p id="journey-error-ltv" class="error" hidden></p>
+            <details class="small-details"><summary>How is patient value estimated?</summary><p>Known LTV means average collections across a patient’s full relationship with your practice, before care costs. You can estimate it as average collections per visit × average lifetime visits.</p><p>The quick proxy below is last year’s collections ÷ last year’s new patients. It mixes collections from existing and new patients, so it is a rough planning shortcut rather than a measured lifetime value.</p></details>
+          </div>
+          <div class="field-grid">
+            <div><label for="journey-revenue">Last year’s collected revenue ($)</label><input id="journey-revenue" name="revenue" type="number" inputmode="decimal" min="0" max="1000000000" step="any" required placeholder="For example, 1,200,000" aria-describedby="journey-error-revenue" /><p id="journey-error-revenue" class="error" hidden></p></div>
+            <div><label for="journey-patients">Last year’s new patients</label><input id="journey-patients" name="patients" type="number" inputmode="numeric" min="0" max="1000000" step="1" required placeholder="For example, 480" aria-describedby="journey-error-patients" /><p id="journey-error-patients" class="error" hidden></p></div>
+            <div><label for="journey-goal">Your annual revenue goal ($)</label><input id="journey-goal" name="goal" type="number" inputmode="decimal" min="0" max="1000000000" step="any" required placeholder="For example, 1,500,000" aria-describedby="journey-error-goal" /><p id="journey-error-goal" class="error" hidden></p></div>
+            <div><label for="journey-weeks">Weeks open per year</label><input id="journey-weeks" name="weeks" type="number" inputmode="numeric" min="1" max="52" step="1" required value="48" aria-describedby="journey-error-weeks" /><p id="journey-error-weeks" class="error" hidden></p></div>
+          </div>
+          <div class="journey-actions"><button class="btn btn--primary" type="submit" data-run disabled>Show my growth opportunity →</button><button type="button" class="text-button" data-example>Try an example</button><button type="button" class="text-button" data-reset>Clear</button></div>
+          <p data-journey-status role="status" class="help">Your numbers stay in this browser. No email required.</p>
+        </div>
+        <aside class="growth-picture" aria-label="Your growth opportunity">
+          <p class="eyebrow">A bigger goal. A clearer next step.</p>
+          <div data-growth-empty><p class="big-number">—</p><h3>How many more patients would it take?</h3><p>Enter your numbers to turn your growth goal into a monthly and weekly patient target.</p></div>
+          <div data-growth-answer hidden>
+            <p class="big-number" data-out="additionalPatients">—</p><h3>additional new patients</h3>
+            <p class="growth-verdict" data-verdict></p>
+            <dl class="growth-metrics"><div><dt>More per month</dt><dd data-out="perMonth">—</dd></div><div><dt>More per week</dt><dd data-out="perWeek">—</dd></div><div><dt>Total annual new-patient goal</dt><dd data-out="totalPatients">—</dd></div><div><dt>Patient value used</dt><dd data-out="ltv">—</dd></div></dl>
+            <p class="help">This translates your revenue ambition into a patient target using your chosen value. Lifetime collections can arrive over several years; this is not a forecast of cash collected next year.</p>
+            <button type="button" class="btn btn--primary" data-next>Build my marketing plan →</button>
+          </div>
+        </aside>
+      </div>
+    </form>
+  </div>
+  <div data-step="2" hidden>
+    <div class="journey-heading"><button class="text-button" type="button" data-back>← Edit my growth goal</button><p class="eyebrow">Now, give your goal a plan</p><h2 tabindex="-1" data-step-heading="2">Get Known. Build Trust. Get Found.</h2><p data-goal-summary></p></div>
+    <div class="budget-top">
+      <div><p class="eyebrow">Suggested monthly planning budget</p><p class="big-number" data-budget>—</p><p class="help">Total marketing envelope, including service fees and media. This is a planning starting point, not a package quote.</p></div>
+      <div class="budget-controls">
+        <label for="journey-marketing">Marketing allowance: <output data-marketing-label>12%</output> of last year’s collections</label><input id="journey-marketing" type="range" min="0" max="30" step="1" value="12" />
+        <label for="journey-cpa">Acquisition allowance: <output data-cpa-label>15%</output> of patient value</label><input id="journey-cpa" type="range" min="0" max="30" step="1" value="15" />
+        <p class="help">These are the original calculator’s editable starting assumptions. They are not industry benchmarks or a proven affordable acquisition cost.</p>
+        <p class="help" data-budget-explanation></p>
+      </div>
+    </div>
+    <fieldset class="practice-options"><legend>Which best describes your practice?</legend><div class="practice-grid">{Object.entries(practiceStages).map(([key, stage], index) => <label class="practice-option"><input type="radio" name="journey-stage" value={key} checked={index === 0} /><span><strong>{stage.label}</strong><small>{stage.help}</small></span></label>)}</div></fieldset>
+    <p class="help">Selecting a practice stage loads ChiroCandy’s original channel mix. Adjust it below to fit your practice. Changing the mix distributes the same budget; it does not increase it.</p>
+    <div class="pillar-grid">{pillars.map(pillar => <section class="pillar"><p class="eyebrow">{pillar.label}</p><h3 data-pillar-amount={pillar.key}>—</h3><p>{pillar.help}</p>{channels.filter(channel => channel.group === pillar.key).map(channel => <div class="channel"><label for={`channel-${channel.key}`}>{channel.label}<output data-channel-percent={channel.key}></output></label><input type="range" id={`channel-${channel.key}`} data-channel={channel.key} min="0" max="100" step="1" value={practiceStages.new.defaults[channel.key]} /><p data-channel-amount={channel.key}>—</p></div>)}</section>)}</div>
+    <p class="allocation-status" data-allocation-status role="status"></p>
+    <button type="button" class="text-button" data-restore>Restore this practice’s recommended mix</button>
+    <p class="help">Channels support more than one goal. These groups organize the budget: retargeting reinforces familiarity, while reviews, content, and community relationships also build trust.</p>
+    <div class="journey-cta"><div><h3>Turn your patient goal into a practical plan.</h3><p>Review your mix, capacity, and next steps with ChiroCandy.</p></div><a class="btn btn--primary" href={SITE.scheduleUrl}>Schedule a strategy call →</a><a class="text-button" href="/pricing/">Explore service packages</a></div>
+  </div>
+  <noscript><p>Enable JavaScript to calculate your plan. The formulas, example, and practice-stage allocations are available below without using the calculator.</p></noscript>
+</section>
+<script>
+  import { calculateJourney, allocateBudget, channels, pillars, practiceStages } from '@/lib/growth-journey.mjs';
+  const root = document.querySelector<HTMLElement>('[data-journey]');
+  if (root) {
+    const find = <T extends HTMLElement = HTMLElement>(selector: string) => root.querySelector<T>(selector)!;
+    const form = find<HTMLFormElement>('[data-journey-form]');
+    const field = (key: string) => form.elements.namedItem(key) as HTMLInputElement;
+    const money = (value: number, cents = false) => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: cents ? 2 : 0, maximumFractionDigits: cents ? 2 : 0 }).format(value);
+    const number = (value: number) => new Intl.NumberFormat('en-US', { maximumFractionDigits: 1 }).format(value);
+    let result: ReturnType<typeof calculateJourney>['result'] = null;
+    let example = false;
+    const marketing = find<HTMLInputElement>('#journey-marketing');
+    const cpa = find<HTMLInputElement>('#journey-cpa');
+    const raw = () => ({ ...Object.fromEntries(new FormData(form)), marketingPercent: marketing.value, cpaPercent: cpa.value });
+    const stageKey = () => find<HTMLInputElement>('[name="journey-stage"]:checked').value as keyof typeof practiceStages;
+    const clearErrors = () => { form.querySelectorAll('[aria-invalid]').forEach(el => el.removeAttribute('aria-invalid')); form.querySelectorAll<HTMLElement>('.error').forEach(el => { el.hidden = true; }); };
+    const previewValue = () => {
+      const known = field('ltv').valueAsNumber;
+      const revenue = field('revenue').valueAsNumber;
+      const patients = field('patients').valueAsNumber;
+      find('[data-value-preview]').textContent = field('ltv').value !== '' ? (Number.isFinite(known) && known > 0 ? `${money(known)} entered patient LTV` : 'Enter a patient value greater than zero.') : revenue > 0 && patients > 0 ? `${money(revenue / patients)} rough patient-value proxy` : 'Enter your LTV, or estimate it with last year’s numbers.';
+    };
+    const showStep = (step: number) => {
+      root.querySelectorAll<HTMLElement>('[data-step]').forEach(el => { el.hidden = Number(el.dataset.step) !== step; });
+      root.querySelectorAll<HTMLElement>('[data-progress]').forEach(el => { if (Number(el.dataset.progress) === step) el.setAttribute('aria-current', 'step'); else el.removeAttribute('aria-current'); });
+      find(`[data-step-heading="${step}"]`).focus({ preventScroll: true });
+      root.scrollIntoView({ block: 'start' });
+    };
+    const renderAllocation = () => {
+      if (!result) return;
+      const allocation = Object.fromEntries(channels.map(channel => [channel.key, Number(find<HTMLInputElement>(`[data-channel="${channel.key}"]`).value)]));
+      const total = Object.values(allocation).reduce((sum, value) => sum + value, 0);
+      const amounts = allocateBudget(result.monthlyBudget, allocation);
+      channels.forEach(channel => {
+        find(`[data-channel-percent="${channel.key}"]`).textContent = `${allocation[channel.key]}%`;
+        find(`[data-channel-amount="${channel.key}"]`).textContent = amounts ? `${money(amounts[channel.key], true)} / month` : 'Balance the mix to see dollars';
+      });
+      pillars.forEach(pillar => { find(`[data-pillar-amount="${pillar.key}"]`).textContent = amounts ? money(channels.filter(c => c.group === pillar.key).reduce((sum, c) => sum + amounts[c.key], 0), true) : '—'; });
+      const status = find('[data-allocation-status]');
+      status.textContent = amounts ? `100% allocated · ${money(result.monthlyBudget, true)} per month in total.` : `${total}% allocated. ${total > 100 ? `Remove ${total - 100}` : `Add ${100 - total}`} percentage points to balance your budget.`;
+      status.classList.toggle('invalid', !amounts);
+    };
+    const renderBudget = () => {
+      result = calculateJourney(raw()).result;
+      if (!result) return;
+      find('[data-budget]').textContent = money(result.monthlyBudget, true);
+      find('[data-marketing-label]').textContent = `${marketing.value}%`;
+      find('[data-cpa-label]').textContent = `${cpa.value}%`;
+      find('[data-goal-summary]').textContent = `${example ? 'Example: ' : 'Your goal: '}${number(result.additionalPatients)} additional patients, about ${number(result.perMonth)} more each month. Plan around ${number(result.totalPerMonth)} total new patients per month, including your existing pace.`;
+      find('[data-budget-explanation]').textContent = `The model uses the lower of your ${money(result.budgetLimit, true)} monthly marketing allowance and your total patient target × ${money(result.valueCpaLimit, true)} acquisition allowance.${result.monthlyBudget === 0 ? ' With no revenue-based allowance or no acquisition allowance, this model produces no budget. A startup needs a separate funding plan.' : ''}`;
+      renderAllocation();
+    };
+    find<HTMLButtonElement>('[data-run]').disabled = false;
+    const calculate = () => {
+      clearErrors();
+      const checked = calculateJourney(raw());
+      result = checked.result;
+      find('[data-growth-empty]').hidden = !!result;
+      find('[data-growth-answer]').hidden = !result;
+      if (!result) {
+        for (const [key, message] of Object.entries(checked.errors)) {
+          const input = field(key);
+          if (!input) continue;
+          input.setAttribute('aria-invalid', 'true');
+          const error = find(`#journey-error-${key}`); error.textContent = String(message); error.hidden = false;
+        }
+        find('[data-journey-status]').textContent = 'Check the highlighted numbers to calculate your opportunity.';
+        form.querySelector<HTMLInputElement>('[aria-invalid="true"]')?.focus();
+        return;
+      }
+      root.querySelectorAll<HTMLElement>('[data-out]').forEach(el => { const key = el.dataset.out! as keyof typeof result; el.textContent = key === 'ltv' ? money(result![key] as number) : number(result![key] as number); });
+      find('[data-verdict]').textContent = result.gap > 0 ? `Your ${money(result.gap)} growth gap translates into about ${number(result.perWeek)} more patients per week.` : 'You are already at or above this goal. Plan for retention and your existing new-patient pace.';
+      find('[data-journey-status]').textContent = `${example ? 'Illustrative example' : 'Your growth opportunity'} calculated using ${result.isProxy ? 'the rough patient-value proxy' : 'your entered LTV'}.`;
+      previewValue();
+    };
+    form.addEventListener('submit', event => { event.preventDefault(); calculate(); });
+    form.addEventListener('input', () => { example = false; result = null; clearErrors(); previewValue(); find('[data-growth-answer]').hidden = true; find('[data-growth-empty]').hidden = false; find('[data-journey-status]').textContent = 'Numbers changed. Recalculate your growth opportunity.'; });
+    find('[data-example]').addEventListener('click', () => { for (const [key, value] of Object.entries({ ltv: '', revenue: '1200000', patients: '480', goal: '1500000', weeks: '48' })) field(key).value = value; example = true; calculate(); });
+    find('[data-reset]').addEventListener('click', () => { form.reset(); marketing.value = '12'; cpa.value = '15'; find<HTMLInputElement>('[name="journey-stage"][value="new"]').checked = true; restore(); result = null; example = false; clearErrors(); previewValue(); find('[data-growth-answer]').hidden = true; find('[data-growth-empty]').hidden = false; find('[data-journey-status]').textContent = 'Numbers cleared.'; field('ltv').focus(); });
+    find('[data-next]').addEventListener('click', () => { if (result) { renderBudget(); showStep(2); } });
+    find('[data-back]').addEventListener('click', () => showStep(1));
+    const restore = () => { const defaults = practiceStages[stageKey()].defaults; channels.forEach(channel => { find<HTMLInputElement>(`[data-channel="${channel.key}"]`).value = String(defaults[channel.key]); }); renderAllocation(); };
+    root.querySelectorAll('[name="journey-stage"]').forEach(el => el.addEventListener('change', restore));
+    find('[data-restore]').addEventListener('click', restore);
+    root.querySelectorAll('[data-channel]').forEach(el => el.addEventListener('input', renderAllocation));
+    marketing.addEventListener('input', renderBudget); cpa.addEventListener('input', renderBudget);
+  }
+</script>
+<style>
+  .journey { scroll-margin-top: 110px; margin-bottom: 4rem; }
+  .journey-progress { list-style: none; display: grid; grid-template-columns: 1fr 1fr; padding: 0; margin: 0 0 2.5rem; border-bottom: 1px solid var(--line); }
+  .journey-progress li { padding: 1rem 0; color: var(--muted); font-size: .9rem; border-bottom: 3px solid transparent; }
+  .journey-progress [aria-current] { color: var(--white); border-color: var(--green); }
+  .journey-progress span { color: var(--green); margin-right: .7rem; font-weight: 700; }
+  .journey-heading { max-width: 760px; margin-bottom: 2rem; }
+  h2 { font-size: clamp(1.8rem, 3.4vw, 2.7rem); line-height: 1.16; }
+  .journey-heading > p:last-child { color: var(--muted); }
+  .journey-layout { display: grid; grid-template-columns: 1.25fr 1fr; gap: 2rem; align-items: start; }
+  .journey-fields, .growth-picture, .budget-top, .pillar { padding: clamp(1.2rem, 3vw, 2rem); border: 1px solid var(--line); border-radius: 16px; background: var(--panel); }
+  .value-field { padding-bottom: 1.2rem; border-bottom: 1px solid var(--line); margin-bottom: 1.5rem; }
+  label { display: block; font-size: .85rem; font-weight: 600; margin-bottom: .6rem; }
+  input[type=number] { width: 100%; min-width: 0; padding: .85rem; border: 1px solid #41566e; border-radius: 8px; background: #0b2037; color: var(--white); font: inherit; }
+  input::placeholder { color: var(--muted); font-size: .8rem; }
+  input[type=range] { width: 100%; accent-color: var(--green); cursor: pointer; }
+  input[aria-invalid] { outline: 2px solid #ffb6a8; }
+  :is(input, button, a, summary):focus-visible { outline: 3px solid var(--green); outline-offset: 4px; }
+  .help, .small-details { font-size: .8rem; color: var(--muted); line-height: 1.6; }
+  .value-preview { color: var(--green); font-weight: 600; }
+  .small-details summary { cursor: pointer; color: var(--white); }
+  .field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+  .field-grid label { min-height: 2.8em; }
+  .journey-actions { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; margin-top: 1.5rem; }
+  button { cursor: pointer; }
+  .text-button { border: 0; padding: .5rem 0; background: transparent; color: var(--green); font: inherit; font-size: .85rem; text-decoration: underline; text-underline-offset: 4px; }
+  .growth-picture { background: linear-gradient(150deg, #183a39, #102338); border-color: #4d734e; }
+  .big-number { color: var(--green); font-family: var(--font-headline); font-size: clamp(2.8rem, 5vw, 4.4rem); font-weight: 700; letter-spacing: -.04em; line-height: 1.1; margin: 1.3rem 0 .5rem; overflow-wrap: anywhere; }
+  .growth-picture h3 { font-size: 1.3rem; }
+  .growth-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; padding-block: 1.2rem; border-block: 1px solid var(--line); }
+  dt { color: var(--muted); font-size: .8rem; } dd { margin: .4rem 0 0; font-size: 1.6rem; font-weight: 600; }
+  .budget-top { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-bottom: 2rem; }
+  .budget-controls label { margin-top: 1rem; } output { color: var(--green); }
+  .practice-options { border: 0; padding: 0; margin: 0; }
+  legend { font-size: 1.15rem; font-weight: 600; margin-bottom: 1rem; }
+  .practice-grid, .pillar-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+  .practice-option { display: flex; gap: .8rem; padding: 1.2rem; border: 1px solid var(--line); border-radius: 12px; cursor: pointer; align-items: start; }
+  .practice-option:has(:checked) { border-color: var(--green); background: #193730; }
+  .practice-option input { accent-color: var(--green); margin-top: .3rem; }
+  .practice-option small { display: block; color: var(--muted); font-weight: 400; line-height: 1.6; margin-top: .5rem; }
+  .pillar-grid { margin-top: 1.5rem; } .pillar { padding: 1.4rem; }
+  .pillar h3 { color: var(--green); font-size: 2rem; margin: .8rem 0; overflow-wrap: anywhere; }
+  .pillar > p:not(.eyebrow) { font-size: .85rem; color: var(--muted); min-height: 4.5em; }
+  .channel { border-top: 1px solid var(--line); padding-top: 1rem; margin-top: 1rem; }
+  .channel label { display: flex; justify-content: space-between; gap: .8rem; }
+  .channel p { font-size: .8rem; color: var(--muted); margin: .2rem 0; }
+  .allocation-status { color: var(--green); padding: 1rem; border: 1px solid currentColor; border-radius: 8px; }
+  .invalid, .error { color: #ffb6a8; } .error { font-size: .8rem; }
+  .journey-cta { margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--line); display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: center; }
+  .journey-cta > div { flex: 1 1 300px; } .journey-cta h3 { font-size: 1.3rem; } .journey-cta p { color: var(--muted); }
+  [hidden] { display: none !important; }
+  @media(max-width: 850px) { .journey-layout, .budget-top { grid-template-columns: 1fr; gap: 1.3rem; } .practice-grid, .pillar-grid { grid-template-columns: 1fr; } .pillar > p:not(.eyebrow) { min-height: 0; } }
+  @media(max-width: 480px) { .field-grid { grid-template-columns: 1fr; } .field-grid label { min-height: 0; } .journey-progress li { font-size: .75rem; padding-right: .6rem; } .journey-progress span { display: block; } }
+</style>

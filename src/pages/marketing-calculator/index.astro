@@ -1,12 +1,13 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import MarketingCalculator from '@/components/MarketingCalculator.astro';
-import GrowthGoalPlanner from '@/components/GrowthGoalPlanner.astro';
+import GrowthJourney from '@/components/GrowthJourney.astro';
+import { channels, practiceStages } from '@/lib/growth-journey.mjs';
 import BuyerResources from '@/components/BuyerResources.astro';
 import { buildGraph, breadcrumbSchema, webPageSchema } from '@/lib/schema';
 import { SITE } from '@/lib/site';
-const title = 'Chiropractic Marketing Budget & Break-Even Calculator | ChiroCandy';
-const description = 'Calculate patient acquisition costs, 90-day collections, and marketing break-even using your own budget and conversion assumptions. No email required.';
+const title = 'Chiropractic Growth & Marketing Budget Calculator | ChiroCandy';
+const description = 'Estimate patient lifetime value, set your new-patient growth goal, and plan a marketing budget to Get Known, Build Trust, and Get Found. No email required.';
 const url = `${SITE.url}/marketing-calculator/`;
 const schema = buildGraph(webPageSchema({ url, name: title, description }), breadcrumbSchema([
   { name: 'Home', url: `${SITE.url}/` }, { name: 'Marketing costs', url: `${SITE.url}/pricing/` }, { name: 'Marketing calculator', url },
@@ -15,12 +16,35 @@ const schema = buildGraph(webPageSchema({ url, name: title, description }), brea
 <BaseLayout title={title} description={description} canonical={url} schema={schema} bodyClass="calculator-page">
   <section class="calculator-hero container">
     <p class="eyebrow">Chiropractic &amp; healthcare practice planning</p>
-    <h1>What would your marketing<br />need to <span>pay for itself?</span></h1>
+    <h1>What would it take to<br /><span>reach your growth goal?</span></h1>
     <p class="answer-first">Start with the lifetime value of a patient. Then set your new-patient growth goal and explore the marketing budget needed to support it.</p>
-    <div class="hero-notes"><span>Free marketing calculator</span><span>No email required</span><a href="#how-it-works">See the math ↓</a></div>
+    <div class="hero-notes"><span>Free marketing calculator</span><span>No email required</span><a href="#growth-method">See the math ↓</a></div>
   </section>
-  <GrowthGoalPlanner />
-  <MarketingCalculator />
+  <GrowthJourney />
+  <section class="section--alt growth-method" id="growth-method">
+    <div class="container prose">
+      <p class="eyebrow">The thinking behind your plan</p>
+      <h2>How many more patients do you need to grow?</h2>
+      <p>Start with the value of a patient, compare last year’s collected revenue with your annual goal, and divide the difference by patient value. This gives you a planning target for additional new patients. Break that target into a monthly and weekly pace before deciding how to invest in marketing.</p>
+      <p>Known patient lifetime value is the average amount collected over the full patient relationship. A rough estimate is average collections per visit × average lifetime visits. If you do not know it, this tool offers the original calculator’s shortcut: last year’s collections ÷ last year’s new patients. Because that shortcut includes collections from existing patients, it is a planning proxy, not measured LTV.</p>
+      <h3>The growth formulas</h3>
+      <ul><li>Growth gap = annual revenue goal − last year’s collections, with a minimum of zero.</li><li>Additional patients = growth gap ÷ patient value, rounded up.</li><li>Total new-patient goal = last year’s new patients + additional patients.</li><li>Additional monthly pace = additional patients ÷ 12; weekly pace = additional patients ÷ weeks open.</li></ul>
+      <p>For example, $1.2 million in collections and 480 new patients gives a $2,500 patient-value proxy. A $1.5 million goal creates a $300,000 gap: 120 additional patients, or 10 more per month and 2.5 more per week across 48 working weeks. The total target becomes 600 new patients.</p>
+      <p>This is a way to size a growth ambition. It assumes the existing baseline holds steady. Lifetime collections can arrive over multiple years, so the patient target is not a prediction that the entire revenue gap will be collected in the next calendar year.</p>
+      <h2>How does the marketing budget connect to the patient goal?</h2>
+      <p>The tool uses the lower of two amounts: your revenue-based monthly marketing allowance, or your total monthly new-patient target multiplied by your patient-value acquisition allowance. The original defaults are 12% of last year’s collections for marketing and 15% of patient value for acquisition. Both are editable ChiroCandy planning assumptions, not industry benchmarks.</p>
+      <p>In the example above, the monthly marketing allowance is $12,000. The value-based allowance is $375 per patient × 50 total new patients per month, or $18,750. The model therefore suggests a $12,000 monthly planning envelope. That budget covers the total target, including the existing acquisition pace; it is not an added budget just for the 10 extra patients.</p>
+      <p>Service fees and advertising both come out of this envelope. Compare it with <a href="/pricing/">ChiroCandy’s service packages</a>, available cash, appointment capacity, and your actual acquisition results before choosing a budget. A new practice with no prior-year collections needs a separate startup funding plan.</p>
+      <h2>How should a practice divide its marketing budget?</h2>
+      <p><strong>Get Known</strong> builds local awareness. <strong>Build Trust</strong> reinforces familiarity and confidence. <strong>Get Found</strong> supports discovery when people search for care. A channel can serve more than one purpose; these groups organize the original channel allocations.</p>
+      <p>New practices start with a broader awareness mix. Established practices with weak search visibility put more toward SEO and Maps. Practices with strong search visibility put more toward expanding reach. These are editable starting mixes, not promises about results.</p>
+      <div class="allocation-table"><table><caption>ChiroCandy’s starting channel allocations by practice stage</caption><thead><tr><th scope="col">Channel</th>{Object.values(practiceStages).map(stage => <th scope="col">{stage.label}</th>)}</tr></thead><tbody>{channels.map(channel => <tr><th scope="row">{channel.label}</th>{Object.values(practiceStages).map(stage => <td>{stage.defaults[channel.key]}%</td>)}</tr>)}</tbody></table></div>
+      <p>Every starting mix totals 100%. Adjusting the sliders redistributes the budget. The tool asks you to rebalance to 100% before displaying channel dollar amounts.</p>
+    </div>
+  </section>
+  <details class="advanced-analysis" id="advanced-analysis">
+    <summary class="container"><span class="eyebrow">Optional deeper analysis</span><strong>Check campaign costs and 90-day break-even</strong><span>Already have campaign data or a package in mind? Explore those numbers here.</span></summary>
+    <MarketingCalculator />
   <section class="method section--alt" id="how-it-works">
     <div class="container method-grid">
       <div><p class="eyebrow">Know what you are measuring</p><h2>One acquisition month.<br />A 90-day view of value.</h2><p>This model follows the patients acquired from one month of paid advertising and estimates what that group collects during each patient’s first 90 days. It does not forecast your practice’s monthly cash flow or total profit.</p><p>Use actual collections from a comparable group of new patients. Billed charges, lifetime value, and total practice revenue are different measures.</p></div>
@@ -41,6 +65,8 @@ const schema = buildGraph(webPageSchema({ url, name: title, description }), brea
       <p>These numbers illustrate the arithmetic. They are not ChiroCandy pricing, average client results, or a prediction for your practice.</p>
       <h2>Why include more than advertising spend?</h2>
       <p>Management fees, software, creative, and allocated setup work are part of acquisition cost. Leaving them out can make a campaign look more profitable than it is. Include costs consistently and avoid counting the same expense both in care costs and marketing.</p>
+      <h2>Can I use a ChiroCandy package in my scenario?</h2>
+      <p>Yes. The optional package selector loads the published monthly service fee. Advertising spend is separate, and the preset does not include setup or usage charges. Add applicable costs to the service-cost input and keep your practice assumptions editable. <a href="/pricing/">See current packages, inclusions, and terms</a>.</p>
       <h2>What if I do not know my conversion rates?</h2>
       <p>Start with a recent, comparable period in your advertising account and CRM. Use inquiries as the denominator for bookings, bookings for attendance, and attendance for patient acquisition. If those numbers are missing, tracking them is the next useful step. The example button lets you explore the tool without treating an assumption as a benchmark.</p>
       <h2>Does a positive scenario mean I should increase spending?</h2>
@@ -50,9 +76,31 @@ const schema = buildGraph(webPageSchema({ url, name: title, description }), brea
       <p><a href="/pricing/">Understand the components of a marketing budget →</a></p>
     </div>
   </section>
+  </details>
   <BuyerResources />
 </BaseLayout>
+<script>
+  import { packages } from '@/data/pricing.mjs';
+  const selectedPackage = new URLSearchParams(window.location.search).get('package');
+  if (packages.some(plan => plan.id === selectedPackage)) {
+    const advanced = document.querySelector<HTMLDetailsElement>('#advanced-analysis');
+    if (advanced) advanced.open = true;
+  }
+</script>
 <style>
+  .growth-method { padding-block: 4rem; scroll-margin-top: 100px; }
+  .growth-method h3 { font-size: 1.3rem; }
+  .allocation-table { overflow-x: auto; margin-block: 2rem; }
+  table { border-collapse: collapse; width: 100%; font-size: .85rem; }
+  caption { text-align: left; padding-bottom: 1rem; font-weight: 600; }
+  th, td { text-align: left; padding: .8rem; border-bottom: 1px solid var(--line); }
+  td { color: var(--muted); }
+  .advanced-analysis { margin-block: 3rem; }
+  .advanced-analysis > summary { cursor: pointer; padding-block: 1.5rem; border-block: 1px solid var(--line); }
+  .advanced-analysis > summary :is(strong, span) { display: block; margin: .6rem 0; }
+  .advanced-analysis > summary strong { font-size: 1.4rem; }
+  .advanced-analysis > summary span:last-child { color: var(--muted); font-size: .9rem; }
+  .advanced-analysis > summary:focus-visible { outline: 3px solid var(--green); }
   .calculator-hero { padding-block: clamp(3rem, 7vw, 6rem) 3.2rem; }
   h1 { font-size: clamp(2.5rem, 5.6vw, 4.6rem); max-width: 950px; margin: 1.2rem 0; letter-spacing: -.045em; line-height: 1.08; }
   h1 span { color: var(--green); }
