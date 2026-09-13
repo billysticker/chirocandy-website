@@ -1,66 +1,153 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import PageHero from '@/components/PageHero.astro';
 import BuyerResources from '@/components/BuyerResources.astro';
 import { buildGraph, breadcrumbSchema, webPageSchema } from '@/lib/schema';
 import { SITE } from '@/lib/site';
-const title = 'Chiropractic Marketing Costs & Budget Guide | ChiroCandy';
-const description = 'Understand advertising spend, management fees, setup work, and ongoing costs. Plan a chiropractic marketing budget and explore your break-even numbers.';
+import { services, packages, includedExtras, typicalSetupFee, metaBudgetRange, formatFee } from '@/data/pricing.mjs';
+import { getCaseStudy } from '@/data/case-studies';
+const title = 'Chiropractic Marketing Pricing & Packages | ChiroCandy';
+const description = 'ChiroCandy monthly service packages: $1,145 for Meta and Google Ads, or $2,290 with SEO/AI and a custom website. Ad spend separate. Explore services and book a call.';
 const url = `${SITE.url}/pricing/`;
-const schema = buildGraph(webPageSchema({ url, name: title, description }), breadcrumbSchema([{ name: 'Home', url: `${SITE.url}/` }, { name: 'Marketing costs', url }]));
-const costs = [
-  ['Advertising spend', 'The budget paid to platforms such as Meta and Google.', 'Is media spend included in the quote or paid separately?'],
-  ['Strategy and management', 'The people and work behind planning, campaign management, reporting, and optimization.', 'Which channels, locations, and deliverables are included?'],
-  ['Setup and creative', 'Initial campaign work, landing pages, tracking, websites, or content production.', 'What is one-time, what recurs, and what would require an additional quote?'],
-  ['Software and follow-up', 'Tools used for tracking, communication, scheduling, and lead follow-up.', 'Are subscriptions, usage charges, and third-party costs included?'],
+const schema = buildGraph(webPageSchema({ url, name: title, description }), breadcrumbSchema([{ name: 'Home', url: `${SITE.url}/` }, { name: 'Pricing', url }]));
+const proof = getCaseStudy('lifeworks-family-chiropractic-kelowna')!;
+const faqs = [
+  { question: 'Is advertising spend included?', answer: 'The prices on this page are monthly service fees. Advertising spend is separate, including Streaming TV ad spend. We will discuss the right media budget for your practice on the strategy call.' },
+  { question: 'What should I budget to get started?', answer: `A one-time setup fee is typically ${formatFee(typicalSetupFee)}. The typical minimum monthly Meta advertising budget is ${formatFee(metaBudgetRange[0])}–${formatFee(metaBudgetRange[1])}, separate from service fees. Google and Streaming TV budgets are additional and depend on your plan.` },
+  { question: 'Are there usage-based charges?', answer: 'AI and SMS usage-based charges may apply. Your agreement covers the usage terms and full scope.' },
+  { question: 'Does the website require a commitment?', answer: 'The custom website requires a 12-month website agreement, whether purchased individually or included in a package. Ownership, cancellation, and other service details are covered in your agreement.' },
+  { question: 'Do I need to choose a package before scheduling?', answer: 'No. Bring your goals and questions. We will discuss your market, existing marketing, follow-up, and budget to help identify the services that fit your practice.' },
+  { question: 'Can I start with an individual service?', answer: 'Yes. The à la carte services below can address a specific need. Packages bring services together and include Streaming TV management, Invisible Intent™, Review Boost, and AI CA™ at no additional service fee; advertising spend and applicable usage charges remain separate.' },
 ];
 ---
 <BaseLayout title={title} description={description} canonical={url} schema={schema}>
-  <PageHero eyebrow="Plan your investment" title="A clear budget starts with the whole picture." answer="A marketing budget can include advertising spend, management, creative, setup, and follow-up tools. Compare those components together, then work backward from your patient economics.">
-    <div class="hero-actions"><a class="btn btn--primary" href="/marketing-calculator/">Calculate my break-even →</a><a class="btn btn--secondary" href={SITE.scheduleUrl}>Discuss my practice</a></div>
-  </PageHero>
-  <section class="section">
-    <div class="container">
-      <div class="prose"><h2>What does chiropractic marketing cost?</h2><p>The useful number is your total investment for a defined scope: which services you need, the markets you want to reach, the assets already in place, and the work your team will handle. A low management fee and a low total cost are not necessarily the same thing.</p><p>For ChiroCandy’s current fees and a scope for your practice, <a href={SITE.scheduleUrl}>request a strategy call</a>. This guide explains the cost components; the calculator uses your own inputs and does not generate a ChiroCandy quote.</p></div>
-      <div class="table-wrap" tabindex="0" role="region" aria-label="Marketing budget cost components">
-        <table><caption>Compare the complete investment</caption><thead><tr><th scope="col">Budget component</th><th scope="col">What it covers</th><th scope="col">What to clarify</th></tr></thead><tbody>{costs.map(row => <tr>{row.map((cell, i) => i === 0 ? <th scope="row">{cell}</th> : <td>{cell}</td>)}</tr>)}</tbody></table>
-      </div>
-      <div class="prose">
-        <h2>What can increase the investment?</h2>
-        <p>More locations or services, additional advertising channels, new website work, frequent creative production, and more involved reporting or integrations can increase the scope. Competitive markets can also change how much advertising is needed to test a campaign.</p>
-        <h2>What can keep costs down?</h2>
-        <p>A focused launch, usable photography and video, a working website, reliable tracking, and clear ownership of follow-up can reduce duplicated work. Start with the services that address a demonstrated bottleneck rather than buying every channel at once.</p>
-        <h2>Why do agency quotes vary so much?</h2>
-        <p>Compare deliverables, specialist involvement, reporting, communication, and who does the work. A smaller scope can reasonably cost less. A higher fee may cover more work, but price by itself does not prove better results.</p>
-        <p>Use the <a href="/compare-marketing-agencies/">agency comparison guide</a> to put proposals side by side.</p>
-        <h2>What is the difference between setup and ongoing costs?</h2>
-        <p>Initial work gets assets, campaigns, and measurement in place. Ongoing work runs and improves the program. Compare both over the same time period, including third-party charges and any costs that continue after an agreement ends.</p>
-        <h2>How much should my practice spend?</h2>
-        <p>Start with what your practice can invest while waiting for collections, how many new patients your team can serve, and what remains from patient collections after delivering care. A percentage of revenue alone cannot answer those questions.</p>
-        <p>The <a href="/marketing-calculator/">marketing budget calculator</a> lets you explore different spending levels, conversion rates, and 90-day patient values. It shows the patient count needed to cover marketing costs under those assumptions.</p>
-        <h2>Which ChiroCandy option should I discuss?</h2>
-        <p>If you want help executing, review the <a href="/done-for-you-program/">Done-For-You program</a>. If you have an internal team, explore <a href="/training-program/">training</a>. For a specific need, see our <a href="/services/">services</a>. Confirm the exact work and pricing in your proposal rather than assuming every service is bundled.</p>
-        <h2>What should I confirm before signing?</h2>
-        <ul><li>Management fees, platform spend, setup charges, and usage costs.</li><li>Included deliverables, launch dependencies, and who handles follow-up.</li><li>Agreement length, renewal, cancellation notice, and any exit costs.</li><li>Ownership and access for ad accounts, domains, websites, creative, and data.</li><li>Payment timing and any available payment arrangements.</li></ul>
-        <h2>When might more marketing be the wrong next step?</h2>
-        <p>If your team cannot respond to existing inquiries, has no appointment capacity, or cannot measure whether new patients arrive, those problems deserve attention first. More leads do not fix a broken handoff. Use the strategy call to identify the constraint before expanding spend.</p>
-      </div>
-      <div class="budget-callout"><div><p class="eyebrow">Put the guide to work</p><h2>What would break-even look like for you?</h2><p>Use your numbers. See each step from lead to patient.</p></div><a class="btn btn--primary" href="/marketing-calculator/">Run my scenario →</a></div>
+  <section class="pricing-hero container">
+    <div class="hero-copy">
+      <p class="eyebrow">Chiropractic marketing pricing</p>
+      <h1>Build Trust.<br />Get Known.<br /><span>Be Found.</span></h1>
+      <p class="answer-first">Explore marketing packages from <strong>{formatFee(packages[0].fee)}/month</strong> in service fees. Find the right mix for your practice, your market, and your goals.</p>
+      <p class="hero-note">Advertising spend is separate. Typical setup: {formatFee(typicalSetupFee)} one time.</p>
+      <a class="btn btn--primary" href={SITE.scheduleUrl}>Schedule My Strategy Call →</a>
+      <p class="call-note">Discuss your goals, channel priorities, and total marketing budget.</p>
     </div>
+    <div class="hero-guide" aria-label="Choose a starting point">
+      <p class="eyebrow">A clear starting point</p>
+      {packages.map((plan, index) => <a href={`#${plan.id}`}><span class="guide-number">0{index + 1}</span><span><strong>{plan.name}</strong><span class="guide-price">{formatFee(plan.fee)} / month in service fees</span></span><span aria-hidden="true">↘</span></a>)}
+      <p>Two popular packages. One conversation about what fits.</p>
+      <a class="menu-link" href="#individual-services">Looking for an individual service? ↓</a>
+    </div>
+  </section>
+  <section class="packages-section container" aria-labelledby="packages-heading">
+    <div class="section-intro"><p class="eyebrow">Choose your starting point</p><h2 id="packages-heading">Two ways to move your practice forward.</h2><p>Both packages pair advertising with tools for visibility, reviews, and lead follow-up.</p></div>
+    <div class="package-grid">
+      {packages.map(plan => <article class:list={['package-card', { 'package-expanded': plan.websiteTerm }]} id={plan.id}>
+        <p class="package-focus">{plan.focus}</p><h3>{plan.name}</h3><p class="package-audience">{plan.audience}</p>
+        <p class="package-price"><strong>{formatFee(plan.fee)}</strong><span>/ month</span></p><p class="fee-label">Service fees · advertising spend separate</p>
+        <ul class="core-services">{plan.services.map(id => <li><span aria-hidden="true">✓</span>{services.find(service => service.id === id)!.name}</li>)}</ul>
+        <div class="package-extras"><p>Also included in this package</p><ul>{includedExtras.map(service => <li>{service.id === 'streaming' ? 'Streaming TV management' : service.name}</li>)}</ul></div>
+        <p class="package-terms">Typical setup: {formatFee(typicalSetupFee)} one time. Ad spend and applicable AI/SMS usage are additional.{plan.websiteTerm && <> Custom website requires a 12-month website agreement.</>}</p>
+        <div class="package-actions"><a class="btn btn--primary" href={SITE.scheduleUrl}>Schedule My Strategy Call →</a><a class="scenario-link" href={`/marketing-calculator/?package=${plan.id}`}>Explore this fee in the calculator ↗</a></div>
+      </article>)}
+    </div>
+    <div class="included-note"><span aria-hidden="true">✓</span><p><strong>Four extras included with either package.</strong> Streaming TV management, Invisible Intent™, Review Boost, and AI CA™ come at no additional service fee. For Streaming TV, you pay the advertising spend. Applicable AI/SMS usage charges are covered in your agreement.</p></div>
+  </section>
+  <section class="proof-section container" aria-labelledby="proof-heading">
+    <div><p class="eyebrow">See the work behind the numbers</p><h2 id="proof-heading">A real practice.<br />A documented campaign.</h2><p>For {proof.practice}, the work included Facebook Lead Forms, refreshed creative, and a clearer follow-up pipeline.</p><a class="text-link" href={`/case-studies/${proof.slug}/`}>Read the campaign story →</a></div>
+    <div class="proof-evidence"><p class="proof-name">{proof.practice} · {proof.city}</p><strong>{proof.headlineStat}</strong><p>Reported by Meta over 90 days, June 2–August 31, 2026.</p><p class="fine-print">Ad-platform leads, not confirmed new patients. This individual campaign is not a forecast or a package guarantee.</p><a class="text-link" href="/testimonials/">Hear from more practice owners ↗</a></div>
+  </section>
+  <section class="services-section section--alt" id="individual-services" aria-labelledby="services-heading">
+    <div class="container">
+      <div class="section-intro"><p class="eyebrow">À la carte services</p><h2 id="services-heading">Need help with a specific service?</h2><p>Start with a particular need, or bring the pieces together in a package. All prices below are monthly service fees in USD. Advertising spend is separate.</p></div>
+      <div class="table-wrap" tabindex="0" role="region" aria-label="Individual service pricing">
+        <table><caption>Monthly service fees and scope</caption><thead><tr><th scope="col">Service</th><th scope="col">Monthly fee</th><th scope="col">What it supports</th></tr></thead><tbody>{services.map(service => <tr><th scope="row">{service.href ? <a href={service.href}>{service.name}</a> : service.name}{service.included && <span class="included-tag">Included in both packages</span>}</th><td class="service-price">{formatFee(service.fee)}<span>/ month</span></td><td>{service.description}</td></tr>)}</tbody></table>
+      </div>
+      <p class="fine-print">Typical setup is {formatFee(typicalSetupFee)} one time. Applicable AI/SMS usage charges are additional. Custom websites require a 12-month website agreement. Full scope and terms are covered in your agreement.</p>
+      <a class="btn btn--secondary" href={SITE.scheduleUrl}>Find the right services for my practice →</a>
+    </div>
+  </section>
+  <section class="faq-section container" aria-labelledby="pricing-faq-heading">
+    <div class="section-intro"><p class="eyebrow">A few things to know</p><h2 id="pricing-faq-heading">Plan the complete investment.</h2><p>Clear starting numbers here. The details for your practice in your agreement.</p></div>
+    <div class="faq-list">{faqs.map(faq => <details><summary>{faq.question}<span aria-hidden="true">+</span></summary><p>{faq.answer}</p></details>)}</div>
+  </section>
+  <section class="closing-section container">
+    <div class="closing-callout"><div><p class="eyebrow">Your practice comes first</p><h2>You don’t have to choose alone.</h2><p>Let’s talk through your goals, your market, and the services that make sense for your next stage.</p><a class="btn btn--primary" href={SITE.scheduleUrl}>Schedule My Strategy Call →</a></div><div class="calculator-invite"><h3>Want to explore the numbers first?</h3><p>Start with patient lifetime value, set a growth goal, and model your marketing break-even.</p><a class="text-link" href="/marketing-calculator/">Use the free calculator ↗</a></div></div>
   </section>
   <BuyerResources />
 </BaseLayout>
 <style>
-  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.7rem; }
-  .table-wrap { overflow-x: auto; margin-block: 2.5rem; border: 1px solid var(--line); border-radius: 16px; }
-  table { border-collapse: collapse; text-align: left; width: 100%; min-width: 640px; font-size: .9rem; }
-  caption { text-align: left; padding: 1.3rem; color: var(--green); font-weight: 600; }
-  th, td { padding: 1.1rem 1.3rem; vertical-align: top; border-top: 1px solid var(--line); }
+  .pricing-hero { display: grid; grid-template-columns: 1.25fr 1fr; align-items: center; gap: 5rem; padding-block: 5rem 4.5rem; }
+  h1 { font-size: clamp(3.1rem, 6vw, 5rem); letter-spacing: -.045em; line-height: 1.04; margin: 1rem 0 1.6rem; }
+  h1 span { color: var(--green); }
+  .answer-first { max-width: 560px; }
+  .answer-first strong { color: var(--white); white-space: nowrap; }
+  .hero-note, .call-note, .fine-print { color: var(--muted); font-size: .8rem; line-height: 1.6; }
+  .hero-note { margin: .8rem 0 1.6rem; }
+  .call-note { max-width: 45ch; margin-bottom: 0; }
+  .hero-guide { border-top: 2px solid var(--green); padding-top: 1.5rem; }
+  .hero-guide > a:not(.menu-link) { display: grid; grid-template-columns: auto 1fr auto; gap: 1rem; align-items: center; border-bottom: 1px solid var(--line); padding: 1.5rem 0; text-decoration: none; }
+  .guide-number { color: var(--green); font-size: .8rem; }
+  .hero-guide strong { display: block; font-family: var(--font-headline); font-size: 1.1rem; }
+  .guide-price { display: block; color: var(--muted); font-size: .85rem; margin-top: .5rem; }
+  .hero-guide > p:not(.eyebrow) { color: var(--muted); font-size: .9rem; margin-top: 1.5rem; }
+  .menu-link, .text-link, .scenario-link { color: var(--green); font-size: .9rem; text-underline-offset: .25em; }
+  .packages-section, .faq-section, .closing-section { padding-block: 2rem 4rem; }
+  .section-intro { max-width: 740px; margin-bottom: 2rem; }
+  .section-intro h2, .proof-section h2, .closing-callout h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); line-height: 1.2; margin: .8rem 0 1rem; }
+  .section-intro > p:last-child, .proof-section p, .closing-callout p { color: var(--muted); }
+  .package-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+  .package-card { display: flex; flex-direction: column; padding: 2rem; border: 1px solid var(--line); border-radius: 20px; background: var(--panel); scroll-margin-top: 100px; }
+  .package-expanded { border-color: #527766; background: linear-gradient(155deg, #142e42, #0c1f32 70%); }
+  .package-focus { color: var(--green); font-size: .8rem; margin: 0 0 .8rem; }
+  .package-card h3 { font-size: 1.55rem; margin: 0; line-height: 1.3; }
+  .package-audience { color: var(--muted); font-size: .95rem; min-height: 4.7rem; }
+  .package-price { margin: 1rem 0 .3rem; display: flex; align-items: baseline; gap: .6rem; flex-wrap: wrap; }
+  .package-price strong { font: 600 clamp(2.8rem, 5vw, 4rem)/1.1 var(--font-headline); letter-spacing: -.04em; }
+  .package-price > span { color: var(--muted); }
+  .fee-label { font-size: .8rem; color: var(--muted); margin: .4rem 0 1.5rem; }
+  .core-services { list-style: none; padding: 1.4rem 0; margin: 0; border-top: 1px solid var(--line); min-height: 10rem; }
+  .core-services li { display: flex; align-items: baseline; gap: .75rem; margin-bottom: .6rem; font-size: .95rem; }
+  .core-services span { color: var(--green); }
+  .package-extras { padding: 1rem 0; border-block: 1px solid var(--line); }
+  .package-extras > p { color: var(--green); font-size: .85rem; font-weight: 600; margin: 0 0 .8rem; }
+  .package-extras ul { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem 1rem; list-style: none; padding: 0; margin: 0; color: var(--muted); font-size: .85rem; }
+  .package-terms { font-size: .78rem; color: var(--muted); line-height: 1.6; margin: 1rem 0 1.5rem; }
+  .package-actions { display: grid; gap: 1rem; margin-top: auto; text-align: center; }
+  .package-actions .btn { width: 100%; }
+  .included-note { display: flex; align-items: baseline; gap: 1rem; padding: 1.5rem 0 0; }
+  .included-note > span { color: var(--green); }
+  .included-note p { color: var(--muted); font-size: .85rem; line-height: 1.7; margin: 0; }
+  .included-note strong { color: var(--white); }
+  .proof-section { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; padding-block: 1rem 5rem; }
+  .proof-section > div:first-child { max-width: 510px; }
+  .proof-evidence { padding: 1.5rem 0 1.5rem 2rem; border-left: 2px solid var(--green); }
+  .proof-evidence > strong { color: var(--green); font: 600 clamp(2.5rem, 4.5vw, 3.6rem)/1.2 var(--font-headline); }
+  .proof-name { margin-top: 0; font-size: .85rem; }
+  .proof-evidence p { max-width: 45ch; }
+  .services-section { padding-block: 4rem; scroll-margin-top: 90px; }
+  .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 14px; }
+  table { border-collapse: collapse; text-align: left; width: 100%; min-width: 650px; font-size: .9rem; }
+  caption { text-align: left; padding: 1.2rem; color: var(--green); font-weight: 600; }
+  th, td { padding: 1.1rem 1.2rem; vertical-align: top; border-top: 1px solid var(--line); }
   td { color: var(--muted); }
-  thead, tbody th { background: var(--panel); }
-  tbody th { width: 22%; }
-  .budget-callout { display: flex; gap: 2rem; align-items: center; justify-content: space-between; background: var(--panel); padding: 2rem; border: 1px solid var(--line); border-radius: 20px; margin-top: 3rem; }
-  .budget-callout h2 { max-width: 24ch; }
-  .budget-callout p { color: var(--muted); }
-  @media (max-width: 700px) { .budget-callout { flex-direction: column; align-items: start; } }
+  thead, tbody th { background: rgba(18, 57, 100, .15); }
+  tbody th { width: 31%; }
+  tbody th a { text-underline-offset: .25em; }
+  .service-price { color: var(--white); font-family: var(--font-headline); font-size: 1.1rem; white-space: nowrap; }
+  .service-price span { display: block; font-size: .75rem; color: var(--muted); margin-top: .25rem; }
+  .included-tag { display: block; color: var(--green); font-weight: 400; font-size: .72rem; margin-top: .5rem; }
+  .services-section .fine-print { margin: 1rem 0 1.5rem; }
+  .faq-section { padding-top: 4rem; }
+  .faq-list { max-width: 850px; }
+  .faq-list details { border-bottom: 1px solid var(--line); }
+  summary { cursor: pointer; display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding: 1.3rem 0; font-family: var(--font-headline); font-size: 1.05rem; font-weight: 600; }
+  summary::-webkit-details-marker { display: none; }
+  summary span { color: var(--green); }
+  details[open] summary span { transform: rotate(45deg); }
+  details > p { color: var(--muted); max-width: 75ch; margin: 0 0 1.5rem; }
+  .closing-callout { display: grid; grid-template-columns: 1.4fr 1fr; gap: 4rem; padding: 2.5rem; border: 1px solid var(--line); border-radius: 20px; background: var(--panel); align-items: center; }
+  .calculator-invite { border-left: 1px solid var(--line); padding-left: 2rem; }
+  .calculator-invite h3 { font-size: 1.1rem; }
+  .calculator-invite p { font-size: .9rem; }
+  :is(a, summary, .table-wrap):focus-visible { outline: 3px solid var(--green); outline-offset: 4px; }
+  @media (max-width: 900px) { .pricing-hero { gap: 2rem; } .package-card { padding: 1.5rem; } .proof-section { gap: 2rem; } .closing-callout { gap: 2rem; padding: 2rem; } }
+  @media (max-width: 700px) { .pricing-hero, .package-grid, .proof-section, .closing-callout { grid-template-columns: 1fr; } .pricing-hero { padding-top: 3rem; gap: 2.5rem; } .hero-guide { max-width: 100%; } .package-audience, .core-services { min-height: 0; } .package-extras ul { grid-template-columns: 1fr; } .calculator-invite { border-left: 0; border-top: 1px solid var(--line); padding: 1.5rem 0 0; } .proof-evidence { padding-left: 1.5rem; } .closing-callout { padding: 1.5rem; } }
 </style>

@@ -6,13 +6,15 @@ Prepared September 12, 2026. This is a review build on `codex/visibility-pages-c
 
 | Content category | URL | Implementation | Remaining evidence |
 |---|---|---|---|
-| Pricing | `/pricing/` | New cost guide distinguishing media, management, setup, creative, and tools; connected to the calculator. | Current publishable fees, minimum media budget, and payment terms were requested from the owner. No prices were invented. |
+| Pricing | `/pricing/` | Two packages first, all 11 individual services below, included extras, concise cost and website-term notes, client evidence, and scheduling CTAs. Shared fees connect to the calculator. | Owner confirmed monthly service fees, separate media spend, four extras in both packages, typical setup and Meta budget, usage-based charges, and the 12-month website term. Full terms remain in the agreement. |
 | Comparison | `/compare-marketing-agencies/` | New agency-authored buying guide with nine comparison criteria, evidence to request, and links to ChiroCandy information. | Named competitors, sourced cells, and a defensible ranking methodology would be required for a ranked list. This version does not rank competitors. |
 | Reviews | `/testimonials/` | Preserves all existing videos; adds original YouTube links, a clearly labeled collection count, and case-study source context. | No cross-platform rating totals or unique-client count were inferred. Add current authorized platform data if desired. |
 | Privacy | `/privacy-policy/` | Explains the calculator’s browser-based implementation and distinguishes the website from client patient-data workflows. | Existing retention, vendor, and broader compliance statements need operational ownership; this change is not a security certification. |
 | Expert | `/about/billy-sticker/` | Replaces internal SEO jargon with useful background, work samples, and professional profile links. | Existing performance totals and awards references are retained from the live site, not newly independently verified here. |
 | Recognition | `/news-and-media/` | Adds a linked podcast appearance and distinguishes appearances, business awards, and professional roles. | Existing FOX/CBS/NBC/Forbes/Inc. claims need original issuer/article URLs and award years before becoming a detailed awards directory. No new awards were asserted. |
 | FAQs | `/faqs/` | Groups 22 questions by buying task; adds pricing, ownership, measurement, calculator, and privacy answers. Rewrites unsupported broad performance promises in the affected FAQ data. | Existing claims about contract terms, staffing location, and client counts remain owner-provided site content and should be confirmed before launch. |
+
+Pricing, FAQ, About, and Done-For-You copy now distinguish the 12-month website agreement from the existing marketing-service terms.
 
 The calculator is an additional tool at `/marketing-calculator/`. These three new routes supplement five existing category pages. Existing URLs and redirects remain intact.
 
@@ -46,7 +48,8 @@ Inputs: one month's ad spend, other marketing costs, ad cost per inquiry, bookin
 Outputs: funnel-stage counts, total spend, cost per acquired patient, cohort collections, amount left after care and marketing, return on marketing spend after care costs, and whole patients required for break-even.
 
 - No arbitrary rates are loaded until the visitor chooses an illustrative example.
-- Example fees and results are explicitly not ChiroCandy pricing or typical results.
+- The optional package selector loads the owner-confirmed monthly service fee from `src/data/pricing.mjs`. Package links carry only a recognized package ID. Advertising and practice inputs remain editable. Setup and usage costs must be added by the visitor. Editing the service-cost total switches to custom costs; example and clear actions reset the preset.
+- Illustrative example fees and results are explicitly not ChiroCandy pricing or typical results; selected package fees are published service prices, not a complete quote.
 - Zero acquisitions never produce a fictional cost per patient.
 - Zero contribution and positive spend cannot break even.
 - Zero spend has no defined percentage return.
@@ -63,10 +66,11 @@ Outputs: funnel-stage counts, total spend, cost per acquired patient, cohort col
 - `npm test`: 14 passing tests covering the calculators and LTV estimator, invalid inputs, zero cases, precision, and economic definitions.
 - Rendered HTML checks: all eight affected content pages have one H1, expected canonical URLs, parseable JSON-LD, and resolving internal destinations. The three new routes appear in the XML sitemap.
 - Browser: desktop and 390px mobile views inspected; examples, zero-show results, invalid percentage handling, clear actions, and growth-planner expansion exercised. No calculator page errors or framework overlays observed.
+- Pricing update: desktop and 390px mobile pricing layouts checked with all 11 rows. Package-to-calculator navigation, both fee presets, preserved ad spend, edited cost totals, stale-result handling, and example/clear resets passed browser checks. No horizontal page overflow or browser errors observed. Metadata and internal links passed for pricing, calculator, FAQ, About, and Done-For-You pages.
 - No live form was submitted or production deployment promoted as part of verification.
 
 ## Before a production release
 
-Review copy and provide any desired public fee schedule. Confirm retained company facts and contract language. Add issuer evidence before expanding recognition claims. Use the GitHub review build and its preview for final review; merge/promotion is a separate release action.
+Review the owner-confirmed public fee schedule and package copy. Confirm retained company facts and contract language. Add issuer evidence before expanding recognition claims. Use the GitHub review build and its preview for final review; merge/promotion is a separate release action.
 
 For future measurement, record baseline buyer queries and qualified inquiries, then compare after indexing. A passing build or a complete page checklist is not evidence of increased AI visibility.

@@ -2,7 +2,7 @@
 // Keep this independent of the UI so validation and arithmetic can be tested.
 export const fields = [
   { key: 'adSpend', label: 'Monthly advertising spend', unit: '$', min: 0, max: 1000000, step: '0.01', example: 2000, help: 'Money paid to ad platforms for this acquisition month.' },
-  { key: 'otherCosts', label: 'Other monthly marketing costs', unit: '$', min: 0, max: 1000000, step: '0.01', example: 1000, help: 'Include management, creative, software, and any setup cost allocated to this month. This is your assumption, not our fee.' },
+  { key: 'otherCosts', label: 'Monthly service fees & other marketing costs', unit: '$', min: 0, max: 1000000, step: '0.01', example: 1000, help: 'Include your service fee plus any creative, software, usage, and setup cost allocated to this month. Package presets load only the recurring service fee; add other costs yourself.' },
   { key: 'costPerLead', label: 'Advertising cost per lead', unit: '$', min: 0.01, max: 1000000, step: '0.01', example: 40, help: 'Ad spend divided by inquiries from that spend. Use a comparable campaign, offer, and period.' },
   { key: 'bookingRate', label: 'Lead-to-booking rate', unit: '%', min: 0, max: 100, step: '0.1', example: 50, help: 'Of the people who inquire, how many book an appointment?' },
   { key: 'showRate', label: 'Booked-appointment show rate', unit: '%', min: 0, max: 100, step: '0.1', example: 75, help: 'Of the people who book, how many attend?' },

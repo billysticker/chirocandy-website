@@ -1,6 +1,7 @@
 ---
 import { fields } from '@/lib/marketing-calculator.mjs';
 import { SITE } from '@/lib/site';
+import { packages, formatFee } from '@/data/pricing.mjs';
 const groups = [
   { title: 'Your investment', subtitle: 'One month of acquisition spending', fields: fields.slice(0, 3) },
   { title: 'Your conversion path', subtitle: 'Use each stage’s own denominator', fields: fields.slice(3, 6) },
@@ -20,6 +21,15 @@ const groups = [
         <fieldset>
           <legend><span class="step-number">0{index + 1}</span>{group.title}</legend>
           <p class="group-help">{group.subtitle}</p>
+          {index === 0 && <div class="package-picker">
+            <label for="calc-package">Start with a ChiroCandy package (optional)</label>
+            <select id="calc-package" name="packagePreset" aria-describedby="package-help package-status">
+              <option value="">Use my own service costs</option>
+              {packages.map(plan => <option value={plan.id}>{plan.name} — {formatFee(plan.fee)}/mo</option>)}
+            </select>
+            <p class="field-help" id="package-help">Choosing a package replaces the service-cost input with its monthly fee. Add any setup allocation, usage charges, or other costs to that amount. Enter your full advertising budget separately, including any Google or Streaming TV spend.</p>
+            <p class="field-help" id="package-status" role="status">All budget and practice inputs stay editable. <a href="/pricing/">See package details and terms →</a></p>
+          </div>}
           <div class="calc-fields">
             {group.fields.map((field) => (
               <div class="calc-field">
@@ -73,7 +83,7 @@ const groups = [
         <p class="result-fine">Fractional people represent scenario averages. Collections occur over the cohort’s first 90 days, not necessarily in the acquisition month. Fixed overhead and taxes are excluded. This is a planning scenario, not a forecast or a ChiroCandy quote.</p>
         <button type="button" class="calc-print" data-print>Print this scenario <span aria-hidden="true">↗</span></button>
       </div>
-      <a class="btn btn--primary calc-cta" href={SITE.scheduleUrl}>Talk through my numbers <span aria-hidden="true">→</span></a>
+      <a class="btn btn--primary calc-cta" href={SITE.scheduleUrl}>Discuss My Numbers on a Strategy Call <span aria-hidden="true">→</span></a>
       <p class="result-fine">Bring your assumptions to a strategy call. No email is required to use this tool.</p>
     </aside>
   </div>
@@ -81,6 +91,7 @@ const groups = [
 
 <script>
   import { calculateMarketing, exampleInputs, fields } from '@/lib/marketing-calculator.mjs';
+  import { packages, formatFee, typicalSetupFee } from '@/data/pricing.mjs';
   const root = document.querySelector<HTMLElement>('[data-calculator]');
   if (root) {
     const form = root.querySelector<HTMLFormElement>('form')!;
@@ -88,6 +99,8 @@ const groups = [
     const empty = root.querySelector<HTMLElement>('[data-empty]')!;
     const status = root.querySelector<HTMLElement>('[data-status]')!;
     const mode = root.querySelector<HTMLElement>('[data-result-mode]')!;
+    const packageSelect = root.querySelector<HTMLSelectElement>('#calc-package')!;
+    const packageStatus = root.querySelector<HTMLElement>('#package-status')!;
     const usd = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
     const number = new Intl.NumberFormat('en-US', { maximumFractionDigits: 1 });
     const fieldInputs = () => Array.from(form.querySelectorAll<HTMLInputElement>('input'));
@@ -143,26 +156,53 @@ const groups = [
     root.querySelector<HTMLButtonElement>('[data-calculate]')!.disabled = false;
     root.querySelectorAll<HTMLButtonElement>('[data-example], [data-clear]').forEach(button => { button.hidden = false; });
     form.addEventListener('submit', event => { event.preventDefault(); render(); });
-    form.addEventListener('input', () => {
+    const invalidate = () => {
       illustrative = false;
       clearErrors();
       results.hidden = true;
       empty.hidden = false;
       mode.textContent = 'Inputs changed. Recalculate to update your scenario.';
       status.textContent = 'Your numbers have changed. Select Calculate my scenario to update the result.';
+    };
+    const applyPackage = () => {
+      invalidate();
+      const plan = packages.find(plan => plan.id === packageSelect.value);
+      if (!plan) {
+        packageStatus.textContent = 'Using your own service-cost input. Include all costs for the month you are modeling.';
+        return;
+      }
+      (form.elements.namedItem('otherCosts') as HTMLInputElement).value = String(plan.fee);
+      packageStatus.textContent = `${plan.name}: ${formatFee(plan.fee)}/month service fee loaded. Typical setup of ${formatFee(typicalSetupFee)} and usage charges are not included in this input.${plan.websiteTerm ? ' Custom website requires a 12-month website agreement.' : ''}`;
+      status.textContent = 'Package fee loaded. Add other applicable costs and enter your advertising budget and practice assumptions.';
+    };
+    form.addEventListener('input', event => {
+      invalidate();
+      if ((event.target as HTMLInputElement).name === 'otherCosts') {
+        packageSelect.value = '';
+        packageStatus.textContent = 'Using your edited service-cost total. Include the service fee plus any setup allocation and applicable usage costs.';
+      }
     });
+    packageSelect.addEventListener('change', applyPackage);
     root.querySelector('[data-example]')!.addEventListener('click', () => {
+      packageSelect.value = '';
+      packageStatus.textContent = 'Illustrative example loaded. Its service costs are not a ChiroCandy package fee.';
       fields.forEach(({ key }) => { (form.elements.namedItem(key) as HTMLInputElement).value = String(exampleInputs[key]); });
       illustrative = true;
       render();
     });
     root.querySelector('[data-clear]')!.addEventListener('click', () => {
       form.reset(); clearErrors(); illustrative = false; results.hidden = true; empty.hidden = false;
+      packageStatus.textContent = 'All budget and practice inputs stay editable. Choose a package or enter your own costs.';
       mode.textContent = 'Enter your assumptions to see the result.';
       status.textContent = 'Numbers cleared. Enter your inputs or try an example.';
       fieldInputs()[0].focus();
     });
     root.querySelector('[data-print]')!.addEventListener('click', () => window.print());
+    const requestedPackage = new URLSearchParams(window.location.search).get('package');
+    if (packages.some(plan => plan.id === requestedPackage)) {
+      packageSelect.value = requestedPackage!;
+      applyPackage();
+    }
   }
 </script>
 
@@ -171,7 +211,10 @@ const groups = [
   .calc-topline { display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; padding-bottom: 1.8rem; }
   .calc-topline h2 { margin: .4rem 0; font-size: clamp(1.7rem, 3vw, 2.4rem); }
   button { font-family: inherit; }
-  button:focus-visible, input:focus-visible, a:focus-visible { outline: 3px solid var(--green); outline-offset: 4px; }
+  button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible { outline: 3px solid var(--green); outline-offset: 4px; }
+  .package-picker { padding: 1.2rem; margin-bottom: 1.5rem; border: 1px solid var(--line); border-radius: 12px; background: var(--panel); }
+  .package-picker select { width: 100%; min-width: 0; font: inherit; font-size: .85rem; color: var(--white); background: #0b2037; border: 1px solid #41566e; border-radius: 8px; padding: .8rem .6rem; }
+  .package-picker a { color: var(--green); }
   .calc-example, .calc-print, .calc-clear { color: var(--green); background: transparent; border: 1px solid var(--line); border-radius: 10px; padding: .8rem 1rem; font-size: .9rem; cursor: pointer; }
   .calc-layout { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 2rem; align-items: start; }
   fieldset { border: 0; border-top: 1px solid var(--line); margin: 0 0 2.3rem; padding: 1.5rem 0 0; min-width: 0; }
@@ -219,7 +262,7 @@ const groups = [
     .calculator { color: #111; width: 100%; padding: 0; }
     .calc-layout { grid-template-columns: 1fr 1fr; gap: 1rem; }
     .calc-results { position: static; background: white; border: 1px solid #777; border-radius: 0; padding: 1rem; }
-    .calc-example, .calc-actions, .calc-print, .calc-cta, .calc-status, .field-help, .group-help, .empty-steps { display: none; }
+    .calc-example, .calc-actions, .calc-print, .calc-cta, .calc-status, .field-help, .group-help, .empty-steps, .package-picker { display: none; }
     .calculator :is(h2, h3, p, span, label, legend, dt, dd, output, b, input) { color: #111 !important; }
     .calculator input { padding: .2rem; }
     .input-shell { background: white; border: 0; }
