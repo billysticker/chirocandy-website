@@ -1,0 +1,77 @@
+<section class="patient-value" data-patient-value aria-labelledby="patient-value-heading">
+  <h2 id="patient-value-heading">1. Know the lifetime value of a patient</h2>
+  <p>Start with the average amount your practice collects from one patient over their full relationship with you, after refunds. This is collections-based lifetime value (LTV), before the cost of providing care.</p>
+  <label for="patient-ltv">Patient lifetime value ($)</label>
+  <input id="patient-ltv" type="number" inputmode="decimal" min="0" step=".01" placeholder="Enter your known LTV or estimate below" aria-describedby="ltv-help ltv-status" />
+  <p class="help" id="ltv-help">Use a comparable patient group with enough history. Divide that group’s lifetime collections by its patient count; total practice revenue divided by new patients mixes different groups.</p>
+  <details>
+    <summary>Don’t know your LTV? Estimate it here.</summary>
+    <form data-ltv-form novalidate autocomplete="off">
+      <div class="estimate-fields">
+        <div><label for="ltv-collections">Average collections per visit ($)</label><input id="ltv-collections" name="collections" type="number" inputmode="decimal" required min="0" max="1000000" step=".01" placeholder="For example, 75" aria-describedby="ltv-estimate-help ltv-status" /></div>
+        <div><label for="ltv-visits">Average visits over a patient’s lifetime</label><input id="ltv-visits" name="visits" type="number" inputmode="decimal" required min=".01" max="10000" step=".01" placeholder="For example, 40" aria-describedby="ltv-estimate-help ltv-status" /></div>
+      </div>
+      <p class="help" id="ltv-estimate-help">Average collections per visit × average lifetime visits. Include repeat care over the full relationship. Future visits are an assumption, so use a realistic estimate.</p>
+      <button class="btn btn--secondary" type="submit" disabled>Estimate my patient LTV →</button>
+    </form>
+  </details>
+  <p class="help" id="ltv-status" role="status">Your LTV is the starting point for understanding long-term patient value.</p>
+  <p class="timing-note">Next, use first-year collections for your growth goal and first-90-day collections for marketing break-even. Lifetime value can include years of care, so it does not automatically fill those shorter-term inputs.</p>
+  <noscript><p>To estimate LTV, multiply average collections per visit by average visits over the full patient relationship.</p></noscript>
+</section>
+<script>
+  import { estimatePatientValue } from '@/lib/patient-value.mjs';
+  const root = document.querySelector<HTMLElement>('[data-patient-value]');
+  if (root) {
+    const ltv = root.querySelector<HTMLInputElement>('#patient-ltv')!;
+    const form = root.querySelector<HTMLFormElement>('form')!;
+    const status = root.querySelector<HTMLElement>('#ltv-status')!;
+    const inputs = [...form.querySelectorAll<HTMLInputElement>('input')];
+    let estimated = false;
+    form.querySelector<HTMLButtonElement>('button')!.disabled = false;
+    ltv.addEventListener('input', () => {
+      estimated = false;
+      const valid = ltv.value !== '' && ltv.validity.valid && Number.isFinite(ltv.valueAsNumber);
+      ltv.toggleAttribute('aria-invalid', false);
+      if (ltv.value !== '' && !valid) ltv.setAttribute('aria-invalid', 'true');
+      status.textContent = valid ? 'Your entered LTV is a long-term collections figure, before care costs.' : ltv.value === '' ? 'Enter your known LTV or use the estimator.' : 'Enter a lifetime value of zero or more.';
+    });
+    form.addEventListener('input', () => {
+      inputs.forEach(input => input.removeAttribute('aria-invalid'));
+      if (estimated) { ltv.value = ''; estimated = false; }
+      status.textContent = 'Estimate inputs changed. Calculate again to update your LTV.';
+    });
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+      inputs.forEach(input => input.removeAttribute('aria-invalid'));
+      const invalid = inputs.filter(input => !input.validity.valid);
+      const value = estimatePatientValue(inputs[0].value, inputs[1].value);
+      if (invalid.length || value === null) {
+        invalid.forEach(input => input.setAttribute('aria-invalid', 'true'));
+        status.textContent = 'Enter collections per visit from $0 to $1,000,000 and average lifetime visits from 0.01 to 10,000.';
+        (invalid[0] || inputs[0]).focus();
+        return;
+      }
+      ltv.value = String(value);
+      ltv.removeAttribute('aria-invalid');
+      estimated = true;
+      status.textContent = `Estimated patient LTV: ${new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(value)} in lifetime collections, before care costs.`;
+    });
+  }
+</script>
+<style>
+  .patient-value { padding: 1.5rem; margin-bottom: 2rem; border: 1px solid var(--line); border-radius: 12px; background: var(--panel); }
+  h2 { font-size: 1.25rem; margin-top: 0; }
+  p { color: var(--muted); max-width: 80ch; }
+  label { display: block; font-size: .85rem; font-weight: 600; margin-bottom: .6rem; }
+  input { display: block; box-sizing: border-box; width: 100%; min-width: 0; padding: .85rem; color: var(--white); background: #0b2037; border: 1px solid #41566e; border-radius: 10px; font: inherit; }
+  #patient-ltv { max-width: 460px; }
+  input::placeholder { color: var(--muted); font-size: .8rem; }
+  .help, .timing-note { font-size: .85rem; line-height: 1.6; }
+  .timing-note { margin-bottom: 0; }
+  summary { cursor: pointer; color: var(--green); padding-block: .8rem; }
+  .estimate-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; padding-top: .8rem; }
+  :is(input, button, summary):focus-visible { outline: 3px solid var(--green); outline-offset: 3px; }
+  input[aria-invalid="true"] { outline: 2px solid #ffb6a8; }
+  @media (max-width: 600px) { .estimate-fields { grid-template-columns: 1fr; } .patient-value { padding: 1rem; } }
+</style>

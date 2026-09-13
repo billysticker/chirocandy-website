@@ -31,6 +31,8 @@ Business information must remain client-specific when this workflow becomes a re
 
 ### Growth-goal planner
 
+The goal card opens by default. Its first step asks for patient lifetime value (LTV), with an optional estimator: average collections per visit × average visits across the full patient relationship. This is lifetime collections before care costs. Editing estimated assumptions clears the derived LTV until recalculation. LTV is not automatically substituted for first-year or first-90-day collections; those time windows remain explicit in the following tools.
+
 The training-inspired planner has no hard-coded calendar year. Inputs: current annual collections, target annual collections, first-year collections per added patient, and weeks open. It calculates the positive collections gap, rounds required additional patients up, and divides that count into monthly/weekly acquisition pace.
 
 It assumes the existing business stays steady. A patient's first-year collections can extend beyond the target calendar year, especially for patients acquired late in the year. The UI describes this timing limit; it does not promise the target-year cash will be collected.
@@ -58,7 +60,7 @@ Outputs: funnel-stage counts, total spend, cost per acquired patient, cohort col
 
 - Baseline build: 240 routes succeeded before changes.
 - Updated production build: 243 routes succeeded.
-- `npm test`: 12 passing tests covering both calculators, invalid inputs, zero cases, precision, and economic definitions.
+- `npm test`: 14 passing tests covering the calculators and LTV estimator, invalid inputs, zero cases, precision, and economic definitions.
 - Rendered HTML checks: all eight affected content pages have one H1, expected canonical URLs, parseable JSON-LD, and resolving internal destinations. The three new routes appear in the XML sitemap.
 - Browser: desktop and 390px mobile views inspected; examples, zero-show results, invalid percentage handling, clear actions, and growth-planner expansion exercised. No calculator page errors or framework overlays observed.
 - No live form was submitted or production deployment promoted as part of verification.
