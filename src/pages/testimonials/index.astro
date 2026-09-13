@@ -1,11 +1,13 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import PageHero from '@/components/PageHero.astro';
+import BuyerResources from '@/components/BuyerResources.astro';
+import { CASE_STUDIES } from '@/data/case-studies';
 import { buildGraph, breadcrumbSchema, webPageSchema } from '@/lib/schema';
 import { SITE } from '@/lib/site';
 import testimonials from '@/data/testimonials.json';
 
-const title = 'Testimonials | ChiroCandy';
+const title = 'Client Reviews, Testimonials & Case Studies | ChiroCandy';
 const description =
   'Watch chiropractic and healthcare practice owners describe working with ChiroCandy. Video testimonials from doctors who used the growth system to get known, found, and trusted.';
 const url = `${SITE.url}/testimonials/`;
@@ -21,10 +23,15 @@ const schema = buildGraph(
 <BaseLayout title={title} description={description} canonical={url} schema={schema}>
   <PageHero
     title="Proof from the practices we serve"
-    answer="These doctors used ChiroCandy to grow patient flow. Watch the videos, then book a strategy call if you want the same system in your market."
+    answer="Hear practice owners describe their experiences with ChiroCandy, then examine the source material behind our case studies. Individual experiences are not a promise of results for another practice."
     eyebrow="Results"
   />
+  <section class="proof-intro container">
+    <div class="prose"><h2>Look at the experience and the evidence.</h2><p>This collection contains {testimonials.length} client videos published by ChiroCandy. It is a selected testimonial collection, not an independent review-platform rating or a count of unique clients.</p><p><a href="#client-videos">Browse the videos</a> or use the case studies below to examine campaign context and sources. Lead counts, booked appointments, attended visits, and collected revenue are different measures.</p></div>
+    <div class="study-links">{CASE_STUDIES.map(study => <a href={`/case-studies/${study.slug}/`}><strong>{study.practice}</strong><span>{study.sourceLabel}</span><span class="study-link-label">Read the case study →</span></a>)}</div>
+  </section>
   <section class="section">
+    <div class="container"><h2 id="client-videos">Client video library</h2><p class="video-note">Watch the original videos for each speaker’s wording and context.</p></div>
     <div class="container grid">
       {
         testimonials.map((item) => (
@@ -39,6 +46,7 @@ const schema = buildGraph(
               />
             ) : null}
             <h2>{item.name}</h2>
+            {item.youtubeId && <a class="source-link" href={`https://www.youtube.com/watch?v=${item.youtubeId}`} target="_blank" rel="noopener noreferrer">Watch the source on YouTube ↗</a>}
           </article>
         ))
       }
@@ -47,9 +55,16 @@ const schema = buildGraph(
       <a class="btn btn--primary" href={SITE.scheduleUrl}>Book a Strategy Call</a>
     </div>
   </section>
+  <BuyerResources />
 </BaseLayout>
 
 <style>
+  .proof-intro { padding-top: 2rem; }
+  .study-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-top: 2rem; }
+  .study-links a { display: grid; align-content: start; gap: .7rem; padding: 1.3rem; border: 1px solid var(--line); border-radius: 14px; }
+  .study-links span, .video-note { font-size: .85rem; color: var(--muted); }
+  .study-links .study-link-label, .source-link { color: var(--green); }
+  .source-link { display: block; padding: 0 1.1rem 1.2rem; font-size: .8rem; }
   .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

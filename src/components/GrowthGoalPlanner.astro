@@ -1,0 +1,98 @@
+---
+import { growthFields } from '@/lib/growth-planner.mjs';
+---
+<section class="growth-planner container" data-growth-planner aria-labelledby="growth-heading">
+  <details>
+    <summary><span><span class="eyebrow">Start with the goal</span><strong id="growth-heading">How many more patients would your growth goal take?</strong></span><span class="expand-icon" aria-hidden="true">+</span></summary>
+    <div class="growth-content">
+      <p>Work backward from an annual collections goal. This planning model assumes existing collections hold steady and added patients provide the first-year value you enter.</p>
+      <form novalidate data-growth-form autocomplete="off">
+        <div class="growth-fields">{growthFields.map(field => (
+          <div><label for={`growth-${field.key}`}>{field.label}</label><div class="growth-input"><span aria-hidden="true">{field.unit}</span><input id={`growth-${field.key}`} name={field.key} type="number" inputmode="decimal" required min={field.min} max={field.max} step={field.key === 'weeksOpen' ? '1' : '.01'} placeholder="Enter your number" aria-describedby={`growth-error-${field.key}`} /></div><p class="growth-error" id={`growth-error-${field.key}`} hidden></p></div>
+        ))}</div>
+        <p class="growth-help">Use collections during an added patient’s first 12 months, after refunds. Do not use total practice revenue divided by new-patient count. This 12-month value is different from the 90-day value in the campaign calculator below.</p>
+        <div class="growth-actions"><button type="submit" class="btn btn--secondary" data-growth-calculate disabled>Calculate my growth goal →</button><button type="button" data-growth-example hidden>Try an example</button><button type="button" data-growth-clear hidden>Clear</button></div>
+      </form>
+      <p class="growth-status" data-growth-status role="status">Enter your numbers to explore the goal.</p>
+      <div data-growth-results hidden>
+        <dl class="growth-results"><div><dt>Annual collections gap</dt><dd data-growth-output="gap">—</dd></div><div><dt>Additional patients in the planned cohort</dt><dd data-growth-output="additionalPatients">—</dd></div><div><dt>Planned monthly acquisition pace</dt><dd data-growth-output="perMonth">—</dd></div><div><dt>Planned weekly acquisition pace</dt><dd data-growth-output="perWeek">—</dd></div></dl>
+        <p class="growth-help">This is goal math, not a forecast of cash collected within the target year. Patients acquired late in the year can produce part of their first-year collections in the following year. Retention, capacity, timing, and changes in your existing patient base also affect the goal. Use the campaign calculator below to explore an acquisition budget.</p>
+      </div>
+      <noscript><p>Enable JavaScript for this planner. The formula is (target annual collections − current annual collections) ÷ first-year collections per added patient, rounded up. Divide that patient count by 12 or your weeks open to plan the pace.</p></noscript>
+    </div>
+  </details>
+</section>
+<script>
+  import { calculateGrowth, growthFields } from '@/lib/growth-planner.mjs';
+  const root = document.querySelector<HTMLElement>('[data-growth-planner]');
+  if (root) {
+    const form = root.querySelector<HTMLFormElement>('form')!;
+    const results = root.querySelector<HTMLElement>('[data-growth-results]')!;
+    const status = root.querySelector<HTMLElement>('[data-growth-status]')!;
+    let example = false;
+    const clearErrors = () => growthFields.forEach(field => {
+      (form.elements.namedItem(field.key) as HTMLInputElement).removeAttribute('aria-invalid');
+      const error = root.querySelector<HTMLElement>(`#growth-error-${field.key}`)!;
+      error.hidden = true; error.textContent = '';
+    });
+    const calculate = () => {
+      clearErrors();
+      const { errors, result } = calculateGrowth(Object.fromEntries(new FormData(form).entries()));
+      if (!result) {
+        results.hidden = true;
+        Object.entries(errors).forEach(([key, message]) => {
+          (form.elements.namedItem(key) as HTMLInputElement).setAttribute('aria-invalid', 'true');
+          const error = root.querySelector<HTMLElement>(`#growth-error-${key}`)!;
+          error.textContent = String(message); error.hidden = false;
+        });
+        status.textContent = 'Check the highlighted inputs before calculating.';
+        form.querySelector<HTMLInputElement>('[aria-invalid="true"]')?.focus();
+        return;
+      }
+      root.querySelectorAll<HTMLElement>('[data-growth-output]').forEach(el => {
+        const key = el.dataset.growthOutput! as keyof typeof result;
+        el.textContent = new Intl.NumberFormat('en-US', key === 'gap' ? { style: 'currency', currency: 'USD', maximumFractionDigits: 0 } : { maximumFractionDigits: 1 }).format(result[key]);
+      });
+      results.hidden = false;
+      status.textContent = `${example ? 'Illustrative example' : 'Your inputs'}: ${result.additionalPatients.toLocaleString('en-US')} additional patients in the planned cohort. See the timing assumptions below.`;
+    };
+    root.querySelector<HTMLButtonElement>('[data-growth-calculate]')!.disabled = false;
+    root.querySelectorAll<HTMLButtonElement>('[data-growth-example], [data-growth-clear]').forEach(button => { button.hidden = false; });
+    form.addEventListener('submit', event => { event.preventDefault(); calculate(); });
+    form.addEventListener('input', () => { example = false; results.hidden = true; clearErrors(); status.textContent = 'Inputs changed. Recalculate your growth goal.'; });
+    root.querySelector('[data-growth-example]')!.addEventListener('click', () => { growthFields.forEach(field => { (form.elements.namedItem(field.key) as HTMLInputElement).value = String(field.example); }); example = true; calculate(); });
+    root.querySelector('[data-growth-clear]')!.addEventListener('click', () => { form.reset(); clearErrors(); results.hidden = true; example = false; status.textContent = 'Numbers cleared.'; form.querySelector('input')!.focus(); });
+  }
+</script>
+<style>
+  .growth-planner { margin-bottom: 2rem; }
+  details { border: 1px solid var(--line); border-radius: 16px; background: rgba(18, 57, 100, .16); }
+  summary { padding: 1.5rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+  summary > span:first-child { display: grid; gap: .5rem; }
+  summary::-webkit-details-marker { display: none; }
+  summary strong { font-family: var(--font-headline); font-size: 1.15rem; line-height: 1.4; }
+  .expand-icon { color: var(--green); font-size: 1.8rem; }
+  details[open] .expand-icon { transform: rotate(45deg); }
+  .growth-content { padding: 0 1.5rem 1.5rem; }
+  .growth-content > p { max-width: 75ch; color: var(--muted); }
+  .growth-fields, .growth-results { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.2rem; }
+  label { display: block; font-size: .85rem; font-weight: 600; min-height: 3rem; }
+  .growth-input { display: flex; align-items: center; background: #0b2037; border: 1px solid #41566e; border-radius: 10px; }
+  .growth-input span { padding-left: .8rem; color: var(--green); }
+  input { width: 100%; min-width: 0; color: var(--white); background: transparent; border: 0; padding: .8rem; font: inherit; font-size: .9rem; }
+  input::placeholder { color: var(--muted); font-size: .8rem; }
+  :is(input, button, summary):focus-visible { outline: 3px solid var(--green); outline-offset: 3px; }
+  input[aria-invalid="true"] { outline: 2px solid #ffb6a8; }
+  .growth-help, .growth-status, .growth-error { font-size: .8rem; color: var(--muted); }
+  .growth-error { color: #ffb6a8; }
+  .growth-actions { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+  .growth-actions button { cursor: pointer; }
+  .growth-actions button:not(.btn) { color: var(--green); border: 1px solid var(--line); background: transparent; padding: .9rem; border-radius: 10px; font: inherit; font-size: .85rem; }
+  .growth-results { padding-top: 1.5rem; border-top: 1px solid var(--line); }
+  dt { color: var(--muted); font-size: .8rem; }
+  dd { margin: .5rem 0; color: var(--green); font-family: var(--font-headline); font-size: 1.8rem; overflow-wrap: anywhere; }
+  [hidden] { display: none !important; }
+  @media (max-width: 850px) { .growth-fields, .growth-results { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 480px) { .growth-fields, .growth-results { grid-template-columns: 1fr; } label { min-height: 0; margin-bottom: .5rem; } }
+  @media print { .growth-planner { display: none; } }
+</style>

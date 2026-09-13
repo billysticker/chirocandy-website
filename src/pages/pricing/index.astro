@@ -1,0 +1,66 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import BuyerResources from '@/components/BuyerResources.astro';
+import { buildGraph, breadcrumbSchema, webPageSchema } from '@/lib/schema';
+import { SITE } from '@/lib/site';
+const title = 'Chiropractic Marketing Costs & Budget Guide | ChiroCandy';
+const description = 'Understand advertising spend, management fees, setup work, and ongoing costs. Plan a chiropractic marketing budget and explore your break-even numbers.';
+const url = `${SITE.url}/pricing/`;
+const schema = buildGraph(webPageSchema({ url, name: title, description }), breadcrumbSchema([{ name: 'Home', url: `${SITE.url}/` }, { name: 'Marketing costs', url }]));
+const costs = [
+  ['Advertising spend', 'The budget paid to platforms such as Meta and Google.', 'Is media spend included in the quote or paid separately?'],
+  ['Strategy and management', 'The people and work behind planning, campaign management, reporting, and optimization.', 'Which channels, locations, and deliverables are included?'],
+  ['Setup and creative', 'Initial campaign work, landing pages, tracking, websites, or content production.', 'What is one-time, what recurs, and what would require an additional quote?'],
+  ['Software and follow-up', 'Tools used for tracking, communication, scheduling, and lead follow-up.', 'Are subscriptions, usage charges, and third-party costs included?'],
+];
+---
+<BaseLayout title={title} description={description} canonical={url} schema={schema}>
+  <PageHero eyebrow="Plan your investment" title="A clear budget starts with the whole picture." answer="A marketing budget can include advertising spend, management, creative, setup, and follow-up tools. Compare those components together, then work backward from your patient economics.">
+    <div class="hero-actions"><a class="btn btn--primary" href="/marketing-calculator/">Calculate my break-even →</a><a class="btn btn--secondary" href={SITE.scheduleUrl}>Discuss my practice</a></div>
+  </PageHero>
+  <section class="section">
+    <div class="container">
+      <div class="prose"><h2>What does chiropractic marketing cost?</h2><p>The useful number is your total investment for a defined scope: which services you need, the markets you want to reach, the assets already in place, and the work your team will handle. A low management fee and a low total cost are not necessarily the same thing.</p><p>For ChiroCandy’s current fees and a scope for your practice, <a href={SITE.scheduleUrl}>request a strategy call</a>. This guide explains the cost components; the calculator uses your own inputs and does not generate a ChiroCandy quote.</p></div>
+      <div class="table-wrap" tabindex="0" role="region" aria-label="Marketing budget cost components">
+        <table><caption>Compare the complete investment</caption><thead><tr><th scope="col">Budget component</th><th scope="col">What it covers</th><th scope="col">What to clarify</th></tr></thead><tbody>{costs.map(row => <tr>{row.map((cell, i) => i === 0 ? <th scope="row">{cell}</th> : <td>{cell}</td>)}</tr>)}</tbody></table>
+      </div>
+      <div class="prose">
+        <h2>What can increase the investment?</h2>
+        <p>More locations or services, additional advertising channels, new website work, frequent creative production, and more involved reporting or integrations can increase the scope. Competitive markets can also change how much advertising is needed to test a campaign.</p>
+        <h2>What can keep costs down?</h2>
+        <p>A focused launch, usable photography and video, a working website, reliable tracking, and clear ownership of follow-up can reduce duplicated work. Start with the services that address a demonstrated bottleneck rather than buying every channel at once.</p>
+        <h2>Why do agency quotes vary so much?</h2>
+        <p>Compare deliverables, specialist involvement, reporting, communication, and who does the work. A smaller scope can reasonably cost less. A higher fee may cover more work, but price by itself does not prove better results.</p>
+        <p>Use the <a href="/compare-marketing-agencies/">agency comparison guide</a> to put proposals side by side.</p>
+        <h2>What is the difference between setup and ongoing costs?</h2>
+        <p>Initial work gets assets, campaigns, and measurement in place. Ongoing work runs and improves the program. Compare both over the same time period, including third-party charges and any costs that continue after an agreement ends.</p>
+        <h2>How much should my practice spend?</h2>
+        <p>Start with what your practice can invest while waiting for collections, how many new patients your team can serve, and what remains from patient collections after delivering care. A percentage of revenue alone cannot answer those questions.</p>
+        <p>The <a href="/marketing-calculator/">marketing budget calculator</a> lets you explore different spending levels, conversion rates, and 90-day patient values. It shows the patient count needed to cover marketing costs under those assumptions.</p>
+        <h2>Which ChiroCandy option should I discuss?</h2>
+        <p>If you want help executing, review the <a href="/done-for-you-program/">Done-For-You program</a>. If you have an internal team, explore <a href="/training-program/">training</a>. For a specific need, see our <a href="/services/">services</a>. Confirm the exact work and pricing in your proposal rather than assuming every service is bundled.</p>
+        <h2>What should I confirm before signing?</h2>
+        <ul><li>Management fees, platform spend, setup charges, and usage costs.</li><li>Included deliverables, launch dependencies, and who handles follow-up.</li><li>Agreement length, renewal, cancellation notice, and any exit costs.</li><li>Ownership and access for ad accounts, domains, websites, creative, and data.</li><li>Payment timing and any available payment arrangements.</li></ul>
+        <h2>When might more marketing be the wrong next step?</h2>
+        <p>If your team cannot respond to existing inquiries, has no appointment capacity, or cannot measure whether new patients arrive, those problems deserve attention first. More leads do not fix a broken handoff. Use the strategy call to identify the constraint before expanding spend.</p>
+      </div>
+      <div class="budget-callout"><div><p class="eyebrow">Put the guide to work</p><h2>What would break-even look like for you?</h2><p>Use your numbers. See each step from lead to patient.</p></div><a class="btn btn--primary" href="/marketing-calculator/">Run my scenario →</a></div>
+    </div>
+  </section>
+  <BuyerResources />
+</BaseLayout>
+<style>
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.7rem; }
+  .table-wrap { overflow-x: auto; margin-block: 2.5rem; border: 1px solid var(--line); border-radius: 16px; }
+  table { border-collapse: collapse; text-align: left; width: 100%; min-width: 640px; font-size: .9rem; }
+  caption { text-align: left; padding: 1.3rem; color: var(--green); font-weight: 600; }
+  th, td { padding: 1.1rem 1.3rem; vertical-align: top; border-top: 1px solid var(--line); }
+  td { color: var(--muted); }
+  thead, tbody th { background: var(--panel); }
+  tbody th { width: 22%; }
+  .budget-callout { display: flex; gap: 2rem; align-items: center; justify-content: space-between; background: var(--panel); padding: 2rem; border: 1px solid var(--line); border-radius: 20px; margin-top: 3rem; }
+  .budget-callout h2 { max-width: 24ch; }
+  .budget-callout p { color: var(--muted); }
+  @media (max-width: 700px) { .budget-callout { flex-direction: column; align-items: start; } }
+</style>

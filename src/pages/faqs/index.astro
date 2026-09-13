@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import PageHero from '@/components/PageHero.astro';
+import BuyerResources from '@/components/BuyerResources.astro';
 import { buildGraph, breadcrumbSchema, faqPageSchema, webPageSchema } from '@/lib/schema';
 import { SITE } from '@/lib/site';
 import faqs from '@/data/faqs.json';
@@ -11,13 +12,15 @@ const description =
 
 const url = `${SITE.url}/faqs/`;
 const schema = buildGraph(
-  webPageSchema({ url, name: title, description, dateModified: '2026-06-09' }),
+  webPageSchema({ url, name: title, description }),
   breadcrumbSchema([
     { name: 'Home', url: `${SITE.url}/` },
     { name: 'FAQs', url },
   ]),
   faqPageSchema(faqs)
 );
+const categories = ['Working together', 'Costs and commitments', 'Measurement and results', 'Privacy and responsibility'];
+const categoryId = (category: string) => category.toLowerCase().replace(/ /g, '-');
 ---
 
 <BaseLayout title={title} description={description} canonical={url} schema={schema}>
@@ -28,19 +31,26 @@ const schema = buildGraph(
 
   <section class="section">
     <div class="container">
-      <dl class="faq-list">
-        {faqs.map((faq) => (
-          <div class="faq-item reveal" data-animate>
-            <dt>{faq.question}</dt>
-            <dd set:html={faq.answer.replace(/Chiropractic Facebook ads in the U\.S\./g, '<a href="/services/facebook-advertising/">Chiropractic Facebook ads</a>')} />
-          </div>
-        ))}
-      </dl>
+      <nav class="faq-topics" aria-label="FAQ topics">{categories.map(category => <a href={`#${categoryId(category)}`}>{category}</a>)}</nav>
+      {categories.map(category => (
+        <section class="faq-group" id={categoryId(category)} aria-labelledby={`heading-${categoryId(category)}`}>
+          <h2 id={`heading-${categoryId(category)}`}>{category}</h2>
+          <dl class="faq-list">{faqs.filter(faq => faq.category === category).map(faq => (
+            <div class="faq-item"><dt>{faq.question}</dt><dd>{faq.answer}</dd></div>
+          ))}</dl>
+        </section>
+      ))}
+      <p><a href="/pricing/">Explore marketing costs</a> · <a href="/marketing-calculator/">Run a planning scenario</a> · <a href="/privacy-policy/">Read the privacy policy</a></p>
     </div>
   </section>
+  <BuyerResources />
 </BaseLayout>
 
 <style>
+  .faq-topics { display: flex; flex-wrap: wrap; gap: .8rem; margin-bottom: 3rem; }
+  .faq-topics a { border: 1px solid var(--line); padding: .75rem 1rem; border-radius: 12px; font-size: .85rem; }
+  .faq-group { margin-bottom: 3rem; scroll-margin-top: 110px; }
+  .container > p a { color: var(--green); }
   .faq-list {
     margin: 0;
   }

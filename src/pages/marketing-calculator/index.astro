@@ -1,0 +1,78 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import MarketingCalculator from '@/components/MarketingCalculator.astro';
+import GrowthGoalPlanner from '@/components/GrowthGoalPlanner.astro';
+import BuyerResources from '@/components/BuyerResources.astro';
+import { buildGraph, breadcrumbSchema, webPageSchema } from '@/lib/schema';
+import { SITE } from '@/lib/site';
+const title = 'Chiropractic Marketing Budget & Break-Even Calculator | ChiroCandy';
+const description = 'Calculate patient acquisition costs, 90-day collections, and marketing break-even using your own budget and conversion assumptions. No email required.';
+const url = `${SITE.url}/marketing-calculator/`;
+const schema = buildGraph(webPageSchema({ url, name: title, description }), breadcrumbSchema([
+  { name: 'Home', url: `${SITE.url}/` }, { name: 'Marketing costs', url: `${SITE.url}/pricing/` }, { name: 'Marketing calculator', url },
+]));
+---
+<BaseLayout title={title} description={description} canonical={url} schema={schema} bodyClass="calculator-page">
+  <section class="calculator-hero container">
+    <p class="eyebrow">Chiropractic &amp; healthcare practice planning</p>
+    <h1>What would your marketing<br />need to <span>pay for itself?</span></h1>
+    <p class="answer-first">Connect your budget to the patients it would need to acquire. Explore how lead costs, follow-up, and patient collections change the numbers.</p>
+    <div class="hero-notes"><span>Free marketing calculator</span><span>No email required</span><a href="#how-it-works">See the math ↓</a></div>
+  </section>
+  <GrowthGoalPlanner />
+  <MarketingCalculator />
+  <section class="method section--alt" id="how-it-works">
+    <div class="container method-grid">
+      <div><p class="eyebrow">Know what you are measuring</p><h2>One acquisition month.<br />A 90-day view of value.</h2><p>This model follows the patients acquired from one month of paid advertising and estimates what that group collects during each patient’s first 90 days. It does not forecast your practice’s monthly cash flow or total profit.</p><p>Use actual collections from a comparable group of new patients. Billed charges, lifetime value, and total practice revenue are different measures.</p></div>
+      <div class="formula-list">
+        <p><b>Inquiries</b><span>Advertising spend ÷ advertising cost per lead</span></p>
+        <p><b>Acquired patients</b><span>Inquiries × booking rate × show rate × new-patient rate</span></p>
+        <p><b>Contribution per patient</b><span>90-day collections × share left after care costs</span></p>
+        <p><b>After care and marketing costs</b><span>Acquired patients × contribution per patient − total marketing spend</span></p>
+        <p><b>Patients needed to break even</b><span>Total marketing spend ÷ contribution per patient, rounded up</span></p>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container prose">
+      <h2>A worked example</h2>
+      <p>Suppose you spend $2,000 on advertising and $1,000 on other marketing costs. At $40 per inquiry, you generate 50 leads. If 50% book, 75% of those attend, and 80% of attendees become acquired patients, the scenario produces 15 patients.</p>
+      <p>If each of those patients generates $1,000 in collections over 90 days and 60% remains after incremental care costs, that cohort contributes $9,000 before marketing. Subtracting $3,000 in marketing leaves $6,000 before fixed overhead and taxes. Five patients would cover the marketing spend.</p>
+      <p>These numbers illustrate the arithmetic. They are not ChiroCandy pricing, average client results, or a prediction for your practice.</p>
+      <h2>Why include more than advertising spend?</h2>
+      <p>Management fees, software, creative, and allocated setup work are part of acquisition cost. Leaving them out can make a campaign look more profitable than it is. Include costs consistently and avoid counting the same expense both in care costs and marketing.</p>
+      <h2>What if I do not know my conversion rates?</h2>
+      <p>Start with a recent, comparable period in your advertising account and CRM. Use inquiries as the denominator for bookings, bookings for attendance, and attendance for patient acquisition. If those numbers are missing, tracking them is the next useful step. The example button lets you explore the tool without treating an assumption as a benchmark.</p>
+      <h2>Does a positive scenario mean I should increase spending?</h2>
+      <p>It is a starting point for discussion. Check appointment capacity, how quickly collections arrive, retention, and whether lead costs change as spend increases. Actual results may differ from these inputs. Compare the scenario with your own performance before changing a budget.</p>
+      <h2>How is the return calculated?</h2>
+      <p>The displayed return equals the amount left after care and marketing costs divided by total marketing spend. It is not advertising-platform ROAS or net practice profit. With zero total spend, that percentage is undefined. With no contribution per patient and positive spend, break-even is not achievable in the model.</p>
+      <p><a href="/pricing/">Understand the components of a marketing budget →</a></p>
+    </div>
+  </section>
+  <BuyerResources />
+</BaseLayout>
+<style>
+  .calculator-hero { padding-block: clamp(3rem, 7vw, 6rem) 3.2rem; }
+  h1 { font-size: clamp(2.5rem, 5.6vw, 4.6rem); max-width: 950px; margin: 1.2rem 0; letter-spacing: -.045em; line-height: 1.08; }
+  h1 span { color: var(--green); }
+  .answer-first { max-width: 710px; }
+  .hero-notes { display: flex; flex-wrap: wrap; gap: 1rem 1.7rem; margin-top: 1.8rem; font-size: .78rem; color: var(--muted); }
+  .hero-notes a { color: var(--green); }
+  .method { padding-block: 4.5rem; scroll-margin-top: 100px; }
+  .method-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+  .method h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); }
+  .method p { color: var(--muted); font-size: .95rem; }
+  .formula-list p { display: grid; gap: .5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--line); }
+  .formula-list b { color: var(--white); }
+  @media (max-width: 800px) { .method-grid { grid-template-columns: 1fr; gap: 1.5rem; } }
+</style>
+<style is:global>
+  @media print {
+    body.calculator-page { background: white; color: #111; }
+    .calculator-page :is(#nav, .mobile-menu, .site-foot, .cc-bar, .cc-reopen, .method, .section, .hero-notes) { display: none !important; }
+    .calculator-page .calculator-hero { padding: 0 0 1rem; }
+    .calculator-page .calculator-hero h1 { font-size: 1.6rem; color: #111; }
+    .calculator-page .calculator-hero :is(p, span) { color: #111; }
+  }
+</style>
