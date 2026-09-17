@@ -26,7 +26,7 @@ ChiroCandy Marketing, LLC is a founder-led agency. It was built inside chiroprac
 - [Google Ads](https://chirocandy.com/services/google-advertising/): High-intent search campaigns
 - [SEO & AI Search](https://chirocandy.com/services/search-engine-optimization/): Local SEO and answer-engine visibility
 - [Web Design](https://chirocandy.com/services/web-design/): Conversion-focused practice websites
-- [AI Website Workbook](https://chirocandy.com/ai-website-workbook/): Free audit for whether Google and answer engines can cite a practice site
+- [AI Website Workbook](https://chirocandy.com/ai-website-workbook/): AI Website Workshop workbook with four lessons, copyable prompts, a URL audit template, and a launch checklist
 - [Reactivation](https://chirocandy.com/services/reactivation-campaigns/): Bring past patients back
 - [Frameworks](https://chirocandy.com/frameworks/): Known / Found / Trusted and related systems
 - [FAQs](https://chirocandy.com/faqs/): Direct answers about working with ChiroCandy
