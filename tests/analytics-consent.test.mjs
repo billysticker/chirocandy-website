@@ -23,7 +23,7 @@ function browser(saved = null, url = 'https://chirocandy.com/pricing/', storageB
   }
   const location = new URL(url);
   location.reload = () => { reloads++; };
-  const window = { location };
+  const window = { location, addEventListener: (name, handler) => listeners.set(name, [...(listeners.get(name) || []), handler]) };
   const document = {
     referrer: 'https://example.com/article/?email=private@example.com#secret',
     head: { appendChild: script => scripts.push(script.src) },
@@ -107,4 +107,27 @@ test('preview visits and direct thank-you visits cannot create conversions', () 
   assert.deepEqual(thankYou.events(), []);
   thankYou.dispatch('cc:calculator-complete', { detail: { calculator_type: 'arbitrary_value' } });
   assert.deepEqual(thankYou.events(), []);
+});
+
+test('only the embedded calendar success message counts a booking, once, without contact data', () => {
+  const b = browser('accepted', 'https://chirocandy.com/schedule/');
+  const source = {};
+  b.elements.SkKWlvkZrPeFJguQHylX_booking = { contentWindow: source };
+  const valid = { origin: 'https://api.leadconnectorhq.com', source,
+    data: ['msgsndr-booking-complete', { calendarId: 'SkKWlvkZrPeFJguQHylX', fingerprint: 'private-fingerprint', email: 'private@example.com' }] };
+  b.dispatch('message', { ...valid, origin: 'https://example.com' });
+  b.dispatch('message', { ...valid, source: {} });
+  b.dispatch('message', { ...valid, data: ['msgsndr-booking-complete', { calendarId: 'different-calendar' }] });
+  b.dispatch('message', { ...valid, data: ['form-submit', valid.data[1]] });
+  assert.deepEqual(b.events(), []);
+  b.dispatch('message', valid);
+  b.dispatch('message', valid);
+  assert.deepEqual(b.events(), [['event', 'strategy_call_booked', {
+    send_to: 'G-Q7RJFLCYWB', source_path: '/schedule/', transport_type: 'beacon', calendar_id: 'SkKWlvkZrPeFJguQHylX',
+  }]]);
+  const rejected = browser('rejected', 'https://chirocandy.com/schedule/');
+  rejected.elements.SkKWlvkZrPeFJguQHylX_booking = { contentWindow: source };
+  rejected.dispatch('message', valid);
+  rejected.click({ 'data-cookie-choice': 'accepted' });
+  assert.deepEqual(rejected.events(), []);
 });

@@ -194,6 +194,21 @@ import { SITE } from '@/lib/site';
       if (['advertising-growth', 'advertising-search-growth'].includes(detail.package_id)) parameters.package_id = detail.package_id;
       track('calculator_complete', parameters);
     });
+
+    // LeadConnector's booking widget emits this after successful creation.
+    // Trust only our embedded calendar window and its exact origin/calendar ID.
+    // Never forward the provider's fingerprint or submitted contact details.
+    var bookingRecorded = false;
+    window.addEventListener('message', function (event) {
+      var calendarId = 'SkKWlvkZrPeFJguQHylX';
+      var frame = document.getElementById(calendarId + '_booking');
+      if (!loaded || choice !== 'accepted' || bookingRecorded || !frame) return;
+      if (event.origin !== 'https://api.leadconnectorhq.com' || event.source !== frame.contentWindow) return;
+      if (!Array.isArray(event.data) || event.data[0] !== 'msgsndr-booking-complete') return;
+      if (!event.data[1] || event.data[1].calendarId !== calendarId) return;
+      bookingRecorded = true;
+      track('strategy_call_booked', { calendar_id: calendarId });
+    });
   })();
 </script>
 
