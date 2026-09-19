@@ -45,7 +45,7 @@ const faqs = [
         <ul class="core-services">{plan.services.map(id => <li><span aria-hidden="true">✓</span>{services.find(service => service.id === id)!.name}</li>)}</ul>
         <div class="package-extras"><p>Also included in this package</p><ul>{includedExtras.map(service => <li>{service.id === 'streaming' ? 'Streaming TV management' : service.name}</li>)}</ul></div>
         <p class="package-terms">Typical setup: {formatFee(typicalSetupFee)} one time. Ad spend and applicable AI/SMS usage are additional.{plan.websiteTerm && <> Custom website requires a 12-month website agreement.</>}</p>
-        <div class="package-actions"><a class="btn btn--primary" href={SITE.scheduleUrl}>Schedule My Strategy Call →</a><a class="scenario-link" href={`/marketing-calculator/?package=${plan.id}`}>Explore this fee in the calculator ↗</a></div>
+        <div class="package-actions"><a class="btn btn--primary" href={SITE.scheduleUrl}>Schedule My Strategy Call →</a><a class="scenario-link" href={`/marketing-calculator/?package=${plan.id}#advanced-analysis`}>Explore this fee in the calculator ↗</a></div>
       </article>)}
     </div>
     <div class="included-note"><span aria-hidden="true">✓</span><p><strong>Four extras included with either package.</strong> Streaming TV management, Invisible Intent™, Review Boost, and AI CA™ come at no additional service fee. For Streaming TV, you pay the advertising spend. Applicable AI/SMS usage charges are covered in your agreement.</p></div>
