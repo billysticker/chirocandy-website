@@ -1,5 +1,15 @@
 export interface CaseStudy {
   slug: string;
+  dateModified?: string;
+  evidenceSummary?: {
+    title: string;
+    period: string;
+    metrics: { label: string; value: string; meaning: string }[];
+    note: string;
+    definitionsUrl: string;
+    definitionsLabel: string;
+  };
+  relatedResources?: { label: string; url: string; description: string }[];
   practice: string;
   doctor: string;
   city: string;
@@ -84,26 +94,24 @@ export const CASE_STUDIES: CaseStudy[] = [
   },
   {
     slug: 'lifeworks-family-chiropractic-kelowna',
+    dateModified: '2026-09-18',
     practice: 'LifeWorks Family Chiropractic',
     doctor: 'Dr. James Whillans, DC',
     city: 'Kelowna, BC',
     practiceType:
       'Family chiropractic practice in Kelowna, British Columbia. The live Meta offer in this window was a free neuropathy workshop',
     channels: 'Meta (Facebook and Instagram)',
-    headlineStat: '185 leads',
-    headlineLabel: '~$16.06 average CPL on Meta, 90 days',
-    summary:
-      'LifeWorks Family Chiropractic in Kelowna, BC produced 185 Meta leads from June 2 to August 31, 2026 at about $16.06 average cost per lead. The main campaign was a neuropathy workshop using Facebook Lead Forms. These are ad-platform leads, not booked-patient counts from the EHR.',
-    metaDescription:
-      'LifeWorks Family Chiropractic (Kelowna, BC): 185 Meta leads at ~$16.06 CPL, June 2–Aug 31, 2026. Neuropathy workshop Lead Forms.',
+    headlineStat: '185 lead results',
+    headlineLabel: '$14.78 blended CPL across the two lead campaigns',
+    summary: 'LifeWorks Family Chiropractic\'s Meta report shows 185 lead results from June 2 to August 31, 2026: 176 form leads for a neuropathy workshop and 9 website leads. The two lead campaigns spent $2,734.59, or $14.78 per reported lead result. These are ad-platform results, not confirmed new patients.',
+    metaDescription: 'LifeWorks Family Chiropractic: 185 Meta lead results on $2,734.59 in lead-campaign spend, June 2–August 31, 2026. See the source and CPL calculation.',
     sourceLabel: 'Meta Ads Manager campaign report, June 2–August 31, 2026',
     evidenceImage: '/images/case-studies/lifeworks-meta-ads-jun-aug-2026.png',
     evidenceWidth: 2648,
     evidenceHeight: 632,
     evidenceAlt:
       'Meta Ads Manager screenshot for LifeWorks Family Chiropractic covering June 2 to August 31 2026. The neuropathy workshop campaign shows 176 form leads at $14.55 cost per lead. A paused conversion campaign shows 9 website leads. A video views campaign shows 41,141 ThruPlays at one cent each.',
-    evidenceCaption:
-      'Meta Ads Manager, LifeWorks Family Chiropractic, June 2–August 31, 2026. Totals are ad-platform leads, not EHR-confirmed booked patients.',
+    evidenceCaption: 'Meta Ads Manager, June 2–August 31, 2026. The two lead campaigns show 176 form leads and 9 website leads on $2,734.59 combined spend. A separate video campaign spent $410.73; that spend is excluded from the $14.78 lead-campaign CPL.',
     quotes: [],
     challenge:
       'Inbound lead flow was inconsistent. Meta tracking was unreliable from March 4 through June 1, 2026, so the office could not trust conversion reporting on the old setup.',
@@ -111,51 +119,89 @@ export const CASE_STUDIES: CaseStudy[] = [
       'We moved sign-up from a website conversion ad to a Facebook Lead Form, refreshed creative and added audience exclusions to keep frequency in check, and set up HighLevel pipelines with automated appointment tagging for new leads.',
     whatOfficeDid:
       'The office works the CRM pipeline to confirm unconfirmed appointment requests, follows the communication guidance, and stays in the loop on account changes.',
-    result:
-      'In the 90 days from June 2 to August 31, 2026, Meta reported 185 leads at about $16.06 average CPL. The primary neuropathy workshop campaign produced 176 Lead Form leads at $14.55 each. A smaller website-conversion campaign added 9 leads. That is lead volume from Ads Manager, not confirmed visits.',
+    result: 'The screenshot reports 176 workshop form leads on $2,560.55 spend and 9 website leads on $174.04 spend from June 2 to August 31, 2026. Together, those two campaigns produced 185 reported lead results on $2,734.59, giving a calculated blended CPL of $14.78. The separate video campaign spent $410.73. Including that awareness spending would make total displayed spend $3,145.32, or $17.00 per lead result. Neither calculation establishes workshop attendance, booked visits, or patient acquisition cost.',
+    relatedResources: [
+      {
+        label: 'How to choose a chiropractic marketing agency',
+        url: '/blog/how-to-choose-chiropractic-marketing-agency/',
+        description: 'This example shows why an agency should define which campaign costs and results enter its cost-per-lead figure.',
+      },
+      {
+        label: 'Chiropractic marketing costs',
+        url: '/blog/chiropractic-marketing-costs/',
+        description: 'Understand how media spending and agency fees fit into the total marketing budget.',
+      },
+    ],
     faqs: [
       {
-        question: 'What Meta results did LifeWorks Family Chiropractic see?',
-        answer:
-          'From June 2 to August 31, 2026, Meta reported 185 leads at about $16.06 average cost per lead. The main neuropathy workshop campaign used Facebook Lead Forms and produced 176 form leads at $14.55 each.',
+        question: 'What Meta lead results did LifeWorks Family Chiropractic see?',
+        answer: 'The public screenshot shows 176 form leads and 9 website leads from June 2 to August 31, 2026. The two lead campaigns spent $2,734.59, giving 185 reported lead results at a calculated blended cost of $14.78 each.',
+      },
+      {
+        question: 'Does the $14.78 cost per lead include video-awareness spending?',
+        answer: 'No. It includes only the two lead campaigns. The separate video campaign spent $410.73. Including all three displayed campaigns produces $3,145.32 in spend, or $17.00 per reported lead result.',
+      },
+      {
+        question: 'Are those 185 results the same as new patients?',
+        answer: 'No. The total adds the two campaigns\' reported lead results. It does not establish unique people, workshop attendance, booked appointments, or attended visits.',
       },
       {
         question: 'Where is LifeWorks Family Chiropractic?',
-        answer:
-          'LifeWorks Family Chiropractic is a family practice in Kelowna, British Columbia, led by Dr. James Whillans. The campaign in this window promoted a neuropathy workshop.',
-      },
-      {
-        question: 'Are those 185 leads the same as new patients?',
-        answer:
-          'No. 185 is the Meta lead count for that 90-day window. Booked visits and EHR data are not published here.',
+        answer: 'LifeWorks Family Chiropractic is in Kelowna, British Columbia, led by Dr. James Whillans. The campaign shown here promoted a neuropathy workshop.',
       },
     ],
   },
   {
     slug: 'ipswich-spine-clinic-amit-patel',
+    dateModified: '2026-09-18',
     practice: 'Ipswich Spine Clinic',
     doctor: 'Dr. Amit Patel, DC',
     city: 'Ipswich, Suffolk, UK',
     practiceType:
       'Solo general and family chiropractic practice in Ipswich, Suffolk',
     channels: 'Meta, Google Ads, SEO, Google Business Profile, TikTok',
-    headlineStat: '2,668 leads',
-    headlineLabel: '£10.31 blended CPL on Meta, 17 months',
-    summary:
-      'Ipswich Spine Clinic produced 2,668 Meta leads from April 2, 2025 to August 30, 2026 at £10.31 blended cost per lead on £27,505 spend. The main campaign was a £49 new-patient special using the doctor’s own weekly video. These are ad-platform leads, not booked-patient counts from the EHR.',
-    metaDescription:
-      'Ipswich Spine Clinic (Dr. Amit Patel, Suffolk, UK): 2,668 Meta leads at £10.31 CPL, Apr 2025–Aug 2026. Ads Manager crop on the page.',
-    sourceLabel: 'Meta Ads Manager, April 2, 2025–August 30, 2026',
+    headlineStat: '924 profile actions',
+    headlineLabel: 'Google Business Profile report, June 1–July 1, 2026',
+    summary: 'Ipswich Spine Clinic\'s public Google Business Profile report records 924 actions for June 1–July 1, 2026: 179 call-button clicks, 489 direction requests, and 256 website clicks. These are profile interactions, not confirmed new patients. A separate Meta campaign screenshot is included below.',
+    metaDescription: 'Ipswich Spine Clinic: 924 Google Business Profile actions, June 1–July 1, 2026. See the public report, action breakdown, and measurement limits.',
+    evidenceSummary: {
+      title: 'Google Business Profile actions',
+      period: 'June 1–July 1, 2026',
+      metrics: [
+        {
+          label: 'Call-button clicks',
+          value: '179',
+          meaning: 'Clicks on the profile call button; not completed calls.',
+        },
+        {
+          label: 'Direction requests',
+          value: '489',
+          meaning: 'Requests for directions; not confirmed visits.',
+        },
+        {
+          label: 'Website clicks',
+          value: '256',
+          meaning: 'Clicks to the website; not bookings.',
+        },
+        {
+          label: 'Total profile actions',
+          value: '924',
+          meaning: 'Sum of these interactions; not a count of new patients.',
+        },
+      ],
+      note: 'Google Business Profile performance can include organic and Google Ads interactions. These figures do not isolate SEO results or establish attended appointments or revenue.',
+      definitionsUrl: 'https://support.google.com/business/answer/9918094?hl=en',
+      definitionsLabel: 'Google\'s Business Profile metric definitions',
+    },
+    sourceLabel: 'Public Google Business Profile report and separate Meta Ads Manager crop',
     sourceUrl:
       'https://gbp.chirocandy.com/reports/af1bd6b17632fa7114433510fee598a82764415725f34e46',
-    sourceLinkLabel: 'Google Business Profile report',
+    sourceLinkLabel: 'View the Google Business Profile report for June 1–July 1, 2026',
     evidenceImage: '/images/case-studies/ipswich-spine-clinic-meta-ads.png',
     evidenceWidth: 1419,
     evidenceHeight: 98,
-    evidenceAlt:
-      'Meta Ads Manager screenshot for Ipswich Spine Clinic. The £49 New Patient Special campaign shows 2,641 form leads at £10.18 cost per lead. A Video Views-LF campaign shows 32 form leads at £21.66.',
-    evidenceCaption:
-      'Meta Ads Manager crop for Ipswich Spine Clinic. The £49 New Patient Special row shows 2,641 form leads at £10.18. Totals on this page are ad-platform leads, not EHR-confirmed booked patients.',
+    evidenceAlt: 'Separate Meta Ads Manager crop for Ipswich Spine Clinic. The £49 New Patient Special shows 2,641 form leads at £10.18 each; Video Views - LF shows 32 form leads at £21.66 each. The date range is not visible.',
+    evidenceCaption: 'Separate Meta evidence: the £49 offer row shows 2,641 form leads and £26,883.87 spent. The crop does not show a date range and is not the source for the Google Business Profile figures.',
     quotes: [
       {
         text: 'This is mega! Thank you!!!!',
@@ -170,29 +216,49 @@ export const CASE_STUDIES: CaseStudy[] = [
         attribution: 'Ipswich Spine Clinic, 30 July 2026',
       },
     ],
-    challenge:
-      'A two-week low point in May 2026 showed 55 Meta leads at £22.88 cost per lead on £1,258.30 spend. Creative had to stay fresh, and booked leads needed diary slots the same week they came in.',
-    whatWeDid:
-      'We ran the £49 new-patient special on Meta with a weekly creative refresh from Dr. Patel’s own video — that campaign alone produced 2,636 leads at £10.18. We tightened Google keywords and expanded radius (12 leads at £28.92 moved to 19 at £23.99 in the compared windows). We also optimized the Google Business Profile; the report for this window ranked the listing #1 versus the tracked local competitors, with 93% visibility and 924 customer actions (up 16.5%).',
+    challenge: 'For a practice using several marketing channels, the reporting question is which activity each number actually represents. Profile interactions, ad-platform leads, booked appointments, and attended visits measure different stages of the patient journey.',
+    whatWeDid: 'ChiroCandy\'s work for the practice included Meta advertising, Google Ads, and Google Business Profile optimization. The public evidence on this page keeps profile activity separate from paid-social lead results. It does not isolate the incremental effect of any one service.',
     whatOfficeDid:
       'Dr. Patel films and uploads a new video nearly every week, unprompted, which is what makes the creative refresh possible. The office is fast on diary and scheduling changes so booked leads actually get slots.',
-    result:
-      'From April 2, 2025 to August 30, 2026, Meta reported 2,668 leads on £27,505 spend at £10.31 blended CPL. A later two-week window (August 2–15, 2026) showed 107 Meta leads at £11.77 on £1,259.77. That is Ads Manager lead volume, not confirmed visits.',
+    result: 'The public Google Business Profile report displays 924 actions for June 1–July 1, 2026: 179 call-button clicks, 489 direction requests, and 256 website clicks. Its tracked-keyword overview shows an average rank of 7.3 and average visibility of 70% across 10 keywords. These are reporting-system measures for that tracked set, not a claim of ranking first everywhere. Google Business Profile activity can include both organic and Google Ads interactions; this report does not establish SEO-only attribution, attended appointments, or revenue.',
+    relatedResources: [
+      {
+        label: 'Chiropractic SEO and local-search services',
+        url: '/services/search-engine-optimization/',
+        description: 'See how local-search work fits into the practice marketing plan.',
+      },
+      {
+        label: 'Google Ads vs. SEO for chiropractors',
+        url: '/blog/google-ads-vs-seo-for-chiropractors/',
+        description: 'Compare channel roles while keeping their costs and outcomes separate.',
+      },
+      {
+        label: 'How to choose a chiropractic marketing agency',
+        url: '/blog/how-to-choose-chiropractic-marketing-agency/',
+        description: 'Use source reports and clearly defined metrics when evaluating an agency.',
+      },
+      {
+        label: 'Chiropractic marketing costs',
+        url: '/blog/chiropractic-marketing-costs/',
+        description: 'Build a budget around service fees, media costs, and measurable business outcomes.',
+      },
+    ],
     faqs: [
       {
-        question: 'What Meta results did Ipswich Spine Clinic see?',
-        answer:
-          'From April 2, 2025 to August 30, 2026, Meta reported 2,668 leads at £10.31 blended cost per lead on £27,505 spend. The £49 new-patient special was the main campaign.',
+        question: 'What local-search activity does the Ipswich Spine Clinic report show?',
+        answer: 'For June 1–July 1, 2026, the public Google Business Profile report shows 924 actions: 179 call-button clicks, 489 direction requests, and 256 website clicks. The linked report provides the source.',
+      },
+      {
+        question: 'Are 924 profile actions the same as 924 new patients?',
+        answer: 'No. Profile actions are interactions with the listing. Calls count call-button clicks, directions are requests, and website clicks are visits to the linked website. These measures do not confirm completed calls, booked appointments, attended visits, or unique new patients.',
+      },
+      {
+        question: 'Does this report prove an SEO-only or Google Ads return on investment?',
+        answer: 'No. Google Business Profile performance can include organic and Google Ads interactions. A return-on-investment calculation would also need channel-specific costs and reliably attributed business outcomes.',
       },
       {
         question: 'Where is Ipswich Spine Clinic?',
-        answer:
-          'Ipswich Spine Clinic is a solo general and family practice in Ipswich, Suffolk, United Kingdom, led by Dr. Amit Patel.',
-      },
-      {
-        question: 'Are those 2,668 leads the same as new patients?',
-        answer:
-          'No. 2,668 is the Meta lead count for that 17-month window. Booked visits and EHR data are not published here.',
+        answer: 'Ipswich Spine Clinic is a chiropractic practice in Ipswich, Suffolk, United Kingdom, led by Dr. Amit Patel.',
       },
     ],
   },
