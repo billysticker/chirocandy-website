@@ -1,58 +1,112 @@
 [
   {
     "question": "What is a chiropractic marketing agency?",
-    "answer": "A chiropractic marketing agency is a specialized digital marketing firm that focuses exclusively on helping chiropractors attract, convert, and retain patients. Unlike generalist agencies, a chiropractic marketing agency understands practice economics, patient lifetime value, condition-specific search intent, compliance requirements, and front-desk conversion workflows. ChiroCandy has served more than 2,000 chiropractic offices since 2015."
+    "answer": "A chiropractic marketing agency is a specialized digital marketing firm that focuses exclusively on helping chiropractors attract, convert, and retain patients. Unlike generalist agencies, a chiropractic marketing agency understands practice economics, patient lifetime value, condition-specific search intent, compliance requirements, and front-desk conversion workflows. ChiroCandy has served more than 2,000 chiropractic offices since 2015.",
+    "category": "Working together"
   },
   {
     "question": "Why hire a specialist chiropractic marketing agency over a generalist?",
-    "answer": "Chiropractic marketing requires deep domain expertise in patient behavior, compliance, and clinical conversion paths. Generalist agencies test generic campaigns at your expense, whereas a specialist uses proven ad creative, targeted audience sets, and automated patient reactivation sequences calibrated specifically for chiropractic practices. Specialization yields lower cost-per-lead and higher appointment show rates."
+    "answer": "Relevant experience can help a marketing partner understand your services, patient questions, and front-desk workflow. Compare specific work, results, responsibilities, and terms. Specialization alone does not guarantee lower lead costs or better outcomes.",
+    "category": "Working together"
   },
   {
     "question": "How is ChiroCandy different from a Facebook-ads-only agency?",
-    "answer": "ChiroCandy is a comprehensive practice growth system, not a single-channel vendor. While we manage high-performing Facebook and Instagram campaigns, we also deploy Google Ads, local SEO and AI search optimization, custom web design, 24/7 AI-powered lead follow-up, and automated patient reactivation — all anchored by proprietary frameworks like the Known/Found/Trusted model."
+    "answer": "ChiroCandy is a comprehensive practice growth system, not a single-channel vendor. While we manage high-performing Facebook and Instagram campaigns, we also deploy Google Ads, local SEO and AI search optimization, custom web design, 24/7 AI-powered lead follow-up, and automated patient reactivation — all anchored by proprietary frameworks like the Known/Found/Trusted model.",
+    "category": "Working together"
   },
   {
     "question": "What is the difference between ChiroCandy's Done-For-You program and Training program?",
-    "answer": "In the Done-For-You (DFY) program, ChiroCandy handles your complete patient acquisition pipeline — creative production, ad management, SEO, and follow-up automation — so your team can focus entirely on clinical care. In the Training program, we coach and equip your internal staff to execute our proprietary playbooks in-house."
+    "answer": "In the Done-For-You (DFY) program, ChiroCandy handles your complete patient acquisition pipeline — creative production, ad management, SEO, and follow-up automation — so your team can focus entirely on clinical care. In the Training program, we coach and equip your internal staff to execute our proprietary playbooks in-house.",
+    "category": "Working together"
   },
   {
     "question": "How do chiropractors get found in Google and AI search?",
-    "answer": "Chiropractors achieve visibility through two connected layers: traditional local SEO (Google Business Profile optimization, local map pack rankings, citation consistency) and AI answer engine optimization (answering specific clinical questions directly in content, maintaining structured data schema, and allowing AI search crawlers). Google AI Overviews, ChatGPT, and Perplexity cite authoritative pages that already hold strong organic positions."
+    "answer": "Keep business information accurate, publish useful content about the practice and its services, and make the site accessible to search engines. Local SEO and clear, credible content support discovery. No agency can guarantee that a particular search or AI response will recommend a practice.",
+    "category": "Measurement and results"
   },
   {
     "question": "How fast will marketing results show up for my practice?",
-    "answer": "Paid advertising campaigns on Facebook, Instagram, and Google Ads typically generate qualified patient inquiries within 24 to 48 hours of launch. Automated patient reactivation campaigns often produce appointment bookings within the first week. Organic SEO and AI search authority compound over 3 to 12 months into sustainable, non-paid patient flow."
+    "answer": "Timing depends on the channel, market, offer, launch readiness, budget, and follow-up. Ask for a launch plan and agreed review points. Distinguish the first inquiry from a booked appointment, an attended visit, and collected revenue; they happen at different times.",
+    "category": "Measurement and results"
   },
   {
     "question": "Do you require long-term contracts?",
-    "answer": "No. ChiroCandy operates on an initial 60-day setup and optimization period, followed by flexible month-to-month service agreements. You maintain complete control to scale, add, or adjust channels as your practice grows."
+    "answer": "Marketing services begin with an initial 60-day setup and optimization period, then transition to month-to-month. Custom websites require a 12-month website agreement, including when bundled in a package. Your agreement covers the specific service and cancellation terms.",
+    "category": "Costs and commitments"
   },
   {
     "question": "How much should a chiropractic practice spend on marketing?",
-    "answer": "Most growing chiropractic practices allocate 5% to 10% of gross practice collections to marketing. Your investment should be calibrated to target patient acquisition cost against patient lifetime value (LTV). ChiroCandy designs campaigns to ensure patient revenue generated significantly exceeds your total marketing investment."
+    "answer": "Build a budget around your goals, appointment capacity, cash flow, conversion rates, and patient collections after care costs. Include advertising, management, creative, software, and setup. Our marketing calculator lets you explore those assumptions without treating a generic percentage as the right budget for every practice.",
+    "category": "Costs and commitments"
   },
   {
     "question": "Is ChiroCandy HIPAA compliant?",
-    "answer": "Yes. ChiroCandy follows strict data privacy standards to protect prospective and existing patient information (name, phone number, email, and inquiry details) across all digital advertising, landing page forms, and automated lead follow-up workflows."
+    "answer": "Compliance depends on the specific services, data, vendors, agreements, and workflow involved. Ask us to review those requirements with you before sharing patient information or connecting patient systems. Our website privacy policy describes this website; it is not a certification of every possible client integration.",
+    "category": "Privacy and responsibility"
   },
   {
     "question": "Where is the ChiroCandy team based?",
-    "answer": "ChiroCandy is headquartered in Conroe, Texas, with all marketing strategy, media buying, creative development, and client success managed by U.S.-based professionals dedicated to chiropractic practice growth."
+    "answer": "ChiroCandy is headquartered in Conroe, Texas, with all marketing strategy, media buying, creative development, and client success managed by U.S.-based professionals dedicated to chiropractic practice growth.",
+    "category": "Working together"
   },
   {
     "question": "How many offices does ChiroCandy serve?",
-    "answer": "ChiroCandy currently manages active marketing systems for approximately 200 chiropractic clinics nationwide, having partnered with more than 2,000 offices across the company's history since 2015."
+    "answer": "ChiroCandy currently manages active marketing systems for approximately 200 chiropractic clinics nationwide, having partnered with more than 2,000 offices across the company's history since 2015.",
+    "category": "Working together"
   },
   {
     "question": "What are the benefits of having a custom chiropractic website?",
-    "answer": "A custom chiropractic website serves as your practice's primary conversion hub. It educates prospective patients, establishes provider authority, enables mobile-friendly online appointment booking, and provides the technical schema needed to rank in local Google searches and generative AI answer engines."
+    "answer": "A website can explain your services, introduce providers, answer patient questions, and make it easier to request an appointment. Clear navigation, useful content, mobile usability, and accurate business information matter. A custom website or particular schema does not guarantee rankings or AI recommendations.",
+    "category": "Working together"
   },
   {
     "question": "How does automated lead follow-up help chiropractic show rates?",
-    "answer": "Inquiries that receive immediate follow-up within 60 seconds are up to 21 times more likely to convert into booked appointments. ChiroCandy integrates 24/7 automated SMS and email follow-up systems that qualify prospects and schedule them into your calendar before they contact a competing clinic."
+    "answer": "Prompt follow-up can help people get answers and book while their interest is fresh. Reminders and a clear handoff to staff can support attendance. Measure bookings and attended visits separately rather than assuming that a fast response guarantees a patient.",
+    "category": "Measurement and results"
   },
   {
     "question": "How can chiropractors use patient reactivation campaigns?",
-    "answer": "Reactivation campaigns re-engage dormant patient lists via structured SMS and email sequences. Re-engaging past patients who already trust your practice typically produces new appointments at a fraction of the cost of acquiring brand-new patients from paid advertising."
+    "answer": "Reactivation campaigns reach out to eligible past patients through appropriate communication channels. The practice and marketing team should confirm permissions, messaging, and who handles replies. Measure attended appointments and collections as well as responses.",
+    "category": "Measurement and results"
+  },
+  {
+    "question": "Are management fees the same as advertising spend?",
+    "answer": "No. Advertising spend is the budget paid to the advertising platform. Management fees pay for the scope of agency work. Confirm how both appear in your proposal and include setup, software, creative, and usage charges when comparing total cost.",
+    "category": "Costs and commitments"
+  },
+  {
+    "question": "Does the calculator provide a ChiroCandy quote?",
+    "answer": "No. It models your inputs and lets you optionally load a published monthly package service fee. Advertising spend, setup, and applicable usage charges are separate. Illustrative example values are not quoted fees or typical results. See the pricing page for packages and your agreement for the full scope and terms.",
+    "category": "Costs and commitments"
+  },
+  {
+    "question": "What should I confirm about ownership and cancellation?",
+    "answer": "Ask for written terms covering ad accounts, domains, website files, creative, contact records, platform access, export options, renewal, and cancellation notice. Confirm the terms in your specific agreement before signing.",
+    "category": "Costs and commitments"
+  },
+  {
+    "question": "Are leads the same as new patients?",
+    "answer": "No. A lead is an inquiry. That person may then book, attend, and become a patient. Reports should identify which stage is being counted and which system supplies the number. Ad-platform leads do not establish attended visits or collections.",
+    "category": "Measurement and results"
+  },
+  {
+    "question": "What does break-even mean in the marketing calculator?",
+    "answer": "It is the acquired-patient count needed for their first 90 days of collections, after incremental care costs, to cover the entered marketing spend. Fixed overhead and taxes are excluded. Those collections may arrive after the month in which the advertising ran.",
+    "category": "Measurement and results"
+  },
+  {
+    "question": "Can a case study predict my results?",
+    "answer": "A case study shows an individual campaign or practice experience. Compare its market, offer, dates, budget, and follow-up with yours. It can help you evaluate the work and evidence, but it cannot guarantee your outcome.",
+    "category": "Measurement and results"
+  },
+  {
+    "question": "Can I use the calculator without submitting my contact information?",
+    "answer": "Yes. No email or account is required to calculate or print a scenario. If you choose to schedule a call, the scheduling process is separate. The site privacy policy explains cookies and third-party services.",
+    "category": "Privacy and responsibility"
+  },
+  {
+    "question": "Should I enter patient details into this website?",
+    "answer": "The planning calculator uses practice-level numbers and does not need patient names, contact details, diagnoses, or records. For a client workflow involving patient information, discuss the appropriate system and requirements with the team first.",
+    "category": "Privacy and responsibility"
   }
 ]

@@ -1,0 +1,28 @@
+---
+const resources = [
+  { href: '/pricing/', title: 'Understand the investment', detail: 'What belongs in a marketing budget.' },
+  { href: '/marketing-calculator/', title: 'Run your numbers', detail: 'Explore acquisition costs and break-even.' },
+  { href: '/compare-marketing-agencies/', title: 'Compare your options', detail: 'Questions to ask any marketing partner.' },
+  { href: '/testimonials/', title: 'Hear from practice owners', detail: 'Client videos and documented case studies.' },
+];
+const current = Astro.url.pathname;
+---
+<nav class="buyer-resources container" aria-label="Practice owner planning resources">
+  <p class="eyebrow">Make an informed decision</p>
+  <div class="buyer-grid">
+    {resources.filter(item => item.href !== current).map(item => (
+      <a href={item.href}><strong>{item.title}<span aria-hidden="true">↗</span></strong><span>{item.detail}</span></a>
+    ))}
+  </div>
+</nav>
+<style>
+  .buyer-resources { padding-block: 2.5rem 4rem; border-top: 1px solid var(--line); }
+  .buyer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+  a { display: grid; gap: .6rem; border: 1px solid var(--line); padding: 1.4rem; border-radius: 14px; }
+  a:hover { border-color: var(--green); }
+  strong { display: flex; justify-content: space-between; gap: 1rem; font-size: .95rem; }
+  strong span { color: var(--green); }
+  a > span { font-size: .85rem; color: var(--muted); }
+  a:focus-visible { outline: 3px solid var(--green); outline-offset: 4px; }
+  @media print { .buyer-resources { display: none; } }
+</style>

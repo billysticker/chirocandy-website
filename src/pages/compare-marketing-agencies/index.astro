@@ -1,0 +1,57 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import BuyerResources from '@/components/BuyerResources.astro';
+import { buildGraph, breadcrumbSchema, webPageSchema } from '@/lib/schema';
+import { SITE } from '@/lib/site';
+const title = 'How to Compare Chiropractic Marketing Agencies | ChiroCandy';
+const description = 'Compare marketing agencies on scope, total costs, proof, reporting, account ownership, and follow-up. A practical buying guide for chiropractic practices.';
+const url = `${SITE.url}/compare-marketing-agencies/`;
+const schema = buildGraph(webPageSchema({ url, name: title, description }), breadcrumbSchema([{ name: 'Home', url: `${SITE.url}/` }, { name: 'Compare marketing agencies', url }]));
+const criteria = [
+  ['Relevant experience', 'Ask for work with practices, services, and markets comparable to yours.', 'A case study with context, dates, and the source of its results.'],
+  ['Service scope', 'Compare which channels and deliverables are included, not just package names.', 'A written scope with who does each piece of work.'],
+  ['Total investment', 'Separate media spend, management, setup, subscriptions, and usage.', 'A quote with one-time and recurring costs clearly itemized.'],
+  ['Follow-up', 'Identify who contacts inquiries, schedules appointments, and manages no-shows.', 'A defined handoff between the agency, automation, and front desk.'],
+  ['Measurement', 'Ask how leads, booked appointments, attended visits, and acquired patients are distinguished.', 'A sample report with definitions and reconciled sources.'],
+  ['Ownership and access', 'Ask who owns each ad account, domain, website, creative asset, and contact record.', 'Access and export terms in the agreement.'],
+  ['Communication', 'Find out who your contact is and how changes, concerns, and reporting are handled.', 'Named responsibilities and an agreed communication cadence.'],
+  ['Agreement and exit', 'Compare the initial commitment, renewal, notice period, and transition support.', 'Written terms covering cancellation and what happens to your assets.'],
+  ['Privacy and care claims', 'Ask how patient information and claims about clinical services are reviewed.', 'A documented process and applicable vendor agreements for the actual workflow.'],
+];
+---
+<BaseLayout title={title} description={description} canonical={url} schema={schema}>
+  <PageHero eyebrow="A practice owner’s buying guide" title="Choose the partner that fits your practice." answer="Compare agencies using the same scope, cost definitions, and evidence. The best fit depends on the work you need, what your team can handle, and how results will be measured." />
+  <section class="section"><div class="container">
+    <div class="prose"><p class="disclosure">Published by ChiroCandy, a marketing provider. This is our guide to evaluating a marketing partner, not an independent ranking of agencies.</p><h2>What should you compare?</h2><p>Ask each provider the same questions and record the answers. If something is not published, ask for it. Missing public information does not establish that a provider lacks a capability.</p></div>
+    <div class="comparison-wrap" tabindex="0" role="region" aria-label="Agency comparison criteria">
+      <table><caption>Nine criteria for comparing agency proposals</caption><thead><tr><th scope="col">Criterion</th><th scope="col">Question to resolve</th><th scope="col">Evidence to request</th></tr></thead><tbody>{criteria.map(row => <tr>{row.map((text, i) => i === 0 ? <th scope="row">{text}</th> : <td>{text}</td>)}</tr>)}</tbody></table>
+    </div>
+    <div class="prose">
+      <h2>How can you evaluate ChiroCandy?</h2>
+      <p>Start with the <a href="/services/">services we describe</a>, compare our <a href="/done-for-you-program/">Done-For-You program</a> with <a href="/training-program/">training</a>, and review <a href="/case-studies/">case studies</a> alongside <a href="/testimonials/">client interviews</a>. Our <a href="/about/billy-sticker/">founder page</a> explains Billy Sticker’s background.</p>
+      <p>Use a strategy call to ask the same questions you would ask another agency. Confirm service scope, pricing, account ownership, access, and terms in the proposal for your practice.</p>
+      <h2>How should you compare reported results?</h2>
+      <p>Check the dates, spending, offer, market, and definition of the result. A lead count is not a patient count. A revenue claim is not a profit figure. Look for the practice’s contribution too: staffing, follow-up, content, scheduling, and capacity can all affect the outcome.</p>
+      <p>Client stories describe individual experiences. They do not establish the result every practice should expect.</p>
+      <h2>Is a specialist always the better choice?</h2>
+      <p>Relevant experience is useful, but specialization alone does not prove performance. Compare the specific team, work, evidence, and terms. An internal team, a freelancer, a focused service provider, or a broader agency may fit different needs.</p>
+      <h2>How do I compare a lower quote with a higher one?</h2>
+      <p>Put both quotes on the same time horizon and separate media from fees. Identify what your staff would need to do and what would cost extra. Then use your own conversion and collection assumptions to <a href="/marketing-calculator/">explore the economics</a>.</p>
+      <h2>What should the next conversation accomplish?</h2>
+      <p>You should leave with a clear problem to solve, a proposed scope, responsibilities, a way to measure progress, and the open questions needed for a decision.</p>
+      <a class="btn btn--primary" href={SITE.scheduleUrl}>Discuss ChiroCandy for my practice →</a>
+    </div>
+  </div></section>
+  <BuyerResources />
+</BaseLayout>
+<style>
+  .disclosure { font-size: .85rem; border-left: 3px solid var(--green); padding: .5rem 1rem; }
+  .comparison-wrap { overflow-x: auto; margin-block: 2.5rem; border: 1px solid var(--line); border-radius: 16px; }
+  table { border-collapse: collapse; text-align: left; width: 100%; min-width: 640px; font-size: .9rem; }
+  caption { text-align: left; padding: 1.3rem; font-weight: 600; color: var(--green); }
+  th, td { padding: 1.1rem 1.3rem; vertical-align: top; border-top: 1px solid var(--line); }
+  thead, tbody th { background: var(--panel); }
+  tbody th { width: 20%; }
+  td { color: var(--muted); }
+</style>
