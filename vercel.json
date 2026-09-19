@@ -2,6 +2,16 @@
   "installCommand": "npm install --legacy-peer-deps",
   "redirects": [
     {
+      "source": "/chiropractic-marketing/geo-for-chiropractors/",
+      "destination": "/blog/geo-for-chiropractors/",
+      "permanent": true
+    },
+    {
+      "source": "/chiropractic-marketing/geo-for-chiropractors",
+      "destination": "/blog/geo-for-chiropractors/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [
         {

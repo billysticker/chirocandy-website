@@ -22,6 +22,7 @@ interface Props {
   heroTitle: string;
   heroAnswer: string;
   serviceName: string;
+  dateModified?: string;
   faqs: FAQ[];
   relatedServices: { href: string; label: string }[];
 }
@@ -33,13 +34,14 @@ const {
   heroTitle,
   heroAnswer,
   serviceName,
+  dateModified = '2026-08-31',
   faqs,
   relatedServices,
 } = Astro.props;
 
 const url = `${SITE.url}/services/${slug}/`;
 const schema = buildGraph(
-  webPageSchema({ url, name: title, description, dateModified: '2026-08-31' }),
+  webPageSchema({ url, name: title, description, dateModified }),
   breadcrumbSchema([
     { name: 'Home', url: `${SITE.url}/` },
     { name: 'Services', url: `${SITE.url}/services/` },
