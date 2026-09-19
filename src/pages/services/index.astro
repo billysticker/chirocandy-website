@@ -10,7 +10,7 @@ const description =
 
 const url = `${SITE.url}/services/`;
 const schema = buildGraph(
-  webPageSchema({ url, name: title, description, dateModified: '2026-06-09' }),
+  webPageSchema({ url, name: title, description, dateModified: '2026-09-18' }),
   breadcrumbSchema([
     { name: 'Home', url: `${SITE.url}/` },
     { name: 'Services', url },
@@ -47,6 +47,35 @@ const summaries: Record<string, string> = {
           <p>{summaries[service.href]}</p>
         </a>
       ))}
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <h2>Plan your next marketing investment</h2>
+      <p>Use these guides to compare providers, choose a channel, and understand search visibility.</p>
+      <div class="card-grid">
+        <a href="/blog/how-to-choose-chiropractic-marketing-agency/" class="card">
+          <h3>How to choose a chiropractic marketing agency</h3>
+          <p>Compare scope, proof, account ownership, and the work expected from your team.</p>
+        </a>
+        <a href="/blog/google-ads-vs-seo-for-chiropractors/" class="card">
+          <h3>Google Ads or SEO?</h3>
+          <p>Choose a starting point based on your visibility, appointment capacity, and budget.</p>
+        </a>
+        <a href="/blog/chiropractic-marketing-costs/" class="card">
+          <h3>Compare the full marketing budget</h3>
+          <p>Account for management, media, setup, content, software, and your team's time.</p>
+        </a>
+        <a href="/blog/switching-chiropractic-website-providers/" class="card">
+          <h3>Switch website providers with a plan</h3>
+          <p>Review access, existing pages, redirects, and the patient booking experience.</p>
+        </a>
+        <a href="/blog/geo-for-chiropractors/" class="card">
+          <h3>AI visibility for chiropractors</h3>
+          <p>Understand SEO and GEO, then evaluate mentions, citations, and actual inquiries.</p>
+        </a>
+      </div>
     </div>
   </section>
 

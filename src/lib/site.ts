@@ -104,6 +104,7 @@ export const NAV = {
   ],
   resources: [
     { href: '/case-studies/', label: 'Case Studies' },
+    { href: '/ai-website-workbook/', label: 'AI Website Workbook' },
     { href: '/blog/', label: 'Blog' },
     { href: '/podcasts/', label: 'Podcast' },
     { href: '/news-and-media/', label: 'News & Media' },

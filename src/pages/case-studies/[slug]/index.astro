@@ -27,6 +27,7 @@ const title = `${study.practice} Case Study | ChiroCandy`;
 const description = study.metaDescription;
 const url = `${SITE.url}/case-studies/${study.slug}/`;
 const published = '2026-08-31';
+const modified = study.dateModified ?? published;
 const embedUrl = study.youtubeId
   ? `https://www.youtube-nocookie.com/embed/${study.youtubeId}`
   : undefined;
@@ -37,7 +38,7 @@ const schema = buildGraph(
     name: title,
     description,
     datePublished: published,
-    dateModified: published,
+    dateModified: modified,
   }),
   breadcrumbSchema([
     { name: 'Home', url: `${SITE.url}/` },
@@ -49,8 +50,8 @@ const schema = buildGraph(
     headline: `${study.practice}: ${study.headlineStat}`,
     description,
     datePublished: published,
-    dateModified: published,
-    ...(study.evidenceImage && { image: `${SITE.url}${study.evidenceImage}` }),
+    dateModified: modified,
+    ...(study.evidenceImage && !study.evidenceSummary && { image: `${SITE.url}${study.evidenceImage}` }),
   }),
   ...(study.youtubeId && study.sourceUrl && study.youtubeTitle
     ? [
@@ -74,6 +75,43 @@ const schema = buildGraph(
       <p class="meta">
         {study.doctor} · {study.city} · {study.channels}
       </p>
+
+      {study.evidenceSummary && (
+        <section class="evidence-summary" aria-labelledby="report-summary-title">
+          <h2 id="report-summary-title">{study.evidenceSummary.title}</h2>
+          <p><strong>Report period:</strong> {study.evidenceSummary.period}</p>
+          {study.sourceUrl && (
+            <p>
+              <a href={study.sourceUrl} rel="noopener noreferrer">
+                {study.sourceLinkLabel ?? 'View the public source report'}
+              </a>
+            </p>
+          )}
+          <div class="table-scroll">
+            <table>
+              <caption>Action breakdown from the public report</caption>
+              <thead>
+                <tr><th scope="col">Metric</th><th scope="col">Count</th><th scope="col">What it measures</th></tr>
+              </thead>
+              <tbody>
+                {study.evidenceSummary.metrics.map((metric) => (
+                  <tr>
+                    <th scope="row">{metric.label}</th>
+                    <td>{metric.value}</td>
+                    <td>{metric.meaning}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p>{study.evidenceSummary.note}</p>
+          <p>
+            <a href={study.evidenceSummary.definitionsUrl} rel="noopener noreferrer">
+              {study.evidenceSummary.definitionsLabel}
+            </a>
+          </p>
+        </section>
+      )}
 
       {
         study.youtubeId && embedUrl && study.youtubeTitle && study.sourceUrl ? (
@@ -104,7 +142,7 @@ const schema = buildGraph(
             </div>
             <figcaption>
               Source: {study.evidenceCaption ?? study.sourceLabel}
-              {study.sourceUrl && !study.youtubeId && (
+              {study.sourceUrl && !study.youtubeId && !study.evidenceSummary && (
                 <>
                   {' '}
                   <a href={study.sourceUrl} rel="noopener noreferrer">
@@ -141,6 +179,20 @@ const schema = buildGraph(
 
       <h2>What result will we stand behind?</h2>
       <p class="answer-first">{study.result}</p>
+
+      {study.relatedResources && (
+        <section class="related-resources" aria-labelledby="related-resources-title">
+          <h2 id="related-resources-title">Related guides and services</h2>
+          <ul>
+            {study.relatedResources.map((resource) => (
+              <li>
+                <a href={resource.url}>{resource.label}</a>
+                <p>{resource.description}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       <p>
         <a href="/get-new-patients/">Get New Patients</a>
@@ -191,6 +243,40 @@ const schema = buildGraph(
     color: var(--text-muted);
     font-size: 0.9rem;
     margin: 0 0 1.5rem;
+  }
+  .evidence-summary {
+    margin: 0 0 2rem;
+    padding: 1.25rem;
+    border: 1px solid var(--border, rgba(18, 57, 100, 0.12));
+    border-radius: var(--radius, 8px);
+    background: rgba(126, 217, 87, 0.06);
+  }
+  .evidence-summary h2 {
+    margin-top: 0;
+  }
+  .table-scroll {
+    overflow-x: auto;
+  }
+  .evidence-summary table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+  }
+  .evidence-summary caption {
+    text-align: left;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+  }
+  .evidence-summary :is(th, td) {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-bottom: 1px solid var(--border, rgba(18, 57, 100, 0.12));
+  }
+  .related-resources li {
+    margin-bottom: 1rem;
+  }
+  .related-resources li p {
+    margin: 0.25rem 0 0;
   }
   .video {
     margin: 0 0 2rem;
