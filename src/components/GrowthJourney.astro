@@ -138,12 +138,20 @@ import { SITE } from '@/lib/site';
       find('[data-verdict]').textContent = result.gap > 0 ? `Your ${money(result.gap)} growth gap translates into about ${number(result.perWeek)} more patients per week.` : 'You are already at or above this goal. Plan for retention and your existing new-patient pace.';
       find('[data-journey-status]').textContent = `${example ? 'Illustrative example' : 'Your growth opportunity'} calculated using ${result.isProxy ? 'the rough patient-value proxy' : 'your entered LTV'}.`;
       previewValue();
+      document.dispatchEvent(new CustomEvent('cc:calculator-complete', { detail: {
+        calculator_type: 'growth_opportunity', scenario_type: example ? 'example' : 'custom',
+      } }));
     };
     form.addEventListener('submit', event => { event.preventDefault(); calculate(); });
     form.addEventListener('input', () => { example = false; result = null; clearErrors(); previewValue(); find('[data-growth-answer]').hidden = true; find('[data-growth-empty]').hidden = false; find('[data-journey-status]').textContent = 'Numbers changed. Recalculate your growth opportunity.'; });
     find('[data-example]').addEventListener('click', () => { for (const [key, value] of Object.entries({ ltv: '', revenue: '1200000', patients: '480', goal: '1500000', weeks: '48' })) field(key).value = value; example = true; calculate(); });
     find('[data-reset]').addEventListener('click', () => { form.reset(); marketing.value = '12'; cpa.value = '15'; find<HTMLInputElement>('[name="journey-stage"][value="new"]').checked = true; restore(); result = null; example = false; clearErrors(); previewValue(); find('[data-growth-answer]').hidden = true; find('[data-growth-empty]').hidden = false; find('[data-journey-status]').textContent = 'Numbers cleared.'; field('ltv').focus(); });
-    find('[data-next]').addEventListener('click', () => { if (result) { renderBudget(); showStep(2); } });
+    find('[data-next]').addEventListener('click', () => { if (result) {
+      renderBudget(); showStep(2);
+      document.dispatchEvent(new CustomEvent('cc:calculator-complete', { detail: {
+        calculator_type: 'marketing_plan', scenario_type: example ? 'example' : 'custom',
+      } }));
+    } });
     find('[data-back]').addEventListener('click', () => showStep(1));
     const restore = () => { const defaults = practiceStages[stageKey()].defaults; channels.forEach(channel => { find<HTMLInputElement>(`[data-channel="${channel.key}"]`).value = String(defaults[channel.key]); }); renderAllocation(); };
     root.querySelectorAll('[name="journey-stage"]').forEach(el => el.addEventListener('change', restore));

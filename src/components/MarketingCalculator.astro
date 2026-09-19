@@ -152,6 +152,9 @@ const groups = [
       results.hidden = false;
       empty.hidden = true;
       status.textContent = `${illustrative ? 'Example' : 'Scenario'} calculated: ${number.format(x.patients)} patients and ${usd.format(x.afterMarketing)} after care and marketing costs.`;
+      document.dispatchEvent(new CustomEvent('cc:calculator-complete', { detail: {
+        calculator_type: 'campaign_analysis', scenario_type: illustrative ? 'example' : 'custom', package_id: packageSelect.value,
+      } }));
     }
     root.querySelector<HTMLButtonElement>('[data-calculate]')!.disabled = false;
     root.querySelectorAll<HTMLButtonElement>('[data-example], [data-clear]').forEach(button => { button.hidden = false; });

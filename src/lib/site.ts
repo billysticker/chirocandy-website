@@ -8,7 +8,7 @@ export const SITE = {
   phoneDisplay: '1-800-662-1745',
   scheduleUrl: '/schedule/',
   email: 'support@chirocandy.com',
-  gtmId: 'GTM-WTMHXMN',
+  gaMeasurementId: 'G-Q7RJFLCYWB',
   facebookPixelId: '1677430622530607',
   foundingYear: 2015,
   logo: '/images/logo-white.png',

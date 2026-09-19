@@ -34,21 +34,60 @@ import { SITE } from '@/lib/site';
   Cookies
 </button>
 
-<script is:inline define:vars={{ gtmId: SITE.gtmId, pixelId: SITE.facebookPixelId }}>
+<script is:inline define:vars={{ measurementId: SITE.gaMeasurementId, pixelId: SITE.facebookPixelId }}>
   (function () {
     var KEY = 'chirocandy-cookie-consent';
     var loaded = false;
+    var choice = null;
+
+    // Keep arbitrary query strings, fragments and form values out of Analytics.
+    function analyticsUrl(value, campaigns) {
+      try {
+        var url = new URL(value);
+        var clean = new URL(url.origin + url.pathname);
+        if (campaigns) {
+          ['utm_source', 'utm_medium', 'utm_campaign', 'utm_id', 'utm_term', 'utm_content', 'gclid', 'dclid', 'gbraid', 'wbraid'].forEach(function (key) {
+            var value = url.searchParams.get(key);
+            if (value && value.length <= 200 && !/[@<>]/.test(value)) clean.searchParams.set(key, value);
+          });
+        }
+        return clean.href;
+      } catch (e) { return ''; }
+    }
+
+    function track(name, parameters) {
+      if (!loaded || choice !== 'accepted') return;
+      window.gtag('event', name, Object.assign({
+        send_to: measurementId,
+        source_path: window.location.pathname,
+        transport_type: 'beacon'
+      }, parameters));
+    }
 
     window.__ccLoadMarketing = function () {
-      if (loaded) return;
+      if (loaded || choice !== 'accepted') return;
+      // Development and preview visits must not pollute the production property.
+      if (!['chirocandy.com', 'www.chirocandy.com'].includes(window.location.hostname)) return;
       loaded = true;
 
       window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-      var gtm = document.createElement('script');
-      gtm.async = true;
-      gtm.src = 'https://www.googletagmanager.com/gtm.js?id=' + gtmId;
-      document.head.appendChild(gtm);
+      window.gtag = function () { window.dataLayer.push(arguments); };
+      window.gtag('consent', 'default', {
+        analytics_storage: 'granted', ad_storage: 'granted',
+        ad_user_data: 'granted', ad_personalization: 'granted'
+      });
+      window.gtag('js', new Date());
+      var config = {
+        send_page_view: true,
+        page_location: analyticsUrl(window.location.href, true),
+        page_referrer: analyticsUrl(document.referrer, false)
+      };
+      if (new URLSearchParams(window.location.search).get('analytics_debug') === '1') config.debug_mode = true;
+      window.gtag('config', measurementId, config);
+      var google = document.createElement('script');
+      google.async = true;
+      google.src = 'https://www.googletagmanager.com/gtag/js?id=' + measurementId;
+      document.head.appendChild(google);
 
       if (window.fbq) return;
       var fbq = (window.fbq = function () {
@@ -97,6 +136,7 @@ import { SITE } from '@/lib/site';
     }
 
     function applyChoice(value, previous) {
+      choice = value;
       writeChoice(value);
       if (value === 'accepted') window.__ccLoadMarketing();
       hideBar();
@@ -106,6 +146,7 @@ import { SITE } from '@/lib/site';
     }
 
     var saved = readChoice();
+    choice = saved;
     if (saved === 'accepted') {
       window.__ccLoadMarketing();
       hideBar();
@@ -116,6 +157,7 @@ import { SITE } from '@/lib/site';
     }
 
     document.addEventListener('click', function (event) {
+      if (!(event.target instanceof Element)) return;
       var target = event.target.closest('[data-cookie-choice], [data-cookie-settings]');
       if (!target) return;
       if (target.hasAttribute('data-cookie-settings')) {
@@ -123,7 +165,34 @@ import { SITE } from '@/lib/site';
         showBar();
         return;
       }
-      applyChoice(target.getAttribute('data-cookie-choice'), readChoice());
+      applyChoice(target.getAttribute('data-cookie-choice'), choice);
+    });
+
+    document.addEventListener('click', function (event) {
+      if (!(event.target instanceof Element)) return;
+      var link = event.target.closest('a[href]');
+      if (!link) return;
+      var href = link.getAttribute('href');
+      var location = link.closest('header') ? 'header' : link.closest('footer') ? 'footer' : 'content';
+      if (/^tel:/i.test(href)) track('phone_click', { cta_location: location });
+      else if (/^mailto:/i.test(href)) track('email_click', { cta_location: location });
+      else {
+        var destination = new URL(href, window.location.href);
+        if (destination.origin === window.location.origin && /^\/schedule\/?$/.test(destination.pathname)) {
+          track('schedule_click', { cta_location: location });
+        }
+      }
+    });
+
+    document.addEventListener('cc:calculator-complete', function (event) {
+      var detail = event.detail || {};
+      if (!['growth_opportunity', 'marketing_plan', 'campaign_analysis'].includes(detail.calculator_type)) return;
+      var parameters = {
+        calculator_type: detail.calculator_type,
+        scenario_type: detail.scenario_type === 'example' ? 'example' : 'custom'
+      };
+      if (['advertising-growth', 'advertising-search-growth'].includes(detail.package_id)) parameters.package_id = detail.package_id;
+      track('calculator_complete', parameters);
     });
   })();
 </script>
