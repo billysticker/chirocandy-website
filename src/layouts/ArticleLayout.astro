@@ -74,6 +74,14 @@ const schema = buildGraph(
         <time datetime={datePublished}>
           Published {new Date(datePublished).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' })}
         </time>
+        {dateModified !== datePublished && (
+          <>
+            {' · '}
+            <time datetime={dateModified}>
+              Updated {new Date(dateModified).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' })}
+            </time>
+          </>
+        )}
       </p>
       <div class="article-body" set:html={bodyHtml} />
       <p>
