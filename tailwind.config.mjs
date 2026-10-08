@@ -13,8 +13,8 @@ export default {
         'on-surface-variant': '#96ABC6',
       },
       fontFamily: {
-        headline: ['Space Grotesk', 'sans-serif'],
-        body: ['Inter', 'sans-serif'],
+        headline: ['Space Grotesk Variable', 'sans-serif'],
+        body: ['Inter Variable', 'sans-serif'],
       },
       boxShadow: {
         glow: '0 10px 34px rgba(126, 217, 87, 0.35)',

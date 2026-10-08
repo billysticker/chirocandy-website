@@ -10,7 +10,7 @@ export function getStaticPaths() {
 }
 
 const { post } = Astro.props;
-const summary = post.meta_description;
+const summary = post.summary ?? post.meta_description;
 ---
 
 <ArticleLayout

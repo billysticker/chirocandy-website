@@ -1,0 +1,23 @@
+---
+interface Props {
+  text: string;
+  label?: string;
+}
+const { text, label = 'At a glance' } = Astro.props;
+---
+
+<section class="answer-summary" aria-label={label}>
+  <p class="answer-summary__label">{label}</p>
+  <p class="answer-first">{text}</p>
+</section>
+
+<style>
+  .answer-summary { margin: 1.5rem 0; max-width: 72ch; }
+  .answer-summary__label {
+    margin: 0 0 0.4rem;
+    color: var(--green);
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+  .answer-summary :global(.answer-first) { margin: 0; }
+</style>

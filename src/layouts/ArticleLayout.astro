@@ -1,6 +1,6 @@
 ---
+import AnswerSummary from '@/components/AnswerSummary.astro';
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import PageHero from '@/components/PageHero.astro';
 import {
   blogPostingSchema,
   breadcrumbSchema,
@@ -69,7 +69,7 @@ const schema = buildGraph(
       </nav>
       <p class="eyebrow">Billy Sticker</p>
       <h1>{h1}</h1>
-      <p class="answer-first">{summary}</p>
+      <AnswerSummary text={summary} />
       <p class="meta">
         <time datetime={datePublished}>
           Published {new Date(datePublished).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' })}

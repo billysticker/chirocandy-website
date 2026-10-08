@@ -1,0 +1,30 @@
+Baseline and repaired source, using identical installed checker dependencies.
+Baseline: 30 errors
+After: 30 errors
+New errors: 0
+
+src/components/DemoChat.astro - error ts(2339): Property 'leadConnector' does not exist on type 'Window & typeof globalThis'.
+src/components/FluidBackground.astro - error ts(2339): Property 'uid' does not exist on type 'Readonly<AstroGlobal<Props, (_props: Props) => any, Record<string, string | undefined>>>'.
+src/components/GrowthJourney.astro - error ts(7053): Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ seo: number; localSeo: number; googleAds: number; metaAds: number; ctv: number; retargeting: number; directMail: number; communityEvents: number; }'.
+src/components/GrowthJourney.astro - error ts(7053): Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ seo: number; localSeo: number; googleAds: number; metaAds: number; ctv: number; retargeting: number; directMail: number; communityEvents: number; } | { seo: number; localSeo: number; googleAds: number; ... 4 more ...; communityEvents: number; } | { ...; }'.
+src/components/SignalField.astro - error ts(7006): Parameter 'colorMix' implicitly has an 'any' type.
+src/components/SignalField.astro - error ts(7006): Parameter 'alpha' implicitly has an 'any' type.
+src/components/SignalField.astro - error ts(7006): Parameter 'radius' implicitly has an 'any' type.
+src/components/SignalField.astro - error ts(7006): Parameter 'y' implicitly has an 'any' type.
+src/components/SignalField.astro - error ts(7006): Parameter 'x' implicitly has an 'any' type.
+src/components/SignalField.astro - error ts(7006): Parameter 'event' implicitly has an 'any' type.
+src/components/SignalField.astro - error ts(7006): Parameter 'layer' implicitly has an 'any' type.
+src/components/SignalField.astro - error ts(7006): Parameter 'step' implicitly has an 'any' type.
+src/components/SignalField.astro - error ts(7006): Parameter 'b' implicitly has an 'any' type.
+src/components/SignalField.astro - error ts(7006): Parameter 'a' implicitly has an 'any' type.
+src/components/SignalField.astro - error ts(7006): Parameter 'vector' implicitly has an 'any' type.
+src/components/SignalField.astro - error ts(7006): Parameter 'amount' implicitly has an 'any' type.
+src/components/SignalField.astro - error ts(7006): Parameter 'end' implicitly has an 'any' type.
+src/components/SignalField.astro - error ts(7006): Parameter 'start' implicitly has an 'any' type.
+src/components/SignalField.astro - error ts(7006): Parameter 'value' implicitly has an 'any' type.
+src/components/SignalField.astro - error ts(7006): Parameter 'edge1' implicitly has an 'any' type.
+src/components/SignalField.astro - error ts(7006): Parameter 'edge0' implicitly has an 'any' type.
+src/components/SignalField.astro - error ts(7006): Parameter 'max' implicitly has an 'any' type.
+src/components/SignalField.astro - error ts(7006): Parameter 'min' implicitly has an 'any' type.
+src/components/SignalField.astro - error ts(7017): Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
+src/pages/marketing-calculator/index.astro - error ts(7053): Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ seo: number; localSeo: number; googleAds: number; metaAds: number; ctv: number; retargeting: number; directMail: number; communityEvents: number; } | { seo: number; localSeo: number; googleAds: number; ... 4 more ...; communityEvents: number; } | { ...; }'.

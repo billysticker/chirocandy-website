@@ -13,7 +13,7 @@ export function getStaticPaths() {
 const { episode } = Astro.props;
 
 const summary =
-  episode.body.split('\n\n')[0]?.slice(0, 280) ??
+  episode.summary ?? episode.body.split('\n\n')[0] ??
   episode.meta_description;
 const related = relatedEpisodes(episode, podcasts);
 ---

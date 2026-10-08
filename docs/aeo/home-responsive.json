@@ -1,0 +1,76 @@
+[
+  {
+    "build": "before",
+    "resize": {
+      "width": 390,
+      "scroll": 548,
+      "widget": true,
+      "grid": [
+        {
+          "class": "reveal",
+          "width": 520,
+          "min": "auto"
+        },
+        {
+          "class": "reveal d1",
+          "width": 520,
+          "min": "auto"
+        }
+      ]
+    },
+    "freshMobile": {
+      "width": 390,
+      "scroll": 548,
+      "widget": true,
+      "grid": [
+        {
+          "class": "reveal",
+          "width": 520,
+          "min": "auto"
+        },
+        {
+          "class": "reveal d1",
+          "width": 520,
+          "min": "auto"
+        }
+      ]
+    }
+  },
+  {
+    "build": "after",
+    "resize": {
+      "width": 390,
+      "scroll": 548,
+      "widget": true,
+      "grid": [
+        {
+          "class": "reveal",
+          "width": 520,
+          "min": "auto"
+        },
+        {
+          "class": "reveal d1",
+          "width": 520,
+          "min": "auto"
+        }
+      ]
+    },
+    "freshMobile": {
+      "width": 390,
+      "scroll": 548,
+      "widget": true,
+      "grid": [
+        {
+          "class": "reveal",
+          "width": 520,
+          "min": "auto"
+        },
+        {
+          "class": "reveal d1",
+          "width": 520,
+          "min": "auto"
+        }
+      ]
+    }
+  }
+]
