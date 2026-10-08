@@ -39,6 +39,7 @@ Detailed per-route measurements: [before.json](before.json), [after.json](after.
 - Bundled the existing Inter and Space Grotesk families locally with `font-display: swap`; updated all font-family references and retained font licenses under `public/font-licenses/`. Removed the Google Fonts stylesheet and preconnects from shared SEO.
 - Extracted consent logic into `src/lib/consent.mjs`. Its function body is unchanged apart from whitespace/export wrapper. Astro bundles it once; small JS bundles are external/cacheable instead of repeated in every document. Kept Astro's default critical-CSS inlining. All consent gating, production-host restrictions, analytics IDs, events, booking origin checks, and privacy filtering remain.
 - Added `defer` to the existing calendar and chat loaders, retaining their URLs/IDs and initialization logic.
+- Fixed the verified homepage chat overflow by allowing the AI demo's grid children to shrink (`min-width: 0`). The vendor widget's intrinsic width previously forced a 520px column on mobile. The form, consent controls, and loader configuration remain intact; no body clipping was added.
 - Added missing checker dependencies and a reproducible built-HTML audit plus preservation comparator. No production dependency was upgraded apart from the transitive `@emnapi/runtime` used by the installed checker; font dependencies are new.
 
 ## Verification
@@ -52,6 +53,7 @@ Detailed per-route measurements: [before.json](before.json), [after.json](after.
 - Consent: reject, reopen, accept, saved choice, and preview-host suppression verified. No marketing scripts loaded from the site's consent code on localhost. Unit tests additionally exercise production-host gating, event allowlists, consent revocation, and verified calendar completion messages without forwarding contact details.
 - Mobile navigation opened and reached booking. Calendar displayed available dates/times and reached the contact-details form; no information or appointment was submitted. Desktop calculator example produced 120 additional patients, 2.5/week. At 390px, the calculator continued to its $12,000 monthly-budget result, returned to the first step, cleared, and announced/focused invalid inputs correctly. Desktop navigation from Contact to Services also passed. [Interaction evidence](browser-interactions.json).
 - Homepage chat widget mounts with the deferred loader. No chat inquiry was submitted. The vendor emits pre-existing third-party/Turnstile errors on localhost, so end-to-end chat submission remains unverified. Calendar's own frame also emits a vendor pixel traffic-permission warning, distinct from the site's consent code.
+- Follow-up responsive chat check: the initial 390px viewport had a 548px document width in both baseline and the first repair ([historical measurements](home-responsive.json)). After the grid fix, document width equals viewport width in all **13 cases across eight widths from 320px to 1440px**, including fresh loads and desktop-to-mobile resizing after the widget mounts. All seven native form controls fit horizontally. At 320px, keyboard navigation scrolls the internal form to its visible submit button without submitting it. [Fresh loads](mobile-chat-fresh.json), [resize measurements](mobile-chat-resize.json), [keyboard check](mobile-chat-keyboard.json), [320px screenshot](mobile-chat-keyboard-320.png). Production build, all 26 tests, and all 278-page preservation/audit checks passed again; HTML audit totals above are unchanged.
 - Local, unthrottled, warm-cache article timings (three alternating runs): median DOM ready 5→5 ms, load 6→6 ms, first contentful paint 32→24 ms. [Raw runs/method](browser-performance.json). These tiny local samples are **not evidence of a field Core Web Vitals improvement**. No production RUM/Lighthouse claim is made.
 
 ## Remaining work and limits
@@ -60,9 +62,8 @@ Detailed per-route measurements: [before.json](before.json), [after.json](after.
 2. Nine distinct legacy WordPress image URLs (10 uses) returned access errors here; one direct sample also returned 404. The browser reported 403 for the legacy calendar image. Their pixels could not be inspected, so alternatives use verified link purpose/nearby instructions rather than invented visual detail. Restore original media from an authorized source, then review descriptive alt and legacy srcsets. [URL/status inventory](legacy-image-availability.json).
 3. The two `/blog/the-benefits-of-hiring-a-professional-website-design-company…/` URLs contain duplicate article content/descriptions. Canonical/redirect selection is intentionally deferred because this task requires preserving those mappings. The podcast/archive copies of episode 173 share a title because they present the same episode. This is different from duplicate meta elements within one document.
 4. The standalone, noindex `/ai-website-workbook/` retains its original external Google Fonts stylesheet and inline application code. It is outside the shared Astro layout and remains byte-for-byte unchanged.
-5. The existing homepage chat grid expands to 548px at a 390px viewport once the widget loads. This reproduces in both baseline and repaired builds, on fresh mobile load and desktop→mobile resize. [Measurements](home-responsive.json). This pre-existing integration layout issue needs a separate targeted fix.
-6. The existing 30 type errors and dependency advisories reported by npm remain; no broad dependency/security upgrade was attempted. Archived article claims, old promotional links, podcast audio contents, and every external destination were not fact-checked or tested. Remaining legacy episode teasers may benefit from an editorial pass backed by audio/transcripts, not generated filler.
-7. Browser verification covered representative routes and two viewport sizes, not every page/browser. No real lead, booking, purchase, or chat was submitted. Runtime third-party shadow content may differ from the static HTML audit. Production indexing, AI citations, and field performance were not verified.
+5. The existing 30 type errors and dependency advisories reported by npm remain; no broad dependency/security upgrade was attempted. Archived article claims, old promotional links, podcast audio contents, and every external destination were not fact-checked or tested. Remaining legacy episode teasers may benefit from an editorial pass backed by audio/transcripts, not generated filler.
+6. Browser verification covered representative routes at two viewport sizes plus the homepage chat at eight widths, not every page/browser. No real lead, booking, purchase, or chat was submitted. Runtime third-party shadow content may differ from the static HTML audit. Production indexing, AI citations, and field performance were not verified.
 
 ## Reproduce
 
@@ -84,6 +85,13 @@ python3 scripts/verify-aeo.py /path/to/baseline/dist dist
 ```
 
 The attached browser results use the installed browse skill against localhost production output. For the smoke/timing recipe, serve baseline `dist` on port 4321 and repaired `dist` on 4322, then run `BROWSE_BIN=/path/to/browse python3 docs/aeo/browser-smoke.py` from the repository root. This is a local diagnostic recipe, not a CI dependency. Recheck the preview's booking/chat flows before any production release. Keep the PR in draft; merge/promotion is a separate action.
+
+For the targeted chat check, build first, leave localhost port 4322 free, then run each command from the repository root. The script starts/stops its own local server, loads the existing third-party widget, and records its controls across nested shadow roots. It never enters lead details or submits the form.
+
+```sh
+BROWSE_BIN=/path/to/browse python3 docs/aeo/mobile-chat-responsive.py fresh
+BROWSE_BIN=/path/to/browse python3 docs/aeo/mobile-chat-responsive.py resize
+```
 
 ## Maintainer note
 

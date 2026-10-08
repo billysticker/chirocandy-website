@@ -27,6 +27,15 @@ docs/aeo/changed-files.txt
 docs/aeo/content-changes.json
 docs/aeo/home-responsive.json
 docs/aeo/legacy-image-availability.json
+docs/aeo/mobile-chat-fresh-1440.png
+docs/aeo/mobile-chat-fresh-320.png
+docs/aeo/mobile-chat-fresh-390.png
+docs/aeo/mobile-chat-fresh.json
+docs/aeo/mobile-chat-keyboard-320.png
+docs/aeo/mobile-chat-keyboard.json
+docs/aeo/mobile-chat-resize-390.png
+docs/aeo/mobile-chat-resize.json
+docs/aeo/mobile-chat-responsive.py
 docs/aeo/preservation.json
 docs/aeo/summary-review.md
 docs/aeo/tests.txt
