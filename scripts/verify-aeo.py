@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Compare route, canonical, schema and integration preservation between builds."""
 import argparse
+import base64
 from collections import Counter
+import hashlib
 import json
 from pathlib import Path
 import runpy
@@ -27,6 +29,23 @@ def pages(root):
     return result
 
 
+def image_sources(page, root, route):
+    """Allow the workbook's embedded PNGs to move to byte-identical local files."""
+    sources = []
+    for image in page.images:
+        source = image.get('src', '')
+        if route == 'ai-website-workbook/index.html':
+            if source.startswith('data:image/png;base64,'):
+                data = base64.b64decode(source.split(',', 1)[1], validate=True)
+                source = 'png-sha256:' + hashlib.sha256(data).hexdigest()
+            elif source.startswith('/ai-website-workbook/assets/') and source.endswith('.png'):
+                file = (root / source.lstrip('/')).resolve()
+                assert file.is_relative_to(root.resolve()), 'Image path escapes build directory'
+                source = 'png-sha256:' + hashlib.sha256(file.read_bytes()).hexdigest()
+        sources.append(source)
+    return Counter(sources)
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('before', type=Path)
@@ -42,7 +61,7 @@ if __name__ == '__main__':
         assert not new.schema_errors, (route, 'Invalid JSON-LD')
         assert schema_identity(old.schemas) == schema_identity(new.schemas), (route, 'Schema other than description changed')
         assert Counter(old.destinations) == Counter(new.destinations), (route, 'Link, media, or form destination changed')
-        assert Counter(image.get('src') for image in old.images) == Counter(image.get('src') for image in new.images), (route, 'Image source changed')
+        assert image_sources(old, args.before, route) == image_sources(new, args.after, route), (route, 'Image source or workbook image bytes changed')
         external = lambda page: Counter(src for src in page.scripts if src.startswith(('https:', 'http:', '//')))
         assert external(old) == external(new), (route, 'External integration script removed')
         if old.schemas != new.schemas:

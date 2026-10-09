@@ -1,0 +1,30 @@
+src/components/DemoChat.astro:30:18 - error ts(2339): Property 'leadConnector' does not exist on type 'Window & typeof globalThis'.
+src/components/DemoChat.astro:23:14 - error ts(2339): Property 'leadConnector' does not exist on type 'Window & typeof globalThis'.
+src/components/FluidBackground.astro:10:40 - error ts(2339): Property 'uid' does not exist on type 'Readonly<AstroGlobal<Props, (_props: Props) => any, Record<string, string | undefined>>>'.
+src/components/GrowthJourney.astro:59:494 - error ts(7053): Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ seo: number; localSeo: number; googleAds: number; metaAds: number; ctv: number; retargeting: number; directMail: number; communityEvents: number; }'.
+src/components/GrowthJourney.astro:156:186 - error ts(7053): Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ seo: number; localSeo: number; googleAds: number; metaAds: number; ctv: number; retargeting: number; directMail: number; communityEvents: number; } | { seo: number; localSeo: number; googleAds: number; ... 4 more ...; communityEvents: number; } | { ...; }'.
+src/components/SignalField.astro:128:45 - error ts(7006): Parameter 'colorMix' implicitly has an 'any' type.
+src/components/SignalField.astro:128:38 - error ts(7006): Parameter 'alpha' implicitly has an 'any' type.
+src/components/SignalField.astro:128:30 - error ts(7006): Parameter 'radius' implicitly has an 'any' type.
+src/components/SignalField.astro:128:27 - error ts(7006): Parameter 'y' implicitly has an 'any' type.
+src/components/SignalField.astro:128:24 - error ts(7006): Parameter 'x' implicitly has an 'any' type.
+src/components/SignalField.astro:122:28 - error ts(7006): Parameter 'event' implicitly has an 'any' type.
+src/components/SignalField.astro:75:33 - error ts(7006): Parameter 'layer' implicitly has an 'any' type.
+src/components/SignalField.astro:59:24 - error ts(7006): Parameter 'step' implicitly has an 'any' type.
+src/components/SignalField.astro:55:19 - error ts(7006): Parameter 'b' implicitly has an 'any' type.
+src/components/SignalField.astro:55:16 - error ts(7006): Parameter 'a' implicitly has an 'any' type.
+src/components/SignalField.astro:47:21 - error ts(7006): Parameter 'b' implicitly has an 'any' type.
+src/components/SignalField.astro:47:18 - error ts(7006): Parameter 'a' implicitly has an 'any' type.
+src/components/SignalField.astro:38:22 - error ts(7006): Parameter 'vector' implicitly has an 'any' type.
+src/components/SignalField.astro:34:28 - error ts(7006): Parameter 'amount' implicitly has an 'any' type.
+src/components/SignalField.astro:34:23 - error ts(7006): Parameter 'end' implicitly has an 'any' type.
+src/components/SignalField.astro:34:16 - error ts(7006): Parameter 'start' implicitly has an 'any' type.
+src/components/SignalField.astro:29:37 - error ts(7006): Parameter 'value' implicitly has an 'any' type.
+src/components/SignalField.astro:29:30 - error ts(7006): Parameter 'edge1' implicitly has an 'any' type.
+src/components/SignalField.astro:29:23 - error ts(7006): Parameter 'edge0' implicitly has an 'any' type.
+src/components/SignalField.astro:25:30 - error ts(7006): Parameter 'max' implicitly has an 'any' type.
+src/components/SignalField.astro:25:25 - error ts(7006): Parameter 'min' implicitly has an 'any' type.
+src/components/SignalField.astro:25:18 - error ts(7006): Parameter 'value' implicitly has an 'any' type.
+src/components/SignalField.astro:18:14 - error ts(7017): Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
+src/components/SignalField.astro:17:33 - error ts(7017): Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
+src/pages/marketing-calculator/index.astro:41:375 - error ts(7053): Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ seo: number; localSeo: number; googleAds: number; metaAds: number; ctv: number; retargeting: number; directMail: number; communityEvents: number; } | { seo: number; localSeo: number; googleAds: number; ... 4 more ...; communityEvents: number; } | { ...; }'.

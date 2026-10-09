@@ -1,0 +1,47 @@
+[
+  {
+    "url": "/ai-website-workbook/assets/chirocandy-logo-4d1eab5c23de.png",
+    "sha256": "4d1eab5c23de67e15c71f57585cd7dcb0fa81f11ff6395663ad79b16e907e0c9",
+    "bytes": 81734
+  },
+  {
+    "url": "/ai-website-workbook/assets/tool-logo-1-46f94a1341ce.png",
+    "sha256": "46f94a1341ce0d1a6f3ac649f58b7665e7207357e2bb61de2ea36a919dd68f54",
+    "bytes": 27878
+  },
+  {
+    "url": "/ai-website-workbook/assets/tool-logo-2-5c9896508c07.png",
+    "sha256": "5c9896508c07b936d2e55d9bead40465b38e9b9892a0307ace3fc5eb7959136c",
+    "bytes": 23981
+  },
+  {
+    "url": "/ai-website-workbook/assets/tool-logo-3-189da2218dff.png",
+    "sha256": "189da2218dffe4262c0803cf8bb4b5db5d15ac685a4a3bc08c0272400e438df5",
+    "bytes": 11917
+  },
+  {
+    "url": "/ai-website-workbook/assets/tool-logo-4-ef3612d41cba.png",
+    "sha256": "ef3612d41cba137e310a20ad53bc7e7fc634f10e5356d8e63d0ee76fa7d02595",
+    "bytes": 3352
+  },
+  {
+    "url": "/ai-website-workbook/assets/github-repository-7c903455267a.png",
+    "sha256": "7c903455267a7e9127c963cedac1ca90e2d3debaa58c0057c5bf4d2cae784a7c",
+    "bytes": 89988
+  },
+  {
+    "url": "/ai-website-workbook/assets/vercel-domain-settings-886812994a62.png",
+    "sha256": "886812994a628ba834b18365905b059985cdaafb9fe798f8bcd91316e9b851b5",
+    "bytes": 110070
+  },
+  {
+    "url": "/ai-website-workbook/assets/namecheap-dns-settings-70a06123a62f.png",
+    "sha256": "70a06123a62ff3264260deed54bbc147d49bac9dc6b2b3b9ce50baa40d843a51",
+    "bytes": 43171
+  },
+  {
+    "url": "/ai-website-workbook/assets/vercel-dns-editor-1b0df4ce5323.png",
+    "sha256": "1b0df4ce53238a95a3bd722115ecfa2b51c4bdbaaf46b4f0066eede70fb9030a",
+    "bytes": 267777
+  }
+]

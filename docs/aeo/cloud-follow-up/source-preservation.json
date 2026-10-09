@@ -1,0 +1,16 @@
+{
+  "incoming_commit": "53b56656b06dcf7b3b2c15201ee5e2837457295a",
+  "podcast_summaries_added": 101,
+  "existing_podcast_summaries_retained": 20,
+  "podcast_body_artifact_cleanup": [
+    "158-how-to-dominate-social-media-marketing-without-discounting-services",
+    "how-to-10x-business"
+  ],
+  "other_podcast_fields_unchanged": true,
+  "workbook_script_and_inline_style_blocks_unchanged": true,
+  "redirects_robots_llm_consent_chat_calendar_files_unchanged": true,
+  "main_type_errors": 30,
+  "incoming_type_errors": 30,
+  "final_type_errors": 30,
+  "new_type_errors": 0
+}

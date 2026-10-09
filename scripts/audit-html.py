@@ -119,7 +119,7 @@ def audit(root):
             for meta in page.meta
         )
         text = ' '.join(' '.join(page.text).split())
-        summaries = [' '.join(' '.join(parts).split()) for parts in page.summaries]
+        summaries = [summary_text for parts in page.summaries if (summary_text := ' '.join(' '.join(parts).split()))]
         description = next((meta.get('content', '') for meta in page.meta if meta.get('name') == 'description'), '')
         title = ''.join(page.titles)
         if description:
@@ -148,6 +148,10 @@ def audit(root):
     rows = list(pages.values())
     if not rows:
         raise ValueError('No built HTML found; run npm run build first.')
+    content_pages = {
+        route: row for route, row in pages.items()
+        if route.count('/') == 3 and route.startswith(('/blog/', '/uncategorized/', '/podcast/'))
+    }
     return {
         'method': 'Initial built HTML only. Meta duplicates grouped by name/property separately; text excludes script/style/template/noscript/explicit hidden regions. CSS visibility and injected third-party DOM require browser checks. Ratio is UTF-8 normalized body text bytes divided by HTML bytes; no pass threshold.',
         'totals': {
@@ -155,7 +159,9 @@ def audit(root):
             'pages_with_missing_alt': sum(bool(row['missing_alt']) for row in rows),
             'pages_with_duplicate_meta_keys': sum(bool(row['duplicate_meta_keys']) for row in rows),
             'pages_with_summary': sum(bool(row['summaries']) for row in rows),
-            'content_pages_with_summary': sum(bool(row['summaries']) for route, row in pages.items() if route.count('/') == 3 and route.startswith(('/blog/', '/uncategorized/', '/podcast/'))),
+            'content_pages': len(content_pages),
+            'content_pages_with_summary': sum(bool(row['summaries']) for row in content_pages.values()),
+            'content_pages_without_summary': sum(not row['summaries'] for row in content_pages.values()),
             'pages_with_external_stylesheet': sum(any(href.startswith(('http:', 'https:', '//')) for href in row['stylesheets']) for row in rows),
             'pages_with_blocking_external_script': sum(bool(row['blocking_scripts']) for row in rows),
             'html_bytes': sum(row['html_bytes'] for row in rows),
@@ -164,6 +170,7 @@ def audit(root):
             'invalid_jsonld_pages': sum(bool(row['schema_errors']) for row in rows),
         },
         'shared_description_groups': [routes for routes in descriptions.values() if len(routes) > 1],
+        'content_routes_without_summary': [route for route, row in content_pages.items() if not row['summaries']],
         'shared_title_groups': [routes for routes in titles.values() if len(routes) > 1],
         'pages': pages,
     }

@@ -1,0 +1,75 @@
+[
+  {
+    "source": "http://chirocandy.wpengine.com/wp-content/uploads/2015/03/10Reasons-300x300.png",
+    "checked_https_url": "https://chirocandy.wpengine.com/wp-content/uploads/2015/03/10Reasons-300x300.png",
+    "status": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+    "routes": [
+      "/blog/reasons/"
+    ]
+  },
+  {
+    "source": "http://chirocandy.wpengine.com/wp-content/uploads/2015/03/SignatureBanner.png",
+    "checked_https_url": "https://chirocandy.wpengine.com/wp-content/uploads/2015/03/SignatureBanner.png",
+    "status": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+    "routes": [
+      "/blog/reasons/"
+    ]
+  },
+  {
+    "source": "http://chirocandy.wpengine.com/wp-content/uploads/2015/05/newnoteworthychirocandy.png",
+    "checked_https_url": "https://chirocandy.wpengine.com/wp-content/uploads/2015/05/newnoteworthychirocandy.png",
+    "status": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+    "routes": [
+      "/blog/new-noteworthy/"
+    ]
+  },
+  {
+    "source": "http://chirocandy.wpengine.com/wp-content/uploads/2015/05/BillyStickerthumbs.png",
+    "checked_https_url": "https://chirocandy.wpengine.com/wp-content/uploads/2015/05/BillyStickerthumbs.png",
+    "status": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+    "routes": [
+      "/blog/new-noteworthy/"
+    ]
+  },
+  {
+    "source": "http://chirocandy.wpengine.com/wp-content/uploads/2015/05/ChiroCandy_iTunes-Review.png",
+    "checked_https_url": "https://chirocandy.wpengine.com/wp-content/uploads/2015/05/ChiroCandy_iTunes-Review.png",
+    "status": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+    "routes": [
+      "/blog/itunesreview/"
+    ]
+  },
+  {
+    "source": "http://chirocandy.wpengine.com/wp-content/uploads/2015/05/itunes_rating_review-300x163.png",
+    "checked_https_url": "https://chirocandy.wpengine.com/wp-content/uploads/2015/05/itunes_rating_review-300x163.png",
+    "status": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+    "routes": [
+      "/blog/itunesreview/"
+    ]
+  },
+  {
+    "source": "http://chirocandy.wpengine.com/wp-content/uploads/2015/05/ios8_app_store_reviews-252x300.png",
+    "checked_https_url": "https://chirocandy.wpengine.com/wp-content/uploads/2015/05/ios8_app_store_reviews-252x300.png",
+    "status": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+    "routes": [
+      "/blog/itunesreview/"
+    ]
+  },
+  {
+    "source": "http://chirocandy.wpengine.com/wp-content/uploads/2015/12/style1a-button.png",
+    "checked_https_url": "https://chirocandy.wpengine.com/wp-content/uploads/2015/12/style1a-button.png",
+    "status": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+    "routes": [
+      "/blog/update/",
+      "/blog/businessorjob/"
+    ]
+  },
+  {
+    "source": "http://chirocandy.wpengine.com/wp-content/uploads/2015/03/marketing_schedule.png",
+    "checked_https_url": "https://chirocandy.wpengine.com/wp-content/uploads/2015/03/marketing_schedule.png",
+    "status": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+    "routes": [
+      "/uncategorized/12-month-plan/"
+    ]
+  }
+]
