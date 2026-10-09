@@ -8,7 +8,7 @@ import {
   buildGraph,
   webPageSchema,
 } from '@/lib/schema';
-import { SITE } from '@/lib/site';
+import { BILLY_STICKER, SITE } from '@/lib/site';
 
 interface Props {
   title: string;
@@ -70,7 +70,7 @@ const schema = buildGraph(
         {' / '}
         <span>{h1}</span>
       </nav>
-      <p class="eyebrow">{isComparison ? "The practice owner’s guide" : "Billy Sticker"}</p>
+      <p class="eyebrow">{isComparison ? "The practice owner’s guide" : <a href={BILLY_STICKER.url}>{BILLY_STICKER.name}</a>}</p>
       <h1>{h1}</h1>
       <AnswerSummary text={summary} />
       <p class="meta">
@@ -88,10 +88,12 @@ const schema = buildGraph(
         )}
       </p>
       {isComparison ? <ComparisonGuide bodyHtml={bodyHtml} /> : <div class="article-body" set:html={bodyHtml} />}
-      <p class="byline">
-        Written for chiropractic and healthcare practice owners. More from <a href="/about/billy-sticker/">Billy Sticker</a>
-        and the <a href="/blog/">ChiroCandy blog</a>.
-      </p>
+      <aside class="author-bio" aria-labelledby="article-author-heading">
+        <h2 id="article-author-heading">About Billy Sticker</h2>
+        <p><a href={BILLY_STICKER.url}>{BILLY_STICKER.name}</a> is the founder of ChiroCandy.
+          Explore his books, speaking, and work in AI and business growth at <a href={BILLY_STICKER.personalUrl}>BillySticker.com</a>.</p>
+        <p class="author-bio__more">Explore more from the <a href="/blog/">ChiroCandy blog</a>.</p>
+      </aside>
       <div class="inner-cta">
         <a class="btn btn--primary" href={SITE.scheduleUrl}>Book a Strategy Call</a>
         <a class="btn btn--secondary" href="/contact-us/">Contact us</a>
@@ -123,7 +125,10 @@ const schema = buildGraph(
   .comparison-shell { max-width:1180px; }
   .comparison-page h1 { max-width:950px; font-size:clamp(2rem,4.5vw,3.6rem); line-height:1.12; letter-spacing:-.035em; }
   .comparison-page .meta { margin-top:1.5rem; }
-  .comparison-page .meta a,.comparison-page .byline a { color:var(--green); text-decoration:underline; }
-  .comparison-page .byline { margin-top:2rem; color:var(--muted); }
+  .comparison-page .meta a,.author-bio a { color:var(--green); text-decoration:underline; text-underline-offset:.15em; }
+  .author-bio { margin-top:2.5rem; padding-top:1.5rem; border-top:1px solid var(--line); }
+  .author-bio h2 { margin:0 0 .75rem; font-size:1.25rem; }
+  .author-bio p { color:var(--muted); margin:0; max-width:72ch; }
+  .author-bio .author-bio__more { margin-top:.75rem; font-size:.9rem; }
   .comparison-page :global(.answer-summary) { max-width:850px; padding:1.25rem 1.5rem; border:1px solid var(--line); border-left:3px solid var(--green); border-radius:0 14px 14px 0; background:var(--panel); }
 </style>
