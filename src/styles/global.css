@@ -20,9 +20,9 @@
   --text-muted: #96abc6;
   --line: rgba(150, 171, 198, 0.14);
   --border: rgba(150, 171, 198, 0.14);
-  --font-headline: 'Space Grotesk', system-ui, sans-serif;
-  --font-subhead: 'Space Grotesk', system-ui, sans-serif;
-  --font-body: 'Inter', system-ui, sans-serif;
+  --font-headline: 'Space Grotesk Variable', system-ui, sans-serif;
+  --font-subhead: 'Space Grotesk Variable', system-ui, sans-serif;
+  --font-body: 'Inter Variable', system-ui, sans-serif;
   --radius: 20px;
   --shadow: 0 40px 100px rgba(0, 0, 0, 0.6);
   --max-width: 1180px;
@@ -211,10 +211,15 @@ h4 {
   color: var(--muted);
 }
 
-.prose a {
+.prose a:not(.btn) {
   color: var(--green);
   text-decoration: underline;
   text-underline-offset: 0.15em;
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--green);
+  outline-offset: 4px;
 }
 
 .prose h2 {

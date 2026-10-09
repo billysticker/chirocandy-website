@@ -1,10 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { initializeConsent } from '../src/lib/consent.mjs';
 import vm from 'node:vm';
 
-const source = readFileSync(new URL('../src/components/CookieConsent.astro', import.meta.url), 'utf8');
-const script = source.match(/<script is:inline[^>]*>([\s\S]*?)<\/script>/)[1];
+const script = `(${initializeConsent.toString()})({ measurementId, pixelId });`;
 
 function browser(saved = null, url = 'https://chirocandy.com/pricing/', storageBlocked = false) {
   const listeners = new Map();

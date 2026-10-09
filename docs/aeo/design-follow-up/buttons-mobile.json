@@ -1,0 +1,1469 @@
+{
+  "base": "http://127.0.0.1:4336",
+  "width": 390,
+  "routes": [
+    {
+      "route": "/",
+      "count": 10
+    },
+    {
+      "route": "/about-us/",
+      "count": 5
+    },
+    {
+      "route": "/about/billy-sticker/",
+      "count": 5
+    },
+    {
+      "route": "/ai-website-workbook/",
+      "count": 21
+    },
+    {
+      "route": "/blog/",
+      "count": 5
+    },
+    {
+      "route": "/blog/5-benefits-of-a-high-functioning-website-for-chiropractors/",
+      "count": 7
+    },
+    {
+      "route": "/blog/5-ways-to-save-time-and-overcome-your-chiropractic-marketing-challenges/",
+      "count": 7
+    },
+    {
+      "route": "/blog/a-comprehensive-marketing-plan-for-chiropractors/",
+      "count": 7
+    },
+    {
+      "route": "/blog/ai-built-chiropractic-website-review-checklist/",
+      "count": 7
+    },
+    {
+      "route": "/blog/best-chiropractic-marketing-agencies/",
+      "count": 7
+    },
+    {
+      "route": "/blog/building-trust/",
+      "count": 7
+    },
+    {
+      "route": "/blog/businessorjob/",
+      "count": 7
+    },
+    {
+      "route": "/blog/chiropractic-advertising-leads-to-appointments/",
+      "count": 7
+    },
+    {
+      "route": "/blog/chiropractic-ai-visibility-audit/",
+      "count": 7
+    },
+    {
+      "route": "/blog/chiropractic-call-tracking-lead-quality/",
+      "count": 7
+    },
+    {
+      "route": "/blog/chiropractic-domain-website-ownership/",
+      "count": 7
+    },
+    {
+      "route": "/blog/chiropractic-google-ads-landing-pages/",
+      "count": 7
+    },
+    {
+      "route": "/blog/chiropractic-google-ads-search-terms/",
+      "count": 7
+    },
+    {
+      "route": "/blog/chiropractic-marketing-costs/",
+      "count": 7
+    },
+    {
+      "route": "/blog/chiropractic-patient-review-request-process/",
+      "count": 7
+    },
+    {
+      "route": "/blog/chiropractic-seo-costs/",
+      "count": 7
+    },
+    {
+      "route": "/blog/chiropractic-service-pages-for-seo/",
+      "count": 7
+    },
+    {
+      "route": "/blog/chiropractic-video-content-approval-workflow/",
+      "count": 7
+    },
+    {
+      "route": "/blog/chiropractic-website-booking-conversion-audit/",
+      "count": 7
+    },
+    {
+      "route": "/blog/chiropractor-seo-strategy-for-new-clinics/",
+      "count": 7
+    },
+    {
+      "route": "/blog/crafting-the-best-chiropractic-website-design/",
+      "count": 7
+    },
+    {
+      "route": "/blog/differentiate-your-home-page-make-sure-it-talks-to-your-unique-patients/",
+      "count": 7
+    },
+    {
+      "route": "/blog/dont-be-fooled-by-the-sizzle-of-chiropractic-marketing-trends-focus-on-what-works/",
+      "count": 7
+    },
+    {
+      "route": "/blog/essential-chiropractic-marketing-tools/",
+      "count": 7
+    },
+    {
+      "route": "/blog/evaluate-chiropractic-marketing-case-studies/",
+      "count": 7
+    },
+    {
+      "route": "/blog/geo-for-chiropractors/",
+      "count": 7
+    },
+    {
+      "route": "/blog/google-ads-budget-for-chiropractors/",
+      "count": 7
+    },
+    {
+      "route": "/blog/google-ads-vs-facebook-ads-for-chiropractors/",
+      "count": 7
+    },
+    {
+      "route": "/blog/google-ads-vs-seo-for-chiropractors/",
+      "count": 7
+    },
+    {
+      "route": "/blog/google-business-optimization-for-chiropractors/",
+      "count": 7
+    },
+    {
+      "route": "/blog/how-can-chiropractors-leverage-chiropractic-facebook-marketing-to-reach-their-target-audience/",
+      "count": 7
+    },
+    {
+      "route": "/blog/how-to-choose-chiropractic-marketing-agency/",
+      "count": 7
+    },
+    {
+      "route": "/blog/how-to-establish-authority-in-the-chiropractic-industry-with-your-website/",
+      "count": 7
+    },
+    {
+      "route": "/blog/how-to-evaluate-chiropractic-seo-progress/",
+      "count": 7
+    },
+    {
+      "route": "/blog/how-to-use-facebook-ads-to-build-your-chiropractic-practices-brand/",
+      "count": 7
+    },
+    {
+      "route": "/blog/itunesreview/",
+      "count": 7
+    },
+    {
+      "route": "/blog/let-chirocandy-marketing-help-you-create-a-more-professional-online-presence/",
+      "count": 7
+    },
+    {
+      "route": "/blog/making-the-most-of-your-time-tips-for-chiropractor-marketing/",
+      "count": 7
+    },
+    {
+      "route": "/blog/marketing-new-chiropractic-associate/",
+      "count": 7
+    },
+    {
+      "route": "/blog/maximizing-your-chiropractic-google-ads/",
+      "count": 7
+    },
+    {
+      "route": "/blog/measure-chiropractic-ai-search-visibility/",
+      "count": 7
+    },
+    {
+      "route": "/blog/new-noteworthy/",
+      "count": 7
+    },
+    {
+      "route": "/blog/reactivation-campaign-ideas/",
+      "count": 7
+    },
+    {
+      "route": "/blog/reasons/",
+      "count": 7
+    },
+    {
+      "route": "/blog/responsive-chiropractic-website-templates/",
+      "count": 7
+    },
+    {
+      "route": "/blog/seo-for-multiple-chiropractic-locations/",
+      "count": 7
+    },
+    {
+      "route": "/blog/switching-chiropractic-website-providers/",
+      "count": 7
+    },
+    {
+      "route": "/blog/the-benefits-of-hiring-a-professional-website-design-company-for-chiropractors/",
+      "count": 7
+    },
+    {
+      "route": "/blog/the-benefits-of-hiring-a-professional-website-design-company/",
+      "count": 7
+    },
+    {
+      "route": "/blog/the-future-of-chiropractic-facebook-marketing-emerging-trends-and-strategies-in-2023/",
+      "count": 7
+    },
+    {
+      "route": "/blog/the-top-10-marketing-strategies-for-growing-your-chiropractic-practice-in-2023/",
+      "count": 7
+    },
+    {
+      "route": "/blog/the-top-3-priorities-for-your-chiropractic-marketing-budget/",
+      "count": 7
+    },
+    {
+      "route": "/blog/unlocking-chiropractic-content-ideas/",
+      "count": 7
+    },
+    {
+      "route": "/blog/update/",
+      "count": 7
+    },
+    {
+      "route": "/blog/using-image-and-video-ads-for-chiropractic-facebook-marketing-how-to-reach-clients-with-engaging-visuals/",
+      "count": 7
+    },
+    {
+      "route": "/blog/why-chiropractic-website-pages-not-indexed/",
+      "count": 7
+    },
+    {
+      "route": "/case-studies/",
+      "count": 6
+    },
+    {
+      "route": "/case-studies/100-percent-chiropractic-chattanooga/",
+      "count": 6
+    },
+    {
+      "route": "/case-studies/advanced-care-chiropractic-jason-white/",
+      "count": 6
+    },
+    {
+      "route": "/case-studies/ipswich-spine-clinic-amit-patel/",
+      "count": 6
+    },
+    {
+      "route": "/case-studies/lemmata-chiropractic-david-martinez/",
+      "count": 6
+    },
+    {
+      "route": "/case-studies/lifeworks-family-chiropractic-kelowna/",
+      "count": 6
+    },
+    {
+      "route": "/case-studies/revive-medical-center-michael-schulman/",
+      "count": 6
+    },
+    {
+      "route": "/compare-marketing-agencies/",
+      "count": 6
+    },
+    {
+      "route": "/contact-us/",
+      "count": 7
+    },
+    {
+      "route": "/demo/",
+      "count": 7
+    },
+    {
+      "route": "/done-for-you-program/",
+      "count": 6
+    },
+    {
+      "route": "/faqs/",
+      "count": 5
+    },
+    {
+      "route": "/frameworks/",
+      "count": 5
+    },
+    {
+      "route": "/frameworks/3d-x-framework/",
+      "count": 5
+    },
+    {
+      "route": "/frameworks/4-o-framework/",
+      "count": 5
+    },
+    {
+      "route": "/frameworks/7-11-4-framework/",
+      "count": 5
+    },
+    {
+      "route": "/frameworks/known-found-trusted/",
+      "count": 5
+    },
+    {
+      "route": "/frameworks/perfect-patient-tribe-turbine/",
+      "count": 5
+    },
+    {
+      "route": "/get-new-patients/",
+      "count": 6
+    },
+    {
+      "route": "/let-me-write-your-book/",
+      "count": 6
+    },
+    {
+      "route": "/marketing-calculator/",
+      "count": 12
+    },
+    {
+      "route": "/news-and-media/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/000/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/001/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/002/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/003/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/004/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/005/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/006/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/10-rules-for-success/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/10-steps-to-building-a-million-dollar-chiropractic-practice/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/128-new-facebook-marketing-strategy/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/142-how-to-succeed-with-facebook-marketing-series-part-1-with-billy-sticker/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/143-chirofunnel-secrets-w-chad-woolner/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/145-how-to-succeed-with-facebook-marketing-series-part-2-with-billy-sticker/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/147-top-5-facebook-instagram-campaigns-you-should-be-running-now/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/148-can-this-software-replace-your-ca/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/149-building-a-legacy-business/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/150-10-tips-for-recording-facebook-videos/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/151-reactivation-tip/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/152-focus-on-these-two-things/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/153-keys-to-successful-facebook-and-instagram-campaigns-w-daniel-knowles/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/154-2/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/155-video-equipment-that-helps-you-create-higher-quality-content/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/156-2/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/157-2/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/158-how-to-dominate-social-media-marketing-without-discounting-services/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/159-great-marketing-will-solve-most-problems-with-dr-ryan-rieder/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/160-how-chiropractors-should-respond-to-covid-19/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/161-guaranteed-patients-even-in-the-chaos/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/162-use-this-as-a-blueprint/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/163-is-your-ppp-loan-really-forgivable-with-jennifer-belville/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/164-practice-purchasing-opportunities-with-kevin-crystal-misenheimer/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/165-part-time-million-dollar-cash-practice-w-dr-nona-djavid/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/166-your-2021-internet-marketing-plan/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/167-how-to-master-personal-injury-marketing-with-dr-mark-slater/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/170-case-study-consistently-get-60-70-show-rates/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/171-100000-patients-a-month/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/172-thriving-in-any-market-condition-with-dr-tory-robson/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/173-how-to-dominate-adding-knee-and-neuropathy-niches-clinic-masters/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/2017-marketing-plan/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/3-essential-steps-to-grow-your-impact/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/3-facebook-marketing-essentials/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/3-keys-of-a-successful-chiropractor/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/3-more-facebook-marketing-secrets/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/3-reasons-facebook-ads-are-not-working/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/3-simple-steps-for-marketing/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/4-pillars-of-chiropractic-success/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/5-disney-success-principles/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/5-factors-of-health/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/5-ms-of-marketing/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/5-star-reputation-management/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/7-reasons-write-a-book/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/7-strategies-to-get-higher-quality-leads-increase-show-rates/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/8-key-takeaways-funnel-hacking-live/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/art-of-story/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/attraction-conversion-retention-wellness/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/automate-your-marketing/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/being-great/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/beyond-bones/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/beyond-the-pain/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/big-idea-mentor/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/blueprint-to-neuropathy/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/bonus-headache-funnel/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/brain-based-wellness/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/brand-building/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/branding-yourself-expert/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/building-a-pediatric-practice/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/building-a-referable-practice/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/chasing-success/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/chiro-ceo/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/chiropractic-critical-mass/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/chiropractic-financial-freedom/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/chiropractic-life-coach/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/chiropractic-marketing-challenge/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/chiropractic-marketing-funnels/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/chiropractic-mastery/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/chiropractic-millionaire-maker-part2/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/chiropractic-millionaire-maker-part3/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/chiropractic-millionaire-maker/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/chiropractic-patient-referrals-from-medical-doctors/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/chiropractic-philosophy/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/chiropractic-relationship-marketing/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/chiropractic-the-documentary/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/chiropractic-wealth-management/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/chiropractic-world-domination/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/chirosummit/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/chirosushi-summit-review/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/chirosushi/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/clarifying-communication/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/closing-more-from-talks/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/closing-more-patients/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/communicating-the-power-of-a-chiropractic-adjustment/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/corporate-wellness/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/creating-ultimate-authority/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/cruise-2018/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/crushing-day-1-2-procedures/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/danny-veiga/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/database-marketing/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/designing-your-ideal-chiropractic-practice/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/dr-vince-leone/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/dynamic-dinner/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/effective-chiropractic-advertising/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/email-marketing-for-chiropractors/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/establishing-yourself-as-the-authority/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/evolved-enterprise/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/facebook-ad-campaign/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/facebook-leads-targeting/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/facebook-marketing-secrets/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/facebook-marketing-strategies/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/fundamentals-of-a-successful-chiropractic-website/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/get-amped/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/get-uncomfortable/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/growth-in-your-practice/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/growth-in-your-practice2/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/helping-patients-sleep-smarter/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/higher-quality-fb-leads/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/holy-grail-business/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/how-to-10x-business/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/how-to-increase-your-pva/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/hugh-liddle-the-sales-wizard/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/hurricane-harvey/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/increasing-your-pva-2/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/increasing-your-pva/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/john-lee-dumas/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/land-your-first-professional-sports-team/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/marketing-from-the-heart/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/marketing-mindset/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/mens-style/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/million-dollar-practice/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/next-generation-chiropractor/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/nutrition-systems/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/part-2-the-best-adjustement-is-above-your-atlas/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/patient-centered-communication/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/patient-food-testing/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/posture-by-design/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/practice-automation/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/practicing-abroad-part-2/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/practicing-abroad-part1/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/private-practice-millionaire/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/purpose-bigger-than-your-fears/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/rediscovering-your-chiropractic-purpose/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/remarkable-chiropractic-practice/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/saving-lives/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/spinal-care-workshops/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/spinal-hygiene-movement/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/spinal-hygienist/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/stop-selling/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/storms-of-life/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/stroke-chiropractic/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/success-self-image/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/successful-2016/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/successful-chiropractor/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/suck-selling/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/supercharge-your-practice-and-profits-podcasting/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/the-best-adjustement-is-above-your-atlas/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/the-message-of-chiropractic/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/tips-for-building-a-practice-from-scratch/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/tips-making-facebook-videos/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/tma-attack-on-chiropractic/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/traits-successful-chiropractor/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/transform-power-workshops/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/trauma-toxins-thoughts/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/ultimate-referral-machine/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/understanding-f/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/vaccines_revealed/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/video-marketing-essentials/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/visit-number-dc-models-going-extinct-best-of/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/visit-number-dc-models-going-extinct/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/waiting-list-practice/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/why-i-do-what-i-do/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/worldwide-influence/",
+      "count": 6
+    },
+    {
+      "route": "/podcast/writing-a-book/",
+      "count": 6
+    },
+    {
+      "route": "/podcasts/",
+      "count": 5
+    },
+    {
+      "route": "/pricing/",
+      "count": 10
+    },
+    {
+      "route": "/privacy-policy/",
+      "count": 5
+    },
+    {
+      "route": "/resources/",
+      "count": 5
+    },
+    {
+      "route": "/schedule/",
+      "count": 5
+    },
+    {
+      "route": "/service-areas/",
+      "count": 6
+    },
+    {
+      "route": "/services/",
+      "count": 5
+    },
+    {
+      "route": "/services/ai-patient-coordinator/",
+      "count": 6
+    },
+    {
+      "route": "/services/ai-visibility/",
+      "count": 6
+    },
+    {
+      "route": "/services/chiropractic-social-media-marketing/",
+      "count": 5
+    },
+    {
+      "route": "/services/facebook-advertising/",
+      "count": 5
+    },
+    {
+      "route": "/services/google-advertising/",
+      "count": 5
+    },
+    {
+      "route": "/services/reactivation-campaigns/",
+      "count": 6
+    },
+    {
+      "route": "/services/search-engine-optimization/",
+      "count": 5
+    },
+    {
+      "route": "/services/voice-ai/",
+      "count": 6
+    },
+    {
+      "route": "/services/web-design/",
+      "count": 5
+    },
+    {
+      "route": "/sitemap/",
+      "count": 5
+    },
+    {
+      "route": "/terms-conditions/",
+      "count": 5
+    },
+    {
+      "route": "/testimonials/",
+      "count": 6
+    },
+    {
+      "route": "/thank-you/",
+      "count": 7
+    },
+    {
+      "route": "/training-program/",
+      "count": 6
+    },
+    {
+      "route": "/uncategorized/12-month-plan/",
+      "count": 7
+    },
+    {
+      "route": "/uncategorized/173-how-to-dominate-adding-knee-and-neuropathy-niches-clinic-masters-2/",
+      "count": 7
+    },
+    {
+      "route": "/uncategorized/174-the-chiropractic-defense-council/",
+      "count": 7
+    },
+    {
+      "route": "/uncategorized/marketing-dream-practice/",
+      "count": 7
+    },
+    {
+      "route": "/uncategorized/maximizing-roi-how-chiropractors-can-optimize-facebook-ads-to-reach-more-patients/",
+      "count": 7
+    },
+    {
+      "route": "/uncategorized/measuring-success-how-to-track-the-roi-of-your-chiropractic-facebook-ad-campaigns/",
+      "count": 7
+    },
+    {
+      "route": "/uncategorized/targeting-the-right-patients-best-practices-for-chiropractors-using-facebook-ads/",
+      "count": 7
+    },
+    {
+      "route": "/uncategorized/the-importance-of-video-ads-for-chiropractors-on-facebook/",
+      "count": 7
+    }
+  ],
+  "failures": [],
+  "manualReview": [],
+  "styleExamples": {
+    "rgb(4, 35, 15)|rgba(0, 0, 0, 0)|linear-gradient(135deg, rgb(155, 240, 122), rgb(92, 191, 62))|16|600|btn btn-green mm-cta": {
+      "route": "/about/billy-sticker/",
+      "tag": "A",
+      "classes": "btn btn-green mm-cta",
+      "label": "Book a Strategy Call\n→",
+      "disabled": false,
+      "iconOnly": false,
+      "name": "Book a Strategy Call\n→",
+      "foreground": "rgb(4, 35, 15)",
+      "background": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "linear-gradient(135deg, rgb(155, 240, 122), rgb(92, 191, 62))",
+      "contrast": 7.17,
+      "required": 4.5,
+      "opacity": 1,
+      "unknownBackground": false,
+      "signature": "rgb(4, 35, 15)|rgba(0, 0, 0, 0)|linear-gradient(135deg, rgb(155, 240, 122), rgb(92, 191, 62))|16|600|btn btn-green mm-cta"
+    },
+    "rgb(234, 241, 250)|rgba(255, 255, 255, 0.03)|none|14.08|600|btn btn-ghost cc-btn": {
+      "route": "/about/billy-sticker/",
+      "tag": "BUTTON",
+      "classes": "btn btn-ghost cc-btn",
+      "label": "Reject",
+      "disabled": false,
+      "iconOnly": false,
+      "name": "Reject",
+      "foreground": "rgb(234, 241, 250)",
+      "background": "rgba(255, 255, 255, 0.03)",
+      "backgroundImage": "none",
+      "contrast": 14.5,
+      "required": 4.5,
+      "opacity": 1,
+      "unknownBackground": false,
+      "signature": "rgb(234, 241, 250)|rgba(255, 255, 255, 0.03)|none|14.08|600|btn btn-ghost cc-btn"
+    },
+    "rgb(4, 35, 15)|rgba(0, 0, 0, 0)|linear-gradient(135deg, rgb(155, 240, 122), rgb(92, 191, 62))|14.08|600|btn btn-green cc-btn": {
+      "route": "/about/billy-sticker/",
+      "tag": "BUTTON",
+      "classes": "btn btn-green cc-btn",
+      "label": "Accept",
+      "disabled": false,
+      "iconOnly": false,
+      "name": "Accept",
+      "foreground": "rgb(4, 35, 15)",
+      "background": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "linear-gradient(135deg, rgb(155, 240, 122), rgb(92, 191, 62))",
+      "contrast": 7.17,
+      "required": 4.5,
+      "opacity": 1,
+      "unknownBackground": false,
+      "signature": "rgb(4, 35, 15)|rgba(0, 0, 0, 0)|linear-gradient(135deg, rgb(155, 240, 122), rgb(92, 191, 62))|14.08|600|btn btn-green cc-btn"
+    },
+    "rgb(126, 217, 87)|rgba(4, 16, 31, 0.88)|none|11.52|600|cc-reopen": {
+      "route": "/about/billy-sticker/",
+      "tag": "BUTTON",
+      "classes": "cc-reopen",
+      "label": "COOKIES",
+      "disabled": false,
+      "iconOnly": false,
+      "name": "COOKIES",
+      "foreground": "rgb(126, 217, 87)",
+      "background": "rgba(4, 16, 31, 0.88)",
+      "backgroundImage": "none",
+      "contrast": 10.87,
+      "required": 4.5,
+      "opacity": 1,
+      "unknownBackground": false,
+      "signature": "rgb(126, 217, 87)|rgba(4, 16, 31, 0.88)|none|11.52|600|cc-reopen"
+    },
+    "rgb(4, 35, 15)|rgba(0, 0, 0, 0)|linear-gradient(135deg, rgb(155, 240, 122), rgb(92, 191, 62))|15.36|600|btn btn--primary": {
+      "route": "/blog/5-benefits-of-a-high-functioning-website-for-chiropractors/",
+      "tag": "A",
+      "classes": "btn btn--primary",
+      "label": "Book a Strategy Call",
+      "disabled": false,
+      "iconOnly": false,
+      "name": "Book a Strategy Call",
+      "foreground": "rgb(4, 35, 15)",
+      "background": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "linear-gradient(135deg, rgb(155, 240, 122), rgb(92, 191, 62))",
+      "contrast": 7.17,
+      "required": 4.5,
+      "opacity": 1,
+      "unknownBackground": false,
+      "signature": "rgb(4, 35, 15)|rgba(0, 0, 0, 0)|linear-gradient(135deg, rgb(155, 240, 122), rgb(92, 191, 62))|15.36|600|btn btn--primary"
+    },
+    "rgb(234, 241, 250)|rgba(255, 255, 255, 0.03)|none|15.36|600|btn btn--secondary": {
+      "route": "/blog/5-benefits-of-a-high-functioning-website-for-chiropractors/",
+      "tag": "A",
+      "classes": "btn btn--secondary",
+      "label": "Contact us",
+      "disabled": false,
+      "iconOnly": false,
+      "name": "Contact us",
+      "foreground": "rgb(234, 241, 250)",
+      "background": "rgba(255, 255, 255, 0.03)",
+      "backgroundImage": "none",
+      "contrast": 15.83,
+      "required": 4.5,
+      "opacity": 1,
+      "unknownBackground": false,
+      "signature": "rgb(234, 241, 250)|rgba(255, 255, 255, 0.03)|none|15.36|600|btn btn--secondary"
+    },
+    "rgb(7, 27, 46)|rgb(149, 214, 87)|none|14|700|btn green": {
+      "route": "/ai-website-workbook/",
+      "tag": "A",
+      "classes": "btn green",
+      "label": "Start with the audit\n↗",
+      "disabled": false,
+      "iconOnly": false,
+      "name": "Start with the audit\n↗",
+      "foreground": "rgb(7, 27, 46)",
+      "background": "rgb(149, 214, 87)",
+      "backgroundImage": "none",
+      "contrast": 9.98,
+      "required": 4.5,
+      "opacity": 1,
+      "unknownBackground": false,
+      "signature": "rgb(7, 27, 46)|rgb(149, 214, 87)|none|14|700|btn green"
+    },
+    "rgb(16, 42, 64)|rgb(255, 255, 255)|none|12|600|copy-btn": {
+      "route": "/ai-website-workbook/",
+      "tag": "BUTTON",
+      "classes": "copy-btn",
+      "label": "Copy prompt",
+      "disabled": false,
+      "iconOnly": false,
+      "name": "Copy prompt",
+      "foreground": "rgb(16, 42, 64)",
+      "background": "rgb(255, 255, 255)",
+      "backgroundImage": "none",
+      "contrast": 14.71,
+      "required": 4.5,
+      "opacity": 1,
+      "unknownBackground": false,
+      "signature": "rgb(16, 42, 64)|rgb(255, 255, 255)|none|12|600|copy-btn"
+    },
+    "rgb(16, 42, 64)|rgb(255, 255, 255)|none|14|700|btn outline small": {
+      "route": "/ai-website-workbook/",
+      "tag": "BUTTON",
+      "classes": "btn outline small",
+      "label": "Download blank URL map ↓",
+      "disabled": false,
+      "iconOnly": false,
+      "name": "Download blank URL map ↓",
+      "foreground": "rgb(16, 42, 64)",
+      "background": "rgb(255, 255, 255)",
+      "backgroundImage": "none",
+      "contrast": 14.71,
+      "required": 4.5,
+      "opacity": 1,
+      "unknownBackground": false,
+      "signature": "rgb(16, 42, 64)|rgb(255, 255, 255)|none|14|700|btn outline small"
+    },
+    "rgb(7, 27, 46)|rgb(149, 214, 87)|none|13|700|btn green": {
+      "route": "/ai-website-workbook/",
+      "tag": "BUTTON",
+      "classes": "btn green",
+      "label": "All prompts ↓",
+      "disabled": false,
+      "iconOnly": false,
+      "name": "All prompts ↓",
+      "foreground": "rgb(7, 27, 46)",
+      "background": "rgb(149, 214, 87)",
+      "backgroundImage": "none",
+      "contrast": 9.98,
+      "required": 4.5,
+      "opacity": 1,
+      "unknownBackground": false,
+      "signature": "rgb(7, 27, 46)|rgb(149, 214, 87)|none|13|700|btn green"
+    },
+    "rgb(255, 255, 255)|rgba(0, 0, 0, 0)|none|13|700|btn outline": {
+      "route": "/ai-website-workbook/",
+      "tag": "BUTTON",
+      "classes": "btn outline",
+      "label": "URL map ↓",
+      "disabled": false,
+      "iconOnly": false,
+      "name": "URL map ↓",
+      "foreground": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "contrast": 17.42,
+      "required": 4.5,
+      "opacity": 1,
+      "unknownBackground": false,
+      "signature": "rgb(255, 255, 255)|rgba(0, 0, 0, 0)|none|13|700|btn outline"
+    },
+    "rgb(4, 35, 15)|rgba(0, 0, 0, 0)|linear-gradient(135deg, rgb(155, 240, 122), rgb(92, 191, 62))|15.36|600|btn btn-green": {
+      "route": "/case-studies/",
+      "tag": "A",
+      "classes": "btn btn-green",
+      "label": "Book a Strategy Call\n→",
+      "disabled": false,
+      "iconOnly": false,
+      "name": "Book a Strategy Call\n→",
+      "foreground": "rgb(4, 35, 15)",
+      "background": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "linear-gradient(135deg, rgb(155, 240, 122), rgb(92, 191, 62))",
+      "contrast": 7.17,
+      "required": 4.5,
+      "opacity": 1,
+      "unknownBackground": false,
+      "signature": "rgb(4, 35, 15)|rgba(0, 0, 0, 0)|linear-gradient(135deg, rgb(155, 240, 122), rgb(92, 191, 62))|15.36|600|btn btn-green"
+    },
+    "rgb(126, 217, 87)|rgba(0, 0, 0, 0)|none|13.6|400|text-button": {
+      "route": "/marketing-calculator/",
+      "tag": "BUTTON",
+      "classes": "text-button",
+      "label": "Try an example",
+      "disabled": false,
+      "iconOnly": false,
+      "name": "Try an example",
+      "foreground": "rgb(126, 217, 87)",
+      "background": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "contrast": 9.72,
+      "required": 4.5,
+      "opacity": 1,
+      "unknownBackground": false,
+      "signature": "rgb(126, 217, 87)|rgba(0, 0, 0, 0)|none|13.6|400|text-button"
+    },
+    "rgb(126, 217, 87)|rgba(0, 0, 0, 0)|none|14.4|400|calc-example": {
+      "route": "/marketing-calculator/",
+      "tag": "BUTTON",
+      "classes": "calc-example",
+      "label": "Try an example ↗",
+      "disabled": false,
+      "iconOnly": false,
+      "name": "Try an example ↗",
+      "foreground": "rgb(126, 217, 87)",
+      "background": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "contrast": 10.87,
+      "required": 4.5,
+      "opacity": 1,
+      "unknownBackground": false,
+      "signature": "rgb(126, 217, 87)|rgba(0, 0, 0, 0)|none|14.4|400|calc-example"
+    },
+    "rgb(126, 217, 87)|rgba(0, 0, 0, 0)|none|14.4|400|calc-clear": {
+      "route": "/marketing-calculator/",
+      "tag": "BUTTON",
+      "classes": "calc-clear",
+      "label": "Clear numbers",
+      "disabled": false,
+      "iconOnly": false,
+      "name": "Clear numbers",
+      "foreground": "rgb(126, 217, 87)",
+      "background": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "contrast": 10.87,
+      "required": 4.5,
+      "opacity": 1,
+      "unknownBackground": false,
+      "signature": "rgb(126, 217, 87)|rgba(0, 0, 0, 0)|none|14.4|400|calc-clear"
+    },
+    "rgb(4, 35, 15)|rgba(0, 0, 0, 0)|linear-gradient(135deg, rgb(155, 240, 122), rgb(92, 191, 62))|15.36|600|btn btn--primary calc-cta": {
+      "route": "/marketing-calculator/",
+      "tag": "A",
+      "classes": "btn btn--primary calc-cta",
+      "label": "Discuss My Numbers on a Strategy Call\n→",
+      "disabled": false,
+      "iconOnly": false,
+      "name": "Discuss My Numbers on a Strategy Call\n→",
+      "foreground": "rgb(4, 35, 15)",
+      "background": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "linear-gradient(135deg, rgb(155, 240, 122), rgb(92, 191, 62))",
+      "contrast": 7.17,
+      "required": 4.5,
+      "opacity": 1,
+      "unknownBackground": false,
+      "signature": "rgb(4, 35, 15)|rgba(0, 0, 0, 0)|linear-gradient(135deg, rgb(155, 240, 122), rgb(92, 191, 62))|15.36|600|btn btn--primary calc-cta"
+    },
+    "rgb(4, 35, 15)|rgba(0, 0, 0, 0)|linear-gradient(135deg, rgb(155, 240, 122), rgb(92, 191, 62))|15.36|600|btn btn-green magnetic": {
+      "route": "/",
+      "tag": "A",
+      "classes": "btn btn-green magnetic",
+      "label": "Book a Strategy Call\n→",
+      "disabled": false,
+      "iconOnly": false,
+      "name": "Book a Strategy Call\n→",
+      "foreground": "rgb(4, 35, 15)",
+      "background": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "linear-gradient(135deg, rgb(155, 240, 122), rgb(92, 191, 62))",
+      "contrast": 7.17,
+      "required": 4.5,
+      "opacity": 1,
+      "unknownBackground": false,
+      "signature": "rgb(4, 35, 15)|rgba(0, 0, 0, 0)|linear-gradient(135deg, rgb(155, 240, 122), rgb(92, 191, 62))|15.36|600|btn btn-green magnetic"
+    },
+    "rgb(234, 241, 250)|rgba(255, 255, 255, 0.03)|none|15.36|600|btn btn-ghost magnetic": {
+      "route": "/",
+      "tag": "A",
+      "classes": "btn btn-ghost magnetic",
+      "label": "See How It Works",
+      "disabled": false,
+      "iconOnly": false,
+      "name": "See How It Works",
+      "foreground": "rgb(234, 241, 250)",
+      "background": "rgba(255, 255, 255, 0.03)",
+      "backgroundImage": "none",
+      "contrast": 15.83,
+      "required": 4.5,
+      "opacity": 1,
+      "unknownBackground": false,
+      "signature": "rgb(234, 241, 250)|rgba(255, 255, 255, 0.03)|none|15.36|600|btn btn-ghost magnetic"
+    },
+    "rgb(4, 35, 15)|rgba(0, 0, 0, 0)|linear-gradient(135deg, rgb(155, 240, 122), rgb(92, 191, 62))|15.36|600|btn btn-green magnetic reveal d2": {
+      "route": "/",
+      "tag": "A",
+      "classes": "btn btn-green magnetic reveal d2",
+      "label": "Book a Strategy Call\n→",
+      "disabled": false,
+      "iconOnly": false,
+      "name": "Book a Strategy Call\n→",
+      "foreground": "rgb(4, 35, 15)",
+      "background": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "linear-gradient(135deg, rgb(155, 240, 122), rgb(92, 191, 62))",
+      "contrast": 7.17,
+      "required": 4.5,
+      "opacity": 1,
+      "unknownBackground": false,
+      "signature": "rgb(4, 35, 15)|rgba(0, 0, 0, 0)|linear-gradient(135deg, rgb(155, 240, 122), rgb(92, 191, 62))|15.36|600|btn btn-green magnetic reveal d2"
+    }
+  },
+  "buttonCount": 1772,
+  "disabled": 0,
+  "iconOnly": 287,
+  "method": "All rendered first-party routes, enabled text buttons/CTA links; WCAG 4.5:1 normal text, 3:1 large text. CSS alpha backgrounds composited; gradient stops and interpolation sampled. Unknown backgrounds flagged. External widgets excluded."
+}

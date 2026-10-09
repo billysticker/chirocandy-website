@@ -1,4 +1,5 @@
 ---
+import AnswerSummary from '@/components/AnswerSummary.astro';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import {
   buildGraph,
@@ -78,7 +79,7 @@ const schema = buildGraph(
       <header class="podcast-episode__header">
         <p class="eyebrow">ChiroCandy Podcast</p>
         <h1>{h1}</h1>
-        {summary && <p class="answer-first podcast-episode__summary">{summary}</p>}
+        {summary && <AnswerSummary text={summary} label="TL;DR — episode overview" />}
         <p class="podcast-episode__meta">
           <time datetime={datePublished}>
             Published {new Date(datePublished).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
@@ -167,10 +168,6 @@ const schema = buildGraph(
     max-width: 48ch;
   }
 
-  .podcast-episode__summary {
-    margin: 0 0 1rem;
-  }
-
   .podcast-episode__meta {
     font-size: 0.875rem;
     color: var(--text-muted);
@@ -196,6 +193,7 @@ const schema = buildGraph(
   .podcast-episode__body {
     max-width: 72ch;
     margin: 2rem 0;
+    overflow-wrap: anywhere;
   }
 
   .podcast-episode__body h2 {

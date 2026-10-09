@@ -1,0 +1,122 @@
+{
+  "method": "Three alternating navigations per build, desktop 1440x1000, localhost, no throttling, cache enabled; 350 ms after navigation for paint. Diagnostic only, not field Core Web Vitals.",
+  "runs": [
+    {
+      "build": "before",
+      "run": 1,
+      "route": "/blog/chiropractic-seo-costs/",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "missingAlt": 0,
+      "summary": "Compare chiropractic SEO proposals by scope, ownership, recurring work, reporting, and total commitment without relying on a vague monthly fee.",
+      "fonts": [
+        "Inter",
+        "Inter",
+        "Space Grotesk",
+        "Space Grotesk",
+        "Space Grotesk"
+      ],
+      "domReadyMs": 6,
+      "loadMs": 7,
+      "firstContentfulPaintMs": 32,
+      "externalFontRequests": 3
+    },
+    {
+      "build": "after",
+      "run": 1,
+      "route": "/blog/chiropractic-seo-costs/",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "missingAlt": 0,
+      "summary": "Compare chiropractic SEO proposals by scope, ownership, recurring work, reporting, and total commitment without relying on a vague monthly fee.",
+      "fonts": [
+        "Inter Variable",
+        "Space Grotesk Variable"
+      ],
+      "domReadyMs": 5,
+      "loadMs": 6,
+      "firstContentfulPaintMs": 24,
+      "externalFontRequests": 0
+    },
+    {
+      "build": "before",
+      "run": 2,
+      "route": "/blog/chiropractic-seo-costs/",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "missingAlt": 0,
+      "summary": "Compare chiropractic SEO proposals by scope, ownership, recurring work, reporting, and total commitment without relying on a vague monthly fee.",
+      "fonts": [
+        "Inter",
+        "Inter",
+        "Space Grotesk",
+        "Space Grotesk",
+        "Space Grotesk"
+      ],
+      "domReadyMs": 5,
+      "loadMs": 6,
+      "firstContentfulPaintMs": 32,
+      "externalFontRequests": 3
+    },
+    {
+      "build": "after",
+      "run": 2,
+      "route": "/blog/chiropractic-seo-costs/",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "missingAlt": 0,
+      "summary": "Compare chiropractic SEO proposals by scope, ownership, recurring work, reporting, and total commitment without relying on a vague monthly fee.",
+      "fonts": [
+        "Inter Variable",
+        "Space Grotesk Variable"
+      ],
+      "domReadyMs": 5,
+      "loadMs": 6,
+      "firstContentfulPaintMs": 24,
+      "externalFontRequests": 0
+    },
+    {
+      "build": "before",
+      "run": 3,
+      "route": "/blog/chiropractic-seo-costs/",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "missingAlt": 0,
+      "summary": "Compare chiropractic SEO proposals by scope, ownership, recurring work, reporting, and total commitment without relying on a vague monthly fee.",
+      "fonts": [
+        "Inter",
+        "Inter",
+        "Space Grotesk",
+        "Space Grotesk",
+        "Space Grotesk"
+      ],
+      "domReadyMs": 5,
+      "loadMs": 6,
+      "firstContentfulPaintMs": 32,
+      "externalFontRequests": 3
+    },
+    {
+      "build": "after",
+      "run": 3,
+      "route": "/blog/chiropractic-seo-costs/",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "missingAlt": 0,
+      "summary": "Compare chiropractic SEO proposals by scope, ownership, recurring work, reporting, and total commitment without relying on a vague monthly fee.",
+      "fonts": [
+        "Inter Variable",
+        "Space Grotesk Variable"
+      ],
+      "domReadyMs": 5,
+      "loadMs": 6,
+      "firstContentfulPaintMs": 24,
+      "externalFontRequests": 0
+    }
+  ]
+}

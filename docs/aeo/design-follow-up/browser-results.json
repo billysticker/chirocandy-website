@@ -1,0 +1,510 @@
+{
+  "base": "http://127.0.0.1:4336",
+  "checkedAt": "2026-10-09T22:28:35.599Z",
+  "layouts": [
+    {
+      "route": "/services/ai-visibility/",
+      "width": 320,
+      "scrollWidth": 320,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/services/ai-visibility/"
+    },
+    {
+      "route": "/services/search-engine-optimization/",
+      "width": 320,
+      "scrollWidth": 320,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/services/search-engine-optimization/"
+    },
+    {
+      "route": "/",
+      "width": 320,
+      "scrollWidth": 320,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/"
+    },
+    {
+      "route": "/resources/",
+      "width": 320,
+      "scrollWidth": 320,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/resources/"
+    },
+    {
+      "route": "/blog/best-chiropractic-marketing-agencies/",
+      "width": 320,
+      "scrollWidth": 320,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/blog/best-chiropractic-marketing-agencies/"
+    },
+    {
+      "route": "/compare-marketing-agencies/",
+      "width": 320,
+      "scrollWidth": 320,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/compare-marketing-agencies/"
+    },
+    {
+      "route": "/services/ai-patient-coordinator/",
+      "width": 320,
+      "scrollWidth": 320,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/services/ai-patient-coordinator/"
+    },
+    {
+      "route": "/services/voice-ai/",
+      "width": 320,
+      "scrollWidth": 320,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/services/voice-ai/"
+    },
+    {
+      "route": "/services/reactivation-campaigns/",
+      "width": 320,
+      "scrollWidth": 320,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/services/reactivation-campaigns/"
+    },
+    {
+      "route": "/services/chiropractic-social-media-marketing/",
+      "width": 320,
+      "scrollWidth": 320,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/services/chiropractic-social-media-marketing/"
+    },
+    {
+      "route": "/get-new-patients/",
+      "width": 320,
+      "scrollWidth": 320,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/get-new-patients/"
+    },
+    {
+      "route": "/case-studies/",
+      "width": 320,
+      "scrollWidth": 320,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/case-studies/"
+    },
+    {
+      "route": "/blog/the-benefits-of-hiring-a-professional-website-design-company/",
+      "width": 320,
+      "scrollWidth": 320,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/blog/the-benefits-of-hiring-a-professional-website-design-company/"
+    },
+    {
+      "route": "/services/",
+      "width": 320,
+      "scrollWidth": 320,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/services/"
+    },
+    {
+      "route": "/pricing/",
+      "width": 320,
+      "scrollWidth": 320,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/pricing/"
+    },
+    {
+      "route": "/services/ai-visibility/",
+      "width": 390,
+      "scrollWidth": 390,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/services/ai-visibility/"
+    },
+    {
+      "route": "/services/search-engine-optimization/",
+      "width": 390,
+      "scrollWidth": 390,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/services/search-engine-optimization/"
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "scrollWidth": 390,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/"
+    },
+    {
+      "route": "/resources/",
+      "width": 390,
+      "scrollWidth": 390,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/resources/"
+    },
+    {
+      "route": "/blog/best-chiropractic-marketing-agencies/",
+      "width": 390,
+      "scrollWidth": 390,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/blog/best-chiropractic-marketing-agencies/"
+    },
+    {
+      "route": "/compare-marketing-agencies/",
+      "width": 390,
+      "scrollWidth": 390,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/compare-marketing-agencies/"
+    },
+    {
+      "route": "/services/ai-patient-coordinator/",
+      "width": 390,
+      "scrollWidth": 390,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/services/ai-patient-coordinator/"
+    },
+    {
+      "route": "/services/voice-ai/",
+      "width": 390,
+      "scrollWidth": 390,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/services/voice-ai/"
+    },
+    {
+      "route": "/services/reactivation-campaigns/",
+      "width": 390,
+      "scrollWidth": 390,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/services/reactivation-campaigns/"
+    },
+    {
+      "route": "/services/chiropractic-social-media-marketing/",
+      "width": 390,
+      "scrollWidth": 390,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/services/chiropractic-social-media-marketing/"
+    },
+    {
+      "route": "/get-new-patients/",
+      "width": 390,
+      "scrollWidth": 390,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/get-new-patients/"
+    },
+    {
+      "route": "/case-studies/",
+      "width": 390,
+      "scrollWidth": 390,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/case-studies/"
+    },
+    {
+      "route": "/blog/the-benefits-of-hiring-a-professional-website-design-company/",
+      "width": 390,
+      "scrollWidth": 390,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/blog/the-benefits-of-hiring-a-professional-website-design-company/"
+    },
+    {
+      "route": "/services/",
+      "width": 390,
+      "scrollWidth": 390,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/services/"
+    },
+    {
+      "route": "/pricing/",
+      "width": 390,
+      "scrollWidth": 390,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/pricing/"
+    },
+    {
+      "route": "/services/ai-visibility/",
+      "width": 768,
+      "scrollWidth": 768,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/services/ai-visibility/"
+    },
+    {
+      "route": "/services/search-engine-optimization/",
+      "width": 768,
+      "scrollWidth": 768,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/services/search-engine-optimization/"
+    },
+    {
+      "route": "/",
+      "width": 768,
+      "scrollWidth": 768,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/"
+    },
+    {
+      "route": "/resources/",
+      "width": 768,
+      "scrollWidth": 768,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/resources/"
+    },
+    {
+      "route": "/blog/best-chiropractic-marketing-agencies/",
+      "width": 768,
+      "scrollWidth": 768,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/blog/best-chiropractic-marketing-agencies/"
+    },
+    {
+      "route": "/compare-marketing-agencies/",
+      "width": 768,
+      "scrollWidth": 768,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/compare-marketing-agencies/"
+    },
+    {
+      "route": "/services/ai-patient-coordinator/",
+      "width": 768,
+      "scrollWidth": 768,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/services/ai-patient-coordinator/"
+    },
+    {
+      "route": "/services/voice-ai/",
+      "width": 768,
+      "scrollWidth": 768,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/services/voice-ai/"
+    },
+    {
+      "route": "/services/reactivation-campaigns/",
+      "width": 768,
+      "scrollWidth": 768,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/services/reactivation-campaigns/"
+    },
+    {
+      "route": "/services/chiropractic-social-media-marketing/",
+      "width": 768,
+      "scrollWidth": 768,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/services/chiropractic-social-media-marketing/"
+    },
+    {
+      "route": "/get-new-patients/",
+      "width": 768,
+      "scrollWidth": 768,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/get-new-patients/"
+    },
+    {
+      "route": "/case-studies/",
+      "width": 768,
+      "scrollWidth": 768,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/case-studies/"
+    },
+    {
+      "route": "/blog/the-benefits-of-hiring-a-professional-website-design-company/",
+      "width": 768,
+      "scrollWidth": 768,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/blog/the-benefits-of-hiring-a-professional-website-design-company/"
+    },
+    {
+      "route": "/services/",
+      "width": 768,
+      "scrollWidth": 768,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/services/"
+    },
+    {
+      "route": "/pricing/",
+      "width": 768,
+      "scrollWidth": 768,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/pricing/"
+    },
+    {
+      "route": "/services/ai-visibility/",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/services/ai-visibility/"
+    },
+    {
+      "route": "/services/search-engine-optimization/",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/services/search-engine-optimization/"
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/"
+    },
+    {
+      "route": "/resources/",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/resources/"
+    },
+    {
+      "route": "/blog/best-chiropractic-marketing-agencies/",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/blog/best-chiropractic-marketing-agencies/"
+    },
+    {
+      "route": "/compare-marketing-agencies/",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/compare-marketing-agencies/"
+    },
+    {
+      "route": "/services/ai-patient-coordinator/",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/services/ai-patient-coordinator/"
+    },
+    {
+      "route": "/services/voice-ai/",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/services/voice-ai/"
+    },
+    {
+      "route": "/services/reactivation-campaigns/",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/services/reactivation-campaigns/"
+    },
+    {
+      "route": "/services/chiropractic-social-media-marketing/",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/services/chiropractic-social-media-marketing/"
+    },
+    {
+      "route": "/get-new-patients/",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/get-new-patients/"
+    },
+    {
+      "route": "/case-studies/",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/case-studies/"
+    },
+    {
+      "route": "/blog/the-benefits-of-hiring-a-professional-website-design-company/",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/blog/the-benefits-of-hiring-a-professional-website-design-company/"
+    },
+    {
+      "route": "/services/",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/services/"
+    },
+    {
+      "route": "/pricing/",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1": 1,
+      "missingAlt": 0,
+      "canonical": "https://chirocandy.com/pricing/"
+    }
+  ],
+  "interactions": [
+    "Keyboard mobile menu → resource hub",
+    "Keyboard resource hub → provider comparison; visible TL;DR",
+    "AI CA price and link to existing homepage demo; no submission",
+    "Voice AI price and accurate demo limitation",
+    {
+      "serverRenderedCounters": [
+        "2,000",
+        "450",
+        "11",
+        "9",
+        "120",
+        "60"
+      ]
+    },
+    "Comparison summary readable with JavaScript disabled",
+    "Keyboard contents anchors and focusable comparison table",
+    "Reported CTA: dark label, no link underline, visible keyboard focus",
+    "AI visibility relationship, rollout qualification, no package price"
+  ],
+  "pageErrors": [],
+  "thirdPartyRequests": "blocked; vendor flows not tested",
+  "formsSubmitted": 0,
+  "status": "passed"
+}

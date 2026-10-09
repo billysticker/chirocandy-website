@@ -34,6 +34,11 @@ const schema = buildGraph(
         </p>
       </div>
 
+      <div class="cs-intro">
+        <h2>Read the result at the stage it measures</h2>
+        <p>Ad-platform leads and Business Profile actions describe marketing activity. Confirmed bookings come from scheduling records; attended visits come from the practice. Client-reported revenue is identified as such. These sources should not be combined into an acquisition-cost or return-on-investment claim without a reconciled reporting window and cost definition.</p>
+        <p><a href="/blog/evaluate-chiropractic-marketing-case-studies/">How to evaluate the evidence</a> · <a href="/blog/chiropractic-advertising-leads-to-appointments/">Follow the lead-to-appointment handoff</a></p>
+      </div>
       <div class="cs-grid">
         {CASE_STUDIES.map((study) => (
           <a href={`/case-studies/${study.slug}/`} class="cs-card">
@@ -90,7 +95,7 @@ const schema = buildGraph(
   }
   .cs-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 420px));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 420px));
     gap: 2rem;
     margin-bottom: 3.5rem;
   }
@@ -145,7 +150,7 @@ const schema = buildGraph(
   .cs-stat b {
     font-size: 2rem;
     color: #2f7a28;
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Space Grotesk Variable', sans-serif;
     display: block;
     line-height: 1.1;
   }

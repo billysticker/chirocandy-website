@@ -1,0 +1,85 @@
+---
+interface Props { bodyHtml: string }
+const { bodyHtml } = Astro.props;
+// This is repository-owned article HTML, already rendered by ArticleLayout.
+const parts = bodyHtml.replaceAll('\\n', '\n').split(/<h2>(.*?)<\/h2>/s);
+const introduction = parts[0];
+const sections = Array.from({ length: (parts.length - 1) / 2 }, (_, i) => ({
+  title: parts[i * 2 + 1],
+  id: parts[i * 2 + 1].toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''),
+  html: parts[i * 2 + 2],
+}));
+const providers = [
+  ['ChiroCandy', 'Coordinated acquisition and follow-up', 'Published fees, campaign evidence, and staff handoffs'],
+  ['ChiroBasix', 'Chiropractic services and ENGAGE CRM', 'Bundle scope, CRM implementation, and usage charges'],
+  ['Perfect Patients', 'Websites and a marketing platform', 'Migration, ongoing content, and account ownership'],
+  ['Well Rounded', 'Chiropractic marketing and brand design', 'Website, advertising, creative, and support scope'],
+];
+---
+<div class="guide-layout">
+  <aside>
+    <nav aria-label="In this comparison" class="contents">
+      <p class="eyebrow">In this guide</p>
+      {sections.map((section, i) => <a href={`#${section.id}`}><span aria-hidden="true">0{i + 1}</span>{section.title}</a>)}
+      <a class="checklist" href="/compare-marketing-agencies/">Open the proposal checklist →</a>
+    </nav>
+  </aside>
+  <div class="reading-panel">
+    <div class="disclosure" set:html={introduction} />
+    {sections.map((section, index) => (
+      <section id={section.id} aria-labelledby={`${section.id}-heading`}>
+        <div class="section-number" aria-hidden="true">0{index + 1}</div>
+        <h2 id={`${section.id}-heading`}>{section.title}</h2>
+        {index === 1 && <>
+          <p class="table-intro">Start with fit, then verify the details in a written proposal.</p>
+          <div class="table-scroll" tabindex="0" role="region" aria-label="Agency comparison table; scroll horizontally on small screens">
+            <table>
+              <caption>Four providers at a glance — not a ranking</caption>
+              <thead><tr><th scope="col">Provider</th><th scope="col">Starting point</th><th scope="col">What to verify</th></tr></thead>
+              <tbody>{providers.map(row => <tr><th scope="row">{row[0]}</th><td>{row[1]}</td><td>{row[2]}</td></tr>)}</tbody>
+            </table>
+          </div>
+        </>}
+        <div class:list={['section-copy', { 'provider-list': index === 1 }]} set:html={section.html} />
+      </section>
+    ))}
+  </div>
+</div>
+<style>
+  .guide-layout { display:grid; grid-template-columns:240px minmax(0,1fr); gap:2.5rem; align-items:start; margin-top:3rem; }
+  aside { position:sticky; top:110px; }
+  .contents { display:grid; gap:.2rem; }
+  .contents .eyebrow { margin:0 0 1rem; }
+  .contents a { display:flex; gap:.8rem; padding:.8rem 0; font-size:.88rem; line-height:1.5; color:var(--ink); border-bottom:1px solid var(--line); }
+  .contents a:hover { color:var(--green); }
+  .contents a span { color:var(--green); font-size:.75rem; padding-top:.15rem; }
+  .contents a.checklist { margin-top:1rem; color:var(--green); border:0; }
+  .reading-panel { min-width:0; padding:clamp(1.3rem,3.5vw,3.5rem); background:#f8faf7; color:#183027; border-radius:22px; }
+  .disclosure { padding:1.2rem; background:#eaf0e8; border-left:3px solid #367c28; border-radius:0 10px 10px 0; font-size:.875rem; line-height:1.7; }
+  .disclosure :global(p) { margin:0; }
+  section { position:relative; margin-top:2.5rem; padding-top:2rem; border-top:1px solid #d5dfd4; scroll-margin-top:110px; }
+  .section-number { color:#3f722f; font:600 .8rem var(--font-body); letter-spacing:.15em; margin-bottom:.6rem; }
+  h2 { color:#10251b; font-size:clamp(1.5rem,2.2vw,2rem); line-height:1.25; letter-spacing:-.025em; margin:0 0 1.25rem; }
+  .section-copy { font-size:1rem; line-height:1.85; }
+  .section-copy :global(p) { margin:0 0 1.1rem; }
+  .section-copy :global(h3) { color:#10251b; font-size:1.25rem; line-height:1.4; margin:2rem 0 .8rem; padding-top:1.5rem; border-top:1px solid #d5dfd4; }
+  .section-copy :global(a), .disclosure :global(a) { color:#246313; text-decoration:underline; text-underline-offset:3px; }
+  .section-copy :global(ul), .section-copy :global(ol) { padding-left:1.3rem; }
+  .section-copy :global(li) { margin-bottom:.8rem; }
+  .table-intro { font-size:1rem; margin:0 0 1rem; }
+  .table-scroll { overflow-x:auto; border:1px solid #cbd9c8; border-radius:12px; }
+  .table-scroll:focus-visible { outline:3px solid #367c28; outline-offset:4px; }
+  table { border-collapse:collapse; width:100%; font-size:.875rem; line-height:1.6; min-width:540px; }
+  caption { text-align:left; padding:1rem; background:#eaf0e8; font-weight:600; }
+  th,td { padding:1rem; text-align:left; vertical-align:top; border-top:1px solid #d5dfd4; }
+  thead { background:#183027; color:#fff; }
+  tbody th { width:24%; }
+  tbody tr:nth-child(even) { background:#edf3eb; }
+  @media(max-width:960px) {
+    .guide-layout { grid-template-columns:1fr; gap:1.5rem; }
+    aside { position:static; }
+    .contents { grid-template-columns:repeat(2,minmax(0,1fr)); column-gap:1.5rem; }
+    .contents .eyebrow,.contents .checklist { grid-column:1/-1; }
+  }
+  @media(max-width:540px) { .contents { grid-template-columns:1fr; } }
+</style>

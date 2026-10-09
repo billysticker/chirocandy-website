@@ -12,9 +12,15 @@ const { opacity = 1, phase = 0 } = Astro.props;
 </div>
 
 <script>
+  interface Vector3 {
+    x: number;
+    y: number;
+    z: number;
+  }
+
   const MOBILE_QUERY = '(max-width: 960px)';
   const REDUCED_MOTION_QUERY = '(prefers-reduced-motion: reduce)';
-  const cleanupMap = globalThis.__signalFieldCleanupMap ?? new WeakMap();
+  const cleanupMap = globalThis.__signalFieldCleanupMap ?? new WeakMap<HTMLElement, () => void>();
   globalThis.__signalFieldCleanupMap = cleanupMap;
 
   const FOV = (55 * Math.PI) / 180;
@@ -22,20 +28,20 @@ const { opacity = 1, phase = 0 } = Astro.props;
   const NAVY = [41, 97, 184];
   const GREEN = [125, 217, 87];
 
-  function clamp(value, min, max) {
+  function clamp(value: number, min: number, max: number) {
     return Math.min(max, Math.max(min, value));
   }
 
-  function smoothstep(edge0, edge1, value) {
+  function smoothstep(edge0: number, edge1: number, value: number) {
     const t = clamp((value - edge0) / (edge1 - edge0), 0, 1);
     return t * t * (3 - 2 * t);
   }
 
-  function mix(start, end, amount) {
+  function mix(start: number, end: number, amount: number) {
     return start + (end - start) * amount;
   }
 
-  function normalize(vector) {
+  function normalize(vector: Vector3) {
     const length = Math.hypot(vector.x, vector.y, vector.z) || 1;
     return {
       x: vector.x / length,
@@ -44,7 +50,7 @@ const { opacity = 1, phase = 0 } = Astro.props;
     };
   }
 
-  function cross(a, b) {
+  function cross(a: Vector3, b: Vector3) {
     return {
       x: a.y * b.z - a.z * b.y,
       y: a.z * b.x - a.x * b.z,
@@ -52,11 +58,11 @@ const { opacity = 1, phase = 0 } = Astro.props;
     };
   }
 
-  function dot(a, b) {
+  function dot(a: Vector3, b: Vector3) {
     return a.x * b.x + a.y * b.y + a.z * b.z;
   }
 
-  function buildPoints(step) {
+  function buildPoints(step: number) {
     const extent = 250;
     const points = [];
 
@@ -72,7 +78,7 @@ const { opacity = 1, phase = 0 } = Astro.props;
     return points;
   }
 
-  function initSignalFieldLayer(layer) {
+  function initSignalFieldLayer(layer: Element) {
     if (!(layer instanceof HTMLElement)) return;
     const canvas = layer.querySelector('canvas');
     if (!(canvas instanceof HTMLCanvasElement)) return;
@@ -119,13 +125,13 @@ const { opacity = 1, phase = 0 } = Astro.props;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     };
 
-    const onPointerMove = (event) => {
+    const onPointerMove = (event: PointerEvent) => {
       if (mobile) return;
       targetMouseX = event.clientX / window.innerWidth - 0.5;
       targetMouseY = event.clientY / window.innerHeight - 0.5;
     };
 
-    const drawPoint = (x, y, radius, alpha, colorMix) => {
+    const drawPoint = (x: number, y: number, radius: number, alpha: number, colorMix: number) => {
       const red = Math.round(mix(NAVY[0], GREEN[0], colorMix));
       const green = Math.round(mix(NAVY[1], GREEN[1], colorMix));
       const blue = Math.round(mix(NAVY[2], GREEN[2], colorMix));

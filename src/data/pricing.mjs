@@ -8,10 +8,10 @@ export const services = [
   { id: 'website', name: 'Custom Website', fee: 350, description: 'A custom, conversion-focused website with clear content and technical foundations. Requires a 12-month website agreement.', href: '/services/web-design/' },
   { id: 'streaming', name: 'Streaming TV / Connected TV', fee: 595, description: 'Local streaming TV campaigns to build familiarity and retarget audiences. Advertising spend is separate.', href: null, included: true },
   { id: 'tiktok', name: 'TikTok Advertising', fee: 795, description: 'Short-form video campaigns to build awareness and expand remarketing audiences.', href: null },
-  { id: 'voice', name: 'Voice AI', fee: 497, description: 'Inbound and outbound call systems for answering, follow-up, appointment booking, and reactivation.', href: null },
+  { id: 'voice', name: 'Voice AI', fee: 497, description: 'Inbound and outbound call systems for answering, follow-up, appointment booking, and reactivation.', href: '/services/voice-ai/' },
   { id: 'intent', name: 'Invisible Intent™ Tracking', fee: 199, description: 'Intent tracking and remarketing to help reconnect with website visitors and interested local audiences.', href: null, included: true },
   { id: 'reviews', name: 'Review Boost Program', fee: 199, description: 'Automated review requests and scripts to help your team consistently ask for feedback.', href: null, included: true },
-  { id: 'aica', name: 'AI CA™', fee: 297, description: 'AI chat and SMS follow-up that answers questions and helps leads schedule appointments.', href: null, included: true },
+  { id: 'aica', name: 'AI CA™', fee: 297, description: 'AI chat and SMS follow-up that answers questions and helps leads schedule appointments.', href: '/services/ai-patient-coordinator/', included: true },
 ];
 export const packages = [
   { id: 'advertising-growth', name: 'Advertising Growth', fee: 1145, focus: 'Build your paid patient acquisition', audience: 'For practices ready to reach new audiences on Meta and capture active searches on Google.', services: ['meta', 'google'], websiteTerm: false },

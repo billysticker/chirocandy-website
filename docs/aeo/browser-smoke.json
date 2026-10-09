@@ -1,0 +1,258 @@
+[
+  {
+    "route": "/blog/chiropractic-seo-costs/",
+    "width": 1440,
+    "overflow": false,
+    "h1": 1,
+    "missingAlt": 0,
+    "summary": "Compare chiropractic SEO proposals by scope, ownership, recurring work, reporting, and total commitment without relying on a vague monthly fee.",
+    "fonts": [
+      "Inter Variable",
+      "Space Grotesk Variable"
+    ],
+    "domReadyMs": 15,
+    "loadMs": 16,
+    "firstContentfulPaintMs": 24,
+    "externalFontRequests": 0
+  },
+  {
+    "route": "/podcast/003/",
+    "width": 1440,
+    "overflow": false,
+    "h1": 1,
+    "missingAlt": 0,
+    "summary": "Billy Sticker and Dr. Tabor Smith discuss sharing useful information through books, spinal screenings, dinner workshops, and business talks. The episode notes include the marketing tools mentioned in their conversation.",
+    "fonts": [
+      "Inter Variable",
+      "Space Grotesk Variable"
+    ],
+    "domReadyMs": 7,
+    "loadMs": 20,
+    "firstContentfulPaintMs": 40,
+    "externalFontRequests": 0
+  },
+  {
+    "route": "/uncategorized/12-month-plan/",
+    "width": 1440,
+    "overflow": false,
+    "h1": 1,
+    "missingAlt": 0,
+    "summary": "Plan promotions across the year instead of deciding each campaign at the last minute. This article uses monthly holiday themes as a starting point and recommends matching the message and offer to each occasion.",
+    "fonts": [
+      "Inter Variable",
+      "Space Grotesk Variable"
+    ],
+    "domReadyMs": 5,
+    "loadMs": 6,
+    "firstContentfulPaintMs": 24,
+    "externalFontRequests": 0
+  },
+  {
+    "route": "/services/web-design/",
+    "width": 1440,
+    "overflow": false,
+    "h1": 1,
+    "missingAlt": 0,
+    "summary": "ChiroCandy designs chiropractic websites that attract, engage, and convert patients. Every site is mobile-ready, search-optimized, and built to reflect your practice's brand and expertise.",
+    "fonts": [
+      "Inter Variable",
+      "Space Grotesk Variable"
+    ],
+    "domReadyMs": 5,
+    "loadMs": 6,
+    "firstContentfulPaintMs": 24,
+    "externalFontRequests": 0
+  },
+  {
+    "route": "/contact-us/",
+    "width": 1440,
+    "overflow": false,
+    "h1": 1,
+    "missingAlt": 0,
+    "summary": "The fastest way to reach ChiroCandy is by phone or a strategy call. Tell us about your practice goals and we will help you decide if the growth system is the right fit.",
+    "fonts": [
+      "Inter Variable",
+      "Space Grotesk Variable"
+    ],
+    "domReadyMs": 6,
+    "loadMs": 7,
+    "firstContentfulPaintMs": 28,
+    "externalFontRequests": 0
+  },
+  {
+    "route": "/case-studies/",
+    "width": 1440,
+    "overflow": false,
+    "h1": 1,
+    "missingAlt": 0,
+    "summary": "Explore named practice examples from owner interviews, ad accounts, and Google Business Profile reports. Each case identifies the source and distinguishes marketing activity from patient outcomes.",
+    "fonts": [
+      "Inter Variable",
+      "Space Grotesk Variable"
+    ],
+    "domReadyMs": 7,
+    "loadMs": 8,
+    "firstContentfulPaintMs": 28,
+    "externalFontRequests": 0
+  },
+  {
+    "route": "/pricing/",
+    "width": 1440,
+    "overflow": false,
+    "h1": 1,
+    "missingAlt": 0,
+    "summary": "Explore marketing packages from $1,145/month in service fees. Find the right mix for your practice, your market, and your goals.",
+    "fonts": [
+      "Inter Variable",
+      "Space Grotesk Variable"
+    ],
+    "domReadyMs": 6,
+    "loadMs": 8,
+    "firstContentfulPaintMs": 40,
+    "externalFontRequests": 0
+  },
+  {
+    "route": "/marketing-calculator/",
+    "width": 1440,
+    "overflow": false,
+    "h1": 1,
+    "missingAlt": 0,
+    "summary": "Start with the lifetime value of a patient. Then set your new-patient growth goal and explore the marketing budget needed to support it.",
+    "fonts": [
+      "Inter Variable",
+      "Space Grotesk Variable"
+    ],
+    "domReadyMs": 22,
+    "loadMs": 22,
+    "firstContentfulPaintMs": 40,
+    "externalFontRequests": 0
+  },
+  {
+    "route": "/blog/chiropractic-seo-costs/",
+    "width": 390,
+    "overflow": false,
+    "h1": 1,
+    "missingAlt": 0,
+    "summary": "Compare chiropractic SEO proposals by scope, ownership, recurring work, reporting, and total commitment without relying on a vague monthly fee.",
+    "fonts": [
+      "Inter Variable",
+      "Space Grotesk Variable"
+    ],
+    "domReadyMs": 5,
+    "loadMs": 6,
+    "firstContentfulPaintMs": 20,
+    "externalFontRequests": 0
+  },
+  {
+    "route": "/podcast/003/",
+    "width": 390,
+    "overflow": false,
+    "h1": 1,
+    "missingAlt": 0,
+    "summary": "Billy Sticker and Dr. Tabor Smith discuss sharing useful information through books, spinal screenings, dinner workshops, and business talks. The episode notes include the marketing tools mentioned in their conversation.",
+    "fonts": [
+      "Inter Variable",
+      "Space Grotesk Variable"
+    ],
+    "domReadyMs": 5,
+    "loadMs": 14,
+    "firstContentfulPaintMs": 20,
+    "externalFontRequests": 0
+  },
+  {
+    "route": "/uncategorized/12-month-plan/",
+    "width": 390,
+    "overflow": false,
+    "h1": 1,
+    "missingAlt": 0,
+    "summary": "Plan promotions across the year instead of deciding each campaign at the last minute. This article uses monthly holiday themes as a starting point and recommends matching the message and offer to each occasion.",
+    "fonts": [
+      "Inter Variable",
+      "Space Grotesk Variable"
+    ],
+    "domReadyMs": 5,
+    "loadMs": 6,
+    "firstContentfulPaintMs": 20,
+    "externalFontRequests": 0
+  },
+  {
+    "route": "/services/web-design/",
+    "width": 390,
+    "overflow": false,
+    "h1": 1,
+    "missingAlt": 0,
+    "summary": "ChiroCandy designs chiropractic websites that attract, engage, and convert patients. Every site is mobile-ready, search-optimized, and built to reflect your practice's brand and expertise.",
+    "fonts": [
+      "Inter Variable",
+      "Space Grotesk Variable"
+    ],
+    "domReadyMs": 5,
+    "loadMs": 6,
+    "firstContentfulPaintMs": 20,
+    "externalFontRequests": 0
+  },
+  {
+    "route": "/contact-us/",
+    "width": 390,
+    "overflow": false,
+    "h1": 1,
+    "missingAlt": 0,
+    "summary": "The fastest way to reach ChiroCandy is by phone or a strategy call. Tell us about your practice goals and we will help you decide if the growth system is the right fit.",
+    "fonts": [
+      "Inter Variable",
+      "Space Grotesk Variable"
+    ],
+    "domReadyMs": 6,
+    "loadMs": 7,
+    "firstContentfulPaintMs": 20,
+    "externalFontRequests": 0
+  },
+  {
+    "route": "/case-studies/",
+    "width": 390,
+    "overflow": false,
+    "h1": 1,
+    "missingAlt": 0,
+    "summary": "Explore named practice examples from owner interviews, ad accounts, and Google Business Profile reports. Each case identifies the source and distinguishes marketing activity from patient outcomes.",
+    "fonts": [
+      "Inter Variable",
+      "Space Grotesk Variable"
+    ],
+    "domReadyMs": 5,
+    "loadMs": 7,
+    "firstContentfulPaintMs": 24,
+    "externalFontRequests": 0
+  },
+  {
+    "route": "/pricing/",
+    "width": 390,
+    "overflow": false,
+    "h1": 1,
+    "missingAlt": 0,
+    "summary": "Explore marketing packages from $1,145/month in service fees. Find the right mix for your practice, your market, and your goals.",
+    "fonts": [
+      "Inter Variable",
+      "Space Grotesk Variable"
+    ],
+    "domReadyMs": 5,
+    "loadMs": 7,
+    "firstContentfulPaintMs": 36,
+    "externalFontRequests": 0
+  },
+  {
+    "route": "/marketing-calculator/",
+    "width": 390,
+    "overflow": false,
+    "h1": 1,
+    "missingAlt": 0,
+    "summary": "Start with the lifetime value of a patient. Then set your new-patient growth goal and explore the marketing budget needed to support it.",
+    "fonts": [
+      "Inter Variable",
+      "Space Grotesk Variable"
+    ],
+    "domReadyMs": 20,
+    "loadMs": 20,
+    "firstContentfulPaintMs": 36,
+    "externalFontRequests": 0
+  }
+]

@@ -12,6 +12,7 @@ const { title, answer, eyebrow } = Astro.props;
   <div class="container hero__inner">
     {eyebrow && <p class="eyebrow">{eyebrow}</p>}
     <h1>{title}</h1>
+    <p class="hero__summary-label">Quick answer</p>
     <p class="answer-first hero__answer">{answer}</p>
     <slot />
   </div>
@@ -29,6 +30,7 @@ const { title, answer, eyebrow } = Astro.props;
     font-size: clamp(2.1rem, 4.4vw, 3.4rem);
     margin: 0.8rem 0 1rem;
   }
+  .hero__summary-label { color: var(--green); font-size: .875rem; font-weight: 600; margin: 0 0 .4rem; }
   .hero__answer {
     margin: 0;
   }

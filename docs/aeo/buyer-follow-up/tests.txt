@@ -1,0 +1,44 @@
+
+> chirocandy-website@1.0.0 test
+> node --test tests/*.test.mjs
+
+✔ built HTML audit distinguishes duplicate keys, decorative alt, data scripts, and visible text (54.472533ms)
+✔ workbook image preservation requires byte-identical extracted PNGs (71.964262ms)
+✔ unknown or rejected consent loads no marketing tags and never replays earlier actions (5.665282ms)
+✔ rejection stops events immediately and reloads, even when storage is unavailable (0.890879ms)
+✔ owned property receives only allowed action metadata, never calculator values or contact links (1.260009ms)
+✔ campaign attribution is retained while arbitrary URL data is removed (1.145969ms)
+✔ preview visits and direct thank-you visits cannot create conversions (1.243476ms)
+✔ only the embedded calendar success message counts a booking, once, without contact data (1.755831ms)
+✔ original example connects patient value, growth target, and the total acquisition budget (0.972094ms)
+✔ known LTV drives patient target; budget also respects the value allowance (0.212897ms)
+✔ zero growth preserves baseline; zero revenue yields no funded budget (0.184824ms)
+✔ missing, fractional counts, negative, nonfinite, and invalid override inputs cannot create results (20.635318ms)
+✔ all original practice mixes are preserved and distribute every cent (0.660814ms)
+✔ translates a goal into an additional cohort and planned acquisition pace (0.792659ms)
+✔ does not report negative patient need when already above the target (0.152763ms)
+✔ rounds patient need up and rejects invalid or missing planning inputs (11.765138ms)
+✔ works through an acquisition cohort without counting every lead as a patient (1.581368ms)
+✔ zero conversions produces a loss and no fictional acquisition cost (0.30574ms)
+✔ no margin cannot break even on positive spend (0.240947ms)
+✔ zero ad spend does not generate patients from management costs (0.270234ms)
+✔ zero total investment leaves return undefined (0.234502ms)
+✔ whole-patient break-even rounds up without rounding the funnel early (0.238573ms)
+✔ rejects missing, negative, infinite, zero-denominator, and impossible-rate inputs (18.821755ms)
+✔ parses valid form strings and respects 100% conversion boundaries (0.312129ms)
+✔ care margin changes contribution, never collections or patient count (0.335554ms)
+✔ estimates lifetime collections using visit collections and full-lifetime visits (0.664976ms)
+✔ does not turn missing or invalid patient assumptions into a value (0.180875ms)
+ℹ tests 27
+ℹ suites 0
+ℹ pass 27
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 189.501948
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice

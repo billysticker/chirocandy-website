@@ -20,4 +20,11 @@ export default defineConfig({
   ],
   trailingSlash: 'always',
   compressHTML: true,
+  vite: {
+    build: {
+      // Cache shared behavior across pages instead of repeating small scripts
+      // in every HTML response. Keep Astro's default critical CSS handling.
+      assetsInlineLimit: (filePath) => filePath.endsWith('.js') ? false : undefined,
+    },
+  },
 });

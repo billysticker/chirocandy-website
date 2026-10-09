@@ -1,0 +1,112 @@
+{
+  "cases": [
+    {
+      "width": 390,
+      "motion": "reduce",
+      "animation": [
+        {
+          "width": 390,
+          "height": 822,
+          "painted": true,
+          "cleanupRegistered": true
+        },
+        {
+          "width": 390,
+          "height": 1405,
+          "painted": true,
+          "cleanupRegistered": true
+        },
+        {
+          "width": 390,
+          "height": 734,
+          "painted": true,
+          "cleanupRegistered": true
+        }
+      ],
+      "widgetMissingAndDelayedAPI": "passed",
+      "calculatorExampleAllStagePresetsAndRestore": "passed"
+    },
+    {
+      "width": 390,
+      "motion": "no-preference",
+      "animation": [
+        {
+          "width": 390,
+          "height": 822,
+          "painted": true,
+          "cleanupRegistered": true
+        },
+        {
+          "width": 390,
+          "height": 1405,
+          "painted": true,
+          "cleanupRegistered": true
+        },
+        {
+          "width": 390,
+          "height": 734,
+          "painted": true,
+          "cleanupRegistered": true
+        }
+      ],
+      "widgetMissingAndDelayedAPI": "passed",
+      "calculatorExampleAllStagePresetsAndRestore": "passed"
+    },
+    {
+      "width": 1440,
+      "motion": "reduce",
+      "animation": [
+        {
+          "width": 1440,
+          "height": 822,
+          "painted": true,
+          "cleanupRegistered": true
+        },
+        {
+          "width": 1440,
+          "height": 828,
+          "painted": true,
+          "cleanupRegistered": true
+        },
+        {
+          "width": 1440,
+          "height": 703,
+          "painted": true,
+          "cleanupRegistered": true
+        }
+      ],
+      "widgetMissingAndDelayedAPI": "passed",
+      "calculatorExampleAllStagePresetsAndRestore": "passed"
+    },
+    {
+      "width": 1440,
+      "motion": "no-preference",
+      "animation": [
+        {
+          "width": 1440,
+          "height": 822,
+          "painted": true,
+          "cleanupRegistered": true
+        },
+        {
+          "width": 1440,
+          "height": 828,
+          "painted": true,
+          "cleanupRegistered": true
+        },
+        {
+          "width": 1440,
+          "height": 703,
+          "painted": true,
+          "cleanupRegistered": true
+        }
+      ],
+      "widgetMissingAndDelayedAPI": "passed",
+      "calculatorExampleAllStagePresetsAndRestore": "passed"
+    }
+  ],
+  "pageErrors": [],
+  "externalVendor": "blocked; local optional-API contract fixture only",
+  "liveSubmissions": 0,
+  "status": "passed"
+}

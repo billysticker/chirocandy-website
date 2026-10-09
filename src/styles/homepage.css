@@ -5,8 +5,8 @@
   --ink:#EAF1FA; --muted:#96ABC6; --muted2:#7E93B0; --line:rgba(150,171,198,.14);
 }
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip}
-h1,h2,h3{font-family:'Space Grotesk',sans-serif;letter-spacing:-.02em}
+body{font-family:'Inter Variable',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip}
+h1,h2,h3{font-family:'Space Grotesk Variable',sans-serif;letter-spacing:-.02em}
 a{color:inherit;text-decoration:none}
 img{max-width:100%}
 button{font:inherit;cursor:pointer}
@@ -60,7 +60,7 @@ button{font:inherit;cursor:pointer}
 .press-strip{display:block;max-width:820px;width:100%;margin:0 auto;filter:grayscale(1) invert(1);mix-blend-mode:screen;opacity:.78;transition:opacity .3s}
 .press-strip:hover{opacity:1}
 .marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(7,28,54,.6);backdrop-filter:blur(10px);overflow:hidden;padding:1.35rem 0;position:relative;z-index:3}
-.marquee-track{display:flex;gap:4.5rem;width:max-content;animation:scrollx 30s linear infinite;font-family:'Space Grotesk';font-size:1rem;color:var(--muted);white-space:nowrap}
+.marquee-track{display:flex;gap:4.5rem;width:max-content;animation:scrollx 30s linear infinite;font-family:'Space Grotesk Variable';font-size:1rem;color:var(--muted);white-space:nowrap}
 .marquee:hover .marquee-track{animation-play-state:paused}
 .marquee-track b{color:var(--green)}
 @keyframes scrollx{to{transform:translateX(-50%)}}
@@ -76,7 +76,7 @@ section{padding:120px 0;position:relative;z-index:3}
 .stats{padding:96px 0}
 .stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
 .stat{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:2.1rem 1.6rem;text-align:center;backdrop-filter:blur(10px)}
-.stat .n{font-family:'Space Grotesk';font-size:2.6rem;font-weight:700;color:#fff}
+.stat .n{font-family:'Space Grotesk Variable';font-size:2.6rem;font-weight:700;color:#fff}
 .stat .n em{color:var(--green);font-style:normal}
 .stat .l{font-size:.84rem;color:var(--muted);margin-top:.3rem}
 
@@ -88,7 +88,7 @@ section{padding:120px 0;position:relative;z-index:3}
 .engine-list li{display:flex;gap:.95rem;padding:.48rem .9rem;border-radius:12px;align-items:baseline;border:1px solid transparent;background:transparent;opacity:.38;transition:background .35s,border-color .35s,opacity .35s,box-shadow .35s}
 .engine-list li.on{opacity:.78;background:rgba(126,217,87,.06);border-color:rgba(126,217,87,.16)}
 .engine-list li.now{opacity:1;background:rgba(126,217,87,.14);border-color:rgba(126,217,87,.85);box-shadow:0 0 0 1px rgba(126,217,87,.22),0 0 28px rgba(126,217,87,.22);animation:engineNow 1.6s ease-in-out infinite}
-.engine-list .k{font-family:'Space Grotesk';font-weight:700;color:var(--muted2);transition:color .3s;flex-shrink:0}
+.engine-list .k{font-family:'Space Grotesk Variable';font-weight:700;color:var(--muted2);transition:color .3s;flex-shrink:0}
 .engine-list li.on .k,.engine-list li.now .k{color:var(--green)}
 .engine-list b{display:block;font-size:.98rem;color:var(--muted);transition:color .3s}
 .engine-list li.on b{color:rgba(234,241,250,.82)}
@@ -101,7 +101,7 @@ section{padding:120px 0;position:relative;z-index:3}
 .ring-wrap{position:relative;aspect-ratio:1/1;max-width:560px;margin:0 auto;width:100%}
 .ring-svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
 .ring-svg line{stroke:rgba(126,217,87,.55);stroke-width:1.5;vector-effect:non-scaling-stroke;stroke-dasharray:1;stroke-dashoffset:1}
-.core{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:31%;aspect-ratio:1/1;border-radius:50%;background:radial-gradient(circle at 35% 30%,#1A4A80,#081E3C);border:1px solid rgba(126,217,87,.45);display:flex;align-items:center;justify-content:center;text-align:center;font-family:'Space Grotesk';font-weight:600;font-size:clamp(.75rem,1.4vw,.95rem);line-height:1.35;padding:1rem;z-index:2}
+.core{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:31%;aspect-ratio:1/1;border-radius:50%;background:radial-gradient(circle at 35% 30%,#1A4A80,#081E3C);border:1px solid rgba(126,217,87,.45);display:flex;align-items:center;justify-content:center;text-align:center;font-family:'Space Grotesk Variable';font-weight:600;font-size:clamp(.75rem,1.4vw,.95rem);line-height:1.35;padding:1rem;z-index:2}
 .core b{color:var(--green)}
 .core-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:52%;aspect-ratio:1/1;border-radius:50%;background:radial-gradient(circle,rgba(126,217,87,.28),transparent 65%);opacity:.15;z-index:1}
 .node{position:absolute;transform:translate(-50%,-50%) scale(.8);background:rgba(6,20,40,.92);border:1px solid var(--line);border-radius:13px;padding:.6rem 1.05rem;font-size:.8rem;font-weight:600;backdrop-filter:blur(6px);box-shadow:0 12px 30px rgba(0,0,0,.4);opacity:.28;z-index:3;white-space:nowrap;transition:border-color .3s}
@@ -117,12 +117,14 @@ section{padding:120px 0;position:relative;z-index:3}
 .step-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;counter-reset:step}
 .step{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:2.2rem 1.8rem;backdrop-filter:blur(10px)}
 .step .day{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--green);font-weight:600}
-.step .sn{font-family:'Space Grotesk';font-weight:700;font-size:2.4rem;color:rgba(126,217,87,.28);line-height:1;margin-bottom:1.1rem}
+.step .sn{font-family:'Space Grotesk Variable';font-weight:700;font-size:2.4rem;color:rgba(126,217,87,.28);line-height:1;margin-bottom:1.1rem}
 .step h3{font-size:1.18rem;margin:.5rem 0 .6rem}
 .step p{font-size:.92rem;color:var(--muted)}
 .step-line{display:none}
 
 .ai-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:4rem;align-items:center}
+/* Let the embedded chat shrink with its grid column on narrow screens. */
+.ai-grid > *{min-width:0}
 .ai-list{list-style:none;margin-top:1.6rem}
 .ai-list li{display:flex;gap:.9rem;margin-bottom:1.15rem;color:var(--muted);font-size:1rem}
 .ai-list .chk{color:var(--green);font-weight:700}
@@ -137,19 +139,19 @@ section{padding:120px 0;position:relative;z-index:3}
 .leak-list{list-style:none;margin-top:1.9rem;border-top:1px solid var(--line)}
 .leak-list li{display:flex;gap:1.1rem;padding:1.15rem .1rem;border-bottom:1px solid var(--line);align-items:baseline}
 .leak-list .lx{color:var(--muted2);font-size:.8rem;flex-shrink:0;width:.9rem}
-.leak-list b{display:block;font-family:'Space Grotesk';font-size:1rem;font-weight:600;color:var(--ink);margin-bottom:.15rem}
+.leak-list b{display:block;font-family:'Space Grotesk Variable';font-size:1rem;font-weight:600;color:var(--ink);margin-bottom:.15rem}
 .leak-list span{font-size:.88rem;color:var(--muted2)}
 .eng-card{background:linear-gradient(160deg,rgba(18,57,100,.5),rgba(7,28,54,.88));border:1px solid var(--line);border-radius:24px;padding:1.9rem;backdrop-filter:blur(12px);box-shadow:0 40px 100px rgba(0,0,0,.5)}
 .eng-top{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-bottom:1.3rem;border-bottom:1px solid var(--line)}
 .eng-top .lbl{display:flex;align-items:center;gap:.65rem;font-size:.73rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
 .eng-live{border:1px solid rgba(126,217,87,.5);color:var(--green);border-radius:999px;padding:.34rem .9rem;font-size:.68rem;letter-spacing:.14em;font-weight:700}
 .eng-when{font-size:.88rem;color:var(--muted);margin-top:1.5rem}
-.eng-h{font-family:'Space Grotesk';font-size:clamp(1.25rem,2.1vw,1.55rem);font-weight:700;margin:.2rem 0 1.5rem}
+.eng-h{font-family:'Space Grotesk Variable';font-size:clamp(1.25rem,2.1vw,1.55rem);font-weight:700;margin:.2rem 0 1.5rem}
 .eng-kpis{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 .eng-kpi{border:1px solid var(--line);border-radius:18px;padding:1.4rem 1.35rem}
 .eng-kpi.hot{border-color:rgba(126,217,87,.35);background:rgba(126,217,87,.06)}
 .eng-kpi .kl{font-size:.84rem;color:var(--muted)}
-.eng-kpi .kn{font-family:'Space Grotesk';font-size:2.4rem;font-weight:700;color:#fff;line-height:1.1;margin:.3rem 0 .25rem}
+.eng-kpi .kn{font-family:'Space Grotesk Variable';font-size:2.4rem;font-weight:700;color:#fff;line-height:1.1;margin:.3rem 0 .25rem}
 .eng-kpi .kn em{font-style:normal;color:var(--green);font-size:1.05rem}
 .eng-kpi .kn .lt{color:var(--muted);font-size:1.7rem;margin-right:.1rem}
 .eng-kpi .ks{font-size:.8rem;color:var(--muted2)}
@@ -171,7 +173,7 @@ section{padding:120px 0;position:relative;z-index:3}
 .founder-shot{position:relative;aspect-ratio:4/5;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#081E3C}
 .founder-shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 20%}
 .founder-badge{position:absolute;bottom:34px;right:-24px;max-width:255px;background:rgba(6,20,40,.74);border:1px solid var(--line);border-radius:16px;padding:1.05rem 1.25rem;backdrop-filter:blur(10px);box-shadow:0 20px 50px rgba(0,0,0,.5)}
-.founder-badge b{display:block;font-family:'Space Grotesk';color:var(--green);font-size:.95rem;margin-bottom:.25rem}
+.founder-badge b{display:block;font-family:'Space Grotesk Variable';color:var(--green);font-size:.95rem;margin-bottom:.25rem}
 .founder-badge span{font-size:.86rem;color:var(--muted);line-height:1.45}
 .founder-h{font-size:clamp(2.1rem,4.2vw,3.4rem);font-weight:700;line-height:1.06;margin:1rem 0 1.6rem}
 .founder-body p{color:var(--muted);font-size:1.04rem;max-width:35rem;text-wrap:pretty}
@@ -252,7 +254,7 @@ section{padding:120px 0;position:relative;z-index:3}
 
 .home-faq-list{max-width:46rem;margin:0 auto}
 .home-faq-item{border-bottom:1px solid var(--line);padding:1.15rem 0}
-.home-faq-item dt{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:1.05rem;margin-bottom:.45rem}
+.home-faq-item dt{font-family:'Space Grotesk Variable',sans-serif;font-weight:600;font-size:1.05rem;margin-bottom:.45rem}
 .home-faq-item dd{margin:0;color:var(--muted);font-size:.98rem}
 .home-faq-item a{color:var(--green);font-weight:600}
 .home-foot a{color:var(--ink);font-weight:600}

@@ -1,0 +1,300 @@
+{
+  "base": "http://127.0.0.1:4322",
+  "checkedAt": "2026-10-09T20:32:56.477Z",
+  "layouts": [
+    {
+      "route": "/ai-website-workbook/",
+      "width": 320,
+      "scrollWidth": 320,
+      "h1": 1,
+      "missingAlt": 0,
+      "summary": null,
+      "canonical": null
+    },
+    {
+      "route": "/podcast/002/",
+      "width": 320,
+      "scrollWidth": 320,
+      "h1": 1,
+      "missingAlt": 0,
+      "summary": "The P.A.S.T. copywriting framework organizes a message into Problem, Agitate, Solution, and Take Action. Billy Sticker introduces those four steps as a way to structure practice marketing.",
+      "canonical": "https://chirocandy.com/podcast/002/"
+    },
+    {
+      "route": "/podcast/155-video-equipment-that-helps-you-create-higher-quality-content/",
+      "width": 320,
+      "scrollWidth": 320,
+      "h1": 1,
+      "missingAlt": 0,
+      "summary": "The equipment list covers a tripod with a phone mount, a lapel microphone, and photography lights. Billy Sticker discusses these three tools for recording practice videos.",
+      "canonical": "https://chirocandy.com/podcast/155-video-equipment-that-helps-you-create-higher-quality-content/"
+    },
+    {
+      "route": "/podcast/storms-of-life/",
+      "width": 320,
+      "scrollWidth": 320,
+      "h1": 1,
+      "missingAlt": 0,
+      "summary": "“Storms of Life” is a solo episode with Billy Sticker. The archived page contains the recording, a cruise link, and a Facebook post, but no written account of the episode's lessons.",
+      "canonical": "https://chirocandy.com/podcast/storms-of-life/"
+    },
+    {
+      "route": "/ai-website-workbook/",
+      "width": 390,
+      "scrollWidth": 390,
+      "h1": 1,
+      "missingAlt": 0,
+      "summary": null,
+      "canonical": null
+    },
+    {
+      "route": "/podcast/002/",
+      "width": 390,
+      "scrollWidth": 390,
+      "h1": 1,
+      "missingAlt": 0,
+      "summary": "The P.A.S.T. copywriting framework organizes a message into Problem, Agitate, Solution, and Take Action. Billy Sticker introduces those four steps as a way to structure practice marketing.",
+      "canonical": "https://chirocandy.com/podcast/002/"
+    },
+    {
+      "route": "/podcast/155-video-equipment-that-helps-you-create-higher-quality-content/",
+      "width": 390,
+      "scrollWidth": 390,
+      "h1": 1,
+      "missingAlt": 0,
+      "summary": "The equipment list covers a tripod with a phone mount, a lapel microphone, and photography lights. Billy Sticker discusses these three tools for recording practice videos.",
+      "canonical": "https://chirocandy.com/podcast/155-video-equipment-that-helps-you-create-higher-quality-content/"
+    },
+    {
+      "route": "/podcast/storms-of-life/",
+      "width": 390,
+      "scrollWidth": 390,
+      "h1": 1,
+      "missingAlt": 0,
+      "summary": "“Storms of Life” is a solo episode with Billy Sticker. The archived page contains the recording, a cruise link, and a Facebook post, but no written account of the episode's lessons.",
+      "canonical": "https://chirocandy.com/podcast/storms-of-life/"
+    },
+    {
+      "route": "/ai-website-workbook/",
+      "width": 768,
+      "scrollWidth": 768,
+      "h1": 1,
+      "missingAlt": 0,
+      "summary": null,
+      "canonical": null
+    },
+    {
+      "route": "/podcast/002/",
+      "width": 768,
+      "scrollWidth": 768,
+      "h1": 1,
+      "missingAlt": 0,
+      "summary": "The P.A.S.T. copywriting framework organizes a message into Problem, Agitate, Solution, and Take Action. Billy Sticker introduces those four steps as a way to structure practice marketing.",
+      "canonical": "https://chirocandy.com/podcast/002/"
+    },
+    {
+      "route": "/podcast/155-video-equipment-that-helps-you-create-higher-quality-content/",
+      "width": 768,
+      "scrollWidth": 768,
+      "h1": 1,
+      "missingAlt": 0,
+      "summary": "The equipment list covers a tripod with a phone mount, a lapel microphone, and photography lights. Billy Sticker discusses these three tools for recording practice videos.",
+      "canonical": "https://chirocandy.com/podcast/155-video-equipment-that-helps-you-create-higher-quality-content/"
+    },
+    {
+      "route": "/podcast/storms-of-life/",
+      "width": 768,
+      "scrollWidth": 768,
+      "h1": 1,
+      "missingAlt": 0,
+      "summary": "“Storms of Life” is a solo episode with Billy Sticker. The archived page contains the recording, a cruise link, and a Facebook post, but no written account of the episode's lessons.",
+      "canonical": "https://chirocandy.com/podcast/storms-of-life/"
+    },
+    {
+      "route": "/ai-website-workbook/",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1": 1,
+      "missingAlt": 0,
+      "summary": null,
+      "canonical": null
+    },
+    {
+      "route": "/podcast/002/",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1": 1,
+      "missingAlt": 0,
+      "summary": "The P.A.S.T. copywriting framework organizes a message into Problem, Agitate, Solution, and Take Action. Billy Sticker introduces those four steps as a way to structure practice marketing.",
+      "canonical": "https://chirocandy.com/podcast/002/"
+    },
+    {
+      "route": "/podcast/155-video-equipment-that-helps-you-create-higher-quality-content/",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1": 1,
+      "missingAlt": 0,
+      "summary": "The equipment list covers a tripod with a phone mount, a lapel microphone, and photography lights. Billy Sticker discusses these three tools for recording practice videos.",
+      "canonical": "https://chirocandy.com/podcast/155-video-equipment-that-helps-you-create-higher-quality-content/"
+    },
+    {
+      "route": "/podcast/storms-of-life/",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1": 1,
+      "missingAlt": 0,
+      "summary": "“Storms of Life” is a solo episode with Billy Sticker. The archived page contains the recording, a cruise link, and a Facebook post, but no written account of the episode's lessons.",
+      "canonical": "https://chirocandy.com/podcast/storms-of-life/"
+    }
+  ],
+  "interactions": [
+    {
+      "workbookFonts": [
+        {
+          "family": "Inter",
+          "status": "loaded"
+        },
+        {
+          "family": "Space Grotesk",
+          "status": "loaded"
+        }
+      ]
+    },
+    {
+      "workbookImages": [
+        {
+          "src": "/ai-website-workbook/assets/chirocandy-logo-4d1eab5c23de.png",
+          "width": 1473,
+          "height": 336,
+          "alt": "ChiroCandy"
+        },
+        {
+          "src": "/ai-website-workbook/assets/tool-logo-1-46f94a1341ce.png",
+          "width": 512,
+          "height": 512,
+          "alt": ""
+        },
+        {
+          "src": "/ai-website-workbook/assets/tool-logo-2-5c9896508c07.png",
+          "width": 512,
+          "height": 512,
+          "alt": ""
+        },
+        {
+          "src": "/ai-website-workbook/assets/tool-logo-3-189da2218dff.png",
+          "width": 512,
+          "height": 512,
+          "alt": ""
+        },
+        {
+          "src": "/ai-website-workbook/assets/tool-logo-4-ef3612d41cba.png",
+          "width": 512,
+          "height": 512,
+          "alt": ""
+        },
+        {
+          "src": "/ai-website-workbook/assets/github-repository-7c903455267a.png",
+          "width": 1528,
+          "height": 350,
+          "alt": "Official GitHub documentation screenshot showing where to name a new repository"
+        },
+        {
+          "src": "/ai-website-workbook/assets/vercel-domain-settings-886812994a62.png",
+          "width": 1890,
+          "height": 726,
+          "alt": "Vercel domain settings showing the Type, Name, and Value columns for a required DNS record. Values are examples only."
+        },
+        {
+          "src": "/ai-website-workbook/assets/namecheap-dns-settings-70a06123a62f.png",
+          "width": 1162,
+          "height": 532,
+          "alt": "Namecheap Advanced DNS settings showing Host Records and the Add New Record button. Existing example records are not Vercel settings."
+        },
+        {
+          "src": "/ai-website-workbook/assets/vercel-dns-editor-1b0df4ce5323.png",
+          "width": 4334,
+          "height": 1446,
+          "alt": "Vercel DNS record editor with Name, Type, Value, TTL, and Add controls. Values shown are examples only."
+        }
+      ]
+    },
+    {
+      "enlargementAndEscape": "4 screenshots passed"
+    },
+    {
+      "checklistPersistenceCopyDownloads": "passed",
+      "vimeoEmbedUrls": [
+        "https://player.vimeo.com/video/1227576760?dnt=1",
+        "https://player.vimeo.com/video/1227576757?dnt=1",
+        "https://player.vimeo.com/video/1227576758?dnt=1",
+        "https://player.vimeo.com/video/1227581915?dnt=1"
+      ],
+      "vimeoPlayback": "not tested"
+    },
+    {
+      "consentRejectReopenAcceptPersistencePreviewSuppression": "passed",
+      "mobileNavigation": "passed",
+      "formsSubmitted": 0
+    }
+  ],
+  "pageErrors": [],
+  "failedRequests": [
+    {
+      "url": "https://player.vimeo.com/video/1227576760?dnt=1",
+      "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+    },
+    {
+      "url": "https://player.vimeo.com/video/1227576760?dnt=1",
+      "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+    },
+    {
+      "url": "https://player.vimeo.com/video/1227576760?dnt=1",
+      "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+    },
+    {
+      "url": "https://player.vimeo.com/video/1227576760?dnt=1",
+      "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+    },
+    {
+      "url": "https://player.vimeo.com/video/1227576757?dnt=1",
+      "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+    },
+    {
+      "url": "https://player.vimeo.com/video/1227576760?dnt=1",
+      "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+    },
+    {
+      "url": "https://player.vimeo.com/video/1227576757?dnt=1",
+      "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+    },
+    {
+      "url": "https://player.vimeo.com/video/1227576758?dnt=1",
+      "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+    },
+    {
+      "url": "https://player.vimeo.com/video/1227581915?dnt=1",
+      "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+    },
+    {
+      "url": "https://7nyt0uhk7sse4zvn.public.blob.vercel-storage.com/docs-assets/static/docs/concepts/deployments/git/index/repo-list-light.png",
+      "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+    },
+    {
+      "url": "https://player.vimeo.com/video/1227576757?dnt=1",
+      "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+    },
+    {
+      "url": "https://player.vimeo.com/video/1227576760?dnt=1",
+      "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+    },
+    {
+      "url": "https://player.vimeo.com/video/1227576758?dnt=1",
+      "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+    },
+    {
+      "url": "https://player.vimeo.com/video/1227581915?dnt=1",
+      "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+    }
+  ],
+  "status": "passed"
+}

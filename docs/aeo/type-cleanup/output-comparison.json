@@ -1,0 +1,12 @@
+{
+  "html_pages_identical_except_css_filename": 282,
+  "javascript_files_byte_identical": 11,
+  "removed_unused_css_utilities": [
+    "pointer-events-none",
+    "inset-0",
+    "z-0",
+    "h-full",
+    "w-full"
+  ],
+  "other_assets_byte_identical": true
+}

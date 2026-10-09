@@ -1,0 +1,21 @@
+{
+  "calculatorBudget": {
+    "step2Visible": true,
+    "monthlyBudget": true,
+    "overflow": false
+  },
+  "calculatorValidation": {
+    "cleared": true,
+    "errors": [
+      "Enter a patient value greater than zero, or enter last year\u2019s collections and new patients to estimate a proxy.",
+      "Enter a number from 0 to 1,000,000,000.",
+      "Enter a whole number from 0 to 1,000,000.",
+      "Enter a number from 0 to 1,000,000,000."
+    ],
+    "focused": "journey-ltv"
+  },
+  "desktopNavigation": {
+    "route": "/services/",
+    "h1": "Chiropractic marketing services"
+  }
+}
