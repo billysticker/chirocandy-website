@@ -211,10 +211,15 @@ h4 {
   color: var(--muted);
 }
 
-.prose a {
+.prose a:not(.btn) {
   color: var(--green);
   text-decoration: underline;
   text-underline-offset: 0.15em;
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--green);
+  outline-offset: 4px;
 }
 
 .prose h2 {

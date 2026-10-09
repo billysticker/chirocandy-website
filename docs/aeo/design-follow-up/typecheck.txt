@@ -1,0 +1,21 @@
+
+> chirocandy-website@1.0.0 check
+> astro check
+
+22:27:52 [types] Generated 242ms
+22:27:52 [check] Getting diagnostics for Astro files in /workspace/chirocandy-website...
+[96msrc/pages/schedule/index.astro[0m:[93m89[0m:[93m17[0m - [93mwarning[0m[90m ts(6385): [0m'scrolling' is deprecated.
+
+[7m89[0m                 scrolling="no"
+[7m  [0m [93m                ~~~~~~~~~[0m
+
+Result (97 files): 
+- 0 errors
+- 0 warnings
+- 1 hint
+
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice

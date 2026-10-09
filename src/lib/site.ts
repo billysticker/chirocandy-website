@@ -57,6 +57,7 @@ export const NAV = {
     { href: '/services/facebook-advertising/', label: 'Facebook Ads' },
     { href: '/services/google-advertising/', label: 'Google Ads' },
     { href: '/services/search-engine-optimization/', label: 'SEO & AI Search' },
+    { href: '/services/ai-visibility/', label: 'AI Visibility & AEO' },
     { href: '/services/web-design/', label: 'Web Design' },
     { href: '/services/ai-patient-coordinator/', label: 'AI CA™ Chat & SMS' },
     { href: '/services/voice-ai/', label: 'Voice AI' },

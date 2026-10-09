@@ -1,0 +1,583 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "route": "/about/billy-sticker/",
+      "label": "Programs",
+      "classes": "nav-drop-toggle",
+      "state": "default",
+      "contrast": 8.13,
+      "required": 4.5
+    },
+    {
+      "route": "/about/billy-sticker/",
+      "label": "Programs",
+      "classes": "nav-drop-toggle",
+      "state": "hover",
+      "contrast": 19.11,
+      "required": 4.5
+    },
+    {
+      "route": "/about/billy-sticker/",
+      "label": "Programs",
+      "classes": "nav-drop-toggle",
+      "state": "keyboard focus",
+      "contrast": 19.11,
+      "required": 4.5
+    },
+    {
+      "route": "/about/billy-sticker/",
+      "label": "Book a Strategy Call",
+      "classes": "btn btn-green nav-cta magnetic",
+      "state": "default",
+      "contrast": 7.17,
+      "required": 4.5
+    },
+    {
+      "route": "/about/billy-sticker/",
+      "label": "Book a Strategy Call",
+      "classes": "btn btn-green nav-cta magnetic",
+      "state": "hover",
+      "contrast": 7.17,
+      "required": 4.5
+    },
+    {
+      "route": "/about/billy-sticker/",
+      "label": "Book a Strategy Call",
+      "classes": "btn btn-green nav-cta magnetic",
+      "state": "keyboard focus",
+      "contrast": 7.17,
+      "required": 4.5
+    },
+    {
+      "route": "/about/billy-sticker/",
+      "label": "Book a Strategy Call →",
+      "classes": "btn btn-green mm-cta",
+      "state": "default",
+      "contrast": 7.17,
+      "required": 4.5
+    },
+    {
+      "route": "/about/billy-sticker/",
+      "label": "Book a Strategy Call →",
+      "classes": "btn btn-green mm-cta",
+      "state": "hover",
+      "contrast": 7.17,
+      "required": 4.5
+    },
+    {
+      "route": "/about/billy-sticker/",
+      "label": "Book a Strategy Call →",
+      "classes": "btn btn-green mm-cta",
+      "state": "keyboard focus",
+      "contrast": 7.17,
+      "required": 4.5
+    },
+    {
+      "route": "/about/billy-sticker/",
+      "label": "Reject",
+      "classes": "btn btn-ghost cc-btn",
+      "state": "default",
+      "contrast": 14.5,
+      "required": 4.5
+    },
+    {
+      "route": "/about/billy-sticker/",
+      "label": "Reject",
+      "classes": "btn btn-ghost cc-btn",
+      "state": "hover",
+      "contrast": 9.39,
+      "required": 4.5
+    },
+    {
+      "route": "/about/billy-sticker/",
+      "label": "Reject",
+      "classes": "btn btn-ghost cc-btn",
+      "state": "keyboard focus",
+      "contrast": 14.5,
+      "required": 4.5
+    },
+    {
+      "route": "/about/billy-sticker/",
+      "label": "Accept",
+      "classes": "btn btn-green cc-btn",
+      "state": "default",
+      "contrast": 7.17,
+      "required": 4.5
+    },
+    {
+      "route": "/about/billy-sticker/",
+      "label": "Accept",
+      "classes": "btn btn-green cc-btn",
+      "state": "hover",
+      "contrast": 7.17,
+      "required": 4.5
+    },
+    {
+      "route": "/about/billy-sticker/",
+      "label": "Accept",
+      "classes": "btn btn-green cc-btn",
+      "state": "keyboard focus",
+      "contrast": 7.17,
+      "required": 4.5
+    },
+    {
+      "route": "/about/billy-sticker/",
+      "label": "COOKIES",
+      "classes": "cc-reopen",
+      "state": "default",
+      "contrast": 10.87,
+      "required": 4.5
+    },
+    {
+      "route": "/about/billy-sticker/",
+      "label": "COOKIES",
+      "classes": "cc-reopen",
+      "state": "hover",
+      "contrast": 10.87,
+      "required": 4.5
+    },
+    {
+      "route": "/about/billy-sticker/",
+      "label": "COOKIES",
+      "classes": "cc-reopen",
+      "state": "keyboard focus",
+      "contrast": 10.87,
+      "required": 4.5
+    },
+    {
+      "route": "/blog/5-benefits-of-a-high-functioning-website-for-chiropractors/",
+      "label": "Book a Strategy Call",
+      "classes": "btn btn--primary",
+      "state": "default",
+      "contrast": 7.17,
+      "required": 4.5
+    },
+    {
+      "route": "/blog/5-benefits-of-a-high-functioning-website-for-chiropractors/",
+      "label": "Book a Strategy Call",
+      "classes": "btn btn--primary",
+      "state": "hover",
+      "contrast": 7.17,
+      "required": 4.5
+    },
+    {
+      "route": "/blog/5-benefits-of-a-high-functioning-website-for-chiropractors/",
+      "label": "Book a Strategy Call",
+      "classes": "btn btn--primary",
+      "state": "keyboard focus",
+      "contrast": 7.17,
+      "required": 4.5
+    },
+    {
+      "route": "/blog/5-benefits-of-a-high-functioning-website-for-chiropractors/",
+      "label": "Contact us",
+      "classes": "btn btn--secondary",
+      "state": "default",
+      "contrast": 15.83,
+      "required": 4.5
+    },
+    {
+      "route": "/blog/5-benefits-of-a-high-functioning-website-for-chiropractors/",
+      "label": "Contact us",
+      "classes": "btn btn--secondary",
+      "state": "hover",
+      "contrast": 10.24,
+      "required": 4.5
+    },
+    {
+      "route": "/blog/5-benefits-of-a-high-functioning-website-for-chiropractors/",
+      "label": "Contact us",
+      "classes": "btn btn--secondary",
+      "state": "keyboard focus",
+      "contrast": 15.83,
+      "required": 4.5
+    },
+    {
+      "route": "/ai-website-workbook/",
+      "label": "Print workbook ↗",
+      "classes": "nav-print",
+      "state": "default",
+      "contrast": 14.71,
+      "required": 4.5
+    },
+    {
+      "route": "/ai-website-workbook/",
+      "label": "Print workbook ↗",
+      "classes": "nav-print",
+      "state": "hover",
+      "contrast": 14.71,
+      "required": 4.5
+    },
+    {
+      "route": "/ai-website-workbook/",
+      "label": "Print workbook ↗",
+      "classes": "nav-print",
+      "state": "keyboard focus",
+      "contrast": 14.71,
+      "required": 4.5
+    },
+    {
+      "route": "/ai-website-workbook/",
+      "label": "Start with the audit ↗",
+      "classes": "btn green",
+      "state": "default",
+      "contrast": 9.98,
+      "required": 4.5
+    },
+    {
+      "route": "/ai-website-workbook/",
+      "label": "Start with the audit ↗",
+      "classes": "btn green",
+      "state": "hover",
+      "contrast": 11.36,
+      "required": 4.5
+    },
+    {
+      "route": "/ai-website-workbook/",
+      "label": "Start with the audit ↗",
+      "classes": "btn green",
+      "state": "keyboard focus",
+      "contrast": 9.98,
+      "required": 4.5
+    },
+    {
+      "route": "/ai-website-workbook/",
+      "label": "Copy prompt",
+      "classes": "copy-btn",
+      "state": "default",
+      "contrast": 14.71,
+      "required": 4.5
+    },
+    {
+      "route": "/ai-website-workbook/",
+      "label": "Copy prompt",
+      "classes": "copy-btn",
+      "state": "hover",
+      "contrast": 13.53,
+      "required": 4.5
+    },
+    {
+      "route": "/ai-website-workbook/",
+      "label": "Copy prompt",
+      "classes": "copy-btn",
+      "state": "keyboard focus",
+      "contrast": 14.71,
+      "required": 4.5
+    },
+    {
+      "route": "/ai-website-workbook/",
+      "label": "Download blank URL map ↓",
+      "classes": "btn outline small",
+      "state": "default",
+      "contrast": 14.71,
+      "required": 4.5
+    },
+    {
+      "route": "/ai-website-workbook/",
+      "label": "Download blank URL map ↓",
+      "classes": "btn outline small",
+      "state": "hover",
+      "contrast": 14.71,
+      "required": 4.5
+    },
+    {
+      "route": "/ai-website-workbook/",
+      "label": "Download blank URL map ↓",
+      "classes": "btn outline small",
+      "state": "keyboard focus",
+      "contrast": 14.71,
+      "required": 4.5
+    },
+    {
+      "route": "/ai-website-workbook/",
+      "label": "URL map ↓",
+      "classes": "btn outline",
+      "state": "default",
+      "contrast": 17.42,
+      "required": 4.5
+    },
+    {
+      "route": "/ai-website-workbook/",
+      "label": "URL map ↓",
+      "classes": "btn outline",
+      "state": "hover",
+      "contrast": 12.89,
+      "required": 4.5
+    },
+    {
+      "route": "/ai-website-workbook/",
+      "label": "URL map ↓",
+      "classes": "btn outline",
+      "state": "keyboard focus",
+      "contrast": 17.42,
+      "required": 4.5
+    },
+    {
+      "route": "/case-studies/100-percent-chiropractic-chattanooga/",
+      "label": "Schedule a Call",
+      "classes": "btn btn--primary",
+      "state": "default",
+      "contrast": 7.17,
+      "required": 4.5
+    },
+    {
+      "route": "/case-studies/100-percent-chiropractic-chattanooga/",
+      "label": "Schedule a Call",
+      "classes": "btn btn--primary",
+      "state": "hover",
+      "contrast": 7.17,
+      "required": 4.5
+    },
+    {
+      "route": "/case-studies/100-percent-chiropractic-chattanooga/",
+      "label": "Schedule a Call",
+      "classes": "btn btn--primary",
+      "state": "keyboard focus",
+      "contrast": 7.17,
+      "required": 4.5
+    },
+    {
+      "route": "/case-studies/",
+      "label": "Book a Strategy Call →",
+      "classes": "btn btn-green",
+      "state": "default",
+      "contrast": 7.17,
+      "required": 4.5
+    },
+    {
+      "route": "/case-studies/",
+      "label": "Book a Strategy Call →",
+      "classes": "btn btn-green",
+      "state": "hover",
+      "contrast": 7.17,
+      "required": 4.5
+    },
+    {
+      "route": "/case-studies/",
+      "label": "Book a Strategy Call →",
+      "classes": "btn btn-green",
+      "state": "keyboard focus",
+      "contrast": 7.17,
+      "required": 4.5
+    },
+    {
+      "route": "/contact-us/",
+      "label": "Call 1-800-662-1745",
+      "classes": "btn btn--secondary",
+      "state": "default",
+      "contrast": 15.83,
+      "required": 4.5
+    },
+    {
+      "route": "/contact-us/",
+      "label": "Call 1-800-662-1745",
+      "classes": "btn btn--secondary",
+      "state": "hover",
+      "contrast": 10.24,
+      "required": 4.5
+    },
+    {
+      "route": "/contact-us/",
+      "label": "Call 1-800-662-1745",
+      "classes": "btn btn--secondary",
+      "state": "keyboard focus",
+      "contrast": 15.83,
+      "required": 4.5
+    },
+    {
+      "route": "/marketing-calculator/",
+      "label": "Try an example",
+      "classes": "text-button",
+      "state": "default",
+      "contrast": 9.72,
+      "required": 4.5
+    },
+    {
+      "route": "/marketing-calculator/",
+      "label": "Try an example",
+      "classes": "text-button",
+      "state": "hover",
+      "contrast": 9.72,
+      "required": 4.5
+    },
+    {
+      "route": "/marketing-calculator/",
+      "label": "Try an example",
+      "classes": "text-button",
+      "state": "keyboard focus",
+      "contrast": 9.72,
+      "required": 4.5
+    },
+    {
+      "route": "/marketing-calculator/",
+      "label": "Try an example ↗",
+      "classes": "calc-example",
+      "state": "default",
+      "contrast": 10.87,
+      "required": 4.5
+    },
+    {
+      "route": "/marketing-calculator/",
+      "label": "Try an example ↗",
+      "classes": "calc-example",
+      "state": "hover",
+      "contrast": 10.87,
+      "required": 4.5
+    },
+    {
+      "route": "/marketing-calculator/",
+      "label": "Try an example ↗",
+      "classes": "calc-example",
+      "state": "keyboard focus",
+      "contrast": 10.87,
+      "required": 4.5
+    },
+    {
+      "route": "/marketing-calculator/",
+      "label": "Clear numbers",
+      "classes": "calc-clear",
+      "state": "default",
+      "contrast": 10.87,
+      "required": 4.5
+    },
+    {
+      "route": "/marketing-calculator/",
+      "label": "Clear numbers",
+      "classes": "calc-clear",
+      "state": "hover",
+      "contrast": 10.87,
+      "required": 4.5
+    },
+    {
+      "route": "/marketing-calculator/",
+      "label": "Clear numbers",
+      "classes": "calc-clear",
+      "state": "keyboard focus",
+      "contrast": 10.87,
+      "required": 4.5
+    },
+    {
+      "route": "/marketing-calculator/",
+      "label": "Discuss My Numbers on a Strategy Call →",
+      "classes": "btn btn--primary calc-cta",
+      "state": "default",
+      "contrast": 7.17,
+      "required": 4.5
+    },
+    {
+      "route": "/marketing-calculator/",
+      "label": "Discuss My Numbers on a Strategy Call →",
+      "classes": "btn btn--primary calc-cta",
+      "state": "hover",
+      "contrast": 7.17,
+      "required": 4.5
+    },
+    {
+      "route": "/marketing-calculator/",
+      "label": "Discuss My Numbers on a Strategy Call →",
+      "classes": "btn btn--primary calc-cta",
+      "state": "keyboard focus",
+      "contrast": 7.17,
+      "required": 4.5
+    },
+    {
+      "route": "/",
+      "label": "Book a Strategy Call →",
+      "classes": "btn btn-green magnetic",
+      "state": "default",
+      "contrast": 7.17,
+      "required": 4.5
+    },
+    {
+      "route": "/",
+      "label": "Book a Strategy Call →",
+      "classes": "btn btn-green magnetic",
+      "state": "hover",
+      "contrast": 7.17,
+      "required": 4.5
+    },
+    {
+      "route": "/",
+      "label": "Book a Strategy Call →",
+      "classes": "btn btn-green magnetic",
+      "state": "keyboard focus",
+      "contrast": 7.17,
+      "required": 4.5
+    },
+    {
+      "route": "/",
+      "label": "See How It Works",
+      "classes": "btn btn-ghost magnetic",
+      "state": "default",
+      "contrast": 15.83,
+      "required": 4.5
+    },
+    {
+      "route": "/",
+      "label": "See How It Works",
+      "classes": "btn btn-ghost magnetic",
+      "state": "hover",
+      "contrast": 10.24,
+      "required": 4.5
+    },
+    {
+      "route": "/",
+      "label": "See How It Works",
+      "classes": "btn btn-ghost magnetic",
+      "state": "keyboard focus",
+      "contrast": 15.83,
+      "required": 4.5
+    },
+    {
+      "route": "/",
+      "label": "Book a Strategy Call →",
+      "classes": "btn btn-green magnetic reveal d2",
+      "state": "default",
+      "contrast": 7.17,
+      "required": 4.5
+    },
+    {
+      "route": "/",
+      "label": "Book a Strategy Call →",
+      "classes": "btn btn-green magnetic reveal d2",
+      "state": "hover",
+      "contrast": 7.17,
+      "required": 4.5
+    },
+    {
+      "route": "/",
+      "label": "Book a Strategy Call →",
+      "classes": "btn btn-green magnetic reveal d2",
+      "state": "keyboard focus",
+      "contrast": 7.17,
+      "required": 4.5
+    },
+    {
+      "route": "/ai-website-workbook/",
+      "label": "Close ✕",
+      "classes": "",
+      "state": "dialog open",
+      "contrast": 19.35,
+      "required": 4.5
+    },
+    {
+      "route": "/ai-website-workbook/",
+      "label": "Close ✕",
+      "classes": "",
+      "state": "dialog hover",
+      "contrast": 19.35,
+      "required": 4.5
+    },
+    {
+      "route": "/ai-website-workbook/",
+      "label": "Close ✕",
+      "classes": "",
+      "state": "dialog focus",
+      "contrast": 19.35,
+      "required": 4.5
+    }
+  ],
+  "thirdPartyRequests": "blocked",
+  "formsSubmitted": 0
+}
