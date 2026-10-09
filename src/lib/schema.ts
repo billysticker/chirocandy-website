@@ -68,6 +68,7 @@ export function billyStickerPersonSchema() {
     description: BILLY_STICKER.description,
     worksFor: { '@id': orgId },
     sameAs: [
+      BILLY_STICKER.personalUrl,
       'https://www.youtube.com/c/BillySticker',
       'https://twitter.com/billysticker',
     ],

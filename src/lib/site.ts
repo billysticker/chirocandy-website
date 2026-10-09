@@ -47,6 +47,7 @@ export const BILLY_STICKER = {
   name: 'Billy Sticker',
   jobTitle: 'Founder & CEO',
   url: '/about/billy-sticker/',
+  personalUrl: 'https://billysticker.com/',
   image: '/images/billy-speaking.jpg',
   description:
     'Billy Sticker founded ChiroCandy in 2015. Over 11 years he has helped more than 2,000 chiropractic and healthcare practices worldwide build predictable patient growth.',
