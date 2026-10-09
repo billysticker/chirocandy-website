@@ -79,7 +79,7 @@ const schema = buildGraph(
       <header class="podcast-episode__header">
         <p class="eyebrow">ChiroCandy Podcast</p>
         <h1>{h1}</h1>
-        {summary && <AnswerSummary text={summary} label="Episode overview" />}
+        {summary && <AnswerSummary text={summary} label="TL;DR — episode overview" />}
         <p class="podcast-episode__meta">
           <time datetime={datePublished}>
             Published {new Date(datePublished).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}

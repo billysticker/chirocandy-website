@@ -1,6 +1,6 @@
 # AEO technical repair review — 2026-10-08
 
-**Historical report. See the [October 9 cloud follow-up](cloud-follow-up/README.md) for the current PR audit, additional edits, verification, and remaining issues.**
+**Historical report. See the [October 9 buyer-content follow-up](buyer-follow-up/README.md) for the current PR audit, additional edits, verification, and remaining issues.**
 
 Status: ready for draft review, with the limits below. No production deployment or merge.
 

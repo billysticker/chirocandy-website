@@ -1,4 +1,5 @@
 ---
+import BuyerProof from '@/components/BuyerProof.astro';
 import DemoChat from '@/components/DemoChat.astro';
 import HomeInteractions from '@/components/HomeInteractions.astro';
 import SignalField from '@/components/SignalField.astro';
@@ -22,7 +23,7 @@ const schema = buildGraph(
     name: title,
     description,
     datePublished: '2015-05-01',
-    dateModified: '2026-08-26',
+    dateModified: '2026-10-09',
     speakable: ['.hero h1', '.lede', '.home-faq-item'],
   }),
   faqPageSchema([...HOME_FAQS]),
@@ -79,6 +80,8 @@ const schema = buildGraph(
     <div class="scroll-hint">Scroll</div>
   </header>
 
+  <BuyerProof />
+
   <section class="press" aria-label="As seen on">
     <div class="wrap">
       <img
@@ -131,19 +134,19 @@ const schema = buildGraph(
   <section class="stats">
     <div class="wrap stat-grid">
       <div class="stat reveal">
-        <div class="n"><span class="count" data-to="2000">0</span><em>+</em></div>
+        <div class="n"><span class="count" data-to="2000">2,000</span><em>+</em></div>
         <div class="l">Practices served</div>
       </div>
       <div class="stat reveal d1">
-        <div class="n">$<span class="count" data-to="450">0</span>M<em>+</em></div>
+        <div class="n">$<span class="count" data-to="450">450</span>M<em>+</em></div>
         <div class="l">Estimated client revenue generated</div>
       </div>
       <div class="stat reveal d2">
-        <div class="n"><span class="count" data-to="11">0</span> <em>yrs</em></div>
+        <div class="n"><span class="count" data-to="11">11</span> <em>yrs</em></div>
         <div class="l">Years inside chiropractic and healthcare marketing</div>
       </div>
       <div class="stat reveal d3">
-        <div class="n"><span class="count" data-to="9">0</span></div>
+        <div class="n"><span class="count" data-to="9">9</span></div>
         <div class="l">Services in one integrated system</div>
       </div>
     </div>
@@ -171,19 +174,19 @@ const schema = buildGraph(
           <div class="eng-card">
             <div class="eng-top">
               <span class="lbl"><span class="pulse-dot"></span> Growth Engine Active</span>
-              <span class="eng-live">LIVE</span>
+              <span class="eng-live">EXAMPLE</span>
             </div>
-            <div class="eng-when">This month</div>
+            <div class="eng-when">Illustrative workflow</div>
             <div class="eng-h">Your market, working together.</div>
             <div class="eng-kpis">
               <div class="eng-kpi hot">
                 <div class="kl">New opportunities</div>
-                <div class="kn"><span class="count" data-to="120">0</span><em>+</em></div>
+                <div class="kn"><span class="count" data-to="120">120</span><em>+</em></div>
                 <div class="ks">Across paid and organic</div>
               </div>
               <div class="eng-kpi">
                 <div class="kl">Avg. response</div>
-                <div class="kn"><span class="lt">&lt;</span><span class="count" data-to="60">0</span><em> sec</em></div>
+                <div class="kn"><span class="lt">&lt;</span><span class="count" data-to="60">60</span><em> sec</em></div>
                 <div class="ks">Patient follow-up, 24/7</div>
               </div>
             </div>
@@ -263,10 +266,11 @@ const schema = buildGraph(
           This is what happens the moment a new patient reaches out to a ChiroCandy-powered practice. Open the demo and talk to Atlas, the same AI that answers leads in seconds.
         </p>
         <ul class="ai-list">
-          <li><span class="chk">✓</span> Every lead answered in under 60 seconds, 24/7</li>
-          <li><span class="chk">✓</span> Found when patients ask AI for the best practice near them</li>
-          <li><span class="chk">✓</span> Follow-up that books while your front desk sleeps</li>
+          <li><span class="chk">✓</span> AI-assisted responses and follow-up, available around the clock</li>
+          <li><span class="chk">✓</span> SEO and useful content to support discovery in search</li>
+          <li><span class="chk">✓</span> A booking path with a handoff to your team</li>
         </ul>
+        <p><a href="/services/ai-patient-coordinator/">Explore AI CA chat and SMS</a> · <a href="/services/voice-ai/">Explore Voice AI</a></p>
       </div>
       <div class="reveal d1">
         <DemoChat />

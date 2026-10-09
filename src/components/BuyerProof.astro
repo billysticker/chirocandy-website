@@ -1,0 +1,22 @@
+---
+import { packages, formatFee } from '@/data/pricing.mjs';
+---
+<section class="buyer-proof" aria-labelledby="buyer-proof-heading">
+  <div class="container">
+    <p class="eyebrow">Scope, investment, evidence</p>
+    <h2 id="buyer-proof-heading">See what you’re choosing.</h2>
+    <div class="buyer-proof-grid">
+      <article><h3>One coordinated plan</h3><p>Compare paid ads, SEO, websites, reactivation, and AI follow-up. Choose the scope your practice needs.</p><a href="/services/">Explore the services →</a><a href="/compare-marketing-agencies/">Compare marketing partners →</a></article>
+      <article><h3>Published service fees</h3><p>Packages start at {formatFee(packages[0].fee)}/month. Advertising spend, setup, and applicable usage charges are separate.</p><a href="/pricing/">See packages and full terms →</a><a href="/marketing-calculator/">Model your investment →</a></article>
+      <article><h3>Named campaign evidence</h3><p>LifeWorks reported 185 Meta lead results from June 2–August 31, 2026. Lead-campaign spend: $2,734.59. These are platform leads, not confirmed new patients.</p><a href="/case-studies/lifeworks-family-chiropractic-kelowna/">Read the report and definitions →</a><a href="/case-studies/">Explore more practice stories →</a></article>
+    </div>
+  </div>
+</section>
+<style>
+.buyer-proof { padding: 3rem 0; border-block: 1px solid var(--line); }
+h2 { font-size: clamp(1.7rem,3vw,2.4rem); margin: .6rem 0 1.5rem; }
+.buyer-proof-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1.5rem; }
+article { min-width: 0; border: 1px solid var(--line); border-radius: 16px; padding: 1.5rem; background: var(--panel); }
+h3 { font-size: 1.15rem; } p { color: var(--muted); } a { display: block; color: var(--green); margin-top: .7rem; text-underline-offset: .2em; }
+@media(max-width: 760px) { .buyer-proof-grid { grid-template-columns: 1fr; } }
+</style>

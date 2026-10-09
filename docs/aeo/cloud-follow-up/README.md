@@ -1,6 +1,6 @@
 # Cloud AEO/SEO follow-up — October 9, 2026
 
-This is the current review report for draft PR #16. The parent directory retains October 8 evidence; those browser results are historical, not new cloud results.
+This report records the technical follow-up at commit `01b178b`. The subsequent [buyer-content follow-up](../buyer-follow-up/README.md) has the current inventory and verification for draft PR #16. The parent directory retains October 8 evidence; those browser results are historical, not new cloud results.
 
 ## Baselines and scope
 

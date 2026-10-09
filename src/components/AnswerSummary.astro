@@ -3,7 +3,7 @@ interface Props {
   text: string;
   label?: string;
 }
-const { text, label = 'At a glance' } = Astro.props;
+const { text, label = 'TL;DR — at a glance' } = Astro.props;
 ---
 
 <section class="answer-summary" aria-label={label}>

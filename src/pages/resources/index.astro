@@ -1,0 +1,25 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import { SITE } from '@/lib/site';
+import { buildGraph, webPageSchema, breadcrumbSchema } from '@/lib/schema';
+const title = 'Chiropractic Marketing Resources & Tools | ChiroCandy';
+const description = 'Compare agencies, plan your marketing budget, review case studies, and use ChiroCandy’s calculator, AI website workbook, guides, and podcast archive.';
+const url = `${SITE.url}/resources/`;
+const schema = buildGraph(webPageSchema({url,name:title,description,dateModified:'2026-10-09'}),breadcrumbSchema([{name:'Home',url:SITE.url+'/'},{name:'Resources',url}]));
+const groups = [
+ {title:'Choose a marketing partner',items:[['/blog/best-chiropractic-marketing-agencies/','Compare chiropractic marketing agencies','A dated look at ChiroCandy, ChiroBasix, Perfect Patients, and Well Rounded.'],['/compare-marketing-agencies/','Evaluate proposals','Scope, ownership, evidence, fees, and responsibilities.'],['/pricing/','Explore ChiroCandy pricing','Published packages, individual services, and additional costs.']]},
+ {title:'Plan and test your system',items:[['/marketing-calculator/','Marketing calculator','Model acquisition costs and break-even using your own assumptions.'],['/ai-website-workbook/','AI website workbook','Work through prompts, examples, and a launch checklist.'],['/blog/a-comprehensive-marketing-plan-for-chiropractors/','90-day marketing plan','Choose a priority, assign responsibilities, and set a review date.'],['/services/ai-patient-coordinator/','AI CA overview and demo','Understand chat and SMS follow-up before trying the homepage demo.']]},
+ {title:'Improve patient acquisition and follow-up',items:[['/blog/chiropractic-advertising-leads-to-appointments/','From inquiry to appointment','Review the handoff between campaigns, automation, and the front desk.'],['/blog/reactivation-campaign-ideas/','Patient reactivation guide','Audience eligibility, messages, replies, and measurement.'],['/services/chiropractic-social-media-marketing/','Social media workflow','An illustrative calendar and the practice’s role in creating useful content.'],['/blog/measure-chiropractic-ai-search-visibility/','Measure AI search visibility','Record prompts, citations, and business outcomes without treating a single answer as a ranking.']]},
+ {title:'Learn from practice experience',items:[['/case-studies/','Named case studies','Read the source, period, and definitions behind each result.'],['/testimonials/','Client interviews','Hear practice owners describe their experience.'],['/podcasts/','ChiroCandy podcast','Browse episode overviews and original recordings.'],['/blog/','All articles','Explore advertising, SEO, websites, and practice marketing.'],['/frameworks/','Marketing frameworks','Learn the systems behind the work.']]},
+];
+---
+<BaseLayout title={title} description={description} canonical={url} schema={schema}>
+<PageHero title="Tools and answers for your next decision" eyebrow="ChiroCandy resource library" answer="Start with the question your practice needs to resolve: choosing an agency, planning a budget, improving follow-up, or evaluating results. These resources connect practical tools with guides and named practice examples." />
+{groups.map(group => <section class="section"><div class="container"><h2>{group.title}</h2><div class="resource-grid">{group.items.map(([href,name,detail]) => <a class="resource-card" href={href}><h3>{name}</h3><p>{detail}</p><span>Explore →</span></a>)}</div></div></section>)}
+</BaseLayout>
+<style>
+h2 { margin-bottom: 1.5rem; font-size: clamp(1.5rem,3vw,2rem); }
+.resource-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr)); gap:1rem; }
+.resource-card { border:1px solid var(--line); border-radius:16px; padding:1.5rem; min-width:0; } h3 { font-size:1.15rem; } p { color:var(--muted); } span { color:var(--green); } .resource-card:hover { border-color:var(--green); }
+</style>

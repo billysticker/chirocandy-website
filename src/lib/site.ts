@@ -58,6 +58,8 @@ export const NAV = {
     { href: '/services/google-advertising/', label: 'Google Ads' },
     { href: '/services/search-engine-optimization/', label: 'SEO & AI Search' },
     { href: '/services/web-design/', label: 'Web Design' },
+    { href: '/services/ai-patient-coordinator/', label: 'AI CA™ Chat & SMS' },
+    { href: '/services/voice-ai/', label: 'Voice AI' },
     { href: '/services/reactivation-campaigns/', label: 'Patient Reactivation' },
     {
       href: '/services/chiropractic-social-media-marketing/',
@@ -103,6 +105,7 @@ export const NAV = {
     },
   ],
   resources: [
+    { href: '/resources/', label: 'Resource Library' },
     { href: '/case-studies/', label: 'Case Studies' },
     { href: '/ai-website-workbook/', label: 'AI Website Workbook' },
     { href: '/blog/', label: 'Blog' },
@@ -141,7 +144,7 @@ export const HOME_FAQS = [
   {
     question: 'What happens on a ChiroCandy strategy call?',
     answer:
-      'A strategy call is a 30-minute diagnosis of your marketing health. ChiroCandy uses AI to audit what is live, research your market, and map competitors, then outlines a plan to build trust, become known, and get found. There is no canned pitch.',
+      'A strategy call is a 45-minute diagnosis of your marketing health. ChiroCandy uses AI to audit what is live, research your market, and map competitors, then outlines a plan to build trust, become known, and get found. There is no canned pitch.',
   },
   {
     question: 'How do I contact ChiroCandy?',
