@@ -1,5 +1,7 @@
 # Buyer content and competitive review — October 9, 2026
 
+**Subsequent update:** the [type-check cleanup](../type-cleanup/README.md) resolves the 30 errors recorded below. Rendered content and runtime JavaScript are preserved.
+
 Continuation of draft PR #16 on `codex/aeo-technical-repairs-2026-10-08`, based on fetched head `01b178b6e45297db9743155931eade47c718abbc`. Earlier technical work is retained. Main remains `6125ee3`. No production release or live form submission is part of this update.
 
 ## Delivered

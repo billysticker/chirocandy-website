@@ -1,5 +1,7 @@
 // Original planning model: billysticker/chirocandy-growth-calculator.
 // These editable planning assumptions are not performance benchmarks.
+/** @typedef {keyof typeof practiceStages.new.defaults} ChannelKey */
+/** @type {{key: ChannelKey, label: string, group: 'known' | 'trust' | 'found'}[]} */
 export const channels = [
   { key: 'metaAds', label: 'Meta advertising', group: 'known' },
   { key: 'ctv', label: 'Streaming TV', group: 'known' },
