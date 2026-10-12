@@ -3791,6 +3791,46 @@
       "source": "/callwithryan",
       "destination": "https://go.chirocandy.com/schedule-with-ryan",
       "permanent": false
+    },
+    {
+      "source": "/blog/mastering-chiropractor-facebook-ads/",
+      "destination": "/blog/the-future-of-chiropractic-facebook-marketing-emerging-trends-and-strategies-in-2023/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/mastering-chiropractor-facebook-ads",
+      "destination": "/blog/the-future-of-chiropractic-facebook-marketing-emerging-trends-and-strategies-in-2023/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/mastering-chiropractor-seo-keywords/",
+      "destination": "/blog/identify-the-best-keywords-for-chiropractors/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/mastering-chiropractor-seo-keywords",
+      "destination": "/blog/identify-the-best-keywords-for-chiropractors/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/get-higher-rankings-with-seo-for-chiropractors/",
+      "destination": "/blog/identify-the-best-keywords-for-chiropractors/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/get-higher-rankings-with-seo-for-chiropractors",
+      "destination": "/blog/identify-the-best-keywords-for-chiropractors/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/best-tiktok-ads-for-chiropractors/",
+      "destination": "/blog/personalized-tiktok-ads-for-chiropractic-care/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/best-tiktok-ads-for-chiropractors",
+      "destination": "/blog/personalized-tiktok-ads-for-chiropractic-care/",
+      "permanent": true
     }
   ],
   "headers": [
