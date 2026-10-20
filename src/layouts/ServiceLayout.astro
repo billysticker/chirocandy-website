@@ -23,6 +23,7 @@ interface Props {
   heroAnswer: string;
   serviceName: string;
   dateModified?: string;
+  includeFaqSchema?: boolean;
   faqs: FAQ[];
   relatedServices: { href: string; label: string }[];
 }
@@ -35,6 +36,7 @@ const {
   heroAnswer,
   serviceName,
   dateModified = '2026-08-31',
+  includeFaqSchema = true,
   faqs,
   relatedServices,
 } = Astro.props;
@@ -48,7 +50,7 @@ const schema = buildGraph(
     { name: heroTitle, url },
   ]),
   professionalServiceSchema(serviceName, description, url),
-  faqPageSchema(faqs)
+  ...(includeFaqSchema ? [faqPageSchema(faqs)] : [])
 );
 ---
 
