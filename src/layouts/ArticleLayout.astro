@@ -122,6 +122,22 @@ const schema = buildGraph(
   .article-body :global(p) {
     margin: 0 0 1rem;
   }
+  .article-body :global(.table-wrap) {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: auto;
+    contain: inline-size;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+  }
+  .article-body :global(.table-wrap:focus-visible) {
+    outline: 3px solid var(--green);
+    outline-offset: 4px;
+  }
+  .article-body :global(.table-wrap table) {
+    min-width: 650px;
+  }
   .comparison-shell { max-width:1180px; }
   .comparison-page h1 { max-width:950px; font-size:clamp(2rem,4.5vw,3.6rem); line-height:1.12; letter-spacing:-.035em; }
   .comparison-page .meta { margin-top:1.5rem; }
