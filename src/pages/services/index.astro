@@ -4,13 +4,12 @@ import PageHero from '@/components/PageHero.astro';
 import { NAV, SITE } from '@/lib/site';
 import { buildGraph, breadcrumbSchema, webPageSchema } from '@/lib/schema';
 
-const title = 'Chiropractic Marketing Services | ChiroCandy';
+const title = 'Chiropractic Marketing Services: Where Should Your Practice Start? | ChiroCandy';
 const description =
-  'ChiroCandy offers marketing services for chiropractic and healthcare practices including Facebook ads, Google Ads, SEO, web design, patient reactivation, and social media.';
-
+  'Compare ChiroCandy services by the constraint your established practice needs to solve—visibility, demand, website friction, follow-up, reactivation, or execution capacity.';
 const url = `${SITE.url}/services/`;
 const schema = buildGraph(
-  webPageSchema({ url, name: title, description, dateModified: '2026-09-18' }),
+  webPageSchema({ url, name: title, description, dateModified: '2026-11-03' }),
   breadcrumbSchema([
     { name: 'Home', url: `${SITE.url}/` },
     { name: 'Services', url },
@@ -18,122 +17,293 @@ const schema = buildGraph(
 );
 
 const summaries: Record<string, string> = {
-  '/services/ai-visibility/': 'AI visibility through GetPatients.com, a ChiroCandy company. Discuss the rollout and how it fits your SEO.',
-  '/services/ai-patient-coordinator/': 'AI chat and SMS to answer practice questions and help inquiries reach a booking step.',
-  '/services/voice-ai/': 'Voice AI for answering calls, following up, booking, and reactivation workflows.',
+  '/services/ai-visibility/':
+    'Evaluate a separate GetPatients.com offer for improving how accurate practice information can be discovered and understood in AI answers.',
+  '/services/ai-patient-coordinator/':
+    'Support configured practice questions, chat and SMS follow-up, and a defined next step while staff own exceptions and patient care.',
+  '/services/voice-ai/':
+    'Review call-answering, follow-up, booking, escalation, and reactivation workflows against the integrations and responsibilities in your proposal.',
   '/services/facebook-advertising/':
-    'Facebook and Instagram campaigns with defined creative approvals, lead delivery, office handoff, and reporting responsibilities.',
+    'Build demand with defined creative approvals, campaign settings, lead delivery, office handoff, and separate outcome stages.',
   '/services/google-advertising/':
-    'Google Ads management with defined search, location, landing-page, conversion, and reporting responsibilities.',
+    'Reach eligible search demand with defined account access, locations, landing pages, conversion actions, handoff, and reporting.',
   '/services/search-engine-optimization/':
-    'Local SEO that helps your practice rank for chiropractic searches in your service area.',
+    'Improve unpaid discovery with accurate local information, useful service content, technical foundations, and reporting without ranking promises.',
   '/services/web-design/':
-    'Conversion-focused chiropractic websites built for speed, mobile, and search visibility.',
+    'Improve the mobile inquiry and booking path while defining migration, content, accessibility checks, ownership, and launch acceptance.',
   '/services/reactivation-campaigns/':
-    'Email and messaging systems that bring inactive patients back to your schedule.',
+    'Reconnect with an eligible existing audience through approved outreach, suppression handling, reply ownership, and separate booking and attendance records.',
   '/services/chiropractic-social-media-marketing/':
-    'Social content support with defined practice inputs, approvals, publishing, community response, and reporting responsibilities.',
+    'Define planning, practice inputs, production, approvals, publishing, community response, reporting, and the boundary between organic and paid work.',
 };
+
+const constraints = [
+  {
+    constraint: 'People cannot find or understand your priority services',
+    startingPoint: 'SEO and website',
+    href: '/services/search-engine-optimization/',
+    readiness: 'Accurate service and location facts, useful pages, and a clear contact or booking path',
+    boundary: 'Do not treat completed work as a promised ranking or AI citation.',
+  },
+  {
+    constraint: 'People are actively searching and you can fund a bounded test',
+    startingPoint: 'Google Ads',
+    href: '/services/google-advertising/',
+    readiness: 'A relevant landing page, conversion definitions, a response owner, capacity, and a separate media budget',
+    boundary: 'A click or platform conversion is not a held appointment or patient.',
+  },
+  {
+    constraint: 'You need to create demand and can supply or approve creative',
+    startingPoint: 'Facebook and Instagram ads',
+    href: '/services/facebook-advertising/',
+    readiness: 'An approved offer, creative inputs, lead delivery, follow-up capacity, and outcome definitions',
+    boundary: 'A platform lead does not establish booking, attendance, or revenue.',
+  },
+  {
+    constraint: 'An eligible existing audience may be ready to reconnect',
+    startingPoint: 'Patient reactivation',
+    href: '/services/reactivation-campaigns/',
+    readiness: 'An approved audience, consent and suppression process, relevant invitation, and a reply owner',
+    boundary: 'Do not assume a universal response rate or return-visit result.',
+  },
+  {
+    constraint: 'Inquiries are lost between contact and a clear next step',
+    startingPoint: 'AI CA or Voice AI',
+    href: '/services/ai-patient-coordinator/',
+    readiness: 'Supported integrations, configured answers, escalation rules, staff ownership, and event definitions',
+    boundary: 'Responses, requests, bookings, and attended appointments require separate records.',
+  },
+  {
+    constraint: 'Your team cannot coordinate several marketing workstreams',
+    startingPoint: 'Done-For-You program',
+    href: '/done-for-you-program/',
+    readiness: 'A verified scope, asset access, approvals, budget, practice-side owners, and launch acceptance criteria',
+    boundary: 'Managed execution is not hands-off and does not make growth predictable.',
+  },
+];
+
+const faqs = [
+  {
+    question: 'Should we fix our website before running ads?',
+    answer:
+      'Fix material friction before paying to send more people into it. Confirm that the page matches the campaign, works on mobile, explains the next step, and lets a prospective patient contact or book with the practice. A complete rebuild is not automatically required; the current-page review should determine the scope.',
+  },
+  {
+    question: 'How do we choose between SEO and Google Ads?',
+    answer:
+      'Start with the constraint. Google Ads can reach eligible paid search demand while a campaign runs. SEO improves unpaid discovery and the website information that supports it. Compare current visibility, website readiness, appointment capacity, market, decision horizon, and the budget available for a defined advertising test.',
+  },
+  {
+    question: 'When is reactivation a better first step than acquisition?',
+    answer:
+      'Evaluate reactivation when the practice has an eligible existing audience, a relevant reason to reconnect, an approved contact process, and staff who can own replies. Acquisition addresses new inquiries; reactivation is not a shortcut around consent, suppression, capacity, or follow-through.',
+  },
+  {
+    question: 'Does Done-For-You mean the practice has no responsibilities?',
+    answer:
+      'No. The proposal should name what ChiroCandy manages and what the practice must supply, approve, access, answer, and record. Practice facts, offer approval, clinical or professional claims, staff handoff, patient care, and appointment outcomes remain practice-side responsibilities unless a written scope says otherwise.',
+  },
+  {
+    question: 'What information should we bring to a discovery call?',
+    answer:
+      'Bring the constraint you want to solve, open appointment capacity, current channels, website and account access, response workflow, available inquiry-to-appointment records, budget boundaries, and any upcoming location, staffing, or service changes. Missing data can be identified without being treated as zero.',
+  },
+];
 ---
 
 <BaseLayout title={title} description={description} canonical={url} schema={schema}>
   <PageHero
-    title="Chiropractic marketing services"
-    answer="ChiroCandy builds patient acquisition systems for chiropractic and healthcare practices. Pick the service that matches your growth stage, or combine ads, SEO, and web design into one coordinated plan."
+    eyebrow="Choose by constraint, not channel hype"
+    title="Which Chiropractic Marketing Service Should You Start With?"
+    answer="Start with the bottleneck your practice can verify and support. More traffic will not fix an unclear offer, a difficult website, an unowned follow-up step, or a schedule without capacity."
   />
 
   <section class="section">
-    <div class="container card-grid">
-      {NAV.services.map((service) => (
-        <a href={service.href} class="card reveal" data-animate>
-          <h2>{service.label}</h2>
-          <p>{summaries[service.href]}</p>
-        </a>
-      ))}
+    <div class="container content-column">
+      <h2>TL;DR: solve the first owned constraint</h2>
+      <p>
+        An established practice should identify where a prospective patient path breaks, confirm who
+        owns that step, and choose the smallest useful scope that can be reviewed with evidence. That
+        may be visibility, paid demand, website usability, reactivation, follow-up, or coordinated
+        execution. Channel activity is not the same as booked or held appointments.
+      </p>
+      <p>
+        If the constraint is still unclear, use the
+        <a href="/blog/a-comprehensive-marketing-plan-for-chiropractors/">90-day chiropractic marketing plan</a>
+        to map capacity, handoffs, owners, and decision dates before adding another channel.
+      </p>
     </div>
   </section>
 
   <section class="section section--alt">
+    <div class="container content-column">
+      <p class="eyebrow">Readiness questions</p>
+      <h2>What should you know before choosing a service?</h2>
+      <ul class="check-list">
+        <li><strong>Capacity:</strong> Which location, provider, or service can accept more appropriate appointments?</li>
+        <li><strong>Constraint:</strong> Is the gap discovery, demand, trust, the website path, response, booking, or attendance?</li>
+        <li><strong>Ownership:</strong> Who controls the website, ad accounts, business profiles, phone numbers, creative, and reporting access?</li>
+        <li><strong>Handoff:</strong> Who answers, classifies, books, follows up, and records the outcome of an inquiry?</li>
+        <li><strong>Evidence:</strong> Which stages can you observe reliably, and which are currently unavailable?</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
     <div class="container">
-      <h2>Plan your next marketing investment</h2>
-      <p>Use these guides to compare providers, choose a channel, and understand search visibility.</p>
-      <div class="card-grid">
-        <a href="/blog/how-to-choose-chiropractic-marketing-agency/" class="card">
-          <h3>How to choose a chiropractic marketing agency</h3>
-          <p>Compare scope, proof, account ownership, and the work expected from your team.</p>
-        </a>
-        <a href="/blog/google-ads-vs-seo-for-chiropractors/" class="card">
-          <h3>Google Ads or SEO?</h3>
-          <p>Choose a starting point based on your visibility, appointment capacity, and budget.</p>
-        </a>
-        <a href="/blog/chiropractic-marketing-costs/" class="card">
-          <h3>Compare the full marketing budget</h3>
-          <p>Account for management, media, setup, content, software, and your team's time.</p>
-        </a>
-        <a href="/blog/switching-chiropractic-website-providers/" class="card">
-          <h3>Switch website providers with a plan</h3>
-          <p>Review access, existing pages, redirects, and the patient booking experience.</p>
-        </a>
-        <a href="/blog/geo-for-chiropractors/" class="card">
-          <h3>AI visibility for chiropractors</h3>
-          <p>Understand SEO and GEO, then evaluate mentions, citations, and actual inquiries.</p>
-        </a>
+      <p class="eyebrow">Constraint-to-service guide</p>
+      <h2>Which starting point fits the problem?</h2>
+      <p class="section-intro">
+        This matrix routes the next evaluation; it does not prescribe the same sequence for every
+        practice. Review the linked service page and confirm the actual scope in a current proposal.
+        For a focused search-channel decision, use the
+        <a href="/blog/google-ads-vs-seo-for-chiropractors/">Google Ads versus SEO guide</a>. To model
+        your own capacity, patient value, and budget assumptions without a promised result, use the
+        <a href="/marketing-calculator/">chiropractic marketing calculator</a>.
+      </p>
+      <div class="table-wrap" tabindex="0" role="region" aria-label="Marketing constraint to service decision guide">
+        <table>
+          <caption>Starting scope by observed practice constraint</caption>
+          <thead>
+            <tr>
+              <th scope="col">Observed constraint</th>
+              <th scope="col">Evaluate first</th>
+              <th scope="col">Readiness evidence</th>
+              <th scope="col">Evidence boundary</th>
+            </tr>
+          </thead>
+          <tbody>
+            {constraints.map((item) => (
+              <tr>
+                <th scope="row">{item.constraint}</th>
+                <td><a href={item.href}>{item.startingPoint}</a></td>
+                <td>{item.readiness}</td>
+                <td>{item.boundary}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
 
   <section class="section section--alt">
     <div class="container">
-      <h2 style="font-size:1.5rem; margin-bottom:1rem; color:var(--ink)">Looking for an end-to-end program?</h2>
-      <p style="color:var(--muted); max-width:68ch; margin-bottom:1.5rem">
-        Instead of managing individual channels, discover our flagship practice growth programs and proprietary frameworks.
+      <p class="eyebrow">Individual services</p>
+      <h2>Review the scope behind each service</h2>
+      <p class="section-intro">
+        Each page explains the decision, responsibilities, evidence, and limits in more detail.
+        Published descriptions guide the conversation; your proposal and agreement define the work.
       </p>
       <div class="card-grid">
-        <a href="/get-new-patients/" class="card reveal" data-animate>
-          <h2>Get New Patients</h2>
-          <p>The acquisition system: ads, AI follow-up, and online scheduling that both programs sit on.</p>
-        </a>
-        <a href="/done-for-you-program/" class="card reveal" data-animate>
-          <h2>Done-For-You Program</h2>
-          <p>Full-service patient acquisition managed end to end by ChiroCandy media buyers.</p>
-        </a>
-        <a href="/training-program/" class="card reveal" data-animate>
-          <h2>Training Program</h2>
-          <p>Equip your in-house clinic team with the systems behind $450M+ in revenue.</p>
-        </a>
-        <a href="/frameworks/" class="card reveal" data-animate>
-          <h2>Marketing Frameworks</h2>
-          <p>The Known/Found/Trusted, Tribe Turbine, and 3D-X operational systems.</p>
-        </a>
+        {NAV.services.map((service) => (
+          <a href={service.href} class="card reveal" data-animate>
+            <h3>{service.label}</h3>
+            <p>{summaries[service.href]}</p>
+          </a>
+        ))}
       </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container content-column">
+      <h2>When does a coordinated program make more sense?</h2>
+      <p>
+        An individual service is useful when the constraint and owner are clear. A coordinated
+        program may be a better evaluation when several connected workstreams lack internal
+        capacity. Review the <a href="/done-for-you-program/">Done-For-You program</a> for managed
+        execution, <a href="/get-new-patients/">Get New Patients</a> for the current acquisition-system
+        overview, and the <a href="/training-program/">Training Program</a> when someone inside the
+        practice can own implementation.
+      </p>
+      <p>
+        Compare included work, exclusions, account access, practice responsibilities, launch
+        acceptance, measurement, fees, media spend, usage charges, and exit handoff. The
+        <a href="/pricing/">current pricing page</a> lists public service fees and common boundaries;
+        the written agreement controls the engagement.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container content-column">
+      <h2>Keep ownership and measurement attached to the scope</h2>
+      <p>
+        A useful proposal names the business owner for each account, the people with administrative
+        access, the agency role, billing responsibility, approval steps, and the exit handoff. Use
+        the <a href="/blog/how-to-choose-chiropractic-marketing-agency/">chiropractic marketing agency checklist</a>
+        to compare those terms across providers.
+      </p>
+      <p>
+        Reporting should keep impressions, clicks, platform results, connected inquiries, qualified
+        inquiries, booked appointments, held appointments, patients, and revenue separate. Read the
+        <a href="/blog/chiropractic-advertising-leads-to-appointments/">lead-to-appointment handoff guide</a>
+        before using a platform total as a business outcome.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container faq-section">
+      <p class="eyebrow">Questions practice owners ask</p>
+      <h2>Chiropractic marketing service FAQs</h2>
+      <div class="faq-list">
+        {faqs.map((faq) => (
+          <details>
+            <summary>{faq.question}<span aria-hidden="true">+</span></summary>
+            <p>{faq.answer}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container closing-callout">
+      <div>
+        <p class="eyebrow">Bring the constraint, not a preselected package</p>
+        <h2>Review the next useful scope with ChiroCandy</h2>
+        <p>
+          Bring your open appointment capacity, current channels, response workflow, and the
+          constraint you most need to solve. We can discuss the evidence, responsibilities, and
+          service boundaries without promising rankings, appointments, patients, or revenue.
+        </p>
+      </div>
+      <a class="btn btn--primary" href="/schedule/">Schedule a Marketing &amp; AI Discovery Call →</a>
     </div>
   </section>
 </BaseLayout>
 
 <style>
-  .card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1rem;
-  }
-
-  .card {
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 1.5rem;
-    text-decoration: none;
-    color: inherit;
-    box-shadow: var(--shadow);
-  }
-
-  .card h2 {
-    margin: 0 0 0.5rem;
-    font-size: 1.1rem;
-  }
-
-  .card p {
-    margin: 0;
-    color: var(--text-muted);
-    font-size: 0.9rem;
+  .content-column,
+  .section-intro { max-width: 78ch; }
+  .eyebrow { color: var(--green); font-size: 0.82rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
+  .check-list { padding-left: 1.25rem; }
+  .check-list li { margin-bottom: 0.8rem; }
+  .table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); }
+  table { width: 100%; min-width: 880px; border-collapse: collapse; text-align: left; }
+  caption { padding: 1rem 1.2rem; color: var(--green); font-weight: 600; text-align: left; }
+  th, td { padding: 1rem 1.2rem; border-top: 1px solid var(--border); vertical-align: top; }
+  td { color: var(--text-muted); }
+  thead, tbody th { background: rgba(18, 57, 100, 0.15); }
+  .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+  .card { border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; text-decoration: none; color: inherit; box-shadow: var(--shadow); }
+  .card h3 { margin: 0 0 0.5rem; font-size: 1.1rem; }
+  .card p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+  .faq-section { max-width: 850px; }
+  .faq-list details { border-bottom: 1px solid var(--border); }
+  summary { cursor: pointer; display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding: 1.3rem 0; font-family: var(--font-headline); font-size: 1.05rem; font-weight: 600; }
+  summary::-webkit-details-marker { display: none; }
+  summary span { color: var(--green); }
+  details[open] summary span { transform: rotate(45deg); }
+  details > p { margin: 0 0 1.5rem; color: var(--text-muted); }
+  .closing-callout { display: grid; grid-template-columns: 1.5fr auto; align-items: center; gap: 2rem; padding: 2rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--panel); }
+  .closing-callout h2 { margin-top: 0.5rem; }
+  .closing-callout p:last-child { margin-bottom: 0; }
+  :is(a, summary, .table-wrap):focus-visible { outline: 3px solid var(--green); outline-offset: 4px; }
+  @media (max-width: 700px) {
+    .closing-callout { grid-template-columns: 1fr; }
+    .closing-callout .btn { width: 100%; }
   }
 </style>
