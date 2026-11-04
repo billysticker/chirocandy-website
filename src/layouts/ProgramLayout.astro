@@ -16,17 +16,30 @@ interface Props {
   heroTitle: string;
   heroAnswer: string;
   faqs?: FAQ[];
+  dateModified?: string;
+  includeFaqSchema?: boolean;
+  ctaLabel?: string;
 }
 
-const { title, description, slug, heroTitle, heroAnswer, faqs = [] } = Astro.props;
+const {
+  title,
+  description,
+  slug,
+  heroTitle,
+  heroAnswer,
+  faqs = [],
+  dateModified = '2026-08-31',
+  includeFaqSchema = true,
+  ctaLabel = 'Schedule a Call',
+} = Astro.props;
 const url = `${SITE.url}/${slug}/`;
 const schema = buildGraph(
-  webPageSchema({ url, name: title, description, dateModified: '2026-08-31' }),
+  webPageSchema({ url, name: title, description, dateModified }),
   breadcrumbSchema([
     { name: 'Home', url: `${SITE.url}/` },
     { name: heroTitle, url },
   ]),
-  ...(faqs.length ? [faqPageSchema(faqs)] : [])
+  ...(includeFaqSchema && faqs.length ? [faqPageSchema(faqs)] : [])
 );
 ---
 
@@ -56,7 +69,7 @@ const schema = buildGraph(
   }
   <section class="section">
     <div class="container cta-band">
-      <a href={SITE.scheduleUrl} class="btn btn--primary">Schedule a Call</a>
+      <a href={SITE.scheduleUrl} class="btn btn--primary">{ctaLabel}</a>
     </div>
   </section>
 </BaseLayout>
