@@ -1,43 +1,259 @@
 ---
 import ServiceLayout from '@/layouts/ServiceLayout.astro';
-const description = 'Explore AI visibility and answer engine optimization for chiropractors through GetPatients.com, a ChiroCandy company. Discuss rollout, scope, and how it fits your SEO.';
+
 const faqs = [
-  { question: 'Who provides the AI visibility package?', answer: 'The AI visibility package is offered through GetPatients.com, a ChiroCandy company. Contact our team to discuss the rollout and the scope appropriate for your practice.' },
-  { question: 'Is AI visibility included in my existing SEO plan?', answer: 'Do not assume the GetPatients.com package is included in an existing SEO agreement. Review your current scope with us so the proposal identifies shared work, additional work, and who is responsible for each item.' },
-  { question: 'What does the AI visibility package cost?', answer: 'Contact ChiroCandy for the current proposal and rollout details. Package pricing is not published on this page. Existing ChiroCandy SEO fees do not establish the price of this separate package.' },
-  { question: 'Can you guarantee that an AI answer will recommend my practice?', answer: 'No. AI services choose their own sources and answers. Visibility can vary by question, location, platform, and date. Mentions and citations should be measured separately from inquiries and booked appointments.' },
-  { question: 'Is this the same as AI CA or Voice AI?', answer: 'No. AI visibility concerns how a practice is discovered and represented in AI search and answers. AI CA chat/SMS and Voice AI support conversations and follow-up after someone reaches your practice.' },
+  {
+    question: 'Who provides the AI visibility package?',
+    answer:
+      'The AI visibility package is offered through GetPatients.com, a ChiroCandy company. Ask for a current written proposal before assuming which platforms, pages, deliverables, reporting, schedule, or implementation work are included.',
+  },
+  {
+    question: 'Is AI visibility included in my existing SEO plan?',
+    answer:
+      'Do not assume it is included. Google treats optimization for its generative search features as SEO, so the two scopes can overlap. Compare the proposed work with your current SEO agreement and identify shared work, additional work, each owner, and each fee.',
+  },
+  {
+    question: 'What should an AI visibility proposal include?',
+    answer:
+      'It should name the practice facts and pages being reviewed, the platforms or answer samples in scope, the deliverables, required access, implementation owner, review schedule, evidence, fees, and exclusions. Missing details should remain open questions rather than implied services.',
+  },
+  {
+    question: 'What does the AI visibility package cost?',
+    answer:
+      'Contact ChiroCandy for the current proposal and rollout details. Package pricing is not published on this page. Existing ChiroCandy SEO fees do not establish the price of this separate package.',
+  },
+  {
+    question: 'Can you guarantee that an AI answer will recommend my practice?',
+    answer:
+      'No. Search and answer platforms control their own results. A crawlable, useful page can still be omitted, and observed answers can vary by question, platform, date, location, and session. No proposal should promise indexing, mentions, citations, recommendations, inquiries, or appointments.',
+  },
+  {
+    question: 'Is this the same as AI CA or Voice AI?',
+    answer:
+      'No. AI visibility concerns how a practice is discovered and represented in search and answer systems. AI CA chat and SMS and Voice AI support conversations and follow-up after someone reaches the practice. Confirm each service separately in writing.',
+  },
 ];
 ---
-<ServiceLayout title="AI Visibility & AEO for Chiropractors | ChiroCandy" description={description} slug="ai-visibility" heroTitle="AI visibility for chiropractic practices" heroAnswer="ChiroCandy is rolling out chiropractic AI visibility and answer engine optimization (AEO) through the GetPatients.com AI visibility package. GetPatients.com is a ChiroCandy company. Talk with our team about the rollout and how the proposed work fits your existing SEO plan." serviceName="Chiropractic AI Visibility and Answer Engine Optimization" dateModified="2026-10-09" faqs={faqs} relatedServices={[{href:'/services/search-engine-optimization/',label:'Chiropractic SEO'},{href:'/services/web-design/',label:'Website design'},{href:'/services/ai-patient-coordinator/',label:'AI CA chat and SMS'}]}>
+
+<ServiceLayout
+  title="AI Visibility Services for Chiropractors: Scope and Evidence | ChiroCandy"
+  description="Compare ChiroCandy's separate AI visibility offer with SEO. Review proposed scope, ownership, evidence, measurement, and limits before you buy."
+  slug="ai-visibility"
+  dateModified="2026-11-10"
+  includeFaqSchema={false}
+  heroTitle="AI Visibility Services for Chiropractors: What Is Included?"
+  heroAnswer="ChiroCandy discusses chiropractic AI visibility work through GetPatients.com, a ChiroCandy company. Because this is a separate offer that can overlap with SEO, the current written proposal should name the pages, facts, platforms, deliverables, responsibilities, review schedule, evidence, fees, and exclusions for your practice. It cannot guarantee inclusion, citations, recommendations, inquiries, or appointments."
+  serviceName="Chiropractic AI Visibility and Answer Engine Optimization"
+  faqs={faqs}
+  relatedServices={[
+    { href: '/services/search-engine-optimization/', label: 'Chiropractic SEO' },
+    { href: '/services/web-design/', label: 'Website design' },
+    { href: '/services/ai-patient-coordinator/', label: 'AI CA chat and SMS' },
+  ]}
+>
   <p class="eyebrow">GetPatients.com · A ChiroCandy company</p>
-  <h2>Help prospective patients understand your practice</h2>
-  <p>People ask search engines and AI assistants questions about local care, services, and providers. AI visibility concerns whether your practice appears in those answers, which sources are cited, and whether the information accurately represents your office. AEO focuses on making useful answers easier to find and understand.</p>
-  <p>For a chiropractic practice, the starting point is specific: the services you actually provide, where you provide them, who delivers care, and what a prospective patient should know before contacting you. Clear answers need accurate supporting information.</p>
-  <h2>One coordinated plan for SEO and AI visibility</h2>
-  <p>Our <a href="/services/search-engine-optimization/">SEO service</a> addresses unpaid search visibility, website content, and local practice information. Those foundations also matter for AI search. The GetPatients.com AI visibility package is a separate offer; review its proposed scope alongside your current agreement before adding it.</p>
-  <p>We should identify the work already covered, any additional priorities, who will make each change, and how progress will be reviewed. That makes it possible to coordinate the two services without paying for the same task twice.</p>
-  <h2>Discovery, trust, and a clear booking path</h2>
-  <p>The GetPatients approach connects three areas. Your proposal defines the priorities for your practice:</p>
+
+  <h2>TL;DR: buy a defined scope and an evidence plan, not a visibility promise</h2>
+  <p>
+    An established chiropractic practice should expect an AI visibility proposal to define what
+    will be reviewed, what will change, who will approve and implement each correction, and what
+    evidence will be delivered. Compare that scope with your existing SEO agreement so the same
+    work is not sold twice. Keep observed mentions, recommendations, citations, website visits,
+    inquiries, booked appointments, and held appointments as separate stages.
+  </p>
+  <p>
+    ChiroCandy describes the GetPatients.com package as a separate offer. This page does not claim
+    a universal platform list, cadence, client software login, implementation model, or price. The
+    current written proposal must settle those terms for your practice.
+  </p>
+
+  <h2>How should an owner compare AI visibility scope and evidence?</h2>
+  <p>
+    Use this matrix to turn a broad AEO or GEO promise into named work and reviewable evidence. A
+    possible deliverable is not automatically included; the proposal should mark it as included,
+    excluded, or owned by someone else.
+  </p>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="AI visibility scope and evidence framework">
+    <table>
+      <caption>Proposal scope and acceptance evidence</caption>
+      <thead>
+        <tr>
+          <th scope="col">Workstream</th>
+          <th scope="col">Evidence at the start</th>
+          <th scope="col">Possible deliverable</th>
+          <th scope="col">Acceptance evidence</th>
+          <th scope="col">Not promised</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Access and search eligibility</th>
+          <td>Observed crawl controls, canonical URLs, index eligibility, and rendered pages</td>
+          <td>A prioritized technical correction list with an owner</td>
+          <td>Changed URL, rendered HTML, and a repeated control check</td>
+          <td>Crawling, indexing, or selection as a source</td>
+        </tr>
+        <tr>
+          <th scope="row">Practice facts</th>
+          <td>Dated source records and conflicts across practice-controlled pages or profiles</td>
+          <td>A correction list naming the approved fact, destination, and owner</td>
+          <td>Approved facts visible at the named destinations</td>
+          <td>Adoption by every third-party platform</td>
+        </tr>
+        <tr>
+          <th scope="row">Priority content</th>
+          <td>Real buyer questions, existing pages, overlap, and missing evidence</td>
+          <td>A sourced update to a useful page or a justified new page</td>
+          <td>Published answer, working sources, internal links, and matching metadata</td>
+          <td>A magic word count, “AI schema,” ranking, or citation</td>
+        </tr>
+        <tr>
+          <th scope="row">Answer sampling</th>
+          <td>Exact prompts, engine or product, date, locale, session context, answer, and cited URLs</td>
+          <td>A bounded repeatable question panel and factual-error log</td>
+          <td>Saved observations with mentions, recommendations, and citations classified separately</td>
+          <td>A stable rank, complete market share, or permanent recommendation</td>
+        </tr>
+        <tr>
+          <th scope="row">Referral and business path</th>
+          <td>Available analytics, inquiry, booking, and attendance fields with gaps stated</td>
+          <td>A measurement plan that preserves each stage and its source</td>
+          <td>Dated reports with unavailable fields and denominators explicit</td>
+          <td>Attribution or revenue claims the records cannot support</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Where does AI visibility overlap with SEO?</h2>
+  <p>
+    Google's current <a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide">guidance
+    for generative AI features in Search</a> says this work is still SEO: useful original content,
+    ordinary search eligibility, crawlable pages, and a clear technical structure remain the
+    foundation. Google also says no special AI text file, forced content chunking, or dedicated
+    “AI schema” is required for its generative search features.
+  </p>
+  <p>
+    That does not mean every AI visibility service duplicates every SEO engagement. A separate
+    scope could include a defined fact audit, answer sampling, citation review, or reporting that
+    is absent from the current agreement. Compare the actual tasks, owners, evidence, and fees—not
+    just the service labels. ChiroCandy's <a href="/services/search-engine-optimization/">SEO service</a>
+    remains the broader search service, while the proposal defines any separate GetPatients.com work.
+  </p>
+
+  <h2>What information should the practice approve?</h2>
+  <p>
+    Start with facts the practice can verify: services actually offered, locations served,
+    clinicians and credentials, business name, contact paths, office policies, and the approved
+    next step for a prospective patient. Name the practice owner for each fact and the source that
+    controls it. A marketing provider should not infer a service, credential, location, clinical
+    claim, or booking capability from incomplete website copy.
+  </p>
+  <p>
+    The proposal should also identify the access required, the person who approves corrections,
+    and the person who publishes each change. If the work reaches a third-party profile or system,
+    confirm whether the provider edits it, supplies instructions, or leaves implementation to the
+    practice. “Optimization” is not an implementation plan until those roles are explicit.
+  </p>
+
+  <h2>How should answer visibility be sampled?</h2>
+  <p>
+    Record the exact question, engine or product, date, location and session context, answer, and
+    displayed source URLs. Classify a practice mention separately from a recommendation and a
+    linked citation. Save factual errors as their own review queue. Use the same bounded question
+    panel on a declared schedule instead of changing prompts until a favorable answer appears.
+  </p>
+  <p>
+    An answer sample is an observation, not a permanent ranking. Results can change as platforms,
+    source availability, location, personalization, and the web change. The
+    <a href="/blog/measure-chiropractic-ai-search-visibility/">AI visibility measurement guide</a>
+    explains how to log those observations, and the
+    <a href="/blog/chiropractic-ai-visibility-audit/">pre-purchase audit</a> helps evaluate a proposed service.
+  </p>
+
+  <h2>Which measurement stages should stay separate?</h2>
+  <p>A useful report keeps each stage distinct and labels unavailable evidence:</p>
+  <ol>
+    <li>a page is crawlable and eligible for ordinary search;</li>
+    <li>a page receives a platform-reported impression where that report is available;</li>
+    <li>the practice is mentioned in a saved answer sample;</li>
+    <li>the practice is presented as a recommendation;</li>
+    <li>a practice-controlled page is visibly cited;</li>
+    <li>a tagged or attributable website visit is recorded;</li>
+    <li>a relevant inquiry is recorded under the practice's definition;</li>
+    <li>an appointment is booked; and</li>
+    <li>the appointment is held.</li>
+  </ol>
+  <p>
+    Do not turn one stage into another. A mention is not a citation, a citation is not a visit, and
+    a visit is not an appointment. Google says meeting its technical requirements and best
+    practices does not guarantee crawling, indexing, or serving. No vendor controls another
+    platform's recommendations.
+  </p>
+
+  <h2>What should the written proposal settle?</h2>
   <ul>
-    <li><strong>Discovery:</strong> review search foundations, service and location information, and how your practice is represented across AI platforms.</li>
-    <li><strong>Trust:</strong> make priority service content and answers to patient questions useful, accurate, and specific to your practice.</li>
-    <li><strong>Booking readiness:</strong> review mobile usability, calls to action, and appointment information so people can find a clear next step.</li>
+    <li><strong>Scope:</strong> named pages, facts, locations, platforms or samples, and excluded work.</li>
+    <li><strong>Deliverables:</strong> audits, corrections, content, implementation, reporting, or recommendations.</li>
+    <li><strong>Ownership:</strong> access, fact approval, publishing, profile edits, analytics, and handoff.</li>
+    <li><strong>Evidence:</strong> the baseline, saved observations, completed changes, and unresolved gaps.</li>
+    <li><strong>Review:</strong> the schedule, decision owner, and continue, revise, pause, or blocked criteria.</li>
+    <li><strong>Commercial terms:</strong> fees, term, usage or third-party costs, and any separate SEO work.</li>
   </ul>
-  <p>Reporting is a service supported by internal tools; client access to a software platform is not included. Booking readiness does not imply a new integration or automated appointment booking.</p>
-  <h2>What to discuss during the rollout</h2>
-  <ul>
-    <li><strong>Your priority questions:</strong> the services, locations, and patient questions that matter to your practice.</li>
-    <li><strong>Your current presence:</strong> your website, local listings, existing content, and available search reporting.</li>
-    <li><strong>The proposed work:</strong> deliverables, responsibilities, access requirements, and overlap with your existing marketing.</li>
-    <li><strong>The evidence:</strong> how mentions, citations, factual accuracy, inquiries, and appointments will be evaluated.</li>
-  </ul>
-  <p>These are the topics for the planning conversation. Your written proposal establishes the included deliverables, platform coverage, schedule, and fees.</p>
-  <h2>Measure visibility and business results separately</h2>
-  <p>A useful review records the question, platform, date, and location context of an AI answer, along with any mention or citation. Compare the same questions over time and check whether the answer is accurate. A screenshot of one favorable answer does not establish consistent visibility.</p>
-  <p>Then connect visibility with qualified inquiries, booked appointments, and attended visits where reliable tracking exists. No provider controls an AI platform’s recommendations, and a mention alone is not a new patient.</p>
-  <p>Read our <a href="/blog/geo-for-chiropractors/">guide to AI search visibility</a> for background, or explore the <a href="/resources/">resource library</a> before the conversation.</p>
-  <h2>Discuss AI visibility for your practice</h2>
-  <p>Bring your website, service area, current SEO arrangement, and the questions you want patients to find answers to. We’ll discuss the GetPatients.com package and how it fits your practice. Contact us for current rollout details and a proposal.</p>
-  <p><a class="btn btn--primary" href="/schedule/">Discuss AI visibility →</a></p>
+  <p>
+    If a proposal does not name a platform, deliverable, implementation owner, cadence, or price,
+    treat that field as unresolved. This page does not fill those gaps on the provider's behalf.
+  </p>
+
+  <h2>Prepare for an AI visibility scope conversation</h2>
+  <p>
+    Bring your website, current SEO agreement, priority services and locations, available Search
+    Console access, and the buyer questions you want measured to a
+    <a href="/schedule/">Marketing &amp; AI Discovery Call</a>. ChiroCandy can discuss the current
+    GetPatients.com rollout and proposal. The decision should produce a clear scope and evidence
+    plan—not a promise of rankings, citations, recommendations, inquiries, or appointments.
+  </p>
 </ServiceLayout>
+
+<style>
+  .table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+  }
+
+  table {
+    width: 100%;
+    min-width: 980px;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.9rem;
+  }
+
+  caption {
+    padding: 1rem 1.1rem;
+    color: var(--green);
+    font-weight: 600;
+    text-align: left;
+  }
+
+  th,
+  td {
+    padding: 1rem 1.1rem;
+    border-top: 1px solid var(--line);
+    vertical-align: top;
+  }
+
+  thead th {
+    background: var(--surface-muted);
+  }
+
+  tbody th {
+    min-width: 165px;
+  }
+
+  :is(a, .table-wrap):focus-visible {
+    outline: 3px solid var(--green);
+    outline-offset: 4px;
+  }
+</style>
