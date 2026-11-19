@@ -13,6 +13,7 @@ import { NAV, SITE } from '@/lib/site';
 interface FAQ {
   question: string;
   answer: string;
+  link?: { href: string; label: string };
 }
 
 interface Props {
@@ -24,6 +25,7 @@ interface Props {
   serviceName: string;
   dateModified?: string;
   includeFaqSchema?: boolean;
+  includeServiceSchema?: boolean;
   faqs: FAQ[];
   relatedServices: { href: string; label: string }[];
 }
@@ -37,6 +39,7 @@ const {
   serviceName,
   dateModified = '2026-08-31',
   includeFaqSchema = true,
+  includeServiceSchema = true,
   faqs,
   relatedServices,
 } = Astro.props;
@@ -49,7 +52,7 @@ const schema = buildGraph(
     { name: 'Services', url: `${SITE.url}/services/` },
     { name: heroTitle, url },
   ]),
-  professionalServiceSchema(serviceName, description, url),
+  ...(includeServiceSchema ? [professionalServiceSchema(serviceName, description, url)] : []),
   ...(includeFaqSchema ? [faqPageSchema(faqs)] : [])
 );
 ---
@@ -86,7 +89,10 @@ const schema = buildGraph(
         {faqs.map((faq) => (
           <div class="faq-item">
             <dt>{faq.question}</dt>
-            <dd>{faq.answer}</dd>
+            <dd>
+              {faq.answer}
+              {faq.link && <> <a href={faq.link.href}>{faq.link.label}</a>.</>}
+            </dd>
           </div>
         ))}
       </dl>
