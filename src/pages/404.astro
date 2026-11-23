@@ -1,0 +1,48 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+
+const title = 'Page not found | ChiroCandy';
+const description = 'This ChiroCandy URL is not available. Browse services, articles, the podcast archive, or contact the team.';
+---
+
+<BaseLayout title={title} description={description} noindex>
+  <PageHero
+    eyebrow="404"
+    title="This page is not available"
+    answer="The address may have changed when the site moved off WordPress. These sections are the current public pages."
+  />
+  <section class="section">
+    <div class="container">
+      <ul class="missing-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/pricing/">Pricing</a></li>
+        <li><a href="/blog/">Articles</a></li>
+        <li><a href="/podcasts/">Podcast</a></li>
+        <li><a href="/case-studies/">Case studies</a></li>
+        <li><a href="/contact-us/">Contact</a></li>
+      </ul>
+      <p><a class="btn btn--primary" href="/sitemap/">View the full sitemap</a></p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .missing-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+    gap: 0.75rem;
+    margin: 0 0 1.5rem;
+    padding: 0;
+    list-style: none;
+  }
+  .missing-links a {
+    display: block;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 1rem 1.1rem;
+    font-weight: 600;
+  }
+  .missing-links a:hover { border-color: var(--green); }
+</style>

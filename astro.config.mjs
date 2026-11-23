@@ -14,7 +14,8 @@ export default defineConfig({
       filter: (page) =>
         !page.includes('/sample-page') &&
         !page.includes('/thank-you') &&
-        !page.includes('/demo'),
+        !page.includes('/demo') &&
+        !page.includes('/404'),
     }),
     mdx(),
   ],
