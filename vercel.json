@@ -143,6 +143,686 @@
       "permanent": true
     },
     {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/a-guide-to-social-media-marketing-for-chiropractors/",
+      "destination": "/blog/a-guide-to-social-media-marketing-for-chiropractors/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/a-guide-to-social-media-marketing-for-chiropractors",
+      "destination": "/blog/a-guide-to-social-media-marketing-for-chiropractors/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/best-chiropractic-marketing-agencies/",
+      "destination": "/blog/best-chiropractic-marketing-agencies/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/best-chiropractic-marketing-agencies",
+      "destination": "/blog/best-chiropractic-marketing-agencies/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/chiropractor-seo-strategy-for-new-clinics/",
+      "destination": "/blog/chiropractor-seo-strategy-for-new-clinics/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/chiropractor-seo-strategy-for-new-clinics",
+      "destination": "/blog/chiropractor-seo-strategy-for-new-clinics/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/responsive-chiropractic-website-templates/",
+      "destination": "/blog/responsive-chiropractic-website-templates/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/responsive-chiropractic-website-templates",
+      "destination": "/blog/responsive-chiropractic-website-templates/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/essential-chiropractic-marketing-tools/",
+      "destination": "/blog/essential-chiropractic-marketing-tools/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/essential-chiropractic-marketing-tools",
+      "destination": "/blog/essential-chiropractic-marketing-tools/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/a-comprehensive-marketing-plan-for-chiropractors/",
+      "destination": "/blog/a-comprehensive-marketing-plan-for-chiropractors/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/a-comprehensive-marketing-plan-for-chiropractors",
+      "destination": "/blog/a-comprehensive-marketing-plan-for-chiropractors/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/chiropractic-seo-costs/",
+      "destination": "/blog/chiropractic-seo-costs/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/chiropractic-seo-costs",
+      "destination": "/blog/chiropractic-seo-costs/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/how-to-evaluate-chiropractic-seo-progress/",
+      "destination": "/blog/how-to-evaluate-chiropractic-seo-progress/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/how-to-evaluate-chiropractic-seo-progress",
+      "destination": "/blog/how-to-evaluate-chiropractic-seo-progress/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/seo-for-multiple-chiropractic-locations/",
+      "destination": "/blog/seo-for-multiple-chiropractic-locations/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/seo-for-multiple-chiropractic-locations",
+      "destination": "/blog/seo-for-multiple-chiropractic-locations/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/why-chiropractic-website-pages-not-indexed/",
+      "destination": "/blog/why-chiropractic-website-pages-not-indexed/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/why-chiropractic-website-pages-not-indexed",
+      "destination": "/blog/why-chiropractic-website-pages-not-indexed/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/chiropractic-service-pages-for-seo/",
+      "destination": "/blog/chiropractic-service-pages-for-seo/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/chiropractic-service-pages-for-seo",
+      "destination": "/blog/chiropractic-service-pages-for-seo/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/chiropractic-ai-visibility-audit/",
+      "destination": "/blog/chiropractic-ai-visibility-audit/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/chiropractic-ai-visibility-audit",
+      "destination": "/blog/chiropractic-ai-visibility-audit/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/measure-chiropractic-ai-search-visibility/",
+      "destination": "/blog/measure-chiropractic-ai-search-visibility/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/measure-chiropractic-ai-search-visibility",
+      "destination": "/blog/measure-chiropractic-ai-search-visibility/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/google-ads-budget-for-chiropractors/",
+      "destination": "/blog/google-ads-budget-for-chiropractors/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/google-ads-budget-for-chiropractors",
+      "destination": "/blog/google-ads-budget-for-chiropractors/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/google-ads-vs-facebook-ads-for-chiropractors/",
+      "destination": "/blog/google-ads-vs-facebook-ads-for-chiropractors/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/google-ads-vs-facebook-ads-for-chiropractors",
+      "destination": "/blog/google-ads-vs-facebook-ads-for-chiropractors/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/chiropractic-google-ads-search-terms/",
+      "destination": "/blog/chiropractic-google-ads-search-terms/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/chiropractic-google-ads-search-terms",
+      "destination": "/blog/chiropractic-google-ads-search-terms/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/chiropractic-google-ads-landing-pages/",
+      "destination": "/blog/chiropractic-google-ads-landing-pages/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/chiropractic-google-ads-landing-pages",
+      "destination": "/blog/chiropractic-google-ads-landing-pages/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/chiropractic-call-tracking-lead-quality/",
+      "destination": "/blog/chiropractic-call-tracking-lead-quality/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/chiropractic-call-tracking-lead-quality",
+      "destination": "/blog/chiropractic-call-tracking-lead-quality/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/chiropractic-advertising-leads-to-appointments/",
+      "destination": "/blog/chiropractic-advertising-leads-to-appointments/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/chiropractic-advertising-leads-to-appointments",
+      "destination": "/blog/chiropractic-advertising-leads-to-appointments/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/ai-built-chiropractic-website-review-checklist/",
+      "destination": "/blog/ai-built-chiropractic-website-review-checklist/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/ai-built-chiropractic-website-review-checklist",
+      "destination": "/blog/ai-built-chiropractic-website-review-checklist/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/chiropractic-website-booking-conversion-audit/",
+      "destination": "/blog/chiropractic-website-booking-conversion-audit/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/chiropractic-website-booking-conversion-audit",
+      "destination": "/blog/chiropractic-website-booking-conversion-audit/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/chiropractic-domain-website-ownership/",
+      "destination": "/blog/chiropractic-domain-website-ownership/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/chiropractic-domain-website-ownership",
+      "destination": "/blog/chiropractic-domain-website-ownership/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/marketing-new-chiropractic-associate/",
+      "destination": "/blog/marketing-new-chiropractic-associate/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/marketing-new-chiropractic-associate",
+      "destination": "/blog/marketing-new-chiropractic-associate/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/chiropractic-video-content-approval-workflow/",
+      "destination": "/blog/chiropractic-video-content-approval-workflow/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/chiropractic-video-content-approval-workflow",
+      "destination": "/blog/chiropractic-video-content-approval-workflow/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/evaluate-chiropractic-marketing-case-studies/",
+      "destination": "/blog/evaluate-chiropractic-marketing-case-studies/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/evaluate-chiropractic-marketing-case-studies",
+      "destination": "/blog/evaluate-chiropractic-marketing-case-studies/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/chiropractic-patient-review-request-process/",
+      "destination": "/blog/chiropractic-patient-review-request-process/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/chiropractic-patient-review-request-process",
+      "destination": "/blog/chiropractic-patient-review-request-process/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/unlocking-chiropractic-content-ideas/",
+      "destination": "/blog/unlocking-chiropractic-content-ideas/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/unlocking-chiropractic-content-ideas",
+      "destination": "/blog/unlocking-chiropractic-content-ideas/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/crafting-the-best-chiropractic-website-design/",
+      "destination": "/blog/crafting-the-best-chiropractic-website-design/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/crafting-the-best-chiropractic-website-design",
+      "destination": "/blog/crafting-the-best-chiropractic-website-design/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/maximizing-your-chiropractic-google-ads/",
+      "destination": "/blog/maximizing-your-chiropractic-google-ads/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/maximizing-your-chiropractic-google-ads",
+      "destination": "/blog/maximizing-your-chiropractic-google-ads/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/chiropractic-marketing-costs/",
+      "destination": "/blog/chiropractic-marketing-costs/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/chiropractic-marketing-costs",
+      "destination": "/blog/chiropractic-marketing-costs/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/switching-chiropractic-website-providers/",
+      "destination": "/blog/switching-chiropractic-website-providers/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/switching-chiropractic-website-providers",
+      "destination": "/blog/switching-chiropractic-website-providers/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/geo-for-chiropractors/",
+      "destination": "/blog/geo-for-chiropractors/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/geo-for-chiropractors",
+      "destination": "/blog/geo-for-chiropractors/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/google-ads-vs-seo-for-chiropractors/",
+      "destination": "/blog/google-ads-vs-seo-for-chiropractors/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/google-ads-vs-seo-for-chiropractors",
+      "destination": "/blog/google-ads-vs-seo-for-chiropractors/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/how-to-choose-chiropractic-marketing-agency/",
+      "destination": "/blog/how-to-choose-chiropractic-marketing-agency/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/how-to-choose-chiropractic-marketing-agency",
+      "destination": "/blog/how-to-choose-chiropractic-marketing-agency/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/using-image-and-video-ads-for-chiropractic-facebook-marketing-how-to-reach-clients-with-engaging-visuals/",
+      "destination": "/blog/using-image-and-video-ads-for-chiropractic-facebook-marketing-how-to-reach-clients-with-engaging-visuals/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/using-image-and-video-ads-for-chiropractic-facebook-marketing-how-to-reach-clients-with-engaging-visuals",
+      "destination": "/blog/using-image-and-video-ads-for-chiropractic-facebook-marketing-how-to-reach-clients-with-engaging-visuals/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/how-can-chiropractors-leverage-chiropractic-facebook-marketing-to-reach-their-target-audience/",
+      "destination": "/blog/how-can-chiropractors-leverage-chiropractic-facebook-marketing-to-reach-their-target-audience/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/how-can-chiropractors-leverage-chiropractic-facebook-marketing-to-reach-their-target-audience",
+      "destination": "/blog/how-can-chiropractors-leverage-chiropractic-facebook-marketing-to-reach-their-target-audience/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/how-to-use-facebook-ads-to-build-your-chiropractic-practices-brand/",
+      "destination": "/blog/how-to-use-facebook-ads-to-build-your-chiropractic-practices-brand/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/how-to-use-facebook-ads-to-build-your-chiropractic-practices-brand",
+      "destination": "/blog/how-to-use-facebook-ads-to-build-your-chiropractic-practices-brand/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/the-top-10-marketing-strategies-for-growing-your-chiropractic-practice-in-2023/",
+      "destination": "/blog/the-top-10-marketing-strategies-for-growing-your-chiropractic-practice-in-2023/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/the-top-10-marketing-strategies-for-growing-your-chiropractic-practice-in-2023",
+      "destination": "/blog/the-top-10-marketing-strategies-for-growing-your-chiropractic-practice-in-2023/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/differentiate-your-home-page-make-sure-it-talks-to-your-unique-patients/",
+      "destination": "/blog/differentiate-your-home-page-make-sure-it-talks-to-your-unique-patients/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/differentiate-your-home-page-make-sure-it-talks-to-your-unique-patients",
+      "destination": "/blog/differentiate-your-home-page-make-sure-it-talks-to-your-unique-patients/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/the-benefits-of-hiring-a-professional-website-design-company-for-chiropractors/",
+      "destination": "/blog/the-benefits-of-hiring-a-professional-website-design-company-for-chiropractors/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/the-benefits-of-hiring-a-professional-website-design-company-for-chiropractors",
+      "destination": "/blog/the-benefits-of-hiring-a-professional-website-design-company-for-chiropractors/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/the-benefits-of-hiring-a-professional-website-design-company/",
+      "destination": "/blog/the-benefits-of-hiring-a-professional-website-design-company/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/the-benefits-of-hiring-a-professional-website-design-company",
+      "destination": "/blog/the-benefits-of-hiring-a-professional-website-design-company/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/reasons/",
+      "destination": "/blog/reasons/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/reasons",
+      "destination": "/blog/reasons/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/how-to-establish-authority-in-the-chiropractic-industry-with-your-website/",
+      "destination": "/blog/how-to-establish-authority-in-the-chiropractic-industry-with-your-website/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/how-to-establish-authority-in-the-chiropractic-industry-with-your-website",
+      "destination": "/blog/how-to-establish-authority-in-the-chiropractic-industry-with-your-website/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/5-benefits-of-a-high-functioning-website-for-chiropractors/",
+      "destination": "/blog/5-benefits-of-a-high-functioning-website-for-chiropractors/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/5-benefits-of-a-high-functioning-website-for-chiropractors",
+      "destination": "/blog/5-benefits-of-a-high-functioning-website-for-chiropractors/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/dont-be-fooled-by-the-sizzle-of-chiropractic-marketing-trends-focus-on-what-works/",
+      "destination": "/blog/dont-be-fooled-by-the-sizzle-of-chiropractic-marketing-trends-focus-on-what-works/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/dont-be-fooled-by-the-sizzle-of-chiropractic-marketing-trends-focus-on-what-works",
+      "destination": "/blog/dont-be-fooled-by-the-sizzle-of-chiropractic-marketing-trends-focus-on-what-works/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/let-chirocandy-marketing-help-you-create-a-more-professional-online-presence/",
+      "destination": "/blog/let-chirocandy-marketing-help-you-create-a-more-professional-online-presence/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/let-chirocandy-marketing-help-you-create-a-more-professional-online-presence",
+      "destination": "/blog/let-chirocandy-marketing-help-you-create-a-more-professional-online-presence/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/5-ways-to-save-time-and-overcome-your-chiropractic-marketing-challenges/",
+      "destination": "/blog/5-ways-to-save-time-and-overcome-your-chiropractic-marketing-challenges/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/5-ways-to-save-time-and-overcome-your-chiropractic-marketing-challenges",
+      "destination": "/blog/5-ways-to-save-time-and-overcome-your-chiropractic-marketing-challenges/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/the-top-3-priorities-for-your-chiropractic-marketing-budget/",
+      "destination": "/blog/the-top-3-priorities-for-your-chiropractic-marketing-budget/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/the-top-3-priorities-for-your-chiropractic-marketing-budget",
+      "destination": "/blog/the-top-3-priorities-for-your-chiropractic-marketing-budget/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/making-the-most-of-your-time-tips-for-chiropractor-marketing/",
+      "destination": "/blog/making-the-most-of-your-time-tips-for-chiropractor-marketing/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/making-the-most-of-your-time-tips-for-chiropractor-marketing",
+      "destination": "/blog/making-the-most-of-your-time-tips-for-chiropractor-marketing/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/building-trust/",
+      "destination": "/blog/building-trust/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/building-trust",
+      "destination": "/blog/building-trust/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/new-noteworthy/",
+      "destination": "/blog/new-noteworthy/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/new-noteworthy",
+      "destination": "/blog/new-noteworthy/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/itunesreview/",
+      "destination": "/blog/itunesreview/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/itunesreview",
+      "destination": "/blog/itunesreview/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/update/",
+      "destination": "/blog/update/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/update",
+      "destination": "/blog/update/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/businessorjob/",
+      "destination": "/blog/businessorjob/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/businessorjob",
+      "destination": "/blog/businessorjob/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/google-business-optimization-for-chiropractors/",
+      "destination": "/blog/google-business-optimization-for-chiropractors/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/google-business-optimization-for-chiropractors",
+      "destination": "/blog/google-business-optimization-for-chiropractors/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/reactivation-campaign-ideas/",
+      "destination": "/blog/reactivation-campaign-ideas/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/reactivation-campaign-ideas",
+      "destination": "/blog/reactivation-campaign-ideas/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/identify-the-best-keywords-for-chiropractors/",
+      "destination": "/blog/identify-the-best-keywords-for-chiropractors/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/identify-the-best-keywords-for-chiropractors",
+      "destination": "/blog/identify-the-best-keywords-for-chiropractors/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/personalized-tiktok-ads-for-chiropractic-care/",
+      "destination": "/blog/personalized-tiktok-ads-for-chiropractic-care/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/personalized-tiktok-ads-for-chiropractic-care",
+      "destination": "/blog/personalized-tiktok-ads-for-chiropractic-care/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/the-future-of-chiropractic-facebook-marketing-emerging-trends-and-strategies-in-2023/",
+      "destination": "/blog/the-future-of-chiropractic-facebook-marketing-emerging-trends-and-strategies-in-2023/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/the-future-of-chiropractic-facebook-marketing-emerging-trends-and-strategies-in-2023",
+      "destination": "/blog/the-future-of-chiropractic-facebook-marketing-emerging-trends-and-strategies-in-2023/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/key-metrics-of-facebook-advertising-for-chiropractors/",
+      "destination": "/blog/key-metrics-of-facebook-advertising-for-chiropractors/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/key-metrics-of-facebook-advertising-for-chiropractors",
+      "destination": "/blog/key-metrics-of-facebook-advertising-for-chiropractors/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/maximizing-roi-how-chiropractors-can-optimize-facebook-ads-to-reach-more-patients/",
+      "destination": "/uncategorized/maximizing-roi-how-chiropractors-can-optimize-facebook-ads-to-reach-more-patients/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/maximizing-roi-how-chiropractors-can-optimize-facebook-ads-to-reach-more-patients",
+      "destination": "/uncategorized/maximizing-roi-how-chiropractors-can-optimize-facebook-ads-to-reach-more-patients/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/the-importance-of-video-ads-for-chiropractors-on-facebook/",
+      "destination": "/uncategorized/the-importance-of-video-ads-for-chiropractors-on-facebook/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/the-importance-of-video-ads-for-chiropractors-on-facebook",
+      "destination": "/uncategorized/the-importance-of-video-ads-for-chiropractors-on-facebook/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/measuring-success-how-to-track-the-roi-of-your-chiropractic-facebook-ad-campaigns/",
+      "destination": "/uncategorized/measuring-success-how-to-track-the-roi-of-your-chiropractic-facebook-ad-campaigns/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/measuring-success-how-to-track-the-roi-of-your-chiropractic-facebook-ad-campaigns",
+      "destination": "/uncategorized/measuring-success-how-to-track-the-roi-of-your-chiropractic-facebook-ad-campaigns/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/targeting-the-right-patients-best-practices-for-chiropractors-using-facebook-ads/",
+      "destination": "/uncategorized/targeting-the-right-patients-best-practices-for-chiropractors-using-facebook-ads/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/targeting-the-right-patients-best-practices-for-chiropractors-using-facebook-ads",
+      "destination": "/uncategorized/targeting-the-right-patients-best-practices-for-chiropractors-using-facebook-ads/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/marketing-dream-practice/",
+      "destination": "/uncategorized/marketing-dream-practice/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/marketing-dream-practice",
+      "destination": "/uncategorized/marketing-dream-practice/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/12-month-plan/",
+      "destination": "/uncategorized/12-month-plan/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/12-month-plan",
+      "destination": "/uncategorized/12-month-plan/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/174-the-chiropractic-defense-council/",
+      "destination": "/uncategorized/174-the-chiropractic-defense-council/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/174-the-chiropractic-defense-council",
+      "destination": "/uncategorized/174-the-chiropractic-defense-council/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/173-how-to-dominate-adding-knee-and-neuropathy-niches-clinic-masters-2/",
+      "destination": "/uncategorized/173-how-to-dominate-adding-knee-and-neuropathy-niches-clinic-masters-2/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/173-how-to-dominate-adding-knee-and-neuropathy-niches-clinic-masters-2",
+      "destination": "/uncategorized/173-how-to-dominate-adding-knee-and-neuropathy-niches-clinic-masters-2/",
+      "permanent": true
+    },
+    {
       "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/:slug/",
       "destination": "/podcast/:slug/",
       "permanent": true
@@ -3830,6 +4510,1376 @@
     {
       "source": "/blog/best-tiktok-ads-for-chiropractors",
       "destination": "/blog/personalized-tiktok-ads-for-chiropractic-care/",
+      "permanent": true
+    },
+    {
+      "source": "/147-top-5-facebook-instagram-campaigns-you-should-be-running-now/",
+      "destination": "/podcast/147-top-5-facebook-instagram-campaigns-you-should-be-running-now/",
+      "permanent": true
+    },
+    {
+      "source": "/147-top-5-facebook-instagram-campaigns-you-should-be-running-now",
+      "destination": "/podcast/147-top-5-facebook-instagram-campaigns-you-should-be-running-now/",
+      "permanent": true
+    },
+    {
+      "source": "/148-can-this-software-replace-your-ca/",
+      "destination": "/podcast/148-can-this-software-replace-your-ca/",
+      "permanent": true
+    },
+    {
+      "source": "/148-can-this-software-replace-your-ca",
+      "destination": "/podcast/148-can-this-software-replace-your-ca/",
+      "permanent": true
+    },
+    {
+      "source": "/149-building-a-legacy-business/",
+      "destination": "/podcast/149-building-a-legacy-business/",
+      "permanent": true
+    },
+    {
+      "source": "/149-building-a-legacy-business",
+      "destination": "/podcast/149-building-a-legacy-business/",
+      "permanent": true
+    },
+    {
+      "source": "/150-10-tips-for-recording-facebook-videos/",
+      "destination": "/podcast/150-10-tips-for-recording-facebook-videos/",
+      "permanent": true
+    },
+    {
+      "source": "/150-10-tips-for-recording-facebook-videos",
+      "destination": "/podcast/150-10-tips-for-recording-facebook-videos/",
+      "permanent": true
+    },
+    {
+      "source": "/151-reactivation-tip/",
+      "destination": "/podcast/151-reactivation-tip/",
+      "permanent": true
+    },
+    {
+      "source": "/151-reactivation-tip",
+      "destination": "/podcast/151-reactivation-tip/",
+      "permanent": true
+    },
+    {
+      "source": "/152-focus-on-these-two-things/",
+      "destination": "/podcast/152-focus-on-these-two-things/",
+      "permanent": true
+    },
+    {
+      "source": "/152-focus-on-these-two-things",
+      "destination": "/podcast/152-focus-on-these-two-things/",
+      "permanent": true
+    },
+    {
+      "source": "/153-keys-to-successful-facebook-and-instagram-campaigns-w-daniel-knowles/",
+      "destination": "/podcast/153-keys-to-successful-facebook-and-instagram-campaigns-w-daniel-knowles/",
+      "permanent": true
+    },
+    {
+      "source": "/153-keys-to-successful-facebook-and-instagram-campaigns-w-daniel-knowles",
+      "destination": "/podcast/153-keys-to-successful-facebook-and-instagram-campaigns-w-daniel-knowles/",
+      "permanent": true
+    },
+    {
+      "source": "/154-2/",
+      "destination": "/podcast/154-2/",
+      "permanent": true
+    },
+    {
+      "source": "/154-2",
+      "destination": "/podcast/154-2/",
+      "permanent": true
+    },
+    {
+      "source": "/155-video-equipment-that-helps-you-create-higher-quality-content/",
+      "destination": "/podcast/155-video-equipment-that-helps-you-create-higher-quality-content/",
+      "permanent": true
+    },
+    {
+      "source": "/155-video-equipment-that-helps-you-create-higher-quality-content",
+      "destination": "/podcast/155-video-equipment-that-helps-you-create-higher-quality-content/",
+      "permanent": true
+    },
+    {
+      "source": "/156-2/",
+      "destination": "/podcast/156-2/",
+      "permanent": true
+    },
+    {
+      "source": "/156-2",
+      "destination": "/podcast/156-2/",
+      "permanent": true
+    },
+    {
+      "source": "/157-2/",
+      "destination": "/podcast/157-2/",
+      "permanent": true
+    },
+    {
+      "source": "/157-2",
+      "destination": "/podcast/157-2/",
+      "permanent": true
+    },
+    {
+      "source": "/158-how-to-dominate-social-media-marketing-without-discounting-services/",
+      "destination": "/podcast/158-how-to-dominate-social-media-marketing-without-discounting-services/",
+      "permanent": true
+    },
+    {
+      "source": "/158-how-to-dominate-social-media-marketing-without-discounting-services",
+      "destination": "/podcast/158-how-to-dominate-social-media-marketing-without-discounting-services/",
+      "permanent": true
+    },
+    {
+      "source": "/159-great-marketing-will-solve-most-problems-with-dr-ryan-rieder/",
+      "destination": "/podcast/159-great-marketing-will-solve-most-problems-with-dr-ryan-rieder/",
+      "permanent": true
+    },
+    {
+      "source": "/159-great-marketing-will-solve-most-problems-with-dr-ryan-rieder",
+      "destination": "/podcast/159-great-marketing-will-solve-most-problems-with-dr-ryan-rieder/",
+      "permanent": true
+    },
+    {
+      "source": "/160-how-chiropractors-should-respond-to-covid-19/",
+      "destination": "/podcast/160-how-chiropractors-should-respond-to-covid-19/",
+      "permanent": true
+    },
+    {
+      "source": "/160-how-chiropractors-should-respond-to-covid-19",
+      "destination": "/podcast/160-how-chiropractors-should-respond-to-covid-19/",
+      "permanent": true
+    },
+    {
+      "source": "/161-guaranteed-patients-even-in-the-chaos/",
+      "destination": "/podcast/161-guaranteed-patients-even-in-the-chaos/",
+      "permanent": true
+    },
+    {
+      "source": "/161-guaranteed-patients-even-in-the-chaos",
+      "destination": "/podcast/161-guaranteed-patients-even-in-the-chaos/",
+      "permanent": true
+    },
+    {
+      "source": "/162-use-this-as-a-blueprint/",
+      "destination": "/podcast/162-use-this-as-a-blueprint/",
+      "permanent": true
+    },
+    {
+      "source": "/162-use-this-as-a-blueprint",
+      "destination": "/podcast/162-use-this-as-a-blueprint/",
+      "permanent": true
+    },
+    {
+      "source": "/163-is-your-ppp-loan-really-forgivable-with-jennifer-belville/",
+      "destination": "/podcast/163-is-your-ppp-loan-really-forgivable-with-jennifer-belville/",
+      "permanent": true
+    },
+    {
+      "source": "/163-is-your-ppp-loan-really-forgivable-with-jennifer-belville",
+      "destination": "/podcast/163-is-your-ppp-loan-really-forgivable-with-jennifer-belville/",
+      "permanent": true
+    },
+    {
+      "source": "/164-practice-purchasing-opportunities-with-kevin-crystal-misenheimer/",
+      "destination": "/podcast/164-practice-purchasing-opportunities-with-kevin-crystal-misenheimer/",
+      "permanent": true
+    },
+    {
+      "source": "/164-practice-purchasing-opportunities-with-kevin-crystal-misenheimer",
+      "destination": "/podcast/164-practice-purchasing-opportunities-with-kevin-crystal-misenheimer/",
+      "permanent": true
+    },
+    {
+      "source": "/165-part-time-million-dollar-cash-practice-w-dr-nona-djavid/",
+      "destination": "/podcast/165-part-time-million-dollar-cash-practice-w-dr-nona-djavid/",
+      "permanent": true
+    },
+    {
+      "source": "/165-part-time-million-dollar-cash-practice-w-dr-nona-djavid",
+      "destination": "/podcast/165-part-time-million-dollar-cash-practice-w-dr-nona-djavid/",
+      "permanent": true
+    },
+    {
+      "source": "/166-your-2021-internet-marketing-plan/",
+      "destination": "/podcast/166-your-2021-internet-marketing-plan/",
+      "permanent": true
+    },
+    {
+      "source": "/166-your-2021-internet-marketing-plan",
+      "destination": "/podcast/166-your-2021-internet-marketing-plan/",
+      "permanent": true
+    },
+    {
+      "source": "/167-how-to-master-personal-injury-marketing-with-dr-mark-slater/",
+      "destination": "/podcast/167-how-to-master-personal-injury-marketing-with-dr-mark-slater/",
+      "permanent": true
+    },
+    {
+      "source": "/167-how-to-master-personal-injury-marketing-with-dr-mark-slater",
+      "destination": "/podcast/167-how-to-master-personal-injury-marketing-with-dr-mark-slater/",
+      "permanent": true
+    },
+    {
+      "source": "/170-case-study-consistently-get-60-70-show-rates/",
+      "destination": "/podcast/170-case-study-consistently-get-60-70-show-rates/",
+      "permanent": true
+    },
+    {
+      "source": "/170-case-study-consistently-get-60-70-show-rates",
+      "destination": "/podcast/170-case-study-consistently-get-60-70-show-rates/",
+      "permanent": true
+    },
+    {
+      "source": "/171-100000-patients-a-month/",
+      "destination": "/podcast/171-100000-patients-a-month/",
+      "permanent": true
+    },
+    {
+      "source": "/171-100000-patients-a-month",
+      "destination": "/podcast/171-100000-patients-a-month/",
+      "permanent": true
+    },
+    {
+      "source": "/172-thriving-in-any-market-condition-with-dr-tory-robson/",
+      "destination": "/podcast/172-thriving-in-any-market-condition-with-dr-tory-robson/",
+      "permanent": true
+    },
+    {
+      "source": "/172-thriving-in-any-market-condition-with-dr-tory-robson",
+      "destination": "/podcast/172-thriving-in-any-market-condition-with-dr-tory-robson/",
+      "permanent": true
+    },
+    {
+      "source": "/2017-marketing-plan/",
+      "destination": "/podcast/2017-marketing-plan/",
+      "permanent": true
+    },
+    {
+      "source": "/2017-marketing-plan",
+      "destination": "/podcast/2017-marketing-plan/",
+      "permanent": true
+    },
+    {
+      "source": "/7-reasons-write-a-book/",
+      "destination": "/podcast/7-reasons-write-a-book/",
+      "permanent": true
+    },
+    {
+      "source": "/7-reasons-write-a-book",
+      "destination": "/podcast/7-reasons-write-a-book/",
+      "permanent": true
+    },
+    {
+      "source": "/7-strategies-to-get-higher-quality-leads-increase-show-rates/",
+      "destination": "/podcast/7-strategies-to-get-higher-quality-leads-increase-show-rates/",
+      "permanent": true
+    },
+    {
+      "source": "/7-strategies-to-get-higher-quality-leads-increase-show-rates",
+      "destination": "/podcast/7-strategies-to-get-higher-quality-leads-increase-show-rates/",
+      "permanent": true
+    },
+    {
+      "source": "/8-key-takeaways-funnel-hacking-live/",
+      "destination": "/podcast/8-key-takeaways-funnel-hacking-live/",
+      "permanent": true
+    },
+    {
+      "source": "/8-key-takeaways-funnel-hacking-live",
+      "destination": "/podcast/8-key-takeaways-funnel-hacking-live/",
+      "permanent": true
+    },
+    {
+      "source": "/art-of-story/",
+      "destination": "/podcast/art-of-story/",
+      "permanent": true
+    },
+    {
+      "source": "/art-of-story",
+      "destination": "/podcast/art-of-story/",
+      "permanent": true
+    },
+    {
+      "source": "/attraction-conversion-retention-wellness/",
+      "destination": "/podcast/attraction-conversion-retention-wellness/",
+      "permanent": true
+    },
+    {
+      "source": "/attraction-conversion-retention-wellness",
+      "destination": "/podcast/attraction-conversion-retention-wellness/",
+      "permanent": true
+    },
+    {
+      "source": "/beyond-the-pain/",
+      "destination": "/podcast/beyond-the-pain/",
+      "permanent": true
+    },
+    {
+      "source": "/beyond-the-pain",
+      "destination": "/podcast/beyond-the-pain/",
+      "permanent": true
+    },
+    {
+      "source": "/big-idea-mentor/",
+      "destination": "/podcast/big-idea-mentor/",
+      "permanent": true
+    },
+    {
+      "source": "/big-idea-mentor",
+      "destination": "/podcast/big-idea-mentor/",
+      "permanent": true
+    },
+    {
+      "source": "/bonus-headache-funnel/",
+      "destination": "/podcast/bonus-headache-funnel/",
+      "permanent": true
+    },
+    {
+      "source": "/bonus-headache-funnel",
+      "destination": "/podcast/bonus-headache-funnel/",
+      "permanent": true
+    },
+    {
+      "source": "/brain-based-wellness/",
+      "destination": "/podcast/brain-based-wellness/",
+      "permanent": true
+    },
+    {
+      "source": "/brain-based-wellness",
+      "destination": "/podcast/brain-based-wellness/",
+      "permanent": true
+    },
+    {
+      "source": "/branding-yourself-expert/",
+      "destination": "/podcast/branding-yourself-expert/",
+      "permanent": true
+    },
+    {
+      "source": "/branding-yourself-expert",
+      "destination": "/podcast/branding-yourself-expert/",
+      "permanent": true
+    },
+    {
+      "source": "/building-a-pediatric-practice/",
+      "destination": "/podcast/building-a-pediatric-practice/",
+      "permanent": true
+    },
+    {
+      "source": "/building-a-pediatric-practice",
+      "destination": "/podcast/building-a-pediatric-practice/",
+      "permanent": true
+    },
+    {
+      "source": "/building-a-referable-practice/",
+      "destination": "/podcast/building-a-referable-practice/",
+      "permanent": true
+    },
+    {
+      "source": "/building-a-referable-practice",
+      "destination": "/podcast/building-a-referable-practice/",
+      "permanent": true
+    },
+    {
+      "source": "/businessorjob/",
+      "destination": "/blog/businessorjob/",
+      "permanent": true
+    },
+    {
+      "source": "/businessorjob",
+      "destination": "/blog/businessorjob/",
+      "permanent": true
+    },
+    {
+      "source": "/chiropractic-critical-mass/",
+      "destination": "/podcast/chiropractic-critical-mass/",
+      "permanent": true
+    },
+    {
+      "source": "/chiropractic-critical-mass",
+      "destination": "/podcast/chiropractic-critical-mass/",
+      "permanent": true
+    },
+    {
+      "source": "/chiropractic-marketing-challenge/",
+      "destination": "/podcast/chiropractic-marketing-challenge/",
+      "permanent": true
+    },
+    {
+      "source": "/chiropractic-marketing-challenge",
+      "destination": "/podcast/chiropractic-marketing-challenge/",
+      "permanent": true
+    },
+    {
+      "source": "/chiropractic-marketing-funnels/",
+      "destination": "/podcast/chiropractic-marketing-funnels/",
+      "permanent": true
+    },
+    {
+      "source": "/chiropractic-marketing-funnels",
+      "destination": "/podcast/chiropractic-marketing-funnels/",
+      "permanent": true
+    },
+    {
+      "source": "/chiropractic-mastery/",
+      "destination": "/podcast/chiropractic-mastery/",
+      "permanent": true
+    },
+    {
+      "source": "/chiropractic-mastery",
+      "destination": "/podcast/chiropractic-mastery/",
+      "permanent": true
+    },
+    {
+      "source": "/chiropractic-relationship-marketing/",
+      "destination": "/podcast/chiropractic-relationship-marketing/",
+      "permanent": true
+    },
+    {
+      "source": "/chiropractic-relationship-marketing",
+      "destination": "/podcast/chiropractic-relationship-marketing/",
+      "permanent": true
+    },
+    {
+      "source": "/chiropractic-world-domination/",
+      "destination": "/podcast/chiropractic-world-domination/",
+      "permanent": true
+    },
+    {
+      "source": "/chiropractic-world-domination",
+      "destination": "/podcast/chiropractic-world-domination/",
+      "permanent": true
+    },
+    {
+      "source": "/chirosushi-summit-review/",
+      "destination": "/podcast/chirosushi-summit-review/",
+      "permanent": true
+    },
+    {
+      "source": "/chirosushi-summit-review",
+      "destination": "/podcast/chirosushi-summit-review/",
+      "permanent": true
+    },
+    {
+      "source": "/chirosushi/",
+      "destination": "/podcast/chirosushi/",
+      "permanent": true
+    },
+    {
+      "source": "/chirosushi",
+      "destination": "/podcast/chirosushi/",
+      "permanent": true
+    },
+    {
+      "source": "/clarifying-communication/",
+      "destination": "/podcast/clarifying-communication/",
+      "permanent": true
+    },
+    {
+      "source": "/clarifying-communication",
+      "destination": "/podcast/clarifying-communication/",
+      "permanent": true
+    },
+    {
+      "source": "/closing-more-from-talks/",
+      "destination": "/podcast/closing-more-from-talks/",
+      "permanent": true
+    },
+    {
+      "source": "/closing-more-from-talks",
+      "destination": "/podcast/closing-more-from-talks/",
+      "permanent": true
+    },
+    {
+      "source": "/closing-more-patients/",
+      "destination": "/podcast/closing-more-patients/",
+      "permanent": true
+    },
+    {
+      "source": "/closing-more-patients",
+      "destination": "/podcast/closing-more-patients/",
+      "permanent": true
+    },
+    {
+      "source": "/creating-ultimate-authority/",
+      "destination": "/podcast/creating-ultimate-authority/",
+      "permanent": true
+    },
+    {
+      "source": "/creating-ultimate-authority",
+      "destination": "/podcast/creating-ultimate-authority/",
+      "permanent": true
+    },
+    {
+      "source": "/cruise-2018/",
+      "destination": "/podcast/cruise-2018/",
+      "permanent": true
+    },
+    {
+      "source": "/cruise-2018",
+      "destination": "/podcast/cruise-2018/",
+      "permanent": true
+    },
+    {
+      "source": "/database-marketing/",
+      "destination": "/podcast/database-marketing/",
+      "permanent": true
+    },
+    {
+      "source": "/database-marketing",
+      "destination": "/podcast/database-marketing/",
+      "permanent": true
+    },
+    {
+      "source": "/designing-your-ideal-chiropractic-practice/",
+      "destination": "/podcast/designing-your-ideal-chiropractic-practice/",
+      "permanent": true
+    },
+    {
+      "source": "/designing-your-ideal-chiropractic-practice",
+      "destination": "/podcast/designing-your-ideal-chiropractic-practice/",
+      "permanent": true
+    },
+    {
+      "source": "/email-marketing-for-chiropractors/",
+      "destination": "/podcast/email-marketing-for-chiropractors/",
+      "permanent": true
+    },
+    {
+      "source": "/email-marketing-for-chiropractors",
+      "destination": "/podcast/email-marketing-for-chiropractors/",
+      "permanent": true
+    },
+    {
+      "source": "/facebook-leads-targeting/",
+      "destination": "/podcast/facebook-leads-targeting/",
+      "permanent": true
+    },
+    {
+      "source": "/facebook-leads-targeting",
+      "destination": "/podcast/facebook-leads-targeting/",
+      "permanent": true
+    },
+    {
+      "source": "/facebook-marketing-secrets/",
+      "destination": "/podcast/facebook-marketing-secrets/",
+      "permanent": true
+    },
+    {
+      "source": "/facebook-marketing-secrets",
+      "destination": "/podcast/facebook-marketing-secrets/",
+      "permanent": true
+    },
+    {
+      "source": "/get-uncomfortable/",
+      "destination": "/podcast/get-uncomfortable/",
+      "permanent": true
+    },
+    {
+      "source": "/get-uncomfortable",
+      "destination": "/podcast/get-uncomfortable/",
+      "permanent": true
+    },
+    {
+      "source": "/growth-in-your-practice2/",
+      "destination": "/podcast/growth-in-your-practice2/",
+      "permanent": true
+    },
+    {
+      "source": "/growth-in-your-practice2",
+      "destination": "/podcast/growth-in-your-practice2/",
+      "permanent": true
+    },
+    {
+      "source": "/higher-quality-fb-leads/",
+      "destination": "/podcast/higher-quality-fb-leads/",
+      "permanent": true
+    },
+    {
+      "source": "/higher-quality-fb-leads",
+      "destination": "/podcast/higher-quality-fb-leads/",
+      "permanent": true
+    },
+    {
+      "source": "/holy-grail-business/",
+      "destination": "/podcast/holy-grail-business/",
+      "permanent": true
+    },
+    {
+      "source": "/holy-grail-business",
+      "destination": "/podcast/holy-grail-business/",
+      "permanent": true
+    },
+    {
+      "source": "/hugh-liddle-the-sales-wizard/",
+      "destination": "/podcast/hugh-liddle-the-sales-wizard/",
+      "permanent": true
+    },
+    {
+      "source": "/hugh-liddle-the-sales-wizard",
+      "destination": "/podcast/hugh-liddle-the-sales-wizard/",
+      "permanent": true
+    },
+    {
+      "source": "/increasing-your-pva-2/",
+      "destination": "/podcast/increasing-your-pva-2/",
+      "permanent": true
+    },
+    {
+      "source": "/increasing-your-pva-2",
+      "destination": "/podcast/increasing-your-pva-2/",
+      "permanent": true
+    },
+    {
+      "source": "/increasing-your-pva/",
+      "destination": "/podcast/increasing-your-pva/",
+      "permanent": true
+    },
+    {
+      "source": "/increasing-your-pva",
+      "destination": "/podcast/increasing-your-pva/",
+      "permanent": true
+    },
+    {
+      "source": "/million-dollar-practice/",
+      "destination": "/podcast/million-dollar-practice/",
+      "permanent": true
+    },
+    {
+      "source": "/million-dollar-practice",
+      "destination": "/podcast/million-dollar-practice/",
+      "permanent": true
+    },
+    {
+      "source": "/nutrition-systems/",
+      "destination": "/podcast/nutrition-systems/",
+      "permanent": true
+    },
+    {
+      "source": "/nutrition-systems",
+      "destination": "/podcast/nutrition-systems/",
+      "permanent": true
+    },
+    {
+      "source": "/part-2-the-best-adjustement-is-above-your-atlas/",
+      "destination": "/podcast/part-2-the-best-adjustement-is-above-your-atlas/",
+      "permanent": true
+    },
+    {
+      "source": "/part-2-the-best-adjustement-is-above-your-atlas",
+      "destination": "/podcast/part-2-the-best-adjustement-is-above-your-atlas/",
+      "permanent": true
+    },
+    {
+      "source": "/patient-centered-communication/",
+      "destination": "/podcast/patient-centered-communication/",
+      "permanent": true
+    },
+    {
+      "source": "/patient-centered-communication",
+      "destination": "/podcast/patient-centered-communication/",
+      "permanent": true
+    },
+    {
+      "source": "/practice-automation/",
+      "destination": "/podcast/practice-automation/",
+      "permanent": true
+    },
+    {
+      "source": "/practice-automation",
+      "destination": "/podcast/practice-automation/",
+      "permanent": true
+    },
+    {
+      "source": "/practicing-abroad-part-2/",
+      "destination": "/podcast/practicing-abroad-part-2/",
+      "permanent": true
+    },
+    {
+      "source": "/practicing-abroad-part-2",
+      "destination": "/podcast/practicing-abroad-part-2/",
+      "permanent": true
+    },
+    {
+      "source": "/practicing-abroad-part1/",
+      "destination": "/podcast/practicing-abroad-part1/",
+      "permanent": true
+    },
+    {
+      "source": "/practicing-abroad-part1",
+      "destination": "/podcast/practicing-abroad-part1/",
+      "permanent": true
+    },
+    {
+      "source": "/remarkable-chiropractic-practice/",
+      "destination": "/podcast/remarkable-chiropractic-practice/",
+      "permanent": true
+    },
+    {
+      "source": "/remarkable-chiropractic-practice",
+      "destination": "/podcast/remarkable-chiropractic-practice/",
+      "permanent": true
+    },
+    {
+      "source": "/spinal-hygiene-movement/",
+      "destination": "/podcast/spinal-hygiene-movement/",
+      "permanent": true
+    },
+    {
+      "source": "/spinal-hygiene-movement",
+      "destination": "/podcast/spinal-hygiene-movement/",
+      "permanent": true
+    },
+    {
+      "source": "/spinal-hygienist/",
+      "destination": "/podcast/spinal-hygienist/",
+      "permanent": true
+    },
+    {
+      "source": "/spinal-hygienist",
+      "destination": "/podcast/spinal-hygienist/",
+      "permanent": true
+    },
+    {
+      "source": "/successful-2016/",
+      "destination": "/podcast/successful-2016/",
+      "permanent": true
+    },
+    {
+      "source": "/successful-2016",
+      "destination": "/podcast/successful-2016/",
+      "permanent": true
+    },
+    {
+      "source": "/successful-chiropractor/",
+      "destination": "/podcast/successful-chiropractor/",
+      "permanent": true
+    },
+    {
+      "source": "/successful-chiropractor",
+      "destination": "/podcast/successful-chiropractor/",
+      "permanent": true
+    },
+    {
+      "source": "/suck-selling/",
+      "destination": "/podcast/suck-selling/",
+      "permanent": true
+    },
+    {
+      "source": "/suck-selling",
+      "destination": "/podcast/suck-selling/",
+      "permanent": true
+    },
+    {
+      "source": "/the-best-adjustement-is-above-your-atlas/",
+      "destination": "/podcast/the-best-adjustement-is-above-your-atlas/",
+      "permanent": true
+    },
+    {
+      "source": "/the-best-adjustement-is-above-your-atlas",
+      "destination": "/podcast/the-best-adjustement-is-above-your-atlas/",
+      "permanent": true
+    },
+    {
+      "source": "/tips-making-facebook-videos/",
+      "destination": "/podcast/tips-making-facebook-videos/",
+      "permanent": true
+    },
+    {
+      "source": "/tips-making-facebook-videos",
+      "destination": "/podcast/tips-making-facebook-videos/",
+      "permanent": true
+    },
+    {
+      "source": "/tma-attack-on-chiropractic/",
+      "destination": "/podcast/tma-attack-on-chiropractic/",
+      "permanent": true
+    },
+    {
+      "source": "/tma-attack-on-chiropractic",
+      "destination": "/podcast/tma-attack-on-chiropractic/",
+      "permanent": true
+    },
+    {
+      "source": "/traits-successful-chiropractor/",
+      "destination": "/podcast/traits-successful-chiropractor/",
+      "permanent": true
+    },
+    {
+      "source": "/traits-successful-chiropractor",
+      "destination": "/podcast/traits-successful-chiropractor/",
+      "permanent": true
+    },
+    {
+      "source": "/ultimate-referral-machine/",
+      "destination": "/podcast/ultimate-referral-machine/",
+      "permanent": true
+    },
+    {
+      "source": "/ultimate-referral-machine",
+      "destination": "/podcast/ultimate-referral-machine/",
+      "permanent": true
+    },
+    {
+      "source": "/update/",
+      "destination": "/blog/update/",
+      "permanent": true
+    },
+    {
+      "source": "/update",
+      "destination": "/blog/update/",
+      "permanent": true
+    },
+    {
+      "source": "/vaccines_revealed/",
+      "destination": "/podcast/vaccines_revealed/",
+      "permanent": true
+    },
+    {
+      "source": "/vaccines_revealed",
+      "destination": "/podcast/vaccines_revealed/",
+      "permanent": true
+    },
+    {
+      "source": "/video-marketing-essentials/",
+      "destination": "/podcast/video-marketing-essentials/",
+      "permanent": true
+    },
+    {
+      "source": "/video-marketing-essentials",
+      "destination": "/podcast/video-marketing-essentials/",
+      "permanent": true
+    },
+    {
+      "source": "/visit-number-dc-models-going-extinct-best-of/",
+      "destination": "/podcast/visit-number-dc-models-going-extinct-best-of/",
+      "permanent": true
+    },
+    {
+      "source": "/visit-number-dc-models-going-extinct-best-of",
+      "destination": "/podcast/visit-number-dc-models-going-extinct-best-of/",
+      "permanent": true
+    },
+    {
+      "source": "/visit-number-dc-models-going-extinct/",
+      "destination": "/podcast/visit-number-dc-models-going-extinct/",
+      "permanent": true
+    },
+    {
+      "source": "/visit-number-dc-models-going-extinct",
+      "destination": "/podcast/visit-number-dc-models-going-extinct/",
+      "permanent": true
+    },
+    {
+      "source": "/waiting-list-practice/",
+      "destination": "/podcast/waiting-list-practice/",
+      "permanent": true
+    },
+    {
+      "source": "/waiting-list-practice",
+      "destination": "/podcast/waiting-list-practice/",
+      "permanent": true
+    },
+    {
+      "source": "/why-i-do-what-i-do/",
+      "destination": "/podcast/why-i-do-what-i-do/",
+      "permanent": true
+    },
+    {
+      "source": "/why-i-do-what-i-do",
+      "destination": "/podcast/why-i-do-what-i-do/",
+      "permanent": true
+    },
+    {
+      "source": "/category/podcast/page/:page(\\d+)/",
+      "destination": "/podcasts/",
+      "permanent": true
+    },
+    {
+      "source": "/category/podcast/page/:page(\\d+)",
+      "destination": "/podcasts/",
+      "permanent": true
+    },
+    {
+      "source": "/category/podcast/feed/",
+      "destination": "/podcasts/",
+      "permanent": true
+    },
+    {
+      "source": "/category/podcast/feed",
+      "destination": "/podcasts/",
+      "permanent": true
+    },
+    {
+      "source": "/category/facebook-ads/",
+      "destination": "/services/facebook-advertising/",
+      "permanent": true
+    },
+    {
+      "source": "/category/facebook-ads",
+      "destination": "/services/facebook-advertising/",
+      "permanent": true
+    },
+    {
+      "source": "/category/facebook-ads/page/:page(\\d+)/",
+      "destination": "/services/facebook-advertising/",
+      "permanent": true
+    },
+    {
+      "source": "/category/facebook-ads/page/:page(\\d+)",
+      "destination": "/services/facebook-advertising/",
+      "permanent": true
+    },
+    {
+      "source": "/category/facebook-ads/feed/",
+      "destination": "/services/facebook-advertising/",
+      "permanent": true
+    },
+    {
+      "source": "/category/facebook-ads/feed",
+      "destination": "/services/facebook-advertising/",
+      "permanent": true
+    },
+    {
+      "source": "/category/google-ads-for-chiropractors/",
+      "destination": "/services/google-advertising/",
+      "permanent": true
+    },
+    {
+      "source": "/category/google-ads-for-chiropractors",
+      "destination": "/services/google-advertising/",
+      "permanent": true
+    },
+    {
+      "source": "/category/google-ads-for-chiropractors/page/:page(\\d+)/",
+      "destination": "/services/google-advertising/",
+      "permanent": true
+    },
+    {
+      "source": "/category/google-ads-for-chiropractors/page/:page(\\d+)",
+      "destination": "/services/google-advertising/",
+      "permanent": true
+    },
+    {
+      "source": "/category/google-ads-for-chiropractors/feed/",
+      "destination": "/services/google-advertising/",
+      "permanent": true
+    },
+    {
+      "source": "/category/google-ads-for-chiropractors/feed",
+      "destination": "/services/google-advertising/",
+      "permanent": true
+    },
+    {
+      "source": "/category/chiropractor-ppc/",
+      "destination": "/services/google-advertising/",
+      "permanent": true
+    },
+    {
+      "source": "/category/chiropractor-ppc",
+      "destination": "/services/google-advertising/",
+      "permanent": true
+    },
+    {
+      "source": "/category/chiropractor-ppc/page/:page(\\d+)/",
+      "destination": "/services/google-advertising/",
+      "permanent": true
+    },
+    {
+      "source": "/category/chiropractor-ppc/page/:page(\\d+)",
+      "destination": "/services/google-advertising/",
+      "permanent": true
+    },
+    {
+      "source": "/category/chiropractor-ppc/feed/",
+      "destination": "/services/google-advertising/",
+      "permanent": true
+    },
+    {
+      "source": "/category/chiropractor-ppc/feed",
+      "destination": "/services/google-advertising/",
+      "permanent": true
+    },
+    {
+      "source": "/category/seo-for-chiropractors/",
+      "destination": "/services/search-engine-optimization/",
+      "permanent": true
+    },
+    {
+      "source": "/category/seo-for-chiropractors",
+      "destination": "/services/search-engine-optimization/",
+      "permanent": true
+    },
+    {
+      "source": "/category/seo-for-chiropractors/page/:page(\\d+)/",
+      "destination": "/services/search-engine-optimization/",
+      "permanent": true
+    },
+    {
+      "source": "/category/seo-for-chiropractors/page/:page(\\d+)",
+      "destination": "/services/search-engine-optimization/",
+      "permanent": true
+    },
+    {
+      "source": "/category/seo-for-chiropractors/feed/",
+      "destination": "/services/search-engine-optimization/",
+      "permanent": true
+    },
+    {
+      "source": "/category/seo-for-chiropractors/feed",
+      "destination": "/services/search-engine-optimization/",
+      "permanent": true
+    },
+    {
+      "source": "/category/chiropractic-web-design/",
+      "destination": "/services/web-design/",
+      "permanent": true
+    },
+    {
+      "source": "/category/chiropractic-web-design",
+      "destination": "/services/web-design/",
+      "permanent": true
+    },
+    {
+      "source": "/category/chiropractic-web-design/page/:page(\\d+)/",
+      "destination": "/services/web-design/",
+      "permanent": true
+    },
+    {
+      "source": "/category/chiropractic-web-design/page/:page(\\d+)",
+      "destination": "/services/web-design/",
+      "permanent": true
+    },
+    {
+      "source": "/category/chiropractic-web-design/feed/",
+      "destination": "/services/web-design/",
+      "permanent": true
+    },
+    {
+      "source": "/category/chiropractic-web-design/feed",
+      "destination": "/services/web-design/",
+      "permanent": true
+    },
+    {
+      "source": "/category/social-media-marketing-for-chiropractors/",
+      "destination": "/services/chiropractic-social-media-marketing/",
+      "permanent": true
+    },
+    {
+      "source": "/category/social-media-marketing-for-chiropractors",
+      "destination": "/services/chiropractic-social-media-marketing/",
+      "permanent": true
+    },
+    {
+      "source": "/category/social-media-marketing-for-chiropractors/page/:page(\\d+)/",
+      "destination": "/services/chiropractic-social-media-marketing/",
+      "permanent": true
+    },
+    {
+      "source": "/category/social-media-marketing-for-chiropractors/page/:page(\\d+)",
+      "destination": "/services/chiropractic-social-media-marketing/",
+      "permanent": true
+    },
+    {
+      "source": "/category/social-media-marketing-for-chiropractors/feed/",
+      "destination": "/services/chiropractic-social-media-marketing/",
+      "permanent": true
+    },
+    {
+      "source": "/category/social-media-marketing-for-chiropractors/feed",
+      "destination": "/services/chiropractic-social-media-marketing/",
+      "permanent": true
+    },
+    {
+      "source": "/category/reactivation-campaign/",
+      "destination": "/services/reactivation-campaigns/",
+      "permanent": true
+    },
+    {
+      "source": "/category/reactivation-campaign",
+      "destination": "/services/reactivation-campaigns/",
+      "permanent": true
+    },
+    {
+      "source": "/category/reactivation-campaign/page/:page(\\d+)/",
+      "destination": "/services/reactivation-campaigns/",
+      "permanent": true
+    },
+    {
+      "source": "/category/reactivation-campaign/page/:page(\\d+)",
+      "destination": "/services/reactivation-campaigns/",
+      "permanent": true
+    },
+    {
+      "source": "/category/reactivation-campaign/feed/",
+      "destination": "/services/reactivation-campaigns/",
+      "permanent": true
+    },
+    {
+      "source": "/category/reactivation-campaign/feed",
+      "destination": "/services/reactivation-campaigns/",
+      "permanent": true
+    },
+    {
+      "source": "/category/tiktok-ads-for-chiropractors/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/category/tiktok-ads-for-chiropractors",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/category/tiktok-ads-for-chiropractors/page/:page(\\d+)/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/category/tiktok-ads-for-chiropractors/page/:page(\\d+)",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/category/tiktok-ads-for-chiropractors/feed/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/category/tiktok-ads-for-chiropractors/feed",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/category/chiropractic-marketing/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/category/chiropractic-marketing",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/category/chiropractic-marketing/page/:page(\\d+)/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/category/chiropractic-marketing/page/:page(\\d+)",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/category/chiropractic-marketing/feed/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/category/chiropractic-marketing/feed",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/category/blog/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/category/blog",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/category/blog/page/:page(\\d+)/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/category/blog/page/:page(\\d+)",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/category/blog/feed/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/category/blog/feed",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/category/uncategorized/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/category/uncategorized",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/category/uncategorized/page/:page(\\d+)/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/category/uncategorized/page/:page(\\d+)",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/category/uncategorized/feed/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/category/uncategorized/feed",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/category/:slug/page/:page(\\d+)/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/category/:slug/page/:page(\\d+)",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/category/:slug/feed/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/category/:slug/feed",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/category/:slug/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/category/:slug",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/author/:author/page/:page(\\d+)/",
+      "destination": "/about/billy-sticker/",
+      "permanent": true
+    },
+    {
+      "source": "/author/:author/page/:page(\\d+)",
+      "destination": "/about/billy-sticker/",
+      "permanent": true
+    },
+    {
+      "source": "/author/:author/",
+      "destination": "/about/billy-sticker/",
+      "permanent": true
+    },
+    {
+      "source": "/author/:author",
+      "destination": "/about/billy-sticker/",
+      "permanent": true
+    },
+    {
+      "source": "/page/:page(\\d+)/",
+      "destination": "/podcasts/",
+      "permanent": true
+    },
+    {
+      "source": "/page/:page(\\d+)",
+      "destination": "/podcasts/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/page/:page(\\d+)/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/page/:page(\\d+)",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/podcasts/page/:page(\\d+)/",
+      "destination": "/podcasts/",
+      "permanent": true
+    },
+    {
+      "source": "/podcasts/page/:page(\\d+)",
+      "destination": "/podcasts/",
+      "permanent": true
+    },
+    {
+      "source": "/feed/",
+      "destination": "/podcasts/",
+      "permanent": true
+    },
+    {
+      "source": "/feed",
+      "destination": "/podcasts/",
+      "permanent": true
+    },
+    {
+      "source": "/comments/feed/",
+      "destination": "/podcasts/",
+      "permanent": true
+    },
+    {
+      "source": "/comments/feed",
+      "destination": "/podcasts/",
+      "permanent": true
+    },
+    {
+      "source": "/rss/",
+      "destination": "/podcasts/",
+      "permanent": true
+    },
+    {
+      "source": "/rss",
+      "destination": "/podcasts/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/:slug/feed/",
+      "destination": "/blog/:slug/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/:slug/feed",
+      "destination": "/blog/:slug/",
+      "permanent": true
+    },
+    {
+      "source": "/podcast/:slug/feed/",
+      "destination": "/podcast/:slug/",
+      "permanent": true
+    },
+    {
+      "source": "/podcast/:slug/feed",
+      "destination": "/podcast/:slug/",
+      "permanent": true
+    },
+    {
+      "source": "/uncategorized/:slug/feed/",
+      "destination": "/uncategorized/:slug/",
+      "permanent": true
+    },
+    {
+      "source": "/uncategorized/:slug/feed",
+      "destination": "/uncategorized/:slug/",
       "permanent": true
     }
   ],
